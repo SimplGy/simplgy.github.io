@@ -1,0 +1,24 @@
+
+- id: github
+  name: Github
+  url: https://github.com/SimplGy
+  api: https://api.github.com/users/SimplGy
+
+- id: twitter
+  name: Twitter
+  url: https://twitter.com/SimplGy
+  # api: https://api.twitter.com/1.1/users/show.json?screen_name=SimplGy # Not public
+
+- id: linkedin
+  name: Linked In
+  url: http://linkedin.com/in/simplgy
+  #api: not public
+
+- id: stackoverflow
+  name: Stack Overflow Careers
+  url: http://careers.stackoverflow.com/SimplGy
+
+- id: instagram
+  name: Instagram
+  url: https://instagram.com/simplgy
+  #api: not public -- https://api.instagram.com/v1/users/{user-id}/

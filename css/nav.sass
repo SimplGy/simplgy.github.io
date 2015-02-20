@@ -1,0 +1,57 @@
+@import '__'
+
+$h: 40px
+
+.navSpace
+  display: block
+  height: $h
+
+.homePage nav
+  opacity: .6
+  transition: .2s ease-out opacity
+  background: none
+  &:hover
+    opacity: 1
+
+
+nav
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  height: $h
+  line-height: $h
+  background: $green
+  padding: 0 20px
+
+  a
+    font-family: Comfortaa, sans-serif
+    display: block
+    text-transform: lowercase
+    color: mix($green,white,5%)
+    text-decoration: none
+    padding: 0 10px
+    text-shadow: 0 1px 0 $shade10
+    &:hover
+      background: $shade10
+      color: white
+      text-shadow: 0 1px 0 $shade20
+
+  .hasIcon
+    line-height: $h + 3px // visually shift down because the other text is lowercase
+    a
+      padding: 0 2px
+      font-size: 120%
+    a:hover
+      background: none
+
+  .logo
+    float: left
+  ul
+    float: right
+    list-style: none
+    margin: 0
+    padding: 0
+  li
+    display: inline-block
+    vertical-align: top

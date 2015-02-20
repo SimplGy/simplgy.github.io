@@ -1,0 +1,52 @@
+---
+layout: default
+title: About Simple Software
+---
+
+<h1>About</h1>
+
+<ul class="social">
+  {% for site in site.data.social %}
+  <li>
+    <a href="{{ site.url }}" class="bg-{{ site.id }}">
+      <i class="icon {{ site.id }}"></i>
+      {{ site.name }}
+    </a>
+  </li>
+  {% endfor %}
+</ul>
+
+<script>
+  (function(){
+    window.endpoints = {};
+
+    // Use the templating language to list all social sites with endpoints
+    {% for site in site.data.social %}
+      if ('{{ site.api }}' != '') {
+        endpoints['{{site.id}}'] = '{{ site.api }}'
+      };
+    {% endfor %}
+
+    // Handle success for each endpoint
+      onSuccess = {};
+      onSuccess.github = function(data){
+        console.log({ githubUserData: data });
+        img = document.createElement('img');
+        img.src = data.avatar_url;
+        node = document.querySelectorAll('.social .bg-github')[0];
+        node.appendChild(img);
+      }
+
+    // Hit the endpoint for each site
+    for (key in endpoints) {
+      var request = new XMLHttpRequest();
+      request.open('GET', endpoints[key], true);
+      request.onload = function() {
+        if (request.status >= 200 && request.status < 400) {
+          onSuccess[key](JSON.parse(request.responseText));
+        }
+      };
+      request.send();
+      }
+  })();
+</script>

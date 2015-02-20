@@ -1,0 +1,7 @@
+---
+layout: post
+title:  "project 2"
+categories: something else
+---
+
+Hello Project 2

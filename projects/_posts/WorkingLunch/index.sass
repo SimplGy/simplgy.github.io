@@ -1,0 +1,106 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:500)
+
+
+$brandColor: #f89406
+
+body
+  background: #222
+
+.title
+  margin-left: 10px
+  color: #666
+
+h1, h2, h3, h4, h5
+  font-family: 'Raleway', sans-serif
+  font-weight: 500
+  line-height: 1.2
+
+.hero-unit
+  background: white
+  border-radius: 0
+  font-size: 0
+  box-shadow: 0 0 0 3px $brandColor
+  padding: 25px 50px
+  h1
+    font-size: 40px
+    line-height: 1.2
+    color: $brandColor
+    text-shadow: 1px 1px 0 $brandColor - 50
+  p, .alert
+    font-size: 16px
+    line-height: 1.4
+
+
+input.large
+  font-size: 17.5px
+  padding: 11px 19px
+
+
+
+
+
+
+
+.callToAction
+  max-width: 600px
+  padding-top: 25px
+
+
+@media screen and (min-width: 950px) // and bigger
+  h1, .callToAction
+    display: inline-block
+    vertical-align: top
+    box-sizing: border-box
+  .hero-unit
+    padding: 100px 50px
+  .hero-unit h1
+    font-size: 60px
+    line-height: 1.1
+    width: 55%
+    text-align: right
+    padding-right: 25px
+  .callToAction
+    width: 45%
+    padding-left: 25px
+    box-shadow: -1px 0 0 0 #ccc
+  .perk
+    width: 33%
+
+@media screen and (max-width: 320px) // and smaller
+  .hero-unit
+    padding: 10px
+  .hero-unit h1
+    display: block
+    font-size: 30px
+    line-height: 1.1
+  .callToAction
+    display: block
+    padding-top: 10px
+  input.large
+    width: 150px
+  input.large,
+  .btn-large
+    font-size: 14px
+    padding: 5px
+
+
+
+// ---------------------- The Perk Area
+.perks
+  font-size: 0
+.perk
+  font-size: 16px
+  display: inline-block
+  width: 50%
+  vertical-align: top
+  color: white
+  padding: 0 0 25px 50px
+  box-sizing: border-box
+.perk h4
+  color: $brandColor + 50
+.perk
+  @media screen and (max-width: 500px) // and smaller
+    width: 100%
+    padding: 0 25px 10px 25px
+  @media screen and (min-width: 950px) // and bigger
+    width: 33%

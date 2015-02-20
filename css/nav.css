@@ -1,0 +1,49 @@
+.navSpace {
+  display: block;
+  height: 40px; }
+
+.homePage nav {
+  opacity: 0.6;
+  transition: 0.2s ease-out opacity;
+  background: none; }
+  .homePage nav:hover {
+    opacity: 1; }
+
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  line-height: 40px;
+  background: #66cd00;
+  padding: 0 20px; }
+  nav a {
+    font-family: Comfortaa, sans-serif;
+    display: block;
+    text-transform: lowercase;
+    color: #f7fcf2;
+    text-decoration: none;
+    padding: 0 10px;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1); }
+    nav a:hover {
+      background: rgba(0, 0, 0, 0.1);
+      color: white;
+      text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2); }
+  nav .hasIcon {
+    line-height: 43px; }
+    nav .hasIcon a {
+      padding: 0 2px;
+      font-size: 120%; }
+    nav .hasIcon a:hover {
+      background: none; }
+  nav .logo {
+    float: left; }
+  nav ul {
+    float: right;
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+  nav li {
+    display: inline-block;
+    vertical-align: top; }

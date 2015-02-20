@@ -1,0 +1,42 @@
+
+- name: Coatue
+  description: Senior Front Endy
+  from: Today
+  to: 2014
+
+- name: TidePool
+  description: Something
+  to: 2014
+  from: 2013
+
+- name: iSirona
+  description: something else
+  to: 2013
+  from: 2012
+
+- name: GSI, an eBay Company
+  description: something else
+  to: 2012
+  from: 2011
+
+- name: Epic
+  description: User Experience Designer
+  to: 2011
+  from: 2009
+
+- name: A Catered Affair
+  description:
+  to: 2009
+  from: 2008
+
+- name: Avalon Copy Centers
+  description:
+  to: 2008
+  from: 2007
+
+- name: Shi-Ling Hsiang's Art and Design
+  description:
+  to: 2007
+  from: 2005
+
+

@@ -1,0 +1,293 @@
+@import '__'
+
+html, body
+  height: 100%
+
+img
+  max-width: 100%
+
+// Typography
+h1, h2, h3, h4
+  font-family: Comfortaa, sans-serif
+  line-height: 1.2
+  margin: 0
+body
+  font-family: Helvetica, Verdana, sans-serif
+  line-height: 1.5
+  font-size: 16px
+  margin: 0
+  padding: 0
+
+h1
+  font-size: 60px
+  +phone
+    font-size: 40px
+h2
+  font-size: 30px
+  +phone
+    font-size: 25px
+h3
+  font-size: 20px
+
+hr
+  background-color: $black15
+  color: $black15
+  height: 1px
+  border: none
+  margin: 100px auto
+  max-width: 600px
+
+
+// Size text as percentages of itself
+.typePretty
+  $size: 4em
+  margin: $size * .75 0
+
+  small
+    font-size: 60%
+  h1,h2,h3,h4,h5
+    margin: 0
+    padding: 0
+    display: inline-block
+    vertical-align: bottom
+    line-height: 1
+    color: $muted
+    text-align: left
+  h1
+    font-size: $size * 1
+    margin-right: .2em
+    margin-left: .1em
+    color: $black40
+  h2
+    font-size: $size * .4
+    margin-bottom: .25em
+  h3
+    font-size: $size * .22
+    line-height: 1
+    margin-bottom: .75em
+
+  +tablet
+    $size: 3em
+    margin: $size * .75 0
+    h1
+      font-size: $size * 1
+    h2
+      font-size: $size * .4
+    h3
+      font-size: $size * .22
+  +phone
+    $size: 2.5em
+    margin: $size * .75 0
+    h1
+      font-size: $size * 1
+    h2
+      font-size: $size * .4
+    h3
+      font-size: $size * .22
+
+
+
+
+.muted
+  color: $muted
+
+
+.printOnly
+  display: none
+
+.paddedCell
+  padding: 20px
+
+.colorGreen
+  color: $green
+.colorBlue
+  color: $blue
+.colorOrange
+  color: $orange
+.colorBrown
+  color: $brown
+.colorLinkedIn
+  color: $linkedIn
+
+.bgGreen
+  background-color: $green
+.bgBlue
+  background-color: $blue
+.bgOrange
+  background-color: $orange
+.bgBrown
+  background-color: $brown
+
+
+.shadow
+  box-shadow: 0 1px 4px 0 $shade20
+
+.alignCenter
+  text-align: center
+
+a.link
+  color: $blue
+a.link:visited
+  color: $green
+a.link:hover
+  color: mix($blue, white, 80%)
+a.link:visited:hover
+  color: mix($green, white, 80%)
+
+
+.monogram
+  position: absolute
+  top: 7px
+  right: 5px
+  display: block
+  width: 30px
+  height: 28px
+  background: url('../gfx/monogram.png') no-repeat
+
+// ------------------------------ A large panel that fills the height
+.jumbotron
+  //$a: mix(#FDFC47, #24FE41)
+  //$a: mix(#FDFC47, $green)
+  $a: #4CB8C4
+  $b: #3CD3AD
+  //$a: mix(#43cea2, #56c21f)
+  //$b: #56c21f
+  height: 100%
+  min-height: 400px
+  background: linear-gradient(90deg, $a, $b)
+  color: white
+  h1, h3
+    white-space: pre-line // use the line breaks in the content, and also wrap lines normally
+  h1
+    text-shadow: 1px 2px 0 $shade15
+    margin-bottom: 40px
+  h3
+    text-shadow: 0 0 5px $shade30
+    width: 70%
+    min-width: 320px
+    margin: 0 auto
+    line-height: 1.5
+    //text-align: left
+    font-weight: normal
+
+.pusher
+  display: block
+  float: left
+  width: 5px
+  height: 50%
+  margin-bottom: -200px
+.pushee
+  margin: 0 auto
+  text-align: center
+  clear: both
+
+
+//.social
+//  margin-top: 30px
+//  +phone
+//    margin-top: 20px
+//  a
+//    position: relative
+//    display: inline-block
+//    width: 50px
+//    height: 50px
+//    margin: 0 20px
+//    +phone
+//      margin: 0 3px
+//
+//    img
+//      opacity: .65
+//      +transitionable
+//    span
+//      position: absolute
+//      display: block
+//      width: 150px
+//      height: 20px
+//      left: -50px
+//      top: 40px
+//      text-align: center
+//      margin-top: -10px
+//      +transitionable
+//      visibility: hidden
+//      opacity: 0
+
+  a:hover,
+  a:focus
+    outline: none
+    img
+      opacity: .95
+    span
+      visibility: visible
+      opacity: .99
+      top: 55px
+  //padding: 5px 10px
+
+
+
+
+@media print
+  .printOnly
+    display: block
+
+
+// -------------------------------------- Quotes
+.quotesPage
+  p
+    color: $muted
+    margin-top: -35px
+    text-align: right
+    padding: 0 20px
+  blockquote
+    height: 100%
+    padding: 0
+    margin: 0
+    p
+      display: inline-block
+      vertical-align: middle
+      color: $blue
+      font-size: 26px
+      line-height: 26px * 1.5
+      letter-spacing: .03em
+      margin: 0
+      text-align: left
+      +phone
+        font-size: 20px
+
+
+
+
+
+// ----------------------------------------------- Social colors
+ul.social, li
+  list-style: none
+  margin: 0
+  padding: 0
+.social li
+  a
+    position: relative
+    height: 100px
+    line-height: 100px
+    padding-left: 110px
+    display: block
+    color: white
+    text-decoration: none
+    &:hover
+      box-shadow: inset 0 100px $shade05
+  img
+    max-height: 100%
+    position: absolute
+    top: 0
+    left: 0
+
+.bg-twitter
+  background-color: $twitter
+.bg-github
+  background-color: $github
+.bg-linkedin
+  background-color: $linkedIn
+.bg-dribbble
+  background-color: $dribbble
+.bg-stackoverflow
+  background-color: $stackOverflow
+.bg-instagram
+  background-color: $instagram

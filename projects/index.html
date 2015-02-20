@@ -1,0 +1,131 @@
+---
+layout: default
+id: projects
+title: Your New Jekyll Site
+---
+
+<h3>Github Repos with a `gh-pages` branch</h3>
+
+<ul id="GithubProjects"></ul>
+
+<br/>
+<br/>
+
+<h3>Featured Projects</h3>
+
+<header class="typePretty">
+  <h3>
+    Put some <br/>
+    Backbone <br/>
+    into the
+  </h3>
+  <h1>Game <small>of</small> Life</h1>
+</header>
+
+<header class="typePretty">
+  <h1>Angular Performance</h1>
+  <h2>
+    A friendly <br/>
+    Hall Monitor
+  </h2>
+</header>
+
+<header class="typePretty">
+  <h2>
+    Shared Responsibility <br/>
+    Mobile Device
+  </h2>
+  <h1>Alerts <small>for</small> Doctors</h1>
+</header>
+
+<header class="typePretty">
+  <h3>
+    Monitor <br/>
+    and Config <br/>
+    1000s of
+  </h3>
+  <h1>
+    Hospital Devices
+  </h1>
+</header>
+
+<header class="typePretty">
+  <h3>
+    Silly <br/>
+    Spunky <br/>
+    Sarcastic
+  </h3>
+  <h1>
+    Random Word Generator
+  </h1>
+</header>
+
+
+<header class="typePretty">
+  <h2>
+    Never Render<br />
+    Type Diagonally
+  </h2>
+  <h1>Association Grid</h1>
+</header>
+
+
+<ul class="projects">
+  {% for project in site.categories.projects %}
+    <li>
+      <div class="visual"></div>
+      <a href="{{project.url}}">{{ project.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
+
+<br>
+<br>
+
+<script>
+  (function(){
+    // Get data for all repos, and create a list item for each
+    var hasPages = [],
+            repos, r,
+            username = 'SimplGy',
+            container = document.getElementById('GithubProjects'),
+            request = new XMLHttpRequest();
+
+    request.open('GET', "https://api.github.com/users/"+ username +"/repos", true);
+    request.onload = function() {
+      if (request.status >= 200 && request.status < 400) {
+        repos = JSON.parse(request.responseText);
+        for (var i=0; i<repos.length; i++) {
+          r = addRepoToDom(repos[i], container)
+          if (r) {
+            hasPages.push(r);
+          }
+        }
+        console.log({ hasPages:hasPages });
+      }
+    };
+    request.send();
+
+    // Given a repo object and a dom node, create a list item and add it as a child of the node
+    function addRepoToDom(repo, node) {
+      if(!repo.has_pages) { return; }
+      var li, a, url;
+      li = document.createElement('li');
+      a = document.createElement('a');
+      a.innerText = repo.name;
+      // Calculate the url or use the one specfied in the repo's settings
+      if (repo.homepage) {
+        url = repo.homepage;
+      } else if (repo.name === username.toLowerCase() + '.github.io') {
+        url = 'http://' + username.toLowerCase() + '.github.io/';
+      } else {
+        url = 'http://' + username.toLowerCase() + '.github.io/' + repo.name;
+      }
+      a.setAttribute('href', url);
+      a.setAttribute('title', repo.description);
+      li.appendChild(a);
+      node.appendChild(li);
+      return repo;
+    }
+  })();
+</script>

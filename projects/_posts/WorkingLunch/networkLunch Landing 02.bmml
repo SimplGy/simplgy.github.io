@@ -1,0 +1,47 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1054" measuredH="756" mockupW="1037" mockupH="741">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::TitleWindow" x="17" y="15" w="1037" h="741" measuredW="450" measuredH="400" zOrder="0" locked="true" isInGroup="-1">
+      <controlProperties>
+        <close>true</close>
+        <text>Network%20Lunch</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::Label" x="195" y="112" w="-1" h="-1" measuredW="634" measuredH="72" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>2848996</color>
+        <size>60</size>
+        <text>Helping%20Your%20Employees</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Canvas" x="195" y="279" w="397" h="52" measuredW="100" measuredH="70" zOrder="2" locked="false" isInGroup="-1"/>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Label" x="210" y="293" w="-1" h="-1" measuredW="165" measuredH="26" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>10066329</color>
+        <size>18</size>
+        <text>email@address.com</text>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::Button" x="581" y="276" w="248" h="61" measuredW="223" measuredH="27" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <color>2848996</color>
+        <size>18</size>
+        <text>Tell%20Me%20When%20It%27s%20Ready</text>
+      </controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::Label" x="195" y="184" w="-1" h="-1" measuredW="504" measuredH="72" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>2848996</color>
+        <size>60</size>
+        <text>Talk%20to%20Each%20Other</text>
+      </controlProperties>
+    </control>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::Paragraph" x="195" y="352" w="634" h="141" measuredW="200" measuredH="80" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>6710886</color>
+        <size>18</size>
+        <text>I%20promise%20we%27ll%20only%20use%20your%20email%20address%20for%20this%2C%20and%20will%20never%20sell%20it.%0A%20%0AWe%27re%20building%20an%20application%20that%20we%20think%20will%20help%20cross-departmental%20communication%20in%20large%20organizations.%0A%20%0ALet%27s%20start%20with%20lunch.</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

@@ -1,0 +1,47 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="1054" measuredH="756" mockupW="1037" mockupH="741">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::TitleWindow" x="17" y="15" w="1037" h="741" measuredW="450" measuredH="400" zOrder="0" locked="true" isInGroup="-1">
+      <controlProperties>
+        <close>true</close>
+        <text>ToGo%20-%20Text%20Message%20Order%20Management%20for%20Restaurants</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Canvas" x="321" y="325" w="265" h="52" measuredW="100" measuredH="70" zOrder="1" locked="false" isInGroup="-1"/>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Label" x="336" y="339" w="-1" h="-1" measuredW="165" measuredH="26" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>10066329</color>
+        <size>18</size>
+        <text>email@address.com</text>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::Button" x="577" y="322" w="177" h="61" measuredW="137" measuredH="27" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <color>40463</color>
+        <size>18</size>
+        <text>I%20Want%20it%20First</text>
+      </controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::Paragraph" x="321" y="398" w="439" h="64" measuredW="200" measuredH="80" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>6710886</color>
+        <size>18</size>
+        <text>We%27ll%20only%20use%20your%20email%20address%20to%20get%20in%20touch%20with%20you%20about%20ToGo%20Text%20Ordering.</text>
+      </controlProperties>
+    </control>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::Label" x="139" y="168" w="-1" h="-1" measuredW="155" measuredH="72" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <bold>true</bold>
+        <color>40463</color>
+        <size>60</size>
+        <text>ToGo</text>
+      </controlProperties>
+    </control>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::Label" x="139" y="232" w="-1" h="-1" measuredW="820" measuredH="50" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>40</size>
+        <text>Makes%20it%20easy%20to%20accept%20text%20message%20orders%20</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
