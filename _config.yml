@@ -1,5 +1,4 @@
 name: Simple Guy
 markdown: redcarpet
 pygments: true
-# destination: _site
 exclude: ['*.sass']
