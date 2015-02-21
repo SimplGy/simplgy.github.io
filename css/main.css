@@ -214,12 +214,7 @@ a.link:visited:hover {
       .quotesPage blockquote p {
         font-size: 20px; } }
 
-ul.social, li {
-  list-style: none;
-  margin: 0;
-  padding: 0; }
-
-.social li a {
+.aboutPage .content .social li a {
   position: relative;
   height: 100px;
   line-height: 100px;
@@ -227,9 +222,9 @@ ul.social, li {
   display: block;
   color: white;
   text-decoration: none; }
-  .social li a:hover {
+  .aboutPage .content .social li a:hover {
     box-shadow: inset 0 100px rgba(0, 0, 0, 0.05); }
-.social li img {
+.aboutPage .content .social img {
   max-height: 100%;
   position: absolute;
   top: 0;

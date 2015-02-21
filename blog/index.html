@@ -13,6 +13,6 @@ title: Archive of All Posts
 <h2>All Posts</h2>
 <ul>
   {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span> &raquo; <span class="muted">{{ post.categories | array_to_sentence_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% include li-post.html %}
   {% endfor %}
 </ul>
