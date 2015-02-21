@@ -40,6 +40,9 @@ h2
 h3
   font-size: 20px
 
+h1 small
+  font-size: 40%
+
 hr
   background-color: $black15
   color: $black15
@@ -102,9 +105,15 @@ hr
 .muted
   color: $muted
 
+.pullRight
+  float: right
 
 .printOnly
   display: none
+
+@media print
+  .printOnly
+    display: block
 
 .paddedCell
   padding: 20px
@@ -189,24 +198,27 @@ a.link:visited:hover
   clear: both
 
 
-
-@media print
-  .printOnly
-    display: block
-
-
-
 // ----------------------------------------------- Content
 .content
   padding: 0 30px
+  h1
+    font-size: 50px
+    +phone
+      font-size: 30px
   h2
+    color: $muted
+  h1, h2
     margin: 20px 0 5px 0
+  h3
+    margin: 10px 0 5px 0
 
 
 // --------------------------------- Post Summary
-.post.summary
+li.post.summary
   a
     display: block
+    //max-height: 200px // hide extra content. If I truncate contents I can end up with malformed HTML
+    //overflow: hidden
     color: inherit
     padding: 10px
     border-top: 1px dotted $shade10

@@ -5,6 +5,7 @@
       <small class="muted category">{{ post.categories | array_to_sentence_string }}</small>
     </h3>
     <small class="muted">{{ post.date | date_to_string }}</small>
-    <p>{{ post.content | truncate:256,'...' }}</p>
+    <p>{{ post.excerpt | strip_html }}</p>
+    <!-- Not safe to truncate because you can split in the middle of an html tag -->
   </a>
 </li>

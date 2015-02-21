@@ -45,6 +45,9 @@ h2 {
 h3 {
   font-size: 20px; }
 
+h1 small {
+  font-size: 40%; }
+
 hr {
   background-color: #d8d8d8;
   color: #d8d8d8;
@@ -99,9 +102,15 @@ hr {
 .muted {
   color: #aaaaaa; }
 
+.pullRight {
+  float: right; }
+
 .printOnly {
   display: none; }
 
+@media print {
+  .printOnly {
+    display: block; } }
 .paddedCell {
   padding: 20px; }
 
@@ -189,23 +198,29 @@ a.link:visited:hover {
   text-align: center;
   clear: both; }
 
-@media print {
-  .printOnly {
-    display: block; } }
 .content {
   padding: 0 30px; }
+  .content h1 {
+    font-size: 50px; }
+    @media (max-width: 603px) {
+      .content h1 {
+        font-size: 30px; } }
   .content h2 {
+    color: #aaaaaa; }
+  .content h1, .content h2 {
     margin: 20px 0 5px 0; }
+  .content h3 {
+    margin: 10px 0 5px 0; }
 
-.post.summary a {
+li.post.summary a {
   display: block;
   color: inherit;
   padding: 10px;
   border-top: 1px dotted rgba(0, 0, 0, 0.1); }
-.post.summary a:hover {
+li.post.summary a:hover {
   text-decoration: none;
   background: rgba(56, 199, 0, 0.05); }
-.post.summary .category {
+li.post.summary .category {
   float: right; }
 
 .quotesPage p {
