@@ -1,7 +1,7 @@
 ---
 layout: home
 id: quotes
-title: Quotes on Simplicity
+title: Quotes - Eric Miller, Simple Guy
 ---
 
 

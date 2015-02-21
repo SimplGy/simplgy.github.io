@@ -1,0 +1,12 @@
+<footer>
+  <ul>
+  {% for page in site.pages %}
+    {% if page.url == '/index.html' %}
+      {% continue %}
+    {% endif %}
+    <li><a href="{{ page.url }}">
+      {{ page.title }} <span class="muted">{{ page.url }}</span>
+    </a></li>
+  {% endfor %}
+  </ul>
+</footer>
