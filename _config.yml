@@ -1,8 +1,23 @@
 name: Simple Guy
-markdown: redcarpet
-pygments: true
+#markdown: maruku
+#pygments: true
 exclude: ['*.sass']
 permalink: /:categories/:title
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Eric Miller"
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: default
+
 #analytics:
 #  provider: google
 #  google:

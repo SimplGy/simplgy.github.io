@@ -1,15 +1,19 @@
-<!--<code>Page:</code>-->
-<!--<pre>-->
-  <!--{{page}}-->
-<!--</pre>-->
+<!-- Useful Reference: http://jekyllbootstrap.com/api/template-data-api.html -->
 
-<!--<code>Site:</code>-->
-<!--<pre>-->
-  <!--{{site}}-->
-<!--</pre>-->
+<h3><code>page</code></h3>
+<ul>
+  <li>layout: <code>{{ page.layout }}</code></li>
+  <li>categories: <code>{{ page.categories }}</code></li>
+  <li>tags: <code>{{ page.tags }}</code></li>
+  <li>author: <code>{{ page.author}}</code></li>
+  <li>foo: <code>{{ page.foo}}</code></li>
+</ul>
 
 <h3><code>site</code></h3>
 <ul>
-  <li>permalink: <code>{{ site.permalink}}</code></li>
-  <li>markdown_ext: <code>{{ site.markdown_ext}}</code></li>
+  <li>permalink: <code>{{ site.permalink }}</code></li>
+  <li>markdown_ext: <code>{{ site.markdown_ext }}</code></li>
+  <li>categories: <code>{{ site.categories }}</code></li>
+  <li>tags: <code>{{ site.tags }}</code></li>
+  <li>defaults: <code>{{ site.defaults }}</code></li>
 </ul>

@@ -1,7 +1,5 @@
 ---
-layout: post
 title:  "About Me"
-category: dev
 ---
 
 

@@ -1,7 +1,6 @@
 ---
-layout: home
 id: quotes
-title: Quotes - Eric Miller, Simple Guy
+title: Quotes
 ---
 
 
