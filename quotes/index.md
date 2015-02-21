@@ -17,8 +17,6 @@ George Eastman, Kodak
 
 Steve Jobs
 
-> Simplicity is the ultimate sophistication.
-
 Leonardo da Vinci
 
 > Simplicity is the final achievement. After one has played a vast quantity of notes and more notes, it is simplicity that emerges as the crowning reward of art.

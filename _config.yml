@@ -2,3 +2,8 @@ name: Simple Guy
 markdown: redcarpet
 pygments: true
 exclude: ['*.sass']
+permalink: /:categories/:title
+#analytics:
+#  provider: google
+#  google:
+#    tracking_id: ''

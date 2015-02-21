@@ -1,15 +1,16 @@
 ---
 layout: post
 title:  "About Me"
+category: dev
 ---
 
 
-I'm Eric Miller. I build software, particularly web applications. I have a background in design and am self taught in programming.
+I'm Eric Miller. I build web applications. I have a background in design and am self taught in programming.
 I try to stay balanced between froofy art stuff and elite nerd things.
-I belive the best way to make successful software is to *build something people want* and make it *insanely simple to use*.
+I believe the best way to make successful software is to *build something people want* and make it *insanely simple to use*.
 
-Simple == Usable
-----------------------------------------
+## Simple == Usable
+
 Working for Epic gave me the opportunity to talk with lots of real, clinical end users.
 These weren't computer people -- some of them didn't differentiate between left and right clicks, for example.
 But they were brilliant people -- radiologists, surgeons, experienced nurses, CRNAs, and so on.
@@ -36,17 +37,8 @@ I've done usability, design, and development for years now, and I believe that t
 
 I think that even simple to use software can help people accomplish things that seem like science fiction.
 
-Quotes
-------
-Albert Einstein:
-> "As simple as possible, but no simpler"
 
-Steve Jobs:
-> "That's been one of my mantras - focus and simplicity. Simple can be harder than complex: You have to work hard to get your thinking clean to make it simple. But it's worth it in the end because once you get there, you can move mountains."
-
-
-Principles
-----------
+## Principles
 
 * "Wow, that was easy" is the highest praise.
 * End Users Know Best (Talk to 'normal' people, not n3rds)
