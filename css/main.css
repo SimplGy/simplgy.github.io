@@ -168,7 +168,7 @@ a.link:visited:hover {
     text-shadow: 1px 2px 0 rgba(0, 0, 0, 0.15);
     margin-bottom: 40px; }
   .jumbotron h3 {
-    text-shadow: 0 3px 20px rgba(0, 0, 0, 0.4);
+    text-shadow: 0 3px 30px rgba(0, 0, 0, 0.4);
     width: 70%;
     min-width: 320px;
     margin: 0 auto;
