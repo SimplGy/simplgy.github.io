@@ -2,7 +2,9 @@ html, body {
   height: 100%; }
 
 ul, li, ol {
-  list-style: none;
+  list-style: none; }
+
+html, body, p, ul, li, ol {
   margin: 0;
   padding: 0; }
 
@@ -190,6 +192,22 @@ a.link:visited:hover {
 @media print {
   .printOnly {
     display: block; } }
+.content {
+  padding: 0 30px; }
+  .content h2 {
+    margin: 20px 0 5px 0; }
+
+.post.summary a {
+  display: block;
+  color: inherit;
+  padding: 10px;
+  border-top: 1px dotted rgba(0, 0, 0, 0.1); }
+.post.summary a:hover {
+  text-decoration: none;
+  background: rgba(56, 199, 0, 0.05); }
+.post.summary .category {
+  float: right; }
+
 .quotesPage p {
   color: #aaaaaa;
   margin-top: -35px;
@@ -223,7 +241,7 @@ a.link:visited:hover {
   color: white;
   text-decoration: none; }
   .aboutPage .content .social li a:hover {
-    box-shadow: inset 0 100px rgba(0, 0, 0, 0.05); }
+    box-shadow: inset 0 100px rgba(56, 199, 0, 0.05); }
 .aboutPage .content .social img {
   max-height: 100%;
   position: absolute;
@@ -271,7 +289,7 @@ footer {
       border: none; }
   footer li a {
     display: block;
-    line-height: 1.7;
+    line-height: 1.8;
     color: #7f7f7f; }
     footer li a:hover {
       color: #4c4c4c;

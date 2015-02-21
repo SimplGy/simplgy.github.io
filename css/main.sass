@@ -5,6 +5,7 @@ html, body
   height: 100%
 ul, li, ol
   list-style: none
+html, body, p, ul, li, ol
   margin: 0
   padding: 0
 a
@@ -188,52 +189,32 @@ a.link:visited:hover
   clear: both
 
 
-//.social
-//  margin-top: 30px
-//  +phone
-//    margin-top: 20px
-//  a
-//    position: relative
-//    display: inline-block
-//    width: 50px
-//    height: 50px
-//    margin: 0 20px
-//    +phone
-//      margin: 0 3px
-//
-//    img
-//      opacity: .65
-//      +transitionable
-//    span
-//      position: absolute
-//      display: block
-//      width: 150px
-//      height: 20px
-//      left: -50px
-//      top: 40px
-//      text-align: center
-//      margin-top: -10px
-//      +transitionable
-//      visibility: hidden
-//      opacity: 0
-
-  a:hover,
-  a:focus
-    outline: none
-    img
-      opacity: .95
-    span
-      visibility: visible
-      opacity: .99
-      top: 55px
-  //padding: 5px 10px
-
-
-
 
 @media print
   .printOnly
     display: block
+
+
+
+// ----------------------------------------------- Content
+.content
+  padding: 0 30px
+  h2
+    margin: 20px 0 5px 0
+
+
+// --------------------------------- Post Summary
+.post.summary
+  a
+    display: block
+    color: inherit
+    padding: 10px
+    border-top: 1px dotted $shade10
+  a:hover
+    text-decoration: none
+    background: $hoverBg
+  .category
+    float: right
 
 
 // -------------------------------------- Quotes
@@ -276,7 +257,7 @@ a.link:visited:hover
     color: white
     text-decoration: none
     &:hover
-      box-shadow: inset 0 100px $shade05
+      box-shadow: inset 0 100px $hoverBg
   img
     max-height: 100%
     position: absolute
@@ -323,7 +304,7 @@ footer
       border: none
   li a
     display: block
-    line-height: 1.7
+    line-height: 1.8
     color: $black50
     &:hover
       color: $black70

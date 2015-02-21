@@ -1,0 +1,5 @@
+<li>
+  <span class="muted category" style="display: inline-block; min-width: 100px;">{{ post.categories | array_to_sentence_string }}</span>
+  <a href="{{ post.url }}"     style="display: inline-block; min-width: 200px;">{{ post.title }}</a>
+  <span class="muted">{{ post.date | date_to_string }}</span>
+</li>

@@ -10,9 +10,16 @@ title: Archive of All Posts
   <!--{% endfor %}-->
 <!--</ul>-->
 
-<h2>All Posts</h2>
+<h2>Recent Posts</h2>
+<ul style="margin:0 -10px;">
+  {% for post in site.posts limit:2 %}
+    {% include li-post-summary.html %}
+  {% endfor %}
+</ul>
+
+<h2>All Other Posts</h2>
 <ul>
-  {% for post in site.posts %}
-    {% include li-post.html %}
+  {% for post in site.posts offset:2 %}
+    {% include li-post-title.html %}
   {% endfor %}
 </ul>
