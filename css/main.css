@@ -223,6 +223,9 @@ li.post.summary a:hover {
 li.post.summary .category {
   float: right; }
 
+.post.full p {
+  margin: 10px 0; }
+
 .quotesPage p {
   color: #aaaaaa;
   margin-top: -35px;
