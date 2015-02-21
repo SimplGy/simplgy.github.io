@@ -6,14 +6,7 @@ title: About
 <h1>About</h1>
 
 <ul class="social">
-  {% for site in site.data.social %}
-  <li>
-    <a href="{{ site.url }}" class="bg-{{ site.id }}">
-      <i class="icon {{ site.id }}"></i>
-      {{ site.name }}
-    </a>
-  </li>
-  {% endfor %}
+  {% include list-social.html %}
 </ul>
 
 <script>

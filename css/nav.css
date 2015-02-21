@@ -3,11 +3,7 @@
   height: 40px; }
 
 .homePage nav {
-  opacity: 0.6;
-  transition: 0.2s ease-out opacity;
   background: none; }
-  .homePage nav:hover {
-    opacity: 1; }
 
 nav {
   position: absolute;
@@ -16,20 +12,21 @@ nav {
   right: 0;
   height: 40px;
   line-height: 40px;
-  background: #66cd00;
+  background: #38c700;
   padding: 0 20px; }
   nav a {
     font-family: Comfortaa, sans-serif;
     display: block;
     text-transform: lowercase;
-    color: #f7fcf2;
+    color: #f5fcf2;
     text-decoration: none;
     padding: 0 10px;
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1); }
     nav a:hover {
       background: rgba(0, 0, 0, 0.1);
       color: white;
-      text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2); }
+      text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+      text-decoration: none; }
   nav .hasIcon {
     line-height: 43px; }
     nav .hasIcon a {

@@ -1,0 +1,8 @@
+{% for site in site.data.social %}
+<li>
+  <a href="{{ site.url }}" class="social-link bg-{{ site.id }}">
+    <i class="icon {{ site.id }}"></i>
+    {{ site.name }}
+  </a>
+</li>
+{% endfor %}

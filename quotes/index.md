@@ -1,4 +1,5 @@
 ---
+layout: landing
 id: quotes
 title: Quotes
 ---
