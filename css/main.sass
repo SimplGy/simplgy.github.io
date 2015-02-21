@@ -9,6 +9,7 @@ ul, li, ol
   padding: 0
 a
   text-decoration: none
+  color: $green
 a:hover
   text-decoration: underline
 
@@ -135,13 +136,13 @@ hr
   text-align: center
 
 a.link
-  color: $blue
-a.link:visited
   color: $green
+a.link:visited
+  color: mix($green, $blue)
 a.link:hover
-  color: mix($blue, white, 80%)
-a.link:visited:hover
   color: mix($green, white, 80%)
+a.link:visited:hover
+  color: mix(mix($green, $blue), white, 80%)
 
 
 .monogram
@@ -155,15 +156,12 @@ a.link:visited:hover
 
 // ------------------------------ A large panel that fills the height
 .jumbotron
-  //$a: mix(#FDFC47, #24FE41)
-  //$a: mix(#FDFC47, $green)
-  $a: #4CB8C4
-  $b: #3CD3AD
-  //$a: mix(#43cea2, #56c21f)
-  //$b: #56c21f
+  $a: $green
+  $b: $greenYellow
   height: 100%
   min-height: 400px
-  background: linear-gradient(90deg, $a, $b)
+  background: linear-gradient($a, $b)
+  //background: $green
   color: white
   h1, h3
     white-space: pre-line // use the line breaks in the content, and also wrap lines normally
@@ -171,12 +169,11 @@ a.link:visited:hover
     text-shadow: 1px 2px 0 $shade15
     margin-bottom: 40px
   h3
-    text-shadow: 0 0 5px $shade30
+    text-shadow: 0 3px 20px $shade40
     width: 70%
     min-width: 320px
     margin: 0 auto
     line-height: 1.5
-    //text-align: left
     font-weight: normal
 
 .pusher
@@ -248,7 +245,9 @@ a.link:visited:hover
     padding: 0 20px
   blockquote
     height: 100%
+    box-sizing: border-box
     padding: 0
+    padding-top: 50px
     margin: 0
     p
       display: inline-block
@@ -292,11 +291,45 @@ ul.social, li
   background-color: $twitter
 .bg-github
   background-color: $github
-.bg-linkedin
+.bg-linkedIn
   background-color: $linkedIn
-.bg-dribbble
-  background-color: $dribbble
-.bg-stackoverflow
+.bg-stackOverflow
   background-color: $stackOverflow
 .bg-instagram
   background-color: $instagram
+
+
+
+
+// ----------------------------------------------- Footer
+footer
+  display: flex
+  background: $black05
+  border-top: 1px solid $black10
+  font-size: 11px
+  padding: 0 20px
+  +phone
+    flex-wrap: wrap
+    padding: 0
+  h3
+    font-size: 13px
+    color: $black30
+    text-shadow: 0 1px white
+    margin-bottom: 5px
+  section
+
+    display: inline-block
+    margin: 10px
+    border-right: 1px dotted $black20
+    flex-grow: 1
+    &:last-of-type
+      border: none
+  li a
+    display: block
+    line-height: 1.7
+    color: $black50
+    &:hover
+      color: $black70
+      text-decoration: none
+  a.social-link
+    background: none

@@ -9,12 +9,12 @@
   url: https://twitter.com/SimplGy
   # api: https://api.twitter.com/1.1/users/show.json?screen_name=SimplGy # Not public
 
-- id: linkedin
+- id: linkedIn
   name: Linked In
   url: http://linkedin.com/in/simplgy
   #api: not public
 
-- id: stackoverflow
+- id: stackOverflow
   name: Stack Overflow Careers
   url: http://careers.stackoverflow.com/SimplGy
 

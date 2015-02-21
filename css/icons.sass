@@ -16,7 +16,10 @@
   // Better Font Rendering
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
-
+  // For nice alignment in a list with many icons
+  min-width: 13px
+  display: inline-block
+  text-align: center
 
   &.twitter:before
     content: "\ea92"
@@ -24,5 +27,9 @@
     content: "\eac8"
   &.github:before
     content: "\eab4"
-  &.stacko:before
-    content: "\eacf"
+  &.stackOverflow:before
+    content: "\e601"
+  &.rss:before
+    content: "\ea95"
+  &.instagram:before
+    content: "\e600"

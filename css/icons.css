@@ -13,12 +13,19 @@
   text-transform: none;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  -moz-osx-font-smoothing: grayscale;
+  min-width: 13px;
+  display: inline-block;
+  text-align: center; }
   .icon.twitter:before {
     content: "\ea92"; }
   .icon.linkedIn:before {
     content: "\eac8"; }
   .icon.github:before {
     content: "\eab4"; }
-  .icon.stacko:before {
-    content: "\eacf"; }
+  .icon.stackOverflow:before {
+    content: "\e601"; }
+  .icon.rss:before {
+    content: "\ea95"; }
+  .icon.instagram:before {
+    content: "\e600"; }

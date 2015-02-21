@@ -1,12 +1,10 @@
 <footer>
-  <ul>
-  {% for page in site.pages %}
-    {% if page.url == '/index.html' %}
-      {% continue %}
-    {% endif %}
-    <li><a href="{{ page.url }}">
-      {{ page.title }} <span class="muted">{{ page.url }}</span>
-    </a></li>
-  {% endfor %}
-  </ul>
+  <section>
+    <h3>Site Index</h3>
+    <ul>{% include list-pages.html %}</ul>
+  </section>
+  <section>
+    <h3>Social Accounts</h3>
+    <ul>{% include list-social.html %}</ul>
+  </section>
 </footer>
