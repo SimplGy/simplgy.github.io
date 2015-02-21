@@ -1,12 +1,5 @@
-<?php
-$Root = '../../../';
 $appTitle = "Simply Done";
 $appTagline = "Task Management for .txt Lovers";
-$pageTitle = $appTitle.' - An Application from Simple.Gy';
-$bodyAttr = 'class="landingPage"';
-$workKey = basename(getcwd());
-require $Root.'_phpCode/01_headLanding.php';
-?>
 
 
 
@@ -38,16 +31,3 @@ require $Root.'_phpCode/01_headLanding.php';
 <h2>Dropbox Secure</h2>
 <p>Dropbox helps you store your data safely and securely.</p>
 
-
-
-
-
-
-
-
-
-
-
-<?php
-require $Root.'_phpCode/10_end.php';
-?>
