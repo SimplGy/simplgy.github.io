@@ -22,3 +22,6 @@
   name: Instagram
   url: https://instagram.com/simplgy
   #api: not public -- https://api.instagram.com/v1/users/{user-id}/
+
+#- id: vanBlog
+#  url: DownByTheRiver.us
