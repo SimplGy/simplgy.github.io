@@ -27,6 +27,8 @@
     // Given a repo object and a dom node, create a list item and add it as a child of the node
     function addRepoToDom(repo, node) {
       if(!repo.has_pages) { return; }
+      function giturl() { return username.toLowerCase() + '.github.io' }
+      if(repo.name === giturl()) { return; }
       var li, a, url;
       li = document.createElement('li');
       a = document.createElement('a');
@@ -34,10 +36,10 @@
       // Calculate the url or use the one specfied in the repo's settings
       if (repo.homepage) {
         url = repo.homepage;
-      } else if (repo.name === username.toLowerCase() + '.github.io') {
-        url = 'http://' + username.toLowerCase() + '.github.io/';
+      } else if (repo.name === giturl()) {
+        url = 'http://' + giturl();
       } else {
-        url = 'http://' + username.toLowerCase() + '.github.io/' + repo.name;
+        url = 'http://' + giturl() + '/' + repo.name;
       }
       a.setAttribute('href', url);
       a.setAttribute('title', repo.description);
