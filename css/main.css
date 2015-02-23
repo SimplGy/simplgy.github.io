@@ -231,8 +231,9 @@ li.post.summary .category {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding-bottom: 100px; }
 .projectSummaries img {
-  min-height: 200px;
-  background: transparent url("../gfx/throbber.gif") no-repeat scroll center center; }
+  min-height: 150px;
+  background: transparent url("../gfx/throbber.gif") no-repeat scroll center center;
+  margin-top: 10px; }
 
 .quotesPage p {
   color: #aaaaaa;

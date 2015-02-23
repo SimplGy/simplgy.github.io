@@ -16,54 +16,22 @@ title: Projects
 </p>
 <hr>
 
-
-
 <ul class="projectSummaries">
   {% for project in site.categories.projects %}
+    {% if project.isPrivate %} <!-- continue --> {% endif %}
     {% include li-project-summary.html %}
   {% endfor %}
 </ul>
 
 
 
-
-
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-
-<header class="typePretty">
-
-</header>
-
-<header class="typePretty">
-  <h1>Angular Performance</h1>
-  <h2>
-    A friendly <br/>
-    Hall Monitor
-  </h2>
-</header>
-
+<!--
 <header class="typePretty">
   <h2>
     Shared Responsibility <br/>
     Mobile Device
   </h2>
   <h1>Alerts <small>for</small> Doctors</h1>
-</header>
-
-<header class="typePretty">
-  <h3>
-    Monitor <br/>
-    and Config <br/>
-    1000s of
-  </h3>
-  <h1>
-    Hospital Devices
-  </h1>
 </header>
 
 <header class="typePretty">
@@ -77,7 +45,6 @@ title: Projects
   </h1>
 </header>
 
-
 <header class="typePretty">
   <h2>
     Never Render<br />
@@ -85,4 +52,4 @@ title: Projects
   </h2>
   <h1>Association Grid</h1>
 </header>
-
+-->
