@@ -1,0 +1,13 @@
+<li>
+  {{ project.content }}
+  <p>
+    <img class="shadow" src="{{ project.img }}" alt="{{ project.caption }}"/>
+  </p>
+  <!--<a href="{{project.url}}">permalink</a>-->
+  {% if project.live %}
+    <a href="{{project.live}}">live site</a>&nbsp;&nbsp;
+  {% endif %}
+  {% if project.repo %}
+    <a href="{{project.repo}}">repo</a>&nbsp;&nbsp;
+  {% endif %}
+</li>
