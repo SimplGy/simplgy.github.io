@@ -31,10 +31,10 @@ body {
   padding: 0; }
 
 h1 {
-  font-size: 60px; }
+  font-size: 50px; }
   @media (max-width: 603px) {
     h1 {
-      font-size: 40px; } }
+      font-size: 30px; } }
 
 h2 {
   font-size: 30px; }
@@ -47,6 +47,14 @@ h3 {
 
 h1 small {
   font-size: 40%; }
+
+.content > h2 {
+  color: #aaaaaa; }
+.content > h1,
+.content > h2 {
+  margin: 20px 0 5px 0; }
+.content > h3 {
+  margin: 10px 0 5px 0; }
 
 hr {
   background-color: #d8d8d8;
@@ -73,11 +81,11 @@ hr {
   color: #999999; }
 .typePretty h2 {
   font-size: 1.6em;
-  margin-bottom: 0.25em; }
+  margin-bottom: 0.19em; }
 .typePretty h3 {
   font-size: 0.88em;
   line-height: 1;
-  margin-bottom: 0.75em; }
+  margin-bottom: 0.5em; }
 @media (min-width: 604px) and (max-width: 1024px) {
   .typePretty h1 {
     font-size: 3em; }
@@ -191,20 +199,6 @@ a.link:visited:hover {
   margin: 0 auto;
   text-align: center;
   clear: both; }
-
-.content {
-  padding: 0 30px; }
-  .content h1 {
-    font-size: 50px; }
-    @media (max-width: 603px) {
-      .content h1 {
-        font-size: 30px; } }
-  .content h2 {
-    color: #aaaaaa; }
-  .content h1, .content h2 {
-    margin: 20px 0 5px 0; }
-  .content h3 {
-    margin: 10px 0 5px 0; }
 
 li.post.summary a {
   display: block;

@@ -30,9 +30,9 @@ body
   padding: 0
 
 h1
-  font-size: 60px
+  font-size: 50px
   +phone
-    font-size: 40px
+    font-size: 30px
 h2
   font-size: 30px
   +phone
@@ -42,6 +42,16 @@ h3
 
 h1 small
   font-size: 40%
+
+// ----------------------------------------------- Content
+.content
+  > h2
+    color: $muted
+  > h1,
+  > h2
+    margin: 20px 0 5px 0
+  > h3
+    margin: 10px 0 5px 0
 
 hr
   background-color: $black15
@@ -74,11 +84,11 @@ hr
     color: $black40
   h2
     font-size: $size * .4
-    margin-bottom: .25em
+    margin-bottom: .19em
   h3
     font-size: $size * .22
     line-height: 1
-    margin-bottom: .75em
+    margin-bottom: .5em
 
   +tablet
     $size: 3em
@@ -197,20 +207,6 @@ a.link:visited:hover
   text-align: center
   clear: both
 
-
-// ----------------------------------------------- Content
-.content
-  padding: 0 30px
-  h1
-    font-size: 50px
-    +phone
-      font-size: 30px
-  h2
-    color: $muted
-  h1, h2
-    margin: 20px 0 5px 0
-  h3
-    margin: 10px 0 5px 0
 
 
 // --------------------------------- Post Summary
