@@ -247,6 +247,8 @@ li.post.summary .category {
   @media (max-width: 603px) {
     .projectSummaries .project {
       padding: 10px 5px; } }
+.projectSummaries .project.private {
+  display: none; }
 .projectSummaries .project, .projectSummaries header {
   text-align: center; }
 .projectSummaries header {

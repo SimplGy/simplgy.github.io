@@ -1,4 +1,4 @@
-<li class="project">
+<li class="project {% if project.isPrivate %} private {% endif %}">
   {{ project.content }}
   <img class="shadow" src="{{ project.img }}" alt="{{ project.caption }}"/>
   <div class="info" tabindex="{{ forloop.index }}">
