@@ -239,10 +239,10 @@ li.post.summary .category {
 
 .projectSummaries .project {
   position: relative;
-  padding: 30px 20px 100px 20px;
+  padding: 30px 20px 70px 20px;
   min-height: 350px;
   overflow: hidden;
-  margin-bottom: 5px;
+  margin-bottom: 200px;
   background: #f2f2f2; }
   @media (max-width: 603px) {
     .projectSummaries .project {
