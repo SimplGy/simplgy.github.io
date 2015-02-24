@@ -304,12 +304,16 @@ li.post.summary
   //&:hover
     opacity: 1
   section
-    max-width: 66.66%
+
     margin: 20px
     padding: 20px
     padding-bottom: 0
     overflow-y: auto
     +flexBox(2)
+    max-width: 66.66%
+    +tablet
+      max-width: 50%
+      +flexBox(1)
     +phone
       margin: 5px
       padding: 5px
@@ -330,6 +334,8 @@ li.post.summary
     font-weight: 300
     margin-bottom: 20px
     font-size: 18px
+    +tablet
+      font-size: 14px
     +phone
       font-size: 14px
 
