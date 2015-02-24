@@ -1,8 +1,11 @@
 <script>
+  nodes = document.querySelectorAll('.private');
+  function show   (n) { n.style.display = 'block'; }
+  function remove (n) { n.parentNode.removeChild(n); }
+
   if (new Date().getTimezoneOffset() === -420) {
-    nodes = document.querySelectorAll('.private');
-    Array.prototype.forEach.call(nodes, function(n){
-      n.style.display = 'block';
-    });
+    Array.prototype.forEach.call(nodes, show);
+  } else {
+    Array.prototype.forEach.call(nodes, remove);
   }
 </script>
