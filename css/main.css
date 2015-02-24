@@ -230,13 +230,14 @@ li.post.summary .category {
 
 .projectSummaries .project {
   position: relative;
-  padding: 100px 20px;
+  padding: 30px 20px 100px 20px;
   min-height: 350px;
+  overflow: hidden;
   margin-bottom: 5px;
   background: #f2f2f2; }
   @media (max-width: 603px) {
     .projectSummaries .project {
-      padding: 50px 5px; } }
+      padding: 10px 5px; } }
 .projectSummaries .project, .projectSummaries header {
   text-align: center; }
 .projectSummaries header {
@@ -249,10 +250,29 @@ li.post.summary .category {
   background: white url("../gfx/throbber.gif") no-repeat scroll center center; }
 
 .projectSummaries .project .info {
+  -webkit-transition: all 0.1s ease-out;
+  -moz-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+  left: 100%;
+  width: 66.66%; }
+  @media (max-width: 603px) {
+    .projectSummaries .project .info {
+      width: 100%; } }
+
+.projectSummaries .project:hover .info {
+  left: 95%; }
+
+.projectSummaries .project .info:hover,
+.projectSummaries .project .info:focus {
+  left: 33.33%; }
+  @media (max-width: 603px) {
+    .projectSummaries .project .info:hover,
+    .projectSummaries .project .info:focus {
+      left: 0; } }
+
+.projectSummaries .project .info {
   position: absolute;
   top: 0;
-  left: 0;
-  right: 0;
   bottom: 0;
   min-height: 350px;
   background: rgba(0, 0, 0, 0.85);
@@ -267,11 +287,11 @@ li.post.summary .category {
       -webkit-flex-wrap: wrap;
       flex-wrap: wrap; } }
   .projectSummaries .project .info section {
-    -webkit-box-flex: 1;
-    -moz-box-flex: 1;
-    -webkit-flex: 1;
-    flex: 1;
-    max-width: 66%;
+    -webkit-box-flex: 2;
+    -moz-box-flex: 2;
+    -webkit-flex: 2;
+    flex: 2;
+    max-width: 66.66%;
     margin: 20px;
     padding: 20px;
     margin-right: 0;
@@ -281,6 +301,10 @@ li.post.summary .category {
         margin: 10px;
         padding: 10px; } }
     .projectSummaries .project .info section:last-of-type {
+      -webkit-box-flex: 1;
+      -moz-box-flex: 1;
+      -webkit-flex: 1;
+      flex: 1;
       margin-left: 0;
       border-right: none; }
   .projectSummaries .project .info h3, .projectSummaries .project .info p {

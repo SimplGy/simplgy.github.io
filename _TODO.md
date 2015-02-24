@@ -7,9 +7,7 @@ x MvP design for a project summary with: list of code snippets, short descriptio
 x Implement design
 x Write good content for descriptions
 x fix flexbox for safari
-o Improve IxN For project details
-  o LI hover pops in the tab
-  o tab hover/press flys in the details
+x Improve IxN For project details (hover to hint, click or hover for deets)
 o Carefully select and make available **awesome** code snippets
 o Adjust `typePretty` for new font
 

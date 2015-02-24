@@ -246,10 +246,11 @@ li.post.summary
 .projectSummaries
   .project
     position: relative
-    padding: 100px 20px
+    padding: 30px 20px 100px 20px
     min-height: 350px
+    overflow: hidden
     +phone
-      padding: 50px 5px
+      padding: 10px 5px
     margin-bottom: 5px
     background: $black05
   .project, header
@@ -264,11 +265,23 @@ li.post.summary
 
 
 // --------------------------------- Info for a single project summary
+// Show-Hide Interaction
+.projectSummaries .project .info
+  +transitionable(.1s, ease-out)
+  left: 100%
+  width: 66.66%
+  +phone
+    width: 100%
+.projectSummaries .project:hover .info
+  left: 95%
+.projectSummaries .project .info:hover,
+.projectSummaries .project .info:focus
+  left: 33.33%
+  +phone
+    left: 0
 .projectSummaries .project .info
   position: absolute
   top: 0
-  left: 0
-  right: 0
   bottom: 0
   min-height: 350px
   background: $shade85
@@ -278,13 +291,13 @@ li.post.summary
   +flexContainer
   +phone
     +flexWrap
+
   //opacity: .001
-  //+transitionable(.1s, ease-out)
   //&:hover
     opacity: 1
   section
-    +flexBox
-    max-width: 66%
+    +flexBox(2)
+    max-width: 66.66%
     margin: 20px
     padding: 20px
     +phone
@@ -293,6 +306,7 @@ li.post.summary
     margin-right: 0
     border-right: 1px dotted $light20
     &:last-of-type
+      +flexBox(1)
       margin-left: 0
       border-right: none
   h3, p
@@ -318,6 +332,9 @@ li.post.summary
   a
     text-decoration: underline
     color: $greenLight
+
+
+
 
 
 // -------------------------------------- Quotes
