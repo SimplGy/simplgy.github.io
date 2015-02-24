@@ -217,8 +217,9 @@ li.post.summary .category {
 .projectsPage .content {
   padding: 0; }
   .projectsPage .content .padder {
-    padding: 30px;
-    padding-top: 0; }
+    padding: 30px; }
+    .projectsPage .content .padder h2, .projectsPage .content .padder h3 {
+      color: #aaaaaa; }
     .projectsPage .content .padder p, .projectsPage .content .padder h2, .projectsPage .content .padder h3 {
       margin-bottom: 10px; }
 

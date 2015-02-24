@@ -8,8 +8,8 @@ x Implement design
 x Write good content for descriptions
 x fix flexbox for safari
 x Improve IxN For project details (hover to hint, click or hover for deets)
+x Adjust `typePretty` for new font
 o Carefully select and make available **awesome** code snippets
-o Adjust `typePretty` for new font
 
 ## On Deck
 o Better fit on mobile and tablet (footer, reduce global padding/margins)
