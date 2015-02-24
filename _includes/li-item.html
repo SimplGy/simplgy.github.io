@@ -1,0 +1,6 @@
+<li title="{{ item.description }}">
+  {% if item.url %}<a href="{{ item.url }}">{% endif %}
+  {% if item.icon %}<i class="icon {{item.icon}}"></i>{% endif %}
+  {{ item.title }}
+  {% if item.url %}</a>{% endif %}
+</li>

@@ -56,48 +56,42 @@ hr {
   margin: 100px auto;
   max-width: 600px; }
 
-.typePretty {
-  margin: 3em 0; }
-  .typePretty small {
-    font-size: 60%; }
-  .typePretty h1, .typePretty h2, .typePretty h3, .typePretty h4, .typePretty h5 {
-    margin: 0;
-    padding: 0;
-    display: inline-block;
-    vertical-align: bottom;
-    line-height: 1;
-    color: #aaaaaa;
-    text-align: left; }
+.typePretty small {
+  font-size: 60%; }
+.typePretty h1, .typePretty h2, .typePretty h3, .typePretty h4, .typePretty h5 {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  vertical-align: bottom;
+  line-height: 1;
+  color: #aaaaaa;
+  text-align: left; }
+.typePretty h1 {
+  font-size: 4em;
+  margin-right: 0.2em;
+  margin-left: 0.1em;
+  color: #999999; }
+.typePretty h2 {
+  font-size: 1.6em;
+  margin-bottom: 0.25em; }
+.typePretty h3 {
+  font-size: 0.88em;
+  line-height: 1;
+  margin-bottom: 0.75em; }
+@media (min-width: 604px) and (max-width: 1024px) {
   .typePretty h1 {
-    font-size: 4em;
-    margin-right: 0.2em;
-    margin-left: 0.1em;
-    color: #999999; }
+    font-size: 3em; }
   .typePretty h2 {
-    font-size: 1.6em;
-    margin-bottom: 0.25em; }
+    font-size: 1.2em; }
   .typePretty h3 {
-    font-size: 0.88em;
-    line-height: 1;
-    margin-bottom: 0.75em; }
-  @media (min-width: 604px) and (max-width: 1024px) {
-    .typePretty {
-      margin: 2.25em 0; }
-      .typePretty h1 {
-        font-size: 3em; }
-      .typePretty h2 {
-        font-size: 1.2em; }
-      .typePretty h3 {
-        font-size: 0.66em; } }
-  @media (max-width: 603px) {
-    .typePretty {
-      margin: 1.875em 0; }
-      .typePretty h1 {
-        font-size: 2.5em; }
-      .typePretty h2 {
-        font-size: 1em; }
-      .typePretty h3 {
-        font-size: 0.55em; } }
+    font-size: 0.66em; } }
+@media (max-width: 603px) {
+  .typePretty h1 {
+    font-size: 2.5em; }
+  .typePretty h2 {
+    font-size: 1em; }
+  .typePretty h3 {
+    font-size: 0.55em; } }
 
 .muted {
   color: #aaaaaa; }
@@ -226,14 +220,87 @@ li.post.summary .category {
 .post.full p {
   margin: 10px 0; }
 
-.projectSummaries li {
-  text-align: center;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  padding-bottom: 100px; }
+.projectsPage .content {
+  padding: 0; }
+
+.projectSummaries .project {
+  padding: 100px 20px;
+  min-height: 350px;
+  margin-bottom: 5px;
+  background: #f2f2f2; }
+  @media (max-width: 603px) {
+    .projectSummaries .project {
+      padding: 50px 5px; } }
+.projectSummaries .project, .projectSummaries header {
+  text-align: center; }
+.projectSummaries header {
+  margin-bottom: 50px; }
+  @media (max-width: 603px) {
+    .projectSummaries header {
+      margin-bottom: 10px; } }
+.projectSummaries .imgHolder {
+  position: relative;
+  margin-bottom: 10px; }
 .projectSummaries img {
   min-height: 150px;
-  background: transparent url("../gfx/throbber.gif") no-repeat scroll center center;
-  margin-top: 10px; }
+  background: white url("../gfx/throbber.gif") no-repeat scroll center center; }
+
+.projectSummaries .project .info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  min-height: 350px;
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  text-align: left;
+  display: flex;
+  opacity: 0.001;
+  -webkit-transition: all 0.1s ease-out;
+  -moz-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out; }
+  @media (max-width: 603px) {
+    .projectSummaries .project .info {
+      flex-wrap: wrap; } }
+  .projectSummaries .project .info:hover {
+    opacity: 1; }
+  .projectSummaries .project .info section {
+    flex-grow: 1;
+    max-width: 66%;
+    margin: 20px;
+    padding: 20px;
+    margin-right: 0;
+    border-right: 1px dotted rgba(255, 255, 255, 0.2); }
+    @media (max-width: 603px) {
+      .projectSummaries .project .info section {
+        margin: 10px;
+        padding: 10px; } }
+    .projectSummaries .project .info section:last-of-type {
+      margin-left: 0;
+      border-right: none; }
+  .projectSummaries .project .info h3, .projectSummaries .project .info p {
+    line-height: 32px; }
+  .projectSummaries .project .info h3 {
+    color: #7f7f7f;
+    margin: 0; }
+  .projectSummaries .project .info p {
+    text-align: left;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 20px; }
+  .projectSummaries .project .info ul {
+    padding-left: 20px;
+    margin-bottom: 10px; }
+  .projectSummaries .project .info ul, .projectSummaries .project .info li {
+    list-style: square; }
+  .projectSummaries .project .info li {
+    color: #cccccc;
+    font-size: 14px;
+    line-height: 24px; }
+  .projectSummaries .project .info a {
+    text-decoration: underline;
+    color: #bed98f; }
 
 .quotesPage p {
   color: #aaaaaa;
