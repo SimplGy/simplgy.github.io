@@ -1,36 +1,34 @@
 <li class="project">
   {{ project.content }}
-  <div class="imgHolder">
-    <img class="shadow" src="{{ project.img }}" alt="{{ project.caption }}"/>
-    <div class="info">
+  <img class="shadow" src="{{ project.img }}" alt="{{ project.caption }}"/>
+  <div class="info">
 
-      <section>
-        {% if project.description %}{{ project.description | markdownify }}{% endif %}
-        <br/>
-        {% if project.live %}<a href="{{project.live}}">live site</a>&nbsp;&nbsp;{% endif %}
-        {% if project.repo %}<a href="{{project.repo}}">repo</a>&nbsp;&nbsp;{% endif %}
-      </section>
+    <section>
+      {% if project.description %}{{ project.description | markdownify }}{% endif %}
+      <br/>
+      {% if project.live %}<a href="{{project.live}}">live site</a>&nbsp;&nbsp;{% endif %}
+      {% if project.repo %}<a href="{{project.repo}}">repo</a>&nbsp;&nbsp;{% endif %}
+    </section>
 
-      <section>
-        {% if project.technologies %}
-          <h3>Technologies</h3>
-          <ul>
-            {% for item in project.technologies %}
-              {% include li-item.html %}
-            {% endfor %}
-          </ul>
-        {% endif %}
-        {% if project.files %}
-          <h3>Source Files</h3>
-          <ul>
-            {% for item in project.files %}
-              {% include li-item.html %}
-            {% endfor %}
-          </ul>
-        {% endif %}
-      </section>
+    <section>
+      {% if project.technologies %}
+        <h3>Technologies</h3>
+        <ul>
+          {% for item in project.technologies %}
+            {% include li-item.html %}
+          {% endfor %}
+        </ul>
+      {% endif %}
+      {% if project.files %}
+        <h3>Source Files</h3>
+        <ul>
+          {% for item in project.files %}
+            {% include li-item.html %}
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </section>
 
-    </div>
   </div>
   <!--<a href="{{project.url}}">permalink</a>-->
 </li>

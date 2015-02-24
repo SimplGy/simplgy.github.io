@@ -245,6 +245,7 @@ li.post.summary
       margin-bottom: 10px
 .projectSummaries
   .project
+    position: relative
     padding: 100px 20px
     min-height: 350px
     +phone
@@ -257,10 +258,6 @@ li.post.summary
     margin-bottom: 50px
     +phone
       margin-bottom: 10px
-
-  .imgHolder
-    position: relative
-    margin-bottom: 10px
   img
     min-height: 150px // hold open space while it's loading
     background: white url('../gfx/throbber.gif') no-repeat scroll center center
@@ -278,15 +275,15 @@ li.post.summary
   color: white
   text-align: left
   // Have the sections in columns unless this is phone-sized
-  display: flex
+  +flexContainer
   +phone
-    flex-wrap: wrap
-  opacity: .001
-  +transitionable(.1s, ease-out)
-  &:hover
+    +flexWrap
+  //opacity: .001
+  //+transitionable(.1s, ease-out)
+  //&:hover
     opacity: 1
   section
-    flex-grow: 1
+    +flexBox
     max-width: 66%
     margin: 20px
     padding: 20px
@@ -386,7 +383,7 @@ li.post.summary
 
 // ----------------------------------------------- Footer
 footer
-  display: flex
+  +flexContainer
   background: $black05
   border-top: 1px solid $black10
   font-size: 11px
@@ -394,7 +391,8 @@ footer
   margin-top: 100px
   box-shadow: inset 0 -30px 30px white
   +phone
-    flex-wrap: wrap
+    //flex-wrap: wrap
+    +flexWrap
     padding: 0
   h3
     font-size: 13px
@@ -405,7 +403,8 @@ footer
     display: inline-block
     margin: 10px
     border-right: 1px dotted $black20
-    flex-grow: 1
+    //flex-grow: 1
+    +flexBox
     &:last-of-type
       border: none
   li a

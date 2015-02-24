@@ -4,10 +4,14 @@ A to-do list for this project.
 
 ## Today
 x MvP design for a project summary with: list of code snippets, short description, technology bullet points
-o Write good content for descriptions
+x Implement design
+x Write good content for descriptions
+x fix flexbox for safari
+o Improve IxN For project details
+  o LI hover pops in the tab
+  o tab hover/press flys in the details
 o Carefully select and make available **awesome** code snippets
 o Adjust `typePretty` for new font
-o Code up the design.
 
 ## On Deck
 o Better fit on mobile and tablet (footer, reduce global padding/margins)

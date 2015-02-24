@@ -229,6 +229,7 @@ li.post.summary .category {
       margin-bottom: 10px; }
 
 .projectSummaries .project {
+  position: relative;
   padding: 100px 20px;
   min-height: 350px;
   margin-bottom: 5px;
@@ -243,9 +244,6 @@ li.post.summary .category {
   @media (max-width: 603px) {
     .projectSummaries header {
       margin-bottom: 10px; } }
-.projectSummaries .imgHolder {
-  position: relative;
-  margin-bottom: 10px; }
 .projectSummaries img {
   min-height: 150px;
   background: white url("../gfx/throbber.gif") no-repeat scroll center center; }
@@ -260,18 +258,19 @@ li.post.summary .category {
   background: rgba(0, 0, 0, 0.85);
   color: white;
   text-align: left;
-  display: flex;
-  opacity: 0.001;
-  -webkit-transition: all 0.1s ease-out;
-  -moz-transition: all 0.1s ease-out;
-  transition: all 0.1s ease-out; }
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: flex; }
   @media (max-width: 603px) {
     .projectSummaries .project .info {
+      -webkit-flex-wrap: wrap;
       flex-wrap: wrap; } }
-  .projectSummaries .project .info:hover {
-    opacity: 1; }
   .projectSummaries .project .info section {
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
     max-width: 66%;
     margin: 20px;
     padding: 20px;
@@ -363,6 +362,9 @@ li.post.summary .category {
   background-color: #517fa4; }
 
 footer {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
   display: flex;
   background: #f2f2f2;
   border-top: 1px solid #e5e5e5;
@@ -372,6 +374,7 @@ footer {
   box-shadow: inset 0 -30px 30px white; }
   @media (max-width: 603px) {
     footer {
+      -webkit-flex-wrap: wrap;
       flex-wrap: wrap;
       padding: 0; } }
   footer h3 {
@@ -383,7 +386,10 @@ footer {
     display: inline-block;
     margin: 10px;
     border-right: 1px dotted #cccccc;
-    flex-grow: 1; }
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1; }
     footer section:last-of-type {
       border: none; }
   footer li a {

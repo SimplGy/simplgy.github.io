@@ -112,3 +112,19 @@ $sizeTablet: 1024px
 @mixin desktop
   @media (min-width: $sizeTablet+1)
     @content
+
+@mixin flexContainer
+  display: -webkit-box
+  display: -moz-box
+  display: -webkit-flex
+  display: flex
+
+@mixin flexBox($amount: 1)
+  -webkit-box-flex: $amount
+  -moz-box-flex: $amount
+  -webkit-flex: $amount
+  flex: $amount
+
+@mixin flexWrap
+  -webkit-flex-wrap: wrap
+  flex-wrap: wrap
