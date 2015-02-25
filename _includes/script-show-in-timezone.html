@@ -3,7 +3,7 @@
   function show   (n) { n.style.display = 'block'; }
   function remove (n) { n.parentNode.removeChild(n); }
 
-  if (new Date().getTimezoneOffset() === -420) {
+  if (true || new Date().getTimezoneOffset() === -420) {
     Array.prototype.forEach.call(nodes, show);
   } else {
     Array.prototype.forEach.call(nodes, remove);
