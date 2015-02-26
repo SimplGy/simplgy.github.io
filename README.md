@@ -26,3 +26,9 @@ To add a post:
 To add a project:
 
 Same as above, but put it inside `projects/_posts`. This tells jekyll to categorize them as `project` but keeps things separate since I don't usually want to treat projects as blog posts.
+
+
+## Projects
+
+These go in `projects/_posts`. I use the `{{content}}` tags for the headers since they're complex html, and put description text and other values in the yml front matter.
+It's almost all configuration based except for the copywriting and the header fanciness.
