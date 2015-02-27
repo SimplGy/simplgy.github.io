@@ -13,7 +13,8 @@ nav {
   height: 40px;
   line-height: 40px;
   background: #38c700;
-  padding: 0 20px; }
+  padding: 0 20px;
+  overflow: hidden; }
   @media (max-width: 603px) {
     nav {
       padding: 0;
@@ -39,7 +40,13 @@ nav {
     nav .hasIcon a:hover {
       background: none; }
   nav .logo {
-    float: left; }
+    float: left;
+    text-transform: none;
+    -webkit-transition: all 0.1s ease-out;
+    -moz-transition: all 0.1s ease-out;
+    transition: all 0.1s ease-out; }
+    nav .logo:hover, nav .logo.justArrived {
+      margin-top: -40px; }
   nav ul {
     float: right;
     list-style: none;

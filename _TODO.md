@@ -5,7 +5,8 @@ A to-do list for this project.
 ## Today
 x Point to geoblocked CDN for projects
 x If the img fails to load, remove the containing element
-o Improve copy for project titles
+x Improve copy for project titles
+x Hover/animation/IxN so that `simple guy` and `Eric Miller` interchange
 
 ## On Deck
 o Better fit on mobile and tablet (footer, reduce global padding/margins)
@@ -17,7 +18,7 @@ o Style blockquotes nicely
 o Style lists in markdown posts nicely
 o Move all van posts over from winterpress to here
 o Handle loading smoothly (load flat images in dom order. Then load videos based on scroll position. Play videos only when the user is viewing that one)
-o Hover/animation/IxN so that `simple guy` and `Eric Miller` interchange
+
 
 ## Done
 x MvP design for a project summary with: list of code snippets, short description, technology bullet points

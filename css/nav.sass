@@ -23,6 +23,7 @@ nav
   line-height: $h
   background: $green
   padding: 0 20px
+  overflow: hidden
   +phone
     padding: 0
     padding-right: 5px
@@ -51,6 +52,11 @@ nav
 
   .logo
     float: left
+    text-transform: none
+    +transitionable(.1s, ease-out)
+    &:hover,
+    &.justArrived
+      margin-top: -($h)
   ul
     float: right
     list-style: none

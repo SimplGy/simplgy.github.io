@@ -1,0 +1,11 @@
+<script>
+  var logo;
+  setTimeout(function(){
+    logo = document.getElementById('Logo');
+    logo.className += ' justArrived';
+  }, 100)
+  setTimeout(function(){
+    classes = logo.className.split(' justArrived');
+    logo.className = classes.join('');
+  }, 2000)
+</script>
