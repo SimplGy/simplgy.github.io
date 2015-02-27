@@ -1,0 +1,22 @@
+<script>
+  // If there is an error loading an image, remove the containing element from the DOM
+  var onError = function(evt){
+    console.warn('Image `onerror`', evt.target);
+    var imgParent = evt.target.parentNode;
+    imgParent.parentNode.removeChild(imgParent);
+  };
+  var onAbort = function(){
+    console.warn('Image `onabort`', evt.target);
+    var imgParent = evt.target.parentNode;
+    imgParent.parentNode.removeChild(imgParent);
+  };
+  var onSuccess = function(){
+    console.log('success', arguments);
+  };
+  var imgs = document.querySelectorAll('.project img');
+  Array.prototype.forEach.call(imgs, function(img){
+    img.onerror = onError;
+    img.onabort = onAbort;
+    img.onload  = onSuccess;
+  });
+</script>
