@@ -11,7 +11,8 @@
     imgParent.parentNode.removeChild(imgParent);
   };
   var onSuccess = function(){
-    console.log('success', arguments);
+//    console.log('success', arguments);
+    // TODO: only show the LI once the image has loaded? or transition from a nice loading state to the display state?
   };
   var imgs = document.querySelectorAll('.project img');
   Array.prototype.forEach.call(imgs, function(img){
