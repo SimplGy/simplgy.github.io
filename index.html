@@ -2,14 +2,23 @@
 layout: landing
 id: home
 title: Eric Miller - Javscript Developer
+apiDocs: https://developers.google.com/youtube/player_parameters
 ---
 
 <div class="jumbotron">
+
+  <iframe frameborder="0" id="Video" class="video"
+          src="https://youtube.com/embed/{{site.data.me.youtubeVideo}}?autoplay=1&controls=0&showinfo=0&autohide=1&modestbranding=1&playlist={{site.data.me.youtubeVideo}}&loop=1&rel=0">
+  </iframe>
+  <div class="shading"></div>
+
   <b class="pusher"></b>
   <div class="pushee">
     <h1>{{ site.data.me.tagline }}</h1>
-    <h3>{{ site.data.me.description }}</h>
+    <h3>{{ site.data.me.description }}</h3>
   </div>
+
 </div>
 
 {% include script-animate-logo.html %}
+{% include script-scale-video.html %}

@@ -174,10 +174,13 @@ a.link:visited:hover {
   background: url("../gfx/monogram.png") no-repeat; }
 
 .jumbotron {
+  position: fixed;
   height: 100%;
+  width: 100%;
   min-height: 400px;
-  background: linear-gradient(#38c700, #92df18);
-  color: white; }
+  background: #38c700;
+  color: white;
+  overflow: hidden; }
   .jumbotron h1, .jumbotron h3 {
     white-space: pre-line; }
   .jumbotron h1 {
@@ -191,10 +194,22 @@ a.link:visited:hover {
   .jumbotron h3 {
     text-shadow: 0 3px 30px rgba(0, 0, 0, 0.4);
     width: 70%;
-    min-width: 320px;
     margin: 0 auto;
     line-height: 1.5;
     font-weight: normal; }
+  .jumbotron .video,
+  .jumbotron .shading {
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .jumbotron .shading {
+    background: rgba(0, 0, 0, 0.5);
+    bottom: 0;
+    right: 0; }
+  .jumbotron .video {
+    overflow: hidden;
+    opacity: 0.6;
+    background: #38c700; }
 
 .pusher {
   display: block;
@@ -204,6 +219,7 @@ a.link:visited:hover {
   margin-bottom: -170px; }
 
 .pushee {
+  position: relative;
   margin: 0 auto;
   text-align: center;
   clear: both; }

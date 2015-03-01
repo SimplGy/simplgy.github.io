@@ -3,7 +3,10 @@
   height: 40px; }
 
 .homePage nav {
-  background: none; }
+  background: rgba(56, 199, 0, 0.8);
+  transition: 0.2s ease-out background-color; }
+  .homePage nav:hover {
+    background: #38c700; }
 
 nav {
   position: absolute;

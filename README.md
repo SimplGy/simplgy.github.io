@@ -5,8 +5,6 @@ This is a repo for a personal/portfolio/blog website. It uses Jekyll.
 
 To run in dev mode:
 
-    jekyll serve --watch
-    // or...
     jekyll s -w
 
 If you'd like to see `_drafts`, too:
