@@ -216,6 +216,7 @@ a.link:visited:hover {
   float: left;
   width: 5px;
   height: 50%;
+  min-height: 210px;
   margin-bottom: -170px; }
 
 .pushee {
