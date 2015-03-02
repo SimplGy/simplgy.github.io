@@ -1,0 +1,188 @@
+<script>
+  (function(){
+    /*
+    Shows a YouTube video as a full screen background.
+    To use:
+    * Add a container element with id `YouTubeBG`
+    * Add the attribute `ytbg-id="YOUR_ID"` to this element
+    TODO:
+    o Show a still from the video while loading, then replace seamlessly when playing begins
+    o On mouse move (horizontally) seek the video to a rotated place around the laptop, so it looks like panning
+    */
+
+    var id,
+        ratio = 16 / 9,
+        defaultId = 'AyBfzyY19NM' || 'NGfO3OKwxRU' || 'loab4A_SqoQ',                          // default to kittens
+        prefix = 'ytbg-',
+        containerDomId = 'YouTubeBG',
+        containerDomAttr = prefix + 'id',
+        container,
+        playerDomId = 'Ytbg-Video',
+        ytPlayer;
+
+
+    function initialize(){
+      var canRead = readDom();
+      if (canRead) {
+        setUpYouTube();
+      }
+    }
+
+
+    // Verify the container that the user should have added to the DOM, and get the youtube video id from it
+    function readDom(){
+      container = document.getElementById(containerDomId);
+      if (!container) {
+        console.warn('Need a dom element with id `'+ containerDomId +'`');
+        return false;
+      }
+      id  = container.getAttribute(containerDomAttr);
+      if(!id) {
+        console.warn('No `'+ containerDomAttr +'` attribute set, using default');
+        id = defaultId;
+      }
+      return true;
+    }
+
+
+    // Configure and add the YouTube player DOM element and pull in the script for the API
+    function setUpYouTube(){
+      // Player El
+      var playerEl = document.createElement('div');
+      playerEl.setAttribute('id', playerDomId);
+      playerEl.setAttribute('class', prefix + 'video');
+      playerEl.style.position = 'absolute';
+      playerEl.style.visibility = 'hidden';
+      playerEl.style.zIndex = -99;
+      container.appendChild(playerEl);
+      // Overlay El
+      var overlay = document.createElement('div');
+      overlay.setAttribute('class', prefix + 'overlay');
+      overlay.style.position = 'absolute';
+      overlay.style.top    = 0;
+      overlay.style.left   = 0;
+      overlay.style.right  = 0;
+      overlay.style.bottom = 0;
+      playerEl.style.zIndex = -98;
+      container.appendChild(overlay);
+      // YouTube script Tag
+      window.onYouTubeIframeAPIReady = onApiReady;
+      var tag = document.createElement('script');
+      tag.src = "//www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    }
+
+
+    function debugOutput(){
+      window.ytbg = {
+        container: container,
+        id: id,
+        ytPlayer: ytPlayer
+      };
+      console.log('script-youtube-bg', window.ytbg);
+    }
+
+
+    // Fill the screen, even if the video and screen aspect ratios are different
+    // Calculates the correct size using the window size and video ratio
+    function setPosition(){
+      var w = window.innerWidth,
+          h = window.innerHeight,
+          pos = {};
+
+      if (w / ratio < h) {                 // video height < window height
+        pos.width = Math.ceil(h * ratio);  // get new player width
+        pos.height = h;
+        pos.left = (w - pos.width) / 2;    // player width is greater, offset left; reset top
+        pos.top = 0;
+      } else {                             // video height > window height
+        pos.width = w;
+        pos.height = Math.ceil(w / ratio);
+        pos.left = 0;
+        pos.top = (h - pos.height) / 2;
+      }
+
+      // Assign calculated values
+      ytPlayer.d.style.width  = pos.width + 'px';
+      ytPlayer.d.style.height = pos.height + 'px';
+      ytPlayer.d.style.left   = pos.left + 'px';
+      ytPlayer.d.style.top    = pos.top + 'px';
+    }
+
+
+    // ---------------------------------------------------------- YouTube API Event Handlers
+    function onApiReady(){
+      ytPlayer = new window.YT.Player(playerDomId, {
+        width: window.innerWidth,
+        height: Math.ceil(window.innerWidth / ratio),
+        videoId: id,
+        playerVars: {
+          controls: 0,
+          showinfo: 0,
+          modestbranding: 1,
+          autohide: 1,
+          rel: 0,
+          wmode: 'transparent'
+        },
+        events: {
+          'onReady': onReady,
+          'onStateChange': onStateChange
+        }
+      });
+      window.addEventListener('resize', debounce(setPosition));
+      debugOutput();
+    }
+
+    function onReady(e){
+//      console.log('onReady');
+      setPosition();
+      e.target.mute();
+      e.target.playVideo();
+    }
+
+    /*
+     https://developers.google.com/youtube/js_api_reference
+     -1 – unstarted
+      0 – ended
+      1 – playing
+      2 – paused
+      3 – buffering
+      5 – video cued
+     */
+    function onStateChange(state){
+//      console.log('onStateChange', state);
+      switch (state.data) {
+        case 0:
+          onVideoEnd();
+          break;
+        case 1:
+          onVideoPlaying();
+          break;
+      }
+    }
+
+    function onVideoPlaying(){
+      ytPlayer.d.style.visibility = 'visible';
+    }
+    function onVideoEnd(){
+      ytPlayer.seekTo(0); // Start it again
+    }
+
+
+
+    // ---------------------------------------------- Utility Methods
+    // Call a repeating function after a `ms` delay
+    function debounce(fn, ms){
+      ms = ms || 150;
+      var timeout;
+      return function(){
+        clearTimeout(timeout);        // If there was a previous one, we don't need it anymore
+        timeout = setTimeout(fn, ms);
+      };
+    }
+
+    // Bootstrap it up
+    initialize();
+  })();
+</script>

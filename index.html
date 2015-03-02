@@ -5,12 +5,7 @@ title: Eric Miller - Javscript Developer
 apiDocs: https://developers.google.com/youtube/player_parameters
 ---
 
-<div class="jumbotron">
-
-  <iframe frameborder="0" id="Video" class="video"
-          src="https://youtube.com/embed/{{site.data.me.youtubeVideo}}?autoplay=1&controls=0&showinfo=0&autohide=1&modestbranding=1&playlist={{site.data.me.youtubeVideo}}&loop=1&rel=0">
-  </iframe>
-  <div class="shading"></div>
+<div class="jumbotron" id="YouTubeBG" ytbg-id="{{site.data.me.youtubeVideo}}">
 
   <b class="pusher"></b>
   <div class="pushee">
@@ -21,4 +16,4 @@ apiDocs: https://developers.google.com/youtube/player_parameters
 </div>
 
 {% include script-animate-logo.html %}
-{% include script-scale-video.html %}
+{% include script-youtube-bg.html %}

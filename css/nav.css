@@ -3,7 +3,7 @@
   height: 40px; }
 
 .homePage nav {
-  background: rgba(56, 199, 0, 0.8);
+  background: rgba(56, 199, 0, 0.9);
   transition: 0.2s ease-out background-color; }
   .homePage nav:hover {
     background: #38c700; }
@@ -45,6 +45,7 @@ nav {
   nav .logo {
     float: left;
     text-transform: none;
+    text-align: center;
     -webkit-transition: all 0.1s ease-out;
     -moz-transition: all 0.1s ease-out;
     transition: all 0.1s ease-out; }

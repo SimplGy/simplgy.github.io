@@ -178,13 +178,13 @@ a.link:visited:hover {
   height: 100%;
   width: 100%;
   min-height: 400px;
-  background: #38c700;
+  background: #57534f;
   color: white;
   overflow: hidden; }
   .jumbotron h1, .jumbotron h3 {
     white-space: pre-line; }
   .jumbotron h1 {
-    text-shadow: 1px 2px 0 rgba(0, 0, 0, 0.15);
+    text-shadow: 1px 2px 0 rgba(0, 0, 0, 0.15), 10px 3px 20px rgba(0, 0, 0, 0.25), -10px 3px 20px rgba(0, 0, 0, 0.25);
     margin-bottom: 40px;
     font-size: 60px; }
     @media (max-width: 603px) {
@@ -192,24 +192,11 @@ a.link:visited:hover {
         margin-bottom: 20px;
         font-size: 30px; } }
   .jumbotron h3 {
-    text-shadow: 0 3px 30px rgba(0, 0, 0, 0.4);
+    text-shadow: 0 3px 30px rgba(0, 0, 0, 0.4), 5px 1px 10px rgba(0, 0, 0, 0.25), -5px 1px 10px rgba(0, 0, 0, 0.25);
     width: 70%;
     margin: 0 auto;
     line-height: 1.5;
     font-weight: normal; }
-  .jumbotron .video,
-  .jumbotron .shading {
-    position: absolute;
-    top: 0;
-    left: 0; }
-  .jumbotron .shading {
-    background: rgba(0, 0, 0, 0.5);
-    bottom: 0;
-    right: 0; }
-  .jumbotron .video {
-    overflow: hidden;
-    opacity: 0.6;
-    background: #38c700; }
 
 .pusher {
   display: block;
@@ -224,6 +211,12 @@ a.link:visited:hover {
   margin: 0 auto;
   text-align: center;
   clear: both; }
+
+.ytbg-video {
+  opacity: 0.5; }
+
+.ytbg-overlay {
+  box-shadow: inset 0 -3px #38c700; }
 
 li.post.summary a {
   display: block;
