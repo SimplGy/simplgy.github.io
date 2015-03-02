@@ -14,6 +14,7 @@
         ratio = 16 / 9,
         defaultId = 'AyBfzyY19NM' || 'NGfO3OKwxRU' || 'loab4A_SqoQ',                          // default to kittens
         prefix = 'ytbg-',
+        rate, // optional playback rate adjustment
         containerDomId = 'YouTubeBG',
         containerDomAttr = prefix + 'id',
         container,
@@ -41,6 +42,7 @@
         console.warn('No `'+ containerDomAttr +'` attribute set, using default');
         id = defaultId;
       }
+      rate = container.getAttribute(prefix + 'playback-rate');
       return true;
     }
 
@@ -164,6 +166,9 @@
 
     function onVideoPlaying(){
       ytPlayer.d.style.visibility = 'visible';
+      if (rate != null){
+        ytPlayer.setPlaybackRate(rate);
+      }
     }
     function onVideoEnd(){
       ytPlayer.seekTo(0); // Start it again
