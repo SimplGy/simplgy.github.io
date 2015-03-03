@@ -19,7 +19,8 @@
         containerDomAttr = prefix + 'id',
         container,
         playerDomId = 'Ytbg-Video',
-        ytPlayer;
+        player,
+        playerEl;
 
 
     function initialize(){
@@ -50,7 +51,7 @@
     // Configure and add the YouTube player DOM element and pull in the script for the API
     function setUpYouTube(){
       // Player El
-      var playerEl = document.createElement('div');
+      playerEl = document.createElement('div');
       playerEl.setAttribute('id', playerDomId);
       playerEl.setAttribute('class', prefix + 'video');
       playerEl.style.position = 'absolute';
@@ -68,11 +69,11 @@
       playerEl.style.zIndex = -98;
       container.appendChild(overlay);
       // YouTube script Tag
-      window.onYouTubeIframeAPIReady = onApiReady;
       var tag = document.createElement('script');
-      tag.src = "//www.youtube.com/iframe_api";
+      tag.src = "http://www.youtube.com/iframe_api";
       var firstScriptTag = document.getElementsByTagName('script')[0];
       firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+      window.onYouTubeIframeAPIReady = onApiReady; // callback when script is ready
     }
 
 
@@ -80,7 +81,7 @@
       window.ytbg = {
         container: container,
         id: id,
-        ytPlayer: ytPlayer
+        player: player
       };
       console.log('script-youtube-bg', window.ytbg);
     }
@@ -106,20 +107,21 @@
       }
 
       // Assign calculated values
-      ytPlayer.d.style.width  = pos.width + 'px';
-      ytPlayer.d.style.height = pos.height + 'px';
-      ytPlayer.d.style.left   = pos.left + 'px';
-      ytPlayer.d.style.top    = pos.top + 'px';
+      playerEl.style.width  = pos.width + 'px';
+      playerEl.style.height = pos.height + 'px';
+      playerEl.style.left   = pos.left + 'px';
+      playerEl.style.top    = pos.top + 'px';
     }
 
 
     // ---------------------------------------------------------- YouTube API Event Handlers
     function onApiReady(){
-      ytPlayer = new window.YT.Player(playerDomId, {
+      player = new YT.Player(playerDomId, {
         width: window.innerWidth,
         height: Math.ceil(window.innerWidth / ratio),
         videoId: id,
         playerVars: {
+//          origin: 'http://www.simple.gy',
           controls: 0,
           showinfo: 0,
           modestbranding: 1,
@@ -132,6 +134,7 @@
           'onStateChange': onStateChange
         }
       });
+      playerEl = document.getElementById(playerDomId);
       window.addEventListener('resize', debounce(setPosition));
       debugOutput();
     }
@@ -155,23 +158,25 @@
     function onStateChange(state){
 //      console.log('onStateChange', state);
       switch (state.data) {
-        case 0:
+        case YT.PlayerState.ENDED:
           onVideoEnd();
           break;
-        case 1:
+        case YT.PlayerState.PLAYING:
           onVideoPlaying();
           break;
+//        default:
+//          console.log('Unhandled State: ' + state.data)
       }
     }
 
     function onVideoPlaying(){
-      ytPlayer.d.style.visibility = 'visible';
+      playerEl.style.visibility = 'visible';
       if (rate != null){
-        ytPlayer.setPlaybackRate(rate);
+        player.setPlaybackRate(rate);
       }
     }
     function onVideoEnd(){
-      ytPlayer.seekTo(0); // Start it again
+      player.seekTo(0); // Start it again
     }
 
 
