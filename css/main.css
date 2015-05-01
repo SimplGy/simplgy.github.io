@@ -10,7 +10,7 @@ html, body, p, ul, li, ol {
 
 a {
   text-decoration: none;
-  color: #38c700; }
+  color: #2a9400; }
 
 a:hover {
   text-decoration: underline; }
@@ -52,7 +52,7 @@ h1 small {
   font-size: 40%; }
 
 .content > h2 {
-  color: #aaaaaa; }
+  color: #aaa; }
 .content > h1,
 .content > h2 {
   margin: 20px 0 5px 0; }
@@ -75,7 +75,7 @@ hr {
   display: inline-block;
   vertical-align: bottom;
   line-height: 1;
-  color: #aaaaaa;
+  color: #aaa;
   text-align: left; }
 .typePretty h1 {
   font-size: 4em;
@@ -105,7 +105,7 @@ hr {
     font-size: 0.55em; } }
 
 .muted {
-  color: #aaaaaa; }
+  color: #aaa; }
 
 .pullRight {
   float: right; }
@@ -178,7 +178,7 @@ a.link:visited:hover {
   height: 100%;
   width: 100%;
   min-height: 400px;
-  background: #57534f;
+  background: #57534F;
   color: white;
   overflow: hidden; }
   .jumbotron h1, .jumbotron h3 {
@@ -218,20 +218,6 @@ a.link:visited:hover {
 .ytbg-overlay {
   box-shadow: inset 0 -3px #38c700; }
 
-li.post.summary a {
-  display: block;
-  color: inherit;
-  padding: 10px;
-  border-top: 1px dotted rgba(0, 0, 0, 0.1); }
-li.post.summary a:hover {
-  text-decoration: none;
-  background: rgba(56, 199, 0, 0.05); }
-li.post.summary .category {
-  float: right; }
-
-.post.full p {
-  margin: 10px 0; }
-
 .projectsPage .content {
   padding: 0; }
   .projectsPage .content .padder {
@@ -240,7 +226,7 @@ li.post.summary .category {
       .projectsPage .content .padder {
         padding: 10px; } }
     .projectsPage .content .padder h2, .projectsPage .content .padder h3 {
-      color: #aaaaaa; }
+      color: #aaa; }
     .projectsPage .content .padder p, .projectsPage .content .padder h2, .projectsPage .content .padder h3 {
       margin-bottom: 10px; }
       @media (max-width: 603px) {
@@ -369,8 +355,51 @@ li.post.summary .category {
     text-decoration: underline;
     color: #bed98f; }
 
+.blogArchivePage .content h1, .blogArchivePage .content h2 {
+  margin-left: 30px;
+  margin-right: 30px; }
+.blogArchivePage .content li a {
+  padding-left: 30px;
+  padding-right: 30px; }
+@media (max-width: 603px) {
+  .blogArchivePage .content h1, .blogArchivePage .content h2 {
+    margin-left: 10px;
+    margin-right: 10px; }
+  .blogArchivePage .content li.post.summary a {
+    padding-left: 10px;
+    padding-right: 10px; } }
+
+.post.summary .title {
+  margin-bottom: 5px;
+  color: #2a9400; }
+.post.summary p {
+  max-width: 600px; }
+.post.summary a {
+  display: block;
+  color: inherit;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-top: 1px dotted rgba(0, 0, 0, 0.1); }
+.post.summary a:hover {
+  text-decoration: none;
+  background: rgba(56, 199, 0, 0.05); }
+.post.summary .date {
+  float: right; }
+
+.post.oneliner a {
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px; }
+.post.oneliner a:hover {
+  background: rgba(56, 199, 0, 0.05); }
+.post.oneliner .date {
+  float: right; }
+
+.post.full p {
+  margin: 10px 0; }
+
 .quotesPage p {
-  color: #aaaaaa;
+  color: #aaa;
   margin-top: -35px;
   text-align: right;
   padding: 0 20px; }
@@ -464,3 +493,5 @@ footer {
       text-decoration: none; }
   footer a.social-link {
     background: none; }
+
+/*# sourceMappingURL=main.css.map */

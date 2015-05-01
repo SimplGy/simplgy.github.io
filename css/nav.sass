@@ -23,9 +23,14 @@ nav
   background: $green
   padding: 0 20px
   overflow: hidden
+  font-size: 0 // inline block elements
   +phone
     padding: 0
     padding-right: 5px
+
+
+  li, a
+    font-size: 18px
 
   a
     font-family: Comfortaa, sans-serif
@@ -41,13 +46,16 @@ nav
       text-shadow: 0 1px 0 $shade20
       text-decoration: none
 
+  .icon
+    font-size: 20px
+
   .hasIcon
-    line-height: $h + 3px // visually shift down because the other text is lowercase
+    line-height: $h + 2px // visually shift down because the other text is lowercase
     a
-      padding: 0 2px
+      padding: 0 5px
       font-size: 120%
-    a:hover
-      background: none
+    //a:hover
+    //  background: none
 
   .logo
     float: left
@@ -64,3 +72,4 @@ nav
   li
     display: inline-block
     vertical-align: top
+

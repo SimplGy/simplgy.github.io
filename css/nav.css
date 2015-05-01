@@ -17,11 +17,14 @@ nav {
   line-height: 40px;
   background: #38c700;
   padding: 0 20px;
-  overflow: hidden; }
+  overflow: hidden;
+  font-size: 0; }
   @media (max-width: 603px) {
     nav {
       padding: 0;
       padding-right: 5px; } }
+  nav li, nav a {
+    font-size: 18px; }
   nav a {
     font-family: Comfortaa, sans-serif;
     display: block;
@@ -35,13 +38,13 @@ nav {
       color: white;
       text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
       text-decoration: none; }
+  nav .icon {
+    font-size: 20px; }
   nav .hasIcon {
-    line-height: 43px; }
+    line-height: 42px; }
     nav .hasIcon a {
-      padding: 0 2px;
+      padding: 0 5px;
       font-size: 120%; }
-    nav .hasIcon a:hover {
-      background: none; }
   nav .logo {
     float: left;
     text-transform: none;
@@ -59,3 +62,5 @@ nav {
   nav li {
     display: inline-block;
     vertical-align: top; }
+
+/*# sourceMappingURL=nav.css.map */

@@ -10,7 +10,7 @@ html, body, p, ul, li, ol
   padding: 0
 a
   text-decoration: none
-  color: $green
+  color: $greenDark
 a:hover
   text-decoration: underline
 
@@ -229,26 +229,7 @@ a.link:visited:hover
 
 
 
-// --------------------------------- Post Summary
-li.post.summary
-  a
-    display: block
-    //max-height: 200px // hide extra content. If I truncate contents I can end up with malformed HTML
-    //overflow: hidden
-    color: inherit
-    padding: 10px
-    border-top: 1px dotted $shade10
-  a:hover
-    text-decoration: none
-    background: $hoverBg
-  .category
-    float: right
 
-
-// --------------------------------- Post Content Page
-.post.full
-  p
-    margin: 10px 0
 
 
 // --------------------------------- Project Summary List
@@ -370,7 +351,60 @@ li.post.summary
     text-decoration: underline
     color: $greenLight
 
+// -------------------------------------- Blog Pages
+.blogArchivePage .content
+  $padding: 30px
+  h1, h2
+    margin-left: $padding
+    margin-right: $padding
+  li a
+    padding-left: $padding
+    padding-right: $padding
+  +phone
+    $padding: 10px
+    h1, h2
+      margin-left: $padding
+      margin-right: $padding
+    li.post.summary a
+      padding-left: $padding
+      padding-right: $padding
 
+
+// --------------------------------- Post Summary
+.post.summary
+  .title
+    margin-bottom: 5px
+    color: $greenDark
+  p
+    max-width: 600px // prevent lines that are so long as to be difficutl to read
+  a
+    display: block
+    color: inherit
+    padding-top: 30px
+    padding-bottom: 30px
+    border-top: 1px dotted $shade10
+  a:hover
+    text-decoration: none
+    background: $hoverBg
+  .date
+    float: right
+
+.post.oneliner
+  a
+    display: block
+    padding-top: 10px
+    padding-bottom: 10px
+  a:hover
+    background: $hoverBg
+  .date
+    float: right
+
+
+
+// --------------------------------- Blog Post Content Page
+.post.full
+  p
+    margin: 10px 0
 
 
 

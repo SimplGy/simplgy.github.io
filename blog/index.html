@@ -1,25 +1,18 @@
 ---
-id: archive
+id: blogArchive
 title: Archive of All Posts
 ---
 
-<!--<h2>Books</h2>-->
-<!--<ul>-->
-  <!--{% for post in site.categories.books %}-->
-  <!--<li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>-->
-  <!--{% endfor %}-->
-<!--</ul>-->
-
-<h2>Recent Posts</h2>
-<ul style="margin:0 -10px;">
-  {% for post in site.posts limit:2 %}
+<h2>Recent Blog Posts</h2>
+<ul>
+  {% for post in site.categories.blog limit:2 %}
     {% include li-post-summary.html %}
   {% endfor %}
 </ul>
 
 <h2>More Posts</h2>
 <ul>
-  {% for post in site.posts offset:2 %}
-    {% include li-post-title.html %}
+  {% for post in site.categories.blog offset:2 %}
+    {% include li-post-oneliner.html %}
   {% endfor %}
 </ul>

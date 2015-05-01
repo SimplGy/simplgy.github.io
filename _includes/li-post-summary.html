@@ -1,10 +1,12 @@
 <li class="post summary">
   <a href="{{ post.url }}">
-    <h3>
+    <h3 class="title">
       {{ post.title }}
-      <small class="muted category">{{ post.categories | array_to_sentence_string }}</small>
+      <!--<small class="muted category">{{ post.categories | array_to_sentence_string }}</small>-->
+      <small class="muted date">
+        {{ post.date | date_to_string }}
+      </small>
     </h3>
-    <small class="muted">{{ post.date | date_to_string }}</small>
     <p>{{ post.excerpt | strip_html }}</p>
     <!-- Not safe to truncate because you can split in the middle of an html tag -->
   </a>

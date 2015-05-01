@@ -1,7 +1,19 @@
 # Eric Miller, Simple Guy
 ### I create web applications in Angular, Backbone, and more.
 
-This is a repo for a personal/portfolio/blog website. It uses Jekyll.
+This is the repo for my personal site. It uses Jekyll.
+
+## Authoring
+
+Hide a blog post or project (unpublish)
+
+> Add an `x` to the front of the title of the file
+
+Add a blog post
+
+> Add a text file of the format `YYYY-MM-DD-my-title` to the `blogs/_posts` folder. Make sure to include an `excerpt` field in the front matter.
+
+## Development & Deployment
 
 To run in dev mode:
 
