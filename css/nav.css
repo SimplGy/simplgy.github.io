@@ -25,6 +25,9 @@ nav {
       padding-right: 5px; } }
   nav li, nav a {
     font-size: 18px; }
+    @media (max-width: 603px) {
+      nav li, nav a {
+        font-size: 14px; } }
   nav a {
     font-family: Comfortaa, sans-serif;
     display: block;
@@ -33,18 +36,20 @@ nav {
     text-decoration: none;
     padding: 0 10px;
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1); }
+    @media (max-width: 603px) {
+      nav a {
+        padding: 0 5px; } }
     nav a:hover {
       background: rgba(0, 0, 0, 0.1);
       color: white;
       text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
       text-decoration: none; }
-  nav .icon {
-    font-size: 20px; }
   nav .hasIcon {
-    line-height: 42px; }
+    line-height: 44px; }
     nav .hasIcon a {
-      padding: 0 5px;
-      font-size: 120%; }
+      padding: 0 5px; }
+  nav .icon {
+    font-size: 120%; }
   nav .logo {
     float: left;
     text-transform: none;

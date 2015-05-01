@@ -31,6 +31,8 @@ nav
 
   li, a
     font-size: 18px
+    +phone
+      font-size: 14px
 
   a
     font-family: Comfortaa, sans-serif
@@ -39,6 +41,8 @@ nav
     color: mix($green,white,5%)
     text-decoration: none
     padding: 0 10px
+    +phone
+      padding: 0 5px
     text-shadow: 0 1px 0 $shade10
     &:hover
       background: $shade10
@@ -46,16 +50,14 @@ nav
       text-shadow: 0 1px 0 $shade20
       text-decoration: none
 
-  .icon
-    font-size: 20px
 
   .hasIcon
-    line-height: $h + 2px // visually shift down because the other text is lowercase
+    line-height: $h + 4px // visually shift down because the other text is lowercase
     a
       padding: 0 5px
-      font-size: 120%
-    //a:hover
-    //  background: none
+
+  .icon
+    font-size: 120%
 
   .logo
     float: left

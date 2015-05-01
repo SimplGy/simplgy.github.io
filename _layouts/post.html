@@ -1,14 +1,18 @@
 ---
+id: blogPost
 layout: default
 ---
 
 <h1>
   {{ page.title }}
   <!--<small class="muted category">{{ page.categories | array_to_sentence_string }}</small>-->
-  <small class="muted pullRight">{{ page.date | date_to_string }}</small>
 </h1>
+<h3 class="muted date">{{ page.date | date_to_string }}</h3>
 
+<br/>
 
-<div class="post full">
-  {{ content }}
-</div>
+{{ content }}
+
+<hr/>
+
+{% include twitter-plug.html %}

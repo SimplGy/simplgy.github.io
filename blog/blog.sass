@@ -1,0 +1,117 @@
+@import '../css/__'
+
+
+
+// ------------------------------------------- A single blog post
+.blogPostPage .content
+  $fontSize: 18px
+  $lineHeight: 1.75
+  $padding: 30px
+  font-size: $fontSize
+  line-height: 1.75
+  padding: 0 $padding
+  max-width: 800px
+  margin: 0 auto
+
+
+  p, .highlight, blockquote
+    margin-bottom: $fontSize * $lineHeight
+
+  +phone
+    $padding: 10px
+    $fontSize: 16px
+    $lineHeight: 1.75
+    padding: 0 $padding
+    font-size: $fontSize
+    line-height: $lineHeight
+    p, .highlight, blockquote
+      margin-bottom: $fontSize * $lineHeight
+
+  .highlight
+    $roomy: 10px
+    overflow: auto
+    padding: $roomy
+    margin-left: -($roomy)
+    margin-right: -($roomy)
+    border-radius: 5px
+    background: $black02
+    border: 1px solid $black05
+    border-top-color: $black10
+    code
+      padding: 0
+      background: none
+      border: none
+
+  blockquote p
+    margin-bottom: 0
+
+  p > img
+    $minImgWidth: 250px
+    box-shadow: -($minImgWidth) 0 0 0 $black05, $minImgWidth 0 0 0 $black05 // Throws out a bar to contain the image
+    display: block
+    margin: 0 auto
+
+
+  ul, li
+    list-style-type: disc
+    list-style-position: inside
+
+  //.post.full p
+  //  margin: 10px 0
+
+
+
+// ------------------------------------------- Archive of all blog posts
+.blogArchivePage .content
+  $padding: 30px
+  h1, h2
+    margin-left: $padding
+    margin-right: $padding
+  li a
+    padding-left: $padding
+    padding-right: $padding
+  +phone
+    $padding: 10px
+    h1, h2
+      margin-left: $padding
+      margin-right: $padding
+    li.post.summary a
+      padding-left: $padding
+      padding-right: $padding
+
+
+// --------------------------------- Blog Post Brief Summary
+.post.summary
+  .title
+    margin-bottom: 5px
+    color: $greenDark
+  p
+    max-width: 600px // prevent lines that are so long as to be difficutl to read
+  a
+    display: block
+    color: inherit
+    padding-top: 30px
+    padding-bottom: 30px
+    border-top: 1px dotted $shade10
+  a:hover
+    text-decoration: none
+    background: $hoverBg
+  .date
+    float: right
+
+
+// --------------------------------- Blog Post One-liner Title Display
+.post.oneliner
+  a
+    display: block
+    padding-top: 10px
+    padding-bottom: 10px
+  a:hover
+    background: $hoverBg
+  .date
+    float: right
+
+
+
+
+

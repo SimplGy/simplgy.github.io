@@ -3,9 +3,10 @@
 // -------------------------------- Reset
 html, body
   height: 100%
+  color: $black90
 ul, li, ol
   list-style: none
-html, body, p, ul, li, ol
+html, body, p, ul, li, ol, pre, blockquote
   margin: 0
   padding: 0
 a
@@ -13,6 +14,30 @@ a
   color: $greenDark
 a:hover
   text-decoration: underline
+
+blockquote
+  padding: 10px 10px 10px 30px
+  font-size: 120%
+  box-shadow: inset 5px 0 0 $greenLight
+  background: $black02
+  color: $black70
+  border-radius: 5px
+  p
+    margin-bottom: 0
+    line-height: 1.4
+  +phone
+    padding-left: 20px
+
+code
+  padding: 0 3px
+  background: $black02
+  border: 1px solid $black05
+  border-top-color: $black10
+  border-radius: 3px
+//a code
+//  color: $black90
+//a:hover code
+//  color: $greenDark
 
 img
   max-width: 100%
@@ -30,7 +55,7 @@ body
   padding: 0
 
 h1
-  font-size: 50px
+  font-size: 60px
   +phone
     font-size: 30px
 h2
@@ -51,7 +76,7 @@ h1 small
     color: $muted
   > h1,
   > h2
-    margin: 20px 0 5px 0
+    margin: 30px 0 5px 0
   > h3
     margin: 10px 0 5px 0
 
@@ -350,62 +375,6 @@ a.link:visited:hover
   a
     text-decoration: underline
     color: $greenLight
-
-// -------------------------------------- Blog Pages
-.blogArchivePage .content
-  $padding: 30px
-  h1, h2
-    margin-left: $padding
-    margin-right: $padding
-  li a
-    padding-left: $padding
-    padding-right: $padding
-  +phone
-    $padding: 10px
-    h1, h2
-      margin-left: $padding
-      margin-right: $padding
-    li.post.summary a
-      padding-left: $padding
-      padding-right: $padding
-
-
-// --------------------------------- Post Summary
-.post.summary
-  .title
-    margin-bottom: 5px
-    color: $greenDark
-  p
-    max-width: 600px // prevent lines that are so long as to be difficutl to read
-  a
-    display: block
-    color: inherit
-    padding-top: 30px
-    padding-bottom: 30px
-    border-top: 1px dotted $shade10
-  a:hover
-    text-decoration: none
-    background: $hoverBg
-  .date
-    float: right
-
-.post.oneliner
-  a
-    display: block
-    padding-top: 10px
-    padding-bottom: 10px
-  a:hover
-    background: $hoverBg
-  .date
-    float: right
-
-
-
-// --------------------------------- Blog Post Content Page
-.post.full
-  p
-    margin: 10px 0
-
 
 
 // -------------------------------------- Quotes
