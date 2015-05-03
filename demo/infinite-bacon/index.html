@@ -83,7 +83,7 @@
     // ---------------------------------------------- Rendering
     function renderRow(idx) {
       var row = document.createElement('li');
-      row.innerText = idx;
+      row.innerText = '['+ idx + '] ' + String.fromCharCode(idx);
       row.style.top = idx * rowHeight + 'px';
       phonebookEl.appendChild(row);
       rows[idx] = row;
