@@ -13,6 +13,12 @@ Add a blog post
 
 > Add a text file of the format `YYYY-MM-DD-my-title` to the `blogs/_posts` folder. Make sure to include an `excerpt` field in the front matter.
 
+To add a live code demo to your blog post, add a `demo` section to your front matter. This will add an iframe to the demo and a link.
+
+    ---
+      demo: https://jsfiddle.net/yhvrcwog/2/embedded/result
+    ---
+
 ## Development & Deployment
 
 To run in dev mode:

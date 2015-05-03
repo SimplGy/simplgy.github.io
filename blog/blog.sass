@@ -13,6 +13,9 @@
   max-width: 800px
   margin: 0 auto
 
+  h2 small
+    font-size: 60%
+    line-height: 1.7
 
   p, .highlight, blockquote
     margin-bottom: $fontSize * $lineHeight
@@ -42,12 +45,17 @@
       background: none
       border: none
 
+  .highlight
+    font-size: 85% // because the code can be dense
+  .gist-file .highlight
+    font-size: 100% // because gists are small enough
+
   blockquote p
     margin-bottom: 0
 
   p > img
-    $minImgWidth: 250px
-    box-shadow: -($minImgWidth) 0 0 0 $black05, $minImgWidth 0 0 0 $black05 // Throws out a bar to contain the image
+    //$minImgWidth: 250px
+    //box-shadow: -($minImgWidth) 0 0 0 $black05, $minImgWidth 0 0 0 $black05 // Throws out a bar to contain the image
     display: block
     margin: 0 auto
 
@@ -55,9 +63,6 @@
   ul, li
     list-style-type: disc
     list-style-position: inside
-
-  //.post.full p
-  //  margin: 10px 0
 
 
 

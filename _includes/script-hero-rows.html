@@ -1,0 +1,14 @@
+<script>
+  (function(){
+    'use strict';
+    var nodes = document.querySelectorAll('.content p');
+    Array.prototype.forEach.call(nodes, heroLoneImages);
+
+    // Given an element, add a `hero` class if its only child is an image
+    function heroLoneImages (el) {
+      if (el.children.length === 1 && el.children[0].tagName === 'IMG') {
+        el.className += ' hero';
+      }
+    }
+  })();
+</script>

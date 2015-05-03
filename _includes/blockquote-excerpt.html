@@ -1,0 +1,7 @@
+{% comment %}
+  If your post has an `excerpt` defined, print it in a blockquote tag, nicely styled.
+{% endcomment %}
+
+{% if page.excerpt %}
+  <blockquote>{{page.excerpt}}</blockquote>
+{% endif %}

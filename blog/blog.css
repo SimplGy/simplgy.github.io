@@ -4,6 +4,9 @@
   padding: 0 30px;
   max-width: 800px;
   margin: 0 auto; }
+  .blogPostPage .content h2 small {
+    font-size: 60%;
+    line-height: 1.7; }
   .blogPostPage .content p, .blogPostPage .content .highlight, .blogPostPage .content blockquote {
     margin-bottom: 31.5px; }
   @media (max-width: 603px) {
@@ -26,10 +29,13 @@
       padding: 0;
       background: none;
       border: none; }
+  .blogPostPage .content .highlight {
+    font-size: 85%; }
+  .blogPostPage .content .gist-file .highlight {
+    font-size: 100%; }
   .blogPostPage .content blockquote p {
     margin-bottom: 0; }
   .blogPostPage .content p > img {
-    box-shadow: -250px 0 0 0 #f2f2f2, 250px 0 0 0 #f2f2f2;
     display: block;
     margin: 0 auto; }
   .blogPostPage .content ul, .blogPostPage .content li {

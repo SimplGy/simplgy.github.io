@@ -1,0 +1,16 @@
+{% comment %}
+  Includes a styled iframe for a live code demo, such as on a post page, but only if a `page.demo` is defined.
+{% endcomment %}
+
+{% if page.demo %}
+  <div class="demo">
+    <h2>
+      Live Demo
+      <small class="muted pullRight">(iframe)</small>
+    </h2>
+    <p>
+      <iframe src="{{ page.demo }}" frameborder="0"></iframe>
+      <a href="{{ page.demo }}" target="_blank">open in new tab</a>
+    </p>
+  </div>
+{% endif %}

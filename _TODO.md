@@ -5,6 +5,7 @@ A to-do list for this project.
 ## Today
 
 ## On Deck
+o wrap jekyll in gulp/npm scripts so I can have at least a min-cat asset pipeline
 o Fix video origin, see if it can work on mobile
 o Use an img while the video is loading, and play seamlessly from there
 o Support code highlighting with normal triple-backtick code blocks instead of boo `% highlight js %` stuff
@@ -12,6 +13,7 @@ o consider https://github.com/poole/poole
 o redo colors using http://www.rocket-design.fr/color-template/
 o Better fit on mobile and tablet (footer, reduce global padding/margins)
 o Click responsiveness and IxN on mobile and tablet (aim for perfect on ipad air)
+o https://mmistakes.github.io/skinny-bones-jekyll/getting-started/
 
 ## Over the Rainbow
 o Pick a color scheme I can live with for a while. Main color (green), supporting color (blue?), background color (not quite white), shaded bg color (pale white), dark (not quite black, tinged brown), etc.
