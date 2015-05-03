@@ -1,14 +1,9 @@
 ---
 title: Create an Infinite Scroll List with Bacon.js
+demo: http://simple.gy/demo/infinite-bacon
 excerpt:
-  In this tutorial I'll show you how to build an infinite scrolling mechanism using Functional Reactive Programming techniques using Bacon.js.
-  If you, like me, have heard about FRP or Bacon but aren't sure where to start, this tutorial is for you.
-  Give this 30 minutes of your time and you'll be rewarded with a new way of thinking about programming.
+  This tutorial shows you how to build a fast infinite scroller to make your applications more awesome.
 ---
-
-> In this tutorial I'll show you how to build an infinite scrolling mechanism using Functional Reactive Programming techniques with [Bacon.js](https://github.com/baconjs/bacon.js).
-
-[Live Demo](https://jsfiddle.net/yhvrcwog/2/embedded/result/) (The double scrollbar is an artifact of the jsfiddle)
 
 Functional Reactive Programming, or FRP, is the [newish](http://hipsterdevstack.tumblr.com/post/39558331788/frp-yeah-we-were-doing-that-in-2012) [hotness](https://www.google.com/trends/explore#q=functional%20reactive%20programming%2C%20smelly%20old%20socks&date=1%2F2010%2072m&cmpt=q&tz=).
 If you've been busy working, you may not have tried it out yet. Or you might have read a little about it. And then you may have been confused. I was. I did. I was again.
@@ -21,30 +16,27 @@ Let's begin.
 
 ## Getting Prepared
 
-We'll need an html file that includes Bacon.js and Lodash. We'll also want a few CSS rules that are common to most infinite scrolling implementations, so I'll skip discussing them here. You can use [this gist](https://gist.github.com/SimplGy/850ca58f33f28f301125) to get started.
+We'll need an html file that includes Bacon.js and Lodash. We'll also want a few CSS rules that are common to most infinite scrolling implementations, so I'll skip discussing them here.
+This file will get you started:
 
-Once you have that file, let's add some variables.
-
-{% highlight js %}
-var totalResults = 10000; // let's assume this is known. You'd probably have to query for the result count in a real api
-var rowHeight = 30;
-var phonebookEl = document.getElementById('Phonebook');
-phonebookEl.style.height = totalResults * rowHeight + "px";
-{% endhighlight %}
+{% gist SimplGy/850ca58f33f28f301125 %}
 
 So far nothing Bacony.
 
-We're going to assume we know the result set size, and that all rows are the same height. In the real world we might need to query an API for the result set size and in that case we'd just wait to init the `phonebookEl` container until we get that information.
+There is a little bit of JS setup here. All rows are the same height. We assume we know the data set size.
+In the real world we might need to query an API for the result set size.
+In that case we'd just wait to init the `phonebookEl` container until we get that information.
 
 ## Scrolling and Resizing
 
-An infinite scroller needs to know which rows are on screen so it can manage the total number of DOM nodes. Too many and the browser will get slow.
+An infinite scroller needs to know which rows are on screen so it can manage the total number of DOM nodes. Too many and the browser will get dizzy, confused, and slow.
 
-This means we need to know which rows are on screen. Let's reason backwards from the UI events the browser can give us.
-We know we're going to be interested in both scrolling and resizing.
-We care about scrolling because this tells us which set of rows the user is looking at, and resizing because screen size tells us how many rows will fit on screen.
+![too many dom nodes](http://simple.gy/img/too-many-nodes.gif)
 
-Let's have some bacon. We'll create streams for the scrolling and resizing:
+To manage the number of rows on screen, we need to know where the viewport is.
+Specifically, we're interested in when the user scrolls or resizes.
+
+It's bacon time. We'll create streams for the scrolling and resizing:
 
 {% highlight js %}
 var scrolling = Bacon.fromEvent(window, 'scroll');
@@ -53,8 +45,9 @@ var resizing  = Bacon.fromEvent(window, 'resize').debounce(50);
 
 [`fromEvent`](https://github.com/baconjs/bacon.js#bacon-fromevent) turns a normal browser event into a stream.
 
-Debouncing our resize is usually a good choice, and Bacon makes it easy, so we added it already.
+Debouncing our resize is a good choice, and Bacon makes it easy.
 
+The next step is to transform the browser events into the information we care about for our infinite scroll application.
 We care about the `y` position when we scroll, and the height of the screen after a resize:
 
 {% highlight js %}
@@ -183,16 +176,13 @@ To clean up, we just pull the element out of the DOM and remove the cache refere
 
 You should now have a working infinite scroller that prints the index of the row, with all your rendering confined to a nice single method that is provided the row index.
 
-## Links
+## Final Code
 
-* [All the code](https://gist.github.com/SimplGy/d6362369ac4ebf27f3ec)
-* [Working Demo](http://jsfiddle.net/yhvrcwog/2/)
+{% gist SimplGy/d6362369ac4ebf27f3ec %}
 
-## kthxbai
+## Wrapping Up
 
 I hope you're feeling excited about this new way of thinking about programming, and proud of yourself for the beautiful work you've done today.
-
-Tweet at me or something if you like this post. If there's enough interest I'll do a part two that integrates an async data feed.
 
 ![slow smile](http://i.giphy.com/R0TrhAtNeUC0E.gif)
 
