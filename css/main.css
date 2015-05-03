@@ -31,7 +31,7 @@ blockquote {
       padding-left: 20px; } }
 
 .hero blockquote {
-  box-shadow: inset 1px 0 0 #aaa, inset -1px 0 0 #aaa;
+  box-shadow: inset 1px 0 0 rgba(0, 0, 0, 0.1), inset -1px 0 0 rgba(0, 0, 0, 0.1);
   border-radius: 0; }
 
 code {
