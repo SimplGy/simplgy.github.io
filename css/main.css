@@ -30,6 +30,10 @@ blockquote {
     blockquote {
       padding-left: 20px; } }
 
+.hero blockquote {
+  box-shadow: inset 1px 0 0 #aaa, inset -1px 0 0 #aaa;
+  border-radius: 0; }
+
 code {
   padding: 0 3px;
   background: #f9f9f9;
@@ -485,7 +489,7 @@ footer {
   font-size: 80%;
   line-height: 1; }
 
-p.hero {
+.hero {
   background-color: rgba(0, 0, 0, 0.07);
   box-shadow: -600px 0 0 rgba(0, 0, 0, 0.07), 600px 0 0 rgba(0, 0, 0, 0.07); }
 

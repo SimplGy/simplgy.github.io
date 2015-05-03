@@ -1,11 +1,10 @@
 ---
 title: Walden on Wheels - On the Open Road from Debt to Freedom
-excerpt: Remember who you wanted to be. — BUMPER STICKER ON VOLVO IN THE HOME DEPOT PARKING LOT
+excerpt: A book by Ken Ilgunas. Awesome descriptions of leaving it all behind. Very honest narrative. Not much practical stuff about actual van life, but that's not what this story is.
 ---
 
-A book by Ken Ilgunas. Awesome descriptions of leaving it all behind. Very honest narrative. Not much practical stuff about actual van life, but that's not what this story is.
 
-## Selected Excerpts
+## Selected Excerpts from the Book
 
 > Remember who you wanted to be. — BUMPER STICKER ON VOLVO IN THE HOME DEPOT PARKING LOT
 

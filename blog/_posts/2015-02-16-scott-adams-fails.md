@@ -5,8 +5,6 @@ excerpt: An uncommonly straight-forward and practical how-to guide to success fr
 
 ## Summary/Key Takeaways
 
-An uncommonly straight-forward and practical how-to guide to success from the mind of an engineer turned cartoonist.
-
 * The unit of measure is personal energy and happiness
 * Evaluate things for yourself
 * Use a strategy of diverse skill building (including hard and soft skills)

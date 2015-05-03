@@ -28,6 +28,11 @@ blockquote
   +phone
     padding-left: 20px
 
+.hero blockquote
+  box-shadow: inset 1px 0 0 $muted, inset -1px 0 0 $muted
+  //box-shadow: none
+  border-radius: 0
+
 code
   padding: 0 3px
   background: $black02
@@ -485,7 +490,8 @@ footer
     font-size: 80%
     line-height: 1
 
-p.hero
+// ----------------------------------------------- Content highlighted by filling up a full row
+.hero
   $a: $shade07
   $b: $shade07
   background-color: $a
