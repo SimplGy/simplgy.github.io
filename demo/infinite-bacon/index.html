@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>FRP Infinite Scroll using Bacon.js - by @SimplGy</title>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/bacon.js/0.7.53/Bacon.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/3.7.0/lodash.min.js"></script>
+  <style type="text/css">
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Helvetica, arial, freesans, clean, sans-serif;
+    }
+    .phonebook {
+      position: relative;
+      /* draw fake row bg colors with css */
+      background-image: linear-gradient(#f3f3f3 50%, transparent 50%, transparent);
+      background-size: 60px 60px; /* twice the height of a row, since the pattern spans two rows */
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .phonebook li {
+      position: absolute;
+      height: 30px;
+      line-height: 30px;
+      padding: 0 10px;
+      color: #999;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+<ul id="Phonebook" class="phonebook"></ul>
+
+<script>
+  (function(){ // using an IIFE lets me call a function `scrollY` in this scope, and I like that name.
+
+
+    // ---------------------------------------------- Declaration and Setup
+    var totalResults = 10000; // let's assume this is known. You'd probably have to query for the result count in a real api
+    var rowHeight = 30;
+    var rows = {}; // Cache of row dom elements by index
+    var phonebookEl = document.getElementById('Phonebook');
+    phonebookEl.style.height = totalResults * rowHeight + "px";
+
+
+    // ---------------------------------------------- UI Streams
+    var scrollY = function() { return window.scrollY };
+    var windowH = function() { return window.innerHeight };
+
+    var yPosition = Bacon.fromEvent(window, 'scroll').map(scrollY);
+    var firstVisibleRow = yPosition.map(function(y){ return Math.floor( y / rowHeight ) }).skipDuplicates();
+    firstVisibleRow = firstVisibleRow.toProperty(0); // Seed the initial value. without this, the stream will be empty if you load the browser with the scroller at the top of the screen
+
+    var screenHeight = Bacon.fromEvent(window, 'resize').debounce(50).map(windowH);
+    screenHeight = screenHeight.toProperty(window.innerHeight); // Seed the initial value. without this, the stream is empty since no resize has happened
+    var rowCount = screenHeight.map(function(screenHeight){ return Math.ceil(screenHeight/rowHeight) }).skipDuplicates();
+    rowCount.log('rowCount');
+
+
+    function calcVisibleRows (firstRow, rowCount) {
+      var visibleIndices = [];
+
+      // Limit the number of visible rows
+      lastRow = firstRow + rowCount + 1;
+      if (lastRow > totalResults) {
+        firstRow -= lastRow - totalResults;
+      }
+
+      for (var i = 0; i <= rowCount; i++) { visibleIndices.push(i + firstRow) }
+      return visibleIndices;
+    }
+    var visibleRowIndices = Bacon.combineWith(calcVisibleRows, firstVisibleRow, rowCount);
+//      visibleRowIndices.log('visibleRowIndices');
+    var rowIndicesRemoved = visibleRowIndices.diff([], _.difference);
+    var rowIndicesAdded   = visibleRowIndices.diff([], function(prev, cur){ return _.difference(cur, prev) }); // longer form here so we can reverse `cur` and `prev`
+    rowIndicesAdded.onValue(  function(indices){ _.map(indices, renderRow) });
+    rowIndicesRemoved.onValue(function(indices){ _.map(indices, removeRow) });
+
+
+    // ---------------------------------------------- Rendering
+    function renderRow(idx) {
+      var row = document.createElement('li');
+      row.innerText = idx;
+      row.style.top = idx * rowHeight + 'px';
+      phonebookEl.appendChild(row);
+      rows[idx] = row;
+    }
+    function removeRow(idx) {
+      if (idx == null) { return }
+      rows[idx].parentElement.removeChild(rows[idx]);
+      rows[idx] = undefined; // more performant than changing the object shape? Would need to measure.
+    }
+  })();
+</script>
+</body>
+</html>
+
