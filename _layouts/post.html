@@ -15,6 +15,13 @@ layout: boilerplate
 
   <hr/>
   {% include twitter-plug.html %}
+
+  {% if page.next and page.next.categories contains "blog" %}
+    <p class="muted alignCenter">Next Post: <a rel="next" href="{{ page.next.url }}">{{ page.next.title }}</a></p>
+  {% else if page.previous and page.previous.categories contains "blog" %}
+    <p class="muted alignCenter">Previous Post: <a rel="prev" href="{{ page.previous.url }}">{{ page.previous.title }}</a></p>
+  {% endif %}
+
   <hr/>
   {% include script-disqus.html %}
 </div>
