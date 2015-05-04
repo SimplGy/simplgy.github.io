@@ -1,0 +1,22 @@
+{% comment %}
+  Displays the title of a blog post.
+  If the blog post has a `banner` property, it will show that image.
+{% endcomment %}
+
+
+<div class="banner
+        {% if page.banner %} imageBg {% endif %}
+        {% if page.color %}  colorBg {% endif %}"
+     style="
+        {% if page.banner %} background-image:url('{{page.banner}}'); {% endif %}
+        {% if page.color %}  background-color:{{page.color}};         {% endif %}
+">
+
+  <div class="content">
+    <h1>
+      {{ page.title }}
+      <!--<small class="muted category">{{ page.categories | array_to_sentence_string }}</small>-->
+    </h1>
+    <h3 class="muted date">{{ page.date | date_to_string }}</h3>
+  </div>
+</div>

@@ -19,6 +19,8 @@ nav {
   padding: 0 20px;
   overflow: hidden;
   font-size: 0; }
+  nav.muted {
+    background: #4c4c4c; }
   @media (max-width: 603px) {
     nav {
       padding: 0;

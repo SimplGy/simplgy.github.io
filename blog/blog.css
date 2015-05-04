@@ -42,6 +42,29 @@
     list-style-type: disc;
     list-style-position: inside; }
 
+.banner {
+  background-color: #0d2e00;
+  background-size: cover;
+  background-position: center;
+  padding: 30px 0 20px 0; }
+  @media (max-width: 603px) {
+    .banner {
+      padding: 10px 0; } }
+  .banner h1 {
+    margin: 0;
+    margin-bottom: 10px;
+    letter-spacing: 0.02em;
+    word-spacing: 0.1em;
+    line-height: 1.6;
+    color: white;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 -1px 1px rgba(0, 0, 0, 0.2), 1px 0 1px rgba(0, 0, 0, 0.2), -1px 0 1px rgba(0, 0, 0, 0.2), 0 2px 10px rgba(0, 0, 0, 0.4); }
+  .banner .date {
+    text-align: right;
+    font-weight: normal;
+    color: white;
+    word-spacing: 0.2em;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 -1px 1px rgba(0, 0, 0, 0.2), 1px 0 1px rgba(0, 0, 0, 0.2), -1px 0 1px rgba(0, 0, 0, 0.2); }
+
 .blogArchivePage .content h1, .blogArchivePage .content h2 {
   margin-left: 30px;
   margin-right: 30px; }

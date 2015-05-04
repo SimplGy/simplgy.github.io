@@ -1,29 +1,25 @@
 ---
 id: blogPost
-layout: default
+layout: boilerplate
 ---
 
-<h1>
-  {{ page.title }}
-  <!--<small class="muted category">{{ page.categories | array_to_sentence_string }}</small>-->
-</h1>
-<h3 class="muted date">{{ page.date | date_to_string }}</h3>
+<b class="navSpace"></b>
 
-<br/>
+{% include post-banner.html %}
 
-{% include blockquote-excerpt.html %}
+<div class="content">
+  {% include blockquote-excerpt.html %}
+  {% include iframe-demo.html %}
 
-{% include iframe-demo.html %}
+  {{ content }}
 
-{{ content }}
+  <hr/>
+  {% include twitter-plug.html %}
+  <hr/>
+  {% include script-disqus.html %}
+</div>
 
-<hr/>
-
-{% include twitter-plug.html %}
-
-<hr/>
-
-{% include script-disqus.html %}
+{% include nav.html %}
+{% include footer.html %}
 
 {% include script-hero-rows.html %}
-

@@ -1,4 +1,16 @@
-<nav>
+{% comment %}
+        Displays the site navigation.
+        If we're on a page with a banner, mute the color of the nav so it doesn't fight with the banner image.
+{% endcomment %}
+
+
+<nav
+    {% if page.banner %} class="muted" {% endif %}
+    {% if page.color %}
+      style="background-color:{{ page.color }}; box-shadow: inset 0 -40px rgba(0,0,0,.2)"
+    {% endif %}
+>
+
   <a href="/" class="logo" id="Logo">{{site.data.me.alias}}<br/>{{site.data.me.name}}</a>
   <ul>
     <!--<li><a href="/about">about</a></li>-->
