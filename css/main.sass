@@ -477,18 +477,27 @@ footer
 
 // ----------------------------------------------- iframe-demo.html
 .demo
-  iframe
+  $h: 300px
+  .iframeWrapper
+
     border: 5px dashed $black10
-    width: 100%
     box-sizing: border-box
-    height: 300px
-    background: $black02
+    height: $h + 20px
+    width: 100%
     border-radius: 5px
+    background: $black02
+    // http://davidwalsh.name/scroll-iframes-ios
+    // https://gist.github.com/Mao8a/5963675
+    overflow: auto
+    -webkit-overflow-scrolling: touch
+  iframe
+    width: 100%
+    height: $h
   a
     display: block
     text-align: right
     font-size: 80%
-    line-height: 1
+
 
 // ----------------------------------------------- Content highlighted by filling up a full row
 .hero
