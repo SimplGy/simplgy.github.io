@@ -188,5 +188,7 @@ I hope you're feeling excited about this new way of thinking about programming, 
 
 Good work, you.
 
+## Update
 
+@jusrin00 rewrote this in Facebook's [React] using RxJS for the data layer. Really cool stuff on [github](https://github.com/justinwoo/react-rxjs-scroll).
 
