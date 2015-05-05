@@ -190,5 +190,5 @@ Good work, you.
 
 ## Update
 
-@jusrin00 rewrote this in Facebook's [React] using RxJS for the data layer. Really cool stuff on [github](https://github.com/justinwoo/react-rxjs-scroll).
+@jusrin00 rewrote this in Facebook's [React](https://facebook.github.io/react/) using [RxJS](https://xgrommx.github.io/rx-book/) for the data layer. Really cool stuff on [github](https://github.com/justinwoo/react-rxjs-scroll).
 
