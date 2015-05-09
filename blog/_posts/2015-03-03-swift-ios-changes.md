@@ -12,6 +12,20 @@ Now, a year later, I want to start the project back up again.
 
 When I fired up the project I got a stack of 10 compiler errors and warnings. Here's what I ran into, how I fixed it, and why the change was made if I could figure that out.
 
+## Array types are now written with the brackets around the element type
+
+Instead of `let emptyArray = String[]()`, we use `let emptyArray = [String]()`. This one is pretty easy, and the error message explicit and helpful.
+
+## Use of unresolved identifier `..`
+
+Looks like the range syntax was changed. You can no longer use `..` to indicate a half-open range.
+
+> Closed Range Operator `...` – makes a range including the last number, so `0...3` is a range containing 0, 1, 2, and 3.
+Half-Open Range Operator `..<` – makes a range excluding the last number, so `0 ..< 3` is a range containing 0, 1, and 2.
+- [codingexplorer.com](http://www.codingexplorer.com/loops-switch-statements-ranges-swift/)
+
+This makes sense, it's more explicit. I never could remember in Ruby or CoffeeScript which set of dots was which.
+
 ## `IBOutlet` property has non-optional type `UILabel`
     
 This was a [change in Beta 4](http://makeapppie.com/tag/iboutlet-optional/). UILabels are optional and should now be marked as such. Just add `!` after the `UILabel` to create an "implicitly unwrapped optional":
