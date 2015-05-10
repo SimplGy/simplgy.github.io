@@ -3,6 +3,8 @@ title: Create an Infinite Scroll List with Bacon.js
 demo: http://simple.gy/demo/infinite-bacon
 excerpt:
   In this tutorial, you'll learn to think "reactively" while building an infinite scroll UI using Bacon.js
+banner: "http://simple.gy/img/deep-fried-bacon.jpg"
+bannerCaption: "Deep-fried bacon in Thailand"
 ---
 
 Functional Reactive Programming, or FRP, is the [newish](http://hipsterdevstack.tumblr.com/post/39558331788/frp-yeah-we-were-doing-that-in-2012) [hotness](https://www.google.com/trends/explore#q=functional%20reactive%20programming%2C%20smelly%20old%20socks&date=1%2F2010%2072m&cmpt=q&tz=).

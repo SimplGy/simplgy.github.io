@@ -1,15 +1,15 @@
 ---
 title: Javascript Dev Revisits the `C` programming language after 14 years
-excerpt: I hadn't written a line of C since learning it in an AP community college class from the great professor Treyton "T-Rex" Williams.
+excerpt: I hadn't written a line of C since learning it in an AP community college class. Meow I'm back.
 banner: http://simple.gy/img/apollo-13-eva-test.jpg
-bannerCredit: http://unsplash.com
+bannerCaption: "Photo Credit: http://unsplash.com"
 ---
-
-Treehouse has a [really nice overview](https://teamtreehouse.com/library/objectivec-basics) of `C` on the way to learning Objective C.
 
 I hadn't written a line of C in 14 years, not since the *Intro to Computer Programming* class with Treyton "T-Rex" Williams I took at Columbia State Communitiy College. He was a great professor. I hope he's doing well.
 
-Revisiting C was fun, and there are some tidbits I took from it that were really useful.
+Revisiting C was fun. There are some tidbits I took from it that were really useful to me. This post collects the best bits.
+
+If you want to follow along, Treehouse has a [really nice overview](https://teamtreehouse.com/library/objectivec-basics) of `C` on the way to learning Objective C.
 
 ## Arrays and Memory Space
 

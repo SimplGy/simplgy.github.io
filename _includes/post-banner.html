@@ -20,7 +20,7 @@
     <h3 class="muted date">{{ page.date | date_to_string }}</h3>
   </div>
 
-  {% if page.bannerCredit %}
-    <a class="cite" href="{{ page.bannerCredit }}" target="_blank">Photo Credit: {{ page.bannerCredit }}</a>
+  {% if page.bannerCaption %}
+    <div class="caption">{{ page.bannerCaption }}</div>
   {% endif %}
 </div>

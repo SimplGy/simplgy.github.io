@@ -65,7 +65,7 @@
     color: white;
     word-spacing: 0.2em;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 -1px 1px rgba(0, 0, 0, 0.2), 1px 0 1px rgba(0, 0, 0, 0.2), -1px 0 1px rgba(0, 0, 0, 0.2); }
-  .banner .cite {
+  .banner .caption {
     position: absolute;
     bottom: 5px;
     right: 5px;
@@ -73,8 +73,6 @@
     font-size: 13px;
     background: rgba(0, 0, 0, 0.1);
     padding: 0 3px; }
-    .banner .cite:hover {
-      text-decoration: none; }
 
 .blogArchivePage .content h1, .blogArchivePage .content h2 {
   margin-left: 30px;

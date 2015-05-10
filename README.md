@@ -16,8 +16,14 @@ Add a blog post
 To add a live code demo to your blog post, add a `demo` section to your front matter. This will add an iframe to the demo and a link.
 
     ---
-      demo: https://jsfiddle.net/yhvrcwog/2/embedded/result
+    demo: https://jsfiddle.net/yhvrcwog/2/embedded/result
     ---
+
+If you need to use `-` or `:` in the front matter of the post, these are special characters to YAML. Surround it in quotes to make it work.
+
+    ---
+    title: Something easy
+    description: "Singing: how to do it while chewing gum."
 
 ## Development & Deployment
 
