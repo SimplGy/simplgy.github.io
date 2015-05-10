@@ -43,7 +43,8 @@
     list-style-position: inside; }
 
 .banner {
-  background-color: #0d2e00;
+  position: relative;
+  background-color: #4c4c4c;
   background-size: cover;
   background-position: center;
   padding: 30px 0 20px 0; }
@@ -57,13 +58,23 @@
     word-spacing: 0.1em;
     line-height: 1.5;
     color: white;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 -1px 1px rgba(0, 0, 0, 0.2), 1px 0 1px rgba(0, 0, 0, 0.2), -1px 0 1px rgba(0, 0, 0, 0.2), 0 2px 10px rgba(0, 0, 0, 0.4); }
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 -1px 1px rgba(0, 0, 0, 0.2), 1px 0 1px rgba(0, 0, 0, 0.2), -1px 0 1px rgba(0, 0, 0, 0.2), 0 2px 10px rgba(0, 0, 0, 0.4), 0 0 50px rgba(0, 0, 0, 0.7); }
   .banner .date {
     text-align: right;
     font-weight: normal;
     color: white;
     word-spacing: 0.2em;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 -1px 1px rgba(0, 0, 0, 0.2), 1px 0 1px rgba(0, 0, 0, 0.2), -1px 0 1px rgba(0, 0, 0, 0.2); }
+  .banner .cite {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 13px;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 0 3px; }
+    .banner .cite:hover {
+      text-decoration: none; }
 
 .blogArchivePage .content h1, .blogArchivePage .content h2 {
   margin-left: 30px;

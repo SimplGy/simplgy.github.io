@@ -67,7 +67,8 @@
 
 // ------------------------------------------- The .banner title of a blog post
 .banner
-  background-color: $greenVeryDark
+  position: relative
+  background-color: $black70
   background-size: cover
   background-position: center
   padding: 30px 0 20px 0
@@ -81,14 +82,25 @@
     word-spacing: 0.1em
     line-height: 1.5
     color: white
-    // A dark thin outline (4 rules), then a soft shadow below
-    text-shadow: 0 1px 1px $shade20, 0 -1px 1px $shade20, 1px 0 1px $shade20, -1px 0 1px $shade20, 0 2px 10px $shade40
+    // A dark thin outline (4 rules), then a soft shadow below, then a huge shade around
+    text-shadow: 0 1px 1px $shade20, 0 -1px 1px $shade20, 1px 0 1px $shade20, -1px 0 1px $shade20, 0 2px 10px $shade40, 0 0 50px $shade70
   .date
     text-align: right
     font-weight: normal
     color: white
     word-spacing: 0.2em
     text-shadow: 0 1px 1px $shade20, 0 -1px 1px $shade20, 1px 0 1px $shade20, -1px 0 1px $shade20
+
+  .cite
+    position: absolute
+    bottom: 5px
+    right: 5px
+    color: $light60
+    font-size: 13px
+    background: rgba(0,0,0,.1)
+    padding: 0 3px
+    &:hover
+      text-decoration: none
 
 
 // ------------------------------------------- Archive of all blog posts
