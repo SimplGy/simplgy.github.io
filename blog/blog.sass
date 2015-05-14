@@ -153,26 +153,26 @@
     float: right
 
 // --------------------------------- Blog Post One-liner Title Display
+.blogPostPage
+  .deepLink
+    display: none
+    margin-left: 5px
+    padding: 0 10px 0 7px // because the pillcrow shape has a lot of negative space on the left
+    color: $muted
+    border: 1px solid $shade20
+    border-radius: 3px
+    font-weight: normal
+  .deepLink:hover
+    background: $shade05
+    color: $greenDark
+    border: 1px solid $shade20
+    text-decoration: none
 
-.deepLink
-  display: none
-  margin-left: 5px
-  padding: 0 10px 0 7px // because the pillcrow shape has a lot of negative space on the left
-  color: $muted
-  border: 1px solid $shade20
-  border-radius: 3px
-  font-weight: normal
-.deepLink:hover
-  background: $shade05
-  color: $greenDark
-  border: 1px solid $shade20
-  text-decoration: none
-
-h2, h3, h4, h5, h6
-  &:hover,
-  &:focus
-    .deepLink
-      display: inline
+  h2, h3, h4, h5, h6
+    &:hover,
+    &:focus
+      .deepLink
+        display: inline
 
 
 

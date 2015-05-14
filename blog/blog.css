@@ -115,7 +115,7 @@
 .post.oneliner .date {
   float: right; }
 
-.deepLink {
+.blogPostPage .deepLink {
   display: none;
   margin-left: 5px;
   padding: 0 10px 0 7px;
@@ -123,14 +123,12 @@
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 3px;
   font-weight: normal; }
-
-.deepLink:hover {
+.blogPostPage .deepLink:hover {
   background: rgba(0, 0, 0, 0.05);
   color: #2a9400;
   border: 1px solid rgba(0, 0, 0, 0.2);
   text-decoration: none; }
-
-h2:hover .deepLink, h2:focus .deepLink, h3:hover .deepLink, h3:focus .deepLink, h4:hover .deepLink, h4:focus .deepLink, h5:hover .deepLink, h5:focus .deepLink, h6:hover .deepLink, h6:focus .deepLink {
+.blogPostPage h2:hover .deepLink, .blogPostPage h2:focus .deepLink, .blogPostPage h3:hover .deepLink, .blogPostPage h3:focus .deepLink, .blogPostPage h4:hover .deepLink, .blogPostPage h4:focus .deepLink, .blogPostPage h5:hover .deepLink, .blogPostPage h5:focus .deepLink, .blogPostPage h6:hover .deepLink, .blogPostPage h6:focus .deepLink {
   display: inline; }
 
 /*# sourceMappingURL=blog.css.map */
