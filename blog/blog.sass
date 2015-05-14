@@ -18,7 +18,7 @@
     line-height: 1.7
 
   p, .highlight, blockquote
-    margin-bottom: $fontSize * $lineHeight
+    margin-bottom: $fontSize * $lineHeight / 2
 
   +phone
     $padding: 10px
@@ -28,7 +28,7 @@
     font-size: $fontSize
     line-height: $lineHeight
     p, .highlight, blockquote
-      margin-bottom: $fontSize * $lineHeight
+      margin-bottom: $fontSize * $lineHeight / 2
 
   .highlight
     $roomy: 10px
@@ -58,6 +58,7 @@
     //box-shadow: -($minImgWidth) 0 0 0 $black05, $minImgWidth 0 0 0 $black05 // Throws out a bar to contain the image
     display: block
     margin: 0 auto
+    width: 100% // grow the gif images to fill the width, it looks cool
 
 
   ul, li

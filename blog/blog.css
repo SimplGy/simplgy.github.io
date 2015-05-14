@@ -8,14 +8,14 @@
     font-size: 60%;
     line-height: 1.7; }
   .blogPostPage .content p, .blogPostPage .content .highlight, .blogPostPage .content blockquote {
-    margin-bottom: 31.5px; }
+    margin-bottom: 15.75px; }
   @media (max-width: 603px) {
     .blogPostPage .content {
       padding: 0 10px;
       font-size: 16px;
       line-height: 1.75; }
       .blogPostPage .content p, .blogPostPage .content .highlight, .blogPostPage .content blockquote {
-        margin-bottom: 28px; } }
+        margin-bottom: 14px; } }
   .blogPostPage .content .highlight {
     overflow: auto;
     padding: 10px;
@@ -37,7 +37,8 @@
     margin-bottom: 0; }
   .blogPostPage .content p > img {
     display: block;
-    margin: 0 auto; }
+    margin: 0 auto;
+    width: 100%; }
   .blogPostPage .content ul, .blogPostPage .content li {
     list-style-type: disc;
     list-style-position: inside; }
