@@ -1,6 +1,7 @@
 name: Eric Miller
 alias: simple guy
 tagline: Simple JavaScript Apps&#10;for Complex Problems
+# tagline: My life and work are all about keeping things simple. Simple APIs. Simple User Interfaces. Simple lifestyle.
 # tagline: I am a well-rounded (design/business/tech), experienced (7 years) javascript developer
 #tagline: I build&#10;simple-to-use&#10;web apps
 #tagline1: Simple JavaScript Apps
@@ -17,4 +18,5 @@ github: https://github.com/SimplGy
 stackoverflowCareers: http://careers.stackoverflow.com/simplgy
 #dribbble: https://dribbble.com/simpleascouldbe
 instagram: https://instagram.com/simplgy
+facebookAvatarUrl: //graph.facebook.com/v2.1/24407266/picture?height=120&width=120
 youtubeVideo: zyHH6NPPUmQ

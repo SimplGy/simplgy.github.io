@@ -70,6 +70,7 @@ o redo colors using http://www.rocket-design.fr/color-template/
 o Better fit on mobile and tablet (footer, reduce global padding/margins)
 o Click responsiveness and IxN on mobile and tablet (aim for perfect on ipad air)
 o https://mmistakes.github.io/skinny-bones-jekyll/getting-started/
+o See if there's a way to get reddit, google+, and other post parsers to see the banner image before the content images (hide an `img` tag in the banner?)
 
 ### Over the Rainbow
 o Pick a color scheme I can live with for a while. Main color (green), supporting color (blue?), background color (not quite white), shaded bg color (pale white), dark (not quite black, tinged brown), etc.
