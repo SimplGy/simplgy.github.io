@@ -2,6 +2,7 @@
 #pygments: true
 exclude: ['*.sass']
 permalink: /:categories/:title
+productionUrl: http://www.simple.gy
 defaults:
   -
     scope:
