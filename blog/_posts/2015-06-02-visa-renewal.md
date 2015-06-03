@@ -18,7 +18,7 @@ I brought the apartment's business card so my local address is perfect. Pro tip.
 
 8:00. The loudspeaker starts playing some music. Everyone stands up. It takes me a moment to realize: The King's Anthem. We stand solemnly while the anthem plays.
 
-8:30. The office is open and numbers are running. THey call out each new number is called out in Thai and English. Some start at zero. I presume that's my queue. Others are in the 300s or 500s.
+8:30. The office is open and numbers are running. They call out each new number in Thai and English. Some start at zero. I presume that's my queue. Others are in the 300s or 500s.
 
 9:00. Numbers aren't moving much. I'm sitting in an outside waiting area that has resonably priced coffee. A well groomed middle aged man is trading bites of pastry with the younger Thai boy sitting next to him. At the same table, another middle-aged man saves a seat for his wife while she parks the car. This guy looks like a football fan. They wouldn't be sitting at the same table in Florida. Probably not even the same bar.
 
