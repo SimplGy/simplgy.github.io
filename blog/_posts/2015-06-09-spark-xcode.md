@@ -1,6 +1,6 @@
 ---
-title: Undo Spark Inspector's Framework Setup Assistant
-excerpt: How to fix it when Spark nukes your build
+title: How to fix it if Spark Inspector nukes your build
+excerpt: Just something that happened one time. Also what to use instead.
 ---
 
 Spark inspector looks awesome.
@@ -36,3 +36,5 @@ Spark: Please, if you're gonna have a magic install, provide an uninstall too. Y
 It's a shame, I really would like Spark to have worked. Not sure if it's some combination of OS, xcode, swift version, Package Manager, or what. Some day I'll be good enough to debug the build process, but I'm still new at this.
 
 I miss my safe, reliable, visual, web-based debugging tools :(
+
+All that said, *Reveal* is super awesome and the same kind of thing. I was up and running in less than 5 minutes of [manual steps](http://support.revealapp.com/kb/getting-started/integrating-reveal-add-reveal-to-your-xcode-project) that I understand how to reverse if something goes wrong.
