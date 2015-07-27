@@ -7,7 +7,8 @@ tagline: Simple JavaScript Apps&#10;for Complex Problems
 #tagline1: Simple JavaScript Apps
 #tagline2: for Complex Problems
 #description: My name is Eric.&#10;I create web applications&#10;in Angular, Backbone, and more.
-description: My name is Eric.&#10;I build software for the web&#10;in Angular, Backbone, and more.
+#description: My name is Eric.&#10;I build software for the web&#10;in Angular, Backbone, and more.
+description: My name is Eric.&#10;I build software for the web and mobile&#10;in Swift, Angular, Backbone, and more.
 firstName: Eric
 lastName: Miller
 email: hi@simple.gy
