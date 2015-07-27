@@ -205,7 +205,12 @@ a.link:visited:hover {
   height: 100%;
   width: 100%;
   min-height: 400px;
-  background: #57534F;
+  background: url("../img/video-cap/b.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: #57534F;
   color: white;
   overflow: hidden; }
   .jumbotron h1, .jumbotron h3 {
@@ -237,18 +242,21 @@ a.link:visited:hover {
   position: relative;
   margin: 0 auto;
   text-align: center;
-  clear: both; }
+  clear: both;
+  z-index: 1; }
 
 .ytbg-video {
-  opacity: 0.5; }
+  opacity: 1; }
 
 .ytbg-overlay {
-  box-shadow: inset 0 -3px #38c700; }
+  box-shadow: inset 0 -3px #38c700;
+  background: rgba(0, 0, 0, 0.4); }
 
 .projectsPage .content {
   padding: 0; }
   .projectsPage .content .padder {
-    padding: 30px; }
+    padding: 30px;
+    text-align: center; }
     @media (max-width: 603px) {
       .projectsPage .content .padder {
         padding: 10px; } }
@@ -270,8 +278,6 @@ a.link:visited:hover {
   @media (max-width: 603px) {
     .projectSummaries .project {
       padding: 10px 5px; } }
-.projectSummaries .project.private {
-  display: none; }
 .projectSummaries .project, .projectSummaries header {
   text-align: center; }
 .projectSummaries header {

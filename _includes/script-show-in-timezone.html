@@ -1,4 +1,6 @@
 <script>
+  // Hide any element with a `.private` class if the client's device has a timezone offset other than `-420`
+
   var nodes = document.querySelectorAll('.private');
   function show   (n) { n.style.display = 'block'; }
   function remove (n) { n.parentNode.removeChild(n); }

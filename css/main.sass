@@ -213,7 +213,12 @@ a.link:visited:hover
   min-height: 400px
   //background: linear-gradient($a, $b)
   //background: mix($green, black, 60%)
-  background: $warmGray //$black70
+  background: url("../img/video-cap/b.png") no-repeat center center fixed
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -o-background-size: cover
+  background-size: cover
+  background-color: $warmGray //$black70
   color: white
   overflow: hidden
   h1, h3
@@ -244,18 +249,17 @@ a.link:visited:hover
   margin: 0 auto
   text-align: center
   clear: both
+  z-index: 1
+
 
 
 // ----------------------------------- YouTube Background Video
 .ytbg-video
-  opacity: .5
+  opacity: 1
   //transition: .3s ease-out all
 .ytbg-overlay
   box-shadow: inset 0 -3px $green
-  //background: linear-gradient(transparentize($green, .75) 0%, transparent 15%, transparent 50%, transparentize($green, .5))
-
-
-
+  background: $shade40
 
 
 
@@ -264,6 +268,7 @@ a.link:visited:hover
   padding: 0
   .padder
     padding: 30px
+    text-align: center
     +phone
       padding: 10px
     h2, h3
@@ -283,8 +288,6 @@ a.link:visited:hover
     //margin-bottom: 5px
     margin-bottom: 200px
     background: $black05
-  .project.private
-    display: none
   .project, header
     text-align: center
   header
@@ -324,11 +327,7 @@ a.link:visited:hover
   +phone
     +flexWrap
 
-  //opacity: .001
-  //&:hover
-    opacity: 1
   section
-
     margin: 20px
     padding: 20px
     padding-bottom: 0

@@ -3,6 +3,14 @@
 
 This is the repo for my personal site. It uses Jekyll.
 
+
+
+## Quick Start
+
+`jekyll s -w` to run in dev mode
+
+
+
 ## Authoring
 
 Hide a blog post or project (unpublish)
@@ -24,6 +32,8 @@ If you need to use `-` or `:` in the front matter of the post, these are special
     ---
     title: Something easy
     description: "Singing: how to do it while chewing gum."
+
+
 
 ## Development & Deployment
 
@@ -50,15 +60,15 @@ To add a project:
 Same as above, but put it inside `projects/_posts`. This tells jekyll to categorize them as `project` but keeps things separate since I don't usually want to treat projects as blog posts.
 
 
+
 ## Projects
 
 These go in `projects/_posts`. I use the `{{content}}` tags for the headers since they're complex html, and put description text and other values in the yml front matter.
 It's almost all configuration based except for the copywriting and the header fanciness.
 
 
-## To-Do
 
-A to-do list for this project.
+## To-Do
 
 ### On Deck
 o wrap jekyll in gulp/npm scripts so I can have at least a min-cat asset pipeline
