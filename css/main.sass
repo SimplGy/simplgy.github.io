@@ -92,6 +92,8 @@ hr
 
 .padder
   padding: 30px
+  +phone
+    padding: 0
 
 // Size text as percentages of itself
 .typePretty
@@ -267,8 +269,18 @@ a.link:visited:hover
 // --------------------------------- Resume
 .resumePage
   background: #f6f6f6
+  .content
+    text-align: center
+    .gist
+      text-align: left
+      display: inline-block
+      max-width: 900px
+    li
+      list-style: disc
 .resumePage .gist-data
   padding: 20px
+  +phone
+    padding: 10px
 
 // --------------------------------- Project Summary List
 .projectsPage .content

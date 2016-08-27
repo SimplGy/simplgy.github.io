@@ -96,6 +96,9 @@ hr {
 
 .padder {
   padding: 30px; }
+  @media (max-width: 603px) {
+    .padder {
+      padding: 0; } }
 
 .typePretty small {
   font-size: 60%; }
@@ -257,9 +260,20 @@ a.link:visited:hover {
 
 .resumePage {
   background: #f6f6f6; }
+  .resumePage .content {
+    text-align: center; }
+    .resumePage .content .gist {
+      text-align: left;
+      display: inline-block;
+      max-width: 900px; }
+    .resumePage .content li {
+      list-style: disc; }
 
 .resumePage .gist-data {
   padding: 20px; }
+  @media (max-width: 603px) {
+    .resumePage .gist-data {
+      padding: 10px; } }
 
 .projectsPage .content {
   padding: 0; }
