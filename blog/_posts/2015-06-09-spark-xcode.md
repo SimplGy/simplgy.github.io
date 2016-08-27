@@ -38,3 +38,5 @@ It's a shame, I really would like Spark to have worked. Not sure if it's some co
 I miss my safe, reliable, visual, web-based debugging tools :(
 
 All that said, *Reveal* is super awesome and the same kind of thing. I was up and running in less than 5 minutes of [manual steps](http://support.revealapp.com/kb/getting-started/integrating-reveal-add-reveal-to-your-xcode-project) that I understand how to reverse if something goes wrong.
+
+UPDATE: xcode supports this in a pretty decent way out of the box, starting with xcode 6: http://stackoverflow.com/a/26052806/111243

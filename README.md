@@ -27,7 +27,7 @@ To add a live code demo to your blog post, add a `demo` section to your front ma
     demo: https://jsfiddle.net/yhvrcwog/2/embedded/result
     ---
 
-If you need to use `-` or `:` in the front matter of the post, these are special characters to YAML. Surround it in quotes to make it work.
+If you need to use `-` or `:` in the front matter of the post, these are special characters to YAML. Surround the whole thing in quotes to make it work.
 
     ---
     title: Something easy
@@ -67,6 +67,11 @@ These go in `projects/_posts`. I use the `{{content}}` tags for the headers sinc
 It's almost all configuration based except for the copywriting and the header fanciness.
 
 
+## Post Categories
+
+* Projects - work I've created. The set of these is a portfolio.
+* Book Notes - quotes and summaries from books I've read. A less-good version of this kind of book note: http://scattered-thoughts.net/
+* blog - An article I've written, usually technical
 
 ## To-Do
 

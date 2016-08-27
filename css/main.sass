@@ -90,6 +90,8 @@ hr
   margin: 100px auto
   max-width: 600px
 
+.padder
+  padding: 30px
 
 // Size text as percentages of itself
 .typePretty
@@ -262,12 +264,16 @@ a.link:visited:hover
   background: $shade40
 
 
+// --------------------------------- Resume
+.resumePage
+  background: #f6f6f6
+.resumePage .gist-data
+  padding: 20px
 
 // --------------------------------- Project Summary List
 .projectsPage .content
   padding: 0
   .padder
-    padding: 30px
     text-align: center
     +phone
       padding: 10px
@@ -510,8 +516,8 @@ footer
   //border-top: none
   //border-bottom: none
   box-shadow: -600px 0 0 $b, 600px 0 0 $b
-  
-  
+
+
 // ----------------------------------------------- Discuss Customizations
 // TODO: because of load timing, this can cause a scroll bug where the rectangle is positioned before load, and not repositioned after
 //#disqus_thread
@@ -523,4 +529,3 @@ footer
 //  width: 100%
 //  height: 61px
 //  background: white // cover up the adline
-
