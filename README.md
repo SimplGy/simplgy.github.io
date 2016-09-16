@@ -3,13 +3,9 @@
 
 This is the repo for my personal site. It uses Jekyll.
 
-
-
 ## Quick Start
 
-`jekyll s -w` to run in dev mode
-
-
+`bundle exec jekyll serve -w` to run in dev mode
 
 ## Authoring
 
@@ -39,15 +35,15 @@ If you need to use `-` or `:` in the front matter of the post, these are special
 
 To run in dev mode:
 
-    jekyll s -w
+    bundle exec jekyll serve -w
 
 If you'd like to see `_drafts`, too:
 
-    jekyll s --wD
+    bundle exec jekyll serve --wD
 
 To build only:
 
-    jekyll build
+    bundle exec jekyll build
 
 To add a post:
 

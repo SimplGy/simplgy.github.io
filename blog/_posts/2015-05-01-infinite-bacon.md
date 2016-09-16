@@ -40,10 +40,10 @@ Specifically, we're interested in when the user scrolls or resizes.
 
 It's bacon time. We'll create streams for the scrolling and resizing:
 
-{% highlight js %}
+```
 var scrolling = Bacon.fromEvent(window, 'scroll');
 var resizing  = Bacon.fromEvent(window, 'resize').debounce(50);
-{% endhighlight %}
+```
 
 [`fromEvent`](https://github.com/baconjs/bacon.js#bacon-fromevent) turns a normal browser event into a stream.
 
@@ -52,14 +52,14 @@ Debouncing our resize is a good choice, and Bacon makes it easy.
 The next step is to transform the browser events into the information we care about for our infinite scroll application.
 We care about the `y` position when we scroll, and the height of the screen after a resize:
 
-{% highlight js %}
+```
 var scrolling = Bacon.fromEvent(window, 'scroll');
 var yPos = scrolling.map(function(){ return window.scrollY });
 yPos.log('y');
 var resizing = Bacon.fromEvent(window, 'resize').debounce(50);
 var windowH = resizing.map(function(){ return window.innerHeight });
 windowH.log('height');
-{% endhighlight %}
+```
 
 The [`map`](https://github.com/baconjs/bacon.js#observable-map) function takes a stream and applies a transformation to each value. In our case we just grab the global `y` and `height` values value for each point in time.
 
@@ -67,19 +67,19 @@ We're logging the results to make sure we're getting what we expect so far. You 
 
 Actually, all we care about are the `y` position and screen height. We'll never reuse scroll and resize so let's simplify:
 
-{% highlight js %}
+```
 var yPosition = Bacon.fromEvent(window, 'scroll').map(function() { return window.scrollY });
 var screenHeight = Bacon.fromEvent(window, 'resize').debounce(50).map(function() { return window.innerHeight });
-{% endhighlight %}
+```
 
 ## Which Rows are Visible?
 
 Now we can walk slowly towards our infinite scrolling problem. From a stream of `y` scroll position it's easy to calculate the first row that is visible on screen:
 
-{% highlight js %}
+```
 var firstVisibleRow = yPosition.map(function(y){ return Math.floor( y / rowHeight ) }).skipDuplicates();
 firstVisibleRow = firstVisibleRow.toProperty(0); // Seed the initial value.
-{% endhighlight %}
+```
 
 [`skipDuplicates`](https://github.com/baconjs/bacon.js#stream-skipduplicates) causes the stream to not emit new values if the values is the same. This is good. Otherwise, every scroll event would fire a new `firstVisibleRow` event. Since our rows are 30 pixels tall, that means we would otherwise be sending lots of duplicate messages.
 
@@ -87,25 +87,25 @@ firstVisibleRow = firstVisibleRow.toProperty(0); // Seed the initial value.
 
 We are now calculating the first visible row in a way that updates in real time as we scroll, which is awesome. Let's do the same thing for the number of rows that can fit on screen:
 
-{% highlight js %}
+```
 screenHeight = screenHeight.toProperty(window.innerHeight); // Seed the initial value.
 var rowCount = screenHeight.map(function(screenHeight){
   return Math.ceil( screenHeight / rowHeight)
 }).skipDuplicates();
-{% endhighlight %}
+```
 
 Similar to how we seeded the first visible row, we need to seed the screen's height with `.toProperty(window.innerHeight)` because the browser doesn't throw a scroll event on page load. The row count can be the same for many values of screen height so we use `skipDuplicates`.
 
 If you log `rowCount` and `firstVisibleRow` you should see a beautiful, live updating stream of all the data you need to compute your infinite scroll elements:
 
-{% highlight js %}
+```
 rowCount.log('Row Count');
 firstVisibleRow.log('First Row');
-{% endhighlight %}
+```
 
 What we want is an array of all the row indices that are visible on screen. Let's combine these streams using [`combineWith`](https://github.com/baconjs/bacon.js#bacon-combinewith). This method creates a new stream based on other streams. Looks like this:
 
-{% highlight js %}
+```
 function calcVisibleRows (firstRow, rowCount) {
   var visibleIndices = [];
 
@@ -119,7 +119,7 @@ function calcVisibleRows (firstRow, rowCount) {
   return visibleIndices;
 }
 var visibleRowIndices = Bacon.combineWith(calcVisibleRows, firstVisibleRow, rowCount);
-{% endhighlight %}
+```
 
 Our `calcVisibleRows` function just takes two integer indices and calculates what should be visible on screen. It is bound by the result set size in this case, but you could remove this if you have a truly infinite data set.
 
@@ -137,16 +137,16 @@ Ok, let's keep going.
 
 There is one more step we can take in streams to get our data closer to exactly what the UI needs to do the drawing. Let's create two more streams. One for rows that have just become visible (because we need to draw them), and one for rows that have gone off screen (so we can clean them up).
 
-{% highlight js %}
+```
 var rowIndicesRemoved = visibleRowIndices.diff([], _.difference);
 var rowIndicesAdded   = visibleRowIndices.diff([], function(prev, cur){ return _.difference(cur, prev) }); // longer form here so we can reverse `cur` and `prev`
-{% endhighlight %}
+```
 
 Bacon's [`diff`](https://github.com/baconjs/bacon.js#observable-diff) method sends the previous and current value of a stream to a callback function. Then we use lodash's [`difference`](https://lodash.com/docs#difference) method to compute the difference between two arrays. If we used to be showing rows `[1,2,3]`, and now we're showing rows `[2,3,4]`, the `_.difference` is `[4]`. Calling with the arguments in the other order gets the removed elements. It's a little confusing that `diff` and `difference` have similar names. They aren't related. You can implement any function you want and pass it to Bacon's `diff` method.
 
 Now we have exactly the data we want in streams, let's just do our drawing:
 
-{% highlight js %}
+```
 var rows = {}; // cache row dom elements for quick and lookup-free cleanup
 
 rowIndicesAdded.onValue(  function(indices){ _.map(indices, renderRow) });
@@ -158,13 +158,13 @@ function renderRow(idx) {
   phonebookEl.appendChild(row);
   rows[idx] = row;
 }
-{% endhighlight %}
+```
 
 What what what? Any time we get a new value in the stream of added row indices, want to do something, so we use [`onValue`](https://github.com/baconjs/bacon.js#stream-onvalue). What we want to do is send each index in the array of added rows to the render row method. There is usually only one index, but if you jump your scrolling or do it quickly, there can be a lot. Passing these indices on to renderRow individually is what [`_.map`](https://lodash.com/docs#map) is doing for us.
 
 At this point you have a working scroller, but old rows aren't being cleaned up so we get none of the benefits of an infinite scroll widget. Here's the last step, cleanup hidden rows:
 
-{% highlight js %}
+```
 rowIndicesRemoved.onValue(function(indices){ _.map(indices, removeRow) });
 
 function removeRow(idx) {
@@ -172,7 +172,7 @@ function removeRow(idx) {
   rows[idx].parentElement.removeChild(rows[idx]);
   rows[idx] = undefined;
 }
-{% endhighlight %}
+```
 
 To clean up, we just pull the element out of the DOM and remove the cache reference. I would have used `delete` but I think modifying the object's hidden class is slower. Would have to test but I don't have a perf issue yet. Also, reusing DOM elements instead of appending and removing them would be faster, but it would increase the complexity and I wanted to keep this focused on Bacon.js and FRP.
 

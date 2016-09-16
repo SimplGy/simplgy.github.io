@@ -30,9 +30,9 @@ This makes sense, it's more explicit. I never could remember in Ruby or CoffeeSc
     
 This was a [change in Beta 4](http://makeapppie.com/tag/iboutlet-optional/). UILabels are optional and should now be marked as such. Just add `!` after the `UILabel` to create an "implicitly unwrapped optional":
 
-{% highlight swift %}
+```
 @IBOutlet var timeDisplay : UILabel!
-{% endhighlight %}
+```
 
 From Apple's "Using Swift with Cocoa and Objective-C":
 
@@ -44,9 +44,9 @@ From Apple's "Using Swift with Cocoa and Objective-C":
 
 This was the broken line:
 
-{% highlight swift %}
+```
 init(coder aDecoder: NSCoder) {
-{% endhighlight %}
+```
 
 [Quote:](https://github.com/ksm/SwiftInFlux#required-and-designated-initializers-in-subclasses)
 
@@ -56,9 +56,9 @@ init(coder aDecoder: NSCoder) {
 
 The fix is:
 
-{% highlight swift %}
+```
 required init(coder aDecoder: NSCoder) {
-{% endhighlight %}
+```
 
 [Quote](https://developer.apple.com/library/prerelease/ios/documentation/Swift/Conceptual/Swift_Programming_Language/Declarations.html):
 
@@ -70,9 +70,9 @@ I was doing some math on the window height. Pulling `self.frame.height` gives yo
 
 I am doing math with some other values, and for them to play together they need to be the same type. The best solution for me is to declare all values as `CGFloat`:
 
-{% highlight swift %}
+```
 let interval: CGFloat = 1.0
-{% endhighlight %}
+```
 
 [Quote](https://devforums.apple.com/message/998222#998222):
 
@@ -85,14 +85,14 @@ let interval: CGFloat = 1.0
 
 At first I thought the signature had changed, but that is not the case. It turns out it wasn't seeing the first param correctly, because I was sending an interval of type `CGFloat`, which doesn't automatically cast to `NSTimeInterval`. The solution:
 
-{% highlight swift %}
+```
 var timer = NSTimer.scheduledTimerWithTimeInterval(
   NSTimeInterval(interval),
   target: self,
   selector: "tick",
   userInfo: nil,
   repeats: true)
-{% endhighlight %}
+```
 
 ## Resources
 

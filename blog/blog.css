@@ -1,22 +1,22 @@
-.blogPostPage .content {
+.blogPage .content {
   font-size: 18px;
   line-height: 1.75;
   padding: 0 30px;
   max-width: 800px;
   margin: 0 auto; }
-  .blogPostPage .content h2 small {
+  .blogPage .content h2 small {
     font-size: 60%;
     line-height: 1.7; }
-  .blogPostPage .content p, .blogPostPage .content .highlight, .blogPostPage .content blockquote {
+  .blogPage .content p, .blogPage .content .highlight, .blogPage .content blockquote {
     margin-bottom: 15.75px; }
   @media (max-width: 603px) {
-    .blogPostPage .content {
+    .blogPage .content {
       padding: 0 10px;
       font-size: 16px;
       line-height: 1.75; }
-      .blogPostPage .content p, .blogPostPage .content .highlight, .blogPostPage .content blockquote {
+      .blogPage .content p, .blogPage .content .highlight, .blogPage .content blockquote {
         margin-bottom: 14px; } }
-  .blogPostPage .content .highlight {
+  .blogPage .content .highlight {
     overflow: auto;
     padding: 10px;
     margin-left: -10px;
@@ -25,21 +25,21 @@
     background: #fafafa;
     border: 1px solid #f2f2f2;
     border-top-color: #e6e6e6; }
-    .blogPostPage .content .highlight code {
+    .blogPage .content .highlight code {
       padding: 0;
       background: none;
       border: none; }
-  .blogPostPage .content .highlight {
+  .blogPage .content .highlight {
     font-size: 85%; }
-  .blogPostPage .content .gist-file .highlight {
+  .blogPage .content .gist-file .highlight {
     font-size: 100%; }
-  .blogPostPage .content blockquote p {
+  .blogPage .content blockquote p {
     margin-bottom: 0; }
-  .blogPostPage .content p > img {
+  .blogPage .content p > img {
     display: block;
     margin: 0 auto;
     width: 100%; }
-  .blogPostPage .content ul, .blogPostPage .content li {
+  .blogPage .content ul, .blogPage .content li {
     list-style-type: disc;
     list-style-position: inside; }
 
@@ -77,19 +77,22 @@
     background: rgba(0, 0, 0, 0.1);
     padding: 0 3px; }
 
-.blogArchivePage .content h1, .blogArchivePage .content h2 {
-  margin-left: 30px;
-  margin-right: 30px; }
-.blogArchivePage .content li a {
-  padding-left: 30px;
-  padding-right: 30px; }
-@media (max-width: 603px) {
+.blogArchivePage .content {
+  max-width: 800px;
+  margin: 0 auto; }
   .blogArchivePage .content h1, .blogArchivePage .content h2 {
-    margin-left: 10px;
-    margin-right: 10px; }
-  .blogArchivePage .content li.post.summary a {
-    padding-left: 10px;
-    padding-right: 10px; } }
+    margin-left: 30px;
+    margin-right: 30px; }
+  .blogArchivePage .content li a {
+    padding-left: 30px;
+    padding-right: 30px; }
+  @media (max-width: 603px) {
+    .blogArchivePage .content h1, .blogArchivePage .content h2 {
+      margin-left: 10px;
+      margin-right: 10px; }
+    .blogArchivePage .content li.post.summary a {
+      padding-left: 10px;
+      padding-right: 10px; } }
 
 .post.summary .title {
   margin-bottom: 5px;
@@ -117,7 +120,7 @@
 .post.oneliner .date {
   float: right; }
 
-.blogPostPage .deepLink {
+.blogPage .deepLink {
   display: none;
   margin-left: 5px;
   padding: 0 10px 0 7px;
@@ -125,12 +128,12 @@
   border: 1px solid transparent;
   border-radius: 3px;
   font-weight: normal; }
-.blogPostPage .deepLink:hover {
+.blogPage .deepLink:hover {
   background: rgba(0, 0, 0, 0.05);
   color: #2a9400;
   border: 1px solid rgba(0, 0, 0, 0.2);
   text-decoration: none; }
-.blogPostPage h2:hover .deepLink, .blogPostPage h2:focus .deepLink, .blogPostPage h3:hover .deepLink, .blogPostPage h3:focus .deepLink, .blogPostPage h4:hover .deepLink, .blogPostPage h4:focus .deepLink, .blogPostPage h5:hover .deepLink, .blogPostPage h5:focus .deepLink, .blogPostPage h6:hover .deepLink, .blogPostPage h6:focus .deepLink {
+.blogPage h2:hover .deepLink, .blogPage h2:focus .deepLink, .blogPage h3:hover .deepLink, .blogPage h3:focus .deepLink, .blogPage h4:hover .deepLink, .blogPage h4:focus .deepLink, .blogPage h5:hover .deepLink, .blogPage h5:focus .deepLink, .blogPage h6:hover .deepLink, .blogPage h6:focus .deepLink {
   display: inline; }
 
 /*# sourceMappingURL=blog.css.map */

@@ -8,8 +8,7 @@
   {% include css.html %}
   {% include analytics.html %}
 </head>
-<body class="{{page.id}}Page">
-<!--<body class="{{page.permalink || page.id}}Page">-->
+<body class="{% for c in page.categories %} {{ c }}Page {% endfor %}">
 
   {{ content }}
 

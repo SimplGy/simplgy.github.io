@@ -1,6 +1,7 @@
 ---
 layout: landing
-id: quotes
+categories:
+- quotes
 title: Quotes
 ---
 

@@ -55,7 +55,7 @@ By using an IIFE to capture our scope, we can have our instances point to that s
 
 Here's a design:
 
-{% highlight js %}
+```
 const Person = (function(){
   var i=0;
   const me = {};
@@ -71,7 +71,7 @@ const Person = (function(){
 var eric = new Person("Eric");
 eric.name; // undefined
 eric.greet(); // Hi, I'm Eric
-{% endhighlight %}
+```
 
 So, this is what we're looking for, right? And while there's some boilerplate with `me[this.i]`, it's all internal to our Object's implementation, our callers never have to see it, so from an API design perspective I think that's not bad.
 
@@ -85,7 +85,7 @@ There is one huge, giant caveat though. Memory leaks.
 
 This structure is practically designed to leak memory. Check this out:
 
-{% highlight js %}
+```
 var eric = new Person("Eric");
 var bob = new Person("Bob");
 eric.greet(); // Hi, I'm Eric
@@ -94,11 +94,11 @@ eric = null;
 // The eric reference is nulled out, but what about that `me` hash of private data?
 bob.i = 0; // Cheat to reference the previous object's data
 bob.greet(); // Doh. Data for "Eric" is still here
-{% endhighlight %}
+```
     
 Because of this (and pub/sub apis) I am very much looking forward to WeakMap. With a WeakMap, we can implement private members beautifully:
 
-{% highlight js %}
+```
 const Person = (function(){
   window.map = new WeakMap(); // demo only: public so you can verify that the data is garbage collected
   function Person(name) {
@@ -112,7 +112,7 @@ const Person = (function(){
 var eric = new Person("Eric"); // our object graph is now `eric -> map[this] -> {name: "Eric"}`
 window.map[eric].name // "Eric"
 eric = null // now nothing references our object at key `map[this] -> {name: "Eric"}` and it can be garbage collected
-{% endhighlight %}
+```
 
 I wish that were the happy ending, but so far I've been unable to verify in Chrome 52 that the data in the map is being collected by forcing garbage collection cycles and inspecting the object.
 

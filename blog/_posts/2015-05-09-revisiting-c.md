@@ -19,7 +19,7 @@ The first thing I found interesting was a succinct explanation of why arrays sta
 
 The next fascinating thing is how you get an array length in C. It exposes the under-the-hood mechanics in a very direct way.
 
-{% highlight c %}
+```
 float numbers[] = { 1.1, 2.2, 3.3 }
 // Get the size of a `float`:
 printf("Size of float: %ld bytes\n", sizeof(float)); // 4 bytes
@@ -27,7 +27,7 @@ printf("Size of float: %ld bytes\n", sizeof(float)); // 4 bytes
 printf("Size of numbers: %ld bytes\n", sizeof(numbers)); // 12 bytes
 // items in array
 printf("Floats in Array: %ld", sizeof(numbers)/sizeof(float)); // 3 items
-{% endhighlight %}
+```
 
 This left me with a strong impression of how close to the metal C really is, and how useful it can be to think about things in the same way as the computer does.
 
@@ -35,18 +35,18 @@ This left me with a strong impression of how close to the metal C really is, and
 
 In C, you create a reference explicitly using `*` and point it to a value's memory address using `&`:
 
-{% highlight c %}
+```
 char *ref;
 char e = 'e';
 ref = &e;
 printf("value: %c, reference: %c\npointer address: %s\n", e, *ref, ref);
 e = 'changed';
 printf("value: %c, reference: %c, e, *ref);
-{% endhighlight %}
+```
 
 It struck me that the same mechanic is possible in JS. While the memory address is not exposed, JS objects (hash maps) allow us to emulate our own reference behavior. We have to be careful not to change the reference of the original object, but it can be done:
 
-{% highlight js %}
+```
 var nums = [1,2,3];
 var map = { a: nums };
 var ref = 'a';
@@ -55,16 +55,13 @@ console.log("value: "+ nums +", reference: "+ map[ref] +", address: "+ ref);
 nums.splice(-3); // empty it
 Array.prototype.push.apply(nums, [3,4,5]);
 console.log("value: "+ nums +", reference: "+ map[ref] +", address: "+ ref);
-{% endhighlight %}
+```
 
 Pointers in C are more powerful though. For example, autoincrementing is type aware and works on a reference type. you can use this for interating over the characters in a string:
 
-{% highlight c %}
+```
 var *letter;
 char eric[] = "Eric";
 letter = &eric[1];  // pointer to 'r'
 ++letter;           // pointer to 'i'
-{% endhighlight %}
-    
-    
-    
+```

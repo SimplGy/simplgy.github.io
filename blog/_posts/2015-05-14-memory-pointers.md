@@ -20,7 +20,7 @@ Both primitives (`int`, `long`) and reference types (`int *`, `NSObject *`) have
 
 Here's an example:
 
-{% highlight c %}
+```
 // Create a primitive
 int myNum = 42;
 myNum;   // 42             (returned by "default")
@@ -30,7 +30,7 @@ myNum;   // 42             (returned by "default")
 int *pointer = &myNum;
 pointer  // 0x7fff5fbff6bc (returned by "default")
 *pointer // 42             (pointed-at value)
-{% endhighlight %}
+```
     
 This shows that with a primitive value, you can get to the memory address with `&`, and in a pointer, you can get to the value with `*`.
 
@@ -40,12 +40,12 @@ I think this has really sunk in now, and it explains a lot. Everything in progra
 
 Even if your value is an address, that value has its own address. Huh? I'll show you.
 
-{% highlight c %}
+```
 int myNum = 42;        // integer has value 42 and lives at address A
 int *pointer = &myNum; // pointer has value A and lives at address B
 printf("The pointer stores a mem address: %p\n", pointer);  // A
 printf("The pointer lives in memory here: %p\n", &pointer); // B
-{% endhighlight %}
+```
 
 **Everything** has both a value and a memory address, *even if the value itself is a memory address*.
 

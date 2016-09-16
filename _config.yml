@@ -1,6 +1,4 @@
-#markdown: maruku
-#pygments: true
-exclude: ['*.sass']
+markdown: kramdown
 permalink: /:categories/:title
 productionUrl: http://www.simple.gy
 defaults:
@@ -18,7 +16,25 @@ defaults:
     values:
       layout: default
 
-#analytics:
-#  provider: google
-#  google:
-#    tracking_id: ''
+exclude: ['*.sass']
+
+
+# Github allows changing:
+github: [metadata]
+kramdown:
+  input: GFM # https://help.github.com/articles/about-writing-and-formatting-on-github/
+  hard_wrap: false
+gems:
+  - jekyll-coffeescript
+  - jekyll-paginate
+
+# Github does not allow changing
+#lsi: false
+#safe: true
+#source: [your repo's top level directory]
+#incremental: false
+#highlighter: rouge
+#gist:
+#  noscript: false
+#kramdown:
+#  math_engine: mathjax

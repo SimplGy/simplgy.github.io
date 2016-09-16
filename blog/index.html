@@ -1,18 +1,21 @@
 ---
-id: blogArchive
+categories:
+- blogArchive
 title: Blog Post Archive
 ---
 
-<h2>Recent Blog Posts</h2>
+<h2>Blog Posts</h2>
 <ul>
-  {% for post in site.categories.blog limit:2 %}
+  {% for post in site.categories.blog %}
     {% include li-post-summary.html %}
   {% endfor %}
 </ul>
 
+{% comment %}
 <h2>More Posts</h2>
 <ul>
   {% for post in site.categories.blog offset:2 %}
     {% include li-post-oneliner.html %}
   {% endfor %}
 </ul>
+{% endcomment %}
