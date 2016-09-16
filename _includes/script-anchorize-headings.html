@@ -14,7 +14,7 @@
         tags = ['h2', 'h3', 'h4', 'h5', 'h6'];
 
     tags.forEach(function(tag){
-      results = document.getElementsByTagName(tag);
+      results = document.querySelectorAll('.actualPost ' + tag);
       Array.prototype.push.apply(headingNodes, results);
     });
 
