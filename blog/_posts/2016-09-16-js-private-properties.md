@@ -55,7 +55,7 @@ By using an IIFE to capture our scope, we can have our instances point to that s
 
 Here's a design:
 
-```
+```js
 const Person = (function(){
   var i=0;
   const me = {};
@@ -85,7 +85,7 @@ There is one huge, giant caveat though. Memory leaks.
 
 This structure is practically designed to leak memory. Check this out:
 
-```
+```js
 var eric = new Person("Eric");
 var bob = new Person("Bob");
 eric.greet(); // Hi, I'm Eric
@@ -98,7 +98,7 @@ bob.greet(); // Doh. Data for "Eric" is still here
     
 Because of this (and pub/sub apis) I am very much looking forward to WeakMap. With a WeakMap, we can implement private members beautifully:
 
-```
+```js
 const Person = (function(){
   window.map = new WeakMap(); // demo only: public so you can verify that the data is garbage collected
   function Person(name) {
