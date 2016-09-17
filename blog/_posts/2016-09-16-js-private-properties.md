@@ -21,7 +21,9 @@ The answer to my question at that time was basically: "no", or one of these work
 
 * **Private by Convention**: name private methods with an underscore. eg: `this._name`. But... It's just a convention.
 
-* **Private by scope, with method duplication**: put private variables in the Constructor/factory function *and* define all your privileged methods on `this`. eg: `this.greet = function(){}`. This is not the most efficient. It's probably not a performance issue in most situations, but I also don't think it "feels" architecturally correct. I feel like I *can* reuse something, I *should*.
+* **Private by scope, with method duplication**: put private variables in the Constructor/factory function *and* define all your privileged methods on `this`. eg: `this.greet = function(){}`. This is not the most efficient. It's probably not a performance issue in most situations, but I also don't think it "feels" architecturally correct. I feel like if I *can* reuse something, I *should*.
+
+---
 
 Recent studying has reminded me of two central truths needed to resolve this issue.
 
@@ -41,11 +43,9 @@ This is sort of obvious if you do much in JS. But, when considered with *Truth 1
 
 ## Now What?
 
-It's clear then, that we can't put our private data on properties of the object we return to our consumers. If we did, it would never be private (see [Truth 1](#truth-1))
+Given these 2 truths, it's clear we can't put our private data on properties of the object we return to our consumers. If we did, it would never be private (see [Truth 1](#truth-1))
 
 What we *can* do, however, is hide identifiers in scopes nobody else has lexical access to (see [Truth2](#truth-2)).
-
-
 
 ## A Way Forward
 
@@ -96,25 +96,28 @@ bob.i = 0; // Cheat to reference the previous object's data
 bob.greet(); // Doh. Data for "Eric" is still here
 ```
     
-Because of this (and pub/sub apis) I am very much looking forward to WeakMap. With a WeakMap, we can implement private members beautifully:
+Because of this (and pub/sub apis) I am very much looking forward to [WeakMap](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap). With a WeakMap, we can implement private members beautifully:
 
 ```js
 const Person = (function(){
   window.map = new WeakMap(); // demo only: public so you can verify that the data is garbage collected
   function Person(name) {
-    map[this] = {};
-    map[this].name = name;
+    map.set(this, {});
+    map.get(this).name = name;
   }
-  Person.prototype.greet = function(){ return "Hi, I'm " + map[this].name }
+  Person.prototype.greet = function(){ return "Hi, I'm " + map.get(this).name }
   return Person;
 })();
 
-var eric = new Person("Eric"); // our object graph is now `eric -> map[this] -> {name: "Eric"}`
-window.map[eric].name // "Eric"
+var eric = new Person("Eric"); // our object graph is now `eric -> map.get(this) -> {name: "Eric"}`
+window.map.get(eric).name // "Eric"
 eric = null // now nothing references our object at key `map[this] -> {name: "Eric"}` and it can be garbage collected
 ```
 
-I wish that were the happy ending, but so far I've been unable to verify in Chrome 52 that the data in the map is being collected by forcing garbage collection cycles and inspecting the object.
+Awesome, right?
+
+I wish that were the happy ending, but so far I've been unable to verify in Chrome 52 that the data in the map is being collected.
+I've tried forcing garbage collection cycles and inspecting the object. This may be an invalid test but I don't know another one.
 
 This means I'm also unable to verify the correct functioning of great-looking shims like [benvie/WeakMap](https://github.com/Benvie/WeakMap).
 
