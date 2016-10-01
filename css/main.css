@@ -11,7 +11,7 @@ html, body, p, ul, li, ol, pre, blockquote {
 
 a {
   text-decoration: none;
-  color: #2a9400; }
+  color: #36a75e; }
 
 a:hover {
   text-decoration: underline; }
@@ -114,7 +114,7 @@ hr {
   padding: 20px; }
 
 .colorGreen {
-  color: #38c700; }
+  color: #4bc576; }
 
 .colorBlue {
   color: #90b6d6; }
@@ -129,7 +129,7 @@ hr {
   color: #007bb6; }
 
 .bgGreen {
-  background-color: #38c700; }
+  background-color: #4bc576; }
 
 .bgBlue {
   background-color: #90b6d6; }
@@ -147,16 +147,16 @@ hr {
   text-align: center; }
 
 a.link {
-  color: #38c700; }
+  color: #4bc576; }
 
 a.link:visited {
-  color: #64bf6b; }
+  color: #6ebea6; }
 
 a.link:hover {
-  color: #60d233; }
+  color: #6fd191; }
 
 a.link:visited:hover {
-  color: #83cc89; }
+  color: #8bcbb8; }
 
 .monogram {
   position: absolute;
@@ -216,7 +216,7 @@ a.link:visited:hover {
   opacity: 1; }
 
 .ytbg-overlay {
-  box-shadow: inset 0 -3px #38c700;
+  box-shadow: inset 0 -3px #4bc576;
   background: rgba(0, 0, 0, 0.4); }
 
 .resumePage {
@@ -269,7 +269,7 @@ a.link:visited:hover {
   color: white;
   text-decoration: none; }
   .aboutPage .content .social li a:hover {
-    box-shadow: inset 0 100px rgba(56, 199, 0, 0.05); }
+    box-shadow: inset 0 100px rgba(75, 197, 118, 0.05); }
 .aboutPage .content .social img {
   max-height: 100%;
   position: absolute;

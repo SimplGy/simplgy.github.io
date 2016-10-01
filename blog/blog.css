@@ -96,7 +96,7 @@
 
 .post.summary .title {
   margin-bottom: 5px;
-  color: #2a9400; }
+  color: #36a75e; }
 .post.summary p {
   max-width: 600px; }
 .post.summary a {
@@ -111,7 +111,7 @@
       padding-bottom: 30px; } }
 .post.summary a:hover {
   text-decoration: none;
-  background: rgba(56, 199, 0, 0.05); }
+  background: rgba(75, 197, 118, 0.05); }
 .post.summary .date {
   float: right; }
 
@@ -120,7 +120,7 @@
   padding-top: 10px;
   padding-bottom: 10px; }
 .post.oneliner a:hover {
-  background: rgba(56, 199, 0, 0.05); }
+  background: rgba(75, 197, 118, 0.05); }
 .post.oneliner .date {
   float: right; }
 
@@ -134,7 +134,7 @@
   font-weight: normal; }
 .blogPage .deepLink:hover {
   background: rgba(0, 0, 0, 0.05);
-  color: #2a9400;
+  color: #36a75e;
   border: 1px solid rgba(0, 0, 0, 0.2);
   text-decoration: none; }
 .blogPage h2:hover .deepLink, .blogPage h2:focus .deepLink, .blogPage h3:hover .deepLink, .blogPage h3:focus .deepLink, .blogPage h4:hover .deepLink, .blogPage h4:focus .deepLink, .blogPage h5:hover .deepLink, .blogPage h5:focus .deepLink, .blogPage h6:hover .deepLink, .blogPage h6:focus .deepLink {

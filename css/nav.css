@@ -3,10 +3,10 @@
   height: 40px; }
 
 .homePage nav {
-  background: rgba(56, 199, 0, 0.9);
+  background: rgba(75, 197, 118, 0.9);
   transition: 0.2s ease-out background-color; }
   .homePage nav:hover {
-    background: #38c700; }
+    background: #4bc576; }
 
 nav {
   position: absolute;
@@ -15,7 +15,7 @@ nav {
   right: 0;
   height: 40px;
   line-height: 40px;
-  background: #38c700;
+  background: #4bc576;
   padding: 0 20px;
   overflow: hidden;
   font-size: 0; }
@@ -34,7 +34,7 @@ nav {
     font-family: Comfortaa, sans-serif;
     display: block;
     text-transform: lowercase;
-    color: #f5fcf2;
+    color: #f6fcf8;
     text-decoration: none;
     padding: 0 10px;
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1); }
