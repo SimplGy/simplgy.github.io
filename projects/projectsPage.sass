@@ -19,36 +19,38 @@
 // Cards are the rectangles you see when looking at a list of projects
 
 // Sizing (responsive)
-.card
-  max-width: 350px
-  width: 33%
-  a
-    margin: 3px
-  figure
-    height: 150px
-  +tablet
-    width: 50%
+.cards
+  $idealWidth: 412px // +2 for border, +10 for margins. This way a full-size image is exactly 400w x 170h
+  $ratio: 412 / 170
+  max-width: $idealWidth * 4.1
+
+  .card
+    width: 100%
+    max-width: $idealWidth
     figure
       height: 120px
-  +phone
-    width: 100%
-    figure
-      height: 100px
-  +desktop
-    a
-      margin: 5px
+    @media (min-width: 321px)
+      width: 50%
+    @media (min-width: $idealWidth * 2.1)
+      width: 33%
+      figure
+        height: $idealWidth / $ratio
+    @media (min-width: $idealWidth * 3.1)
+      width: 25%
+
 
 // Other Visual and Structural Properties
 .cards
   font-size: 0
   text-align: center
-  max-width: 1300px
   margin: 0 auto
+  background: $shade07
 
 .card
   box-sizing: border-box
   text-align: left
   display: inline-block
+  background: $shade07
 
   a
     display: block
@@ -56,6 +58,7 @@
     border: 1px solid $black07
     background: white
     overflow: hidden
+    margin: 5px
 
     +transitionable
   a:hover
