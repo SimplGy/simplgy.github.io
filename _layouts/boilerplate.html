@@ -1,17 +1,23 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>{{ page.title }} - Eric Miller, Simple Guy</title>
-  <meta name="viewport" content="width=device-width">
-  {% include css.html %}
-  {% include analytics.html %}
-</head>
+<title>{{ page.title }} - Eric Miller, Simple Guy</title>
+<meta name="viewport" content="width=device-width">
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/nav.css">
+<link rel="stylesheet" href="/css/icons.css">
+<link rel="stylesheet" href="/css/syntax.css">
+<link rel="stylesheet" href="/blog/blog.css">
+<link rel="stylesheet" href="/projects/projectsPage.css">
+
+<!--<link href='http://fonts.googleapis.com/css?family=Jura:400,600' rel='stylesheet' type='text/css'>-->
+<link href='http://fonts.googleapis.com/css?family=Comfortaa:300,700' rel='stylesheet' type='text/css'>
+
+{% include analytics.html %}
+
+
 <body class="{% for c in page.categories %} {{ c }}Page {% endfor %}">
 
   {{ content }}
 
 </body>
-</html>
-

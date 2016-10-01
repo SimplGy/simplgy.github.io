@@ -5,19 +5,16 @@ title: Projects
 ---
 
 <div class="padder">
+
   <h2>Projects</h2>
-  <p class="muted">Hello, friend :)</p>
-  <p class="muted">Here are some animated gifs of recent work.</p>
-  <p class="muted">For details, technologies, and links to source code just hover over the right side of the project.</p>
+
+  <ol class="cards">
+    {% for project in site.categories.projects %}
+      {% include li-project-card.html %}
+    {% endfor %}
+  </ol>
+
 </div>
-
-<ul class="projectSummaries">
-  {% for project in site.categories.projects %}
-    {% if project.isPrivate %} {% continue %} {% endif %}
-    {% include li-project-summary.html %}
-  {% endfor %}
-</ul>
-
 
 
 <!--

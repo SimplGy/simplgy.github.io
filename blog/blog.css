@@ -102,9 +102,13 @@
 .post.summary a {
   display: block;
   color: inherit;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   border-top: 1px dotted rgba(0, 0, 0, 0.1); }
+  @media (max-width: 603px) {
+    .post.summary a {
+      padding-top: 30px;
+      padding-bottom: 30px; } }
 .post.summary a:hover {
   text-decoration: none;
   background: rgba(56, 199, 0, 0.05); }

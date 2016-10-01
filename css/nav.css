@@ -20,7 +20,7 @@ nav {
   overflow: hidden;
   font-size: 0; }
   nav.muted {
-    background: #4c4c4c; }
+    background: #4d4d4d; }
   @media (max-width: 603px) {
     nav {
       padding: 0;
@@ -59,7 +59,7 @@ nav {
     -webkit-transition: all 0.1s ease-out;
     -moz-transition: all 0.1s ease-out;
     transition: all 0.1s ease-out; }
-    nav .logo.altText {
+    nav .logo.altText, nav .logo:hover {
       margin-top: -40px; }
   nav ul {
     float: right;
