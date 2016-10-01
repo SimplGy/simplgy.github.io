@@ -64,16 +64,17 @@ It's almost all configuration based except for the copywriting and the header fa
 ## Post Categories
 
 * Projects - work I've created. The set of these is a portfolio.
-* Book Notes - quotes and summaries from books I've read. A less-good version of this kind of book note: http://scattered-thoughts.net/
+* Book Notes - quotes and summaries from books I've read. Sort of like this: http://scattered-thoughts.net/
 * blog - An article I've written, usually technical
 
 ## To-Do
 
 ### On Deck
 o Make the main nav work on mobile (doesn't fit)
-o wrap jekyll in gulp/npm scripts so I can have at least a min-cat asset pipeline
+o Use an img while the video is loading
+o If there's an animation, show it on hover. Show loader while fetching gif, fade the animation in a non-jarring way
+o wrap jekyll in gulp/npm scripts so I can have a a min-cat asset pipeline
 o Fix video origin, see if it can work on mobile
-o Use an img while the video is loading, and play seamlessly from there
 o consider https://github.com/poole/poole
 o Better fit on mobile and tablet (footer, reduce global padding/margins)
 o Click responsiveness and IxN on mobile and tablet
@@ -85,7 +86,6 @@ o Style blockquotes nicely
 o Style lists in markdown posts nicely
 o Move all van posts over from winterpress to here
 o Handle loading smoothly (load flat images in dom order. Then load videos based on scroll position. Play videos only when the user is viewing that one)
-
 
 ### Done
 x Support code highlighting with normal triple-backtick code blocks instead of boo `% highlight js %` stuff

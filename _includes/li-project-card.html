@@ -1,7 +1,13 @@
 <li class="project card {{ project.colorName }}">
   <a href="{{project.url}}">
 
-    <figure></figure>
+    <figure>
+
+      <div class="image at1x" style="background-image: url('/gfx/cards/{{ project.shortName }}.jpg')"></div>
+      <div class="image at2x" style="background-image: url('/gfx/cards/{{ project.shortName }}@2x.jpg')"></div>
+
+    </figure>
+
     <figcaption>
       <p>{{ project.title }}</p>
       <p class="muted subtitle" title="{{ project.summary }}">{{ project.summary }}</p>

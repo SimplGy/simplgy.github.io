@@ -20,8 +20,8 @@
 
 // Sizing (responsive)
 .cards
-  $idealWidth: 412px // +2 for border, +10 for margins. This way a full-size image is exactly 400w x 170h
-  $ratio: 412 / 170
+  $idealWidth: 418px // +2 for border, +10 for margins, +6 for padding. This way a full-size image is exactly 400w x 170h
+  $ratio: 418 / 170
   max-width: $idealWidth * 4.1
 
   .card
@@ -54,11 +54,13 @@
 
   a
     display: block
-    border-radius: 2px
+    border-radius: 3px
     border: 1px solid $black07
     background: white
     overflow: hidden
     margin: 5px
+    padding: 3px
+    padding-bottom: 0
 
     +transitionable
   a:hover
@@ -68,47 +70,115 @@
     text-decoration: none
   a:hover figcaption
     color: black
+    .muted
+      color: $black50
+
+  a figure
+    opacity: 0.89
+    +transitionable
+  a:hover figure
+    opacity: 1
+
+  a figcaption
+    +transitionable
+
+
+  // Ken Burns Effect - On hover, zoom in and pan slowly
+  //a figure .image
+  //  transition-duration: 5s
+  //  transform: scale(1.0)
+  //  transform-origin: 50% 50%
+  //a:hover figure .image
+  //  transform: scale(1.2)
+  //  transform-origin: 50% 0%
 
 
   figure
+    position: relative
     margin: 0
     padding: 0
     background: $black05
+    overflow: hidden
+    border-radius: 2px
+    opacity: 0.7
+    +transitionable
+
+    .image
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      background-size: cover
+      background-position: 50% 20%
+
+    // default, should media queries fail for an old client
+    .image.at2x
+      display: none
+
+    // 2x only
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+      .image.at2x
+        display: block
+      .image.at1x
+        display: none
+        background-image: none !important
+
+    // 1x only
+    @media only screen and (-webkit-max-device-pixel-ratio: 1.25), (max-resolution: 120dpi)
+      .image.at2x
+        display: none
+        background-image: none !important
+
 
   figcaption
     color: $darkText
     padding: 5px 10px
     font-size: 12px
+    margin: 0 -3px // reverse out padding
     p
       white-space: nowrap
       overflow: hidden
       text-overflow: ellipsis
-    //.subtitle
-    //  font-size: 12px
+
 
 // cards can be any of these colors
 .card
   &.green
     figure
-      background-color: mix($green, white, 20%)
+      background-color: mix($green, white, 10%)
+    a:hover figcaption
+      box-shadow: inset 0 -2px 0 0 $green
   &.blue
     figure
-      background-color: mix($blue, white, 25%)
+      background-color: mix($blue, white, 15%)
+    a:hover figcaption
+      box-shadow: inset 0 -2px 0 0 $blue
   &.yellow
     figure
-      background-color: mix($yellow, white, 30%)
+      background-color: mix($yellow, white, 20%)
+    a:hover figcaption
+      box-shadow: inset 0 -2px 0 0 $yellow
   &.orange
     figure
-      background-color: mix($orange, white, 25%)
+      background-color: mix($orange, white, 15%)
+    a:hover figcaption
+      box-shadow: inset 0 -2px 0 0 $orange
   &.red
     figure
-      background-color: mix($red, white, 20%)
+      background-color: mix($red, white, 10%)
+    a:hover figcaption
+      box-shadow: inset 0 -2px 0 0 $red
   &.purple
     figure
-      background-color: mix($purple, white, 20%)
+      background-color: mix($purple, white, 10%)
+    a:hover figcaption
+      box-shadow: inset 0 -2px 0 0 $purple
   &.black
     figure
-      background-color: mix($black60, white, 30%)
+      background-color: mix($black60, white, 20%)
+    a:hover figcaption
+      box-shadow: inset 0 -2px 0 0 $black60
 
 
 
