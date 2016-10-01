@@ -1,0 +1,44 @@
+
+
+<script>
+  var apl = (function(){
+    "use strict";
+
+    return function addPrivateLink(backToPublic){
+      console.log('addPrivateLink('+ backToPublic +')');
+      var a = document.createElement('a');
+
+      if (backToPublic) {
+        a.setAttribute('href', '/projects/');
+        a.textContent = '🙈'; // see-no-evil monkey
+      } else {
+        a.setAttribute('href', '/projects/'+ ['html','private'].reverse().join('.')); // obfuscation
+        a.textContent = '🔓'; // Apple's "Unlock" icon
+      }
+
+      a.className = 'button';
+      a.backgroundColor = 'white';
+      a.style.position = 'absolute';
+      a.style.right = '12px'; // avoid scroll bar
+      a.style.bottom = '5px';
+      a.style.padding = '0 5px 0 2px'; // unicode surrogate pairs tend to align rightish
+      a.style.fontSize = '16px';
+      a.style.textDecoration = 'none';
+      a.style.opacity = '0.3';
+      var footer = document.getElementsByTagName('footer')[0];
+      footer.appendChild(a);
+
+      window.apl = undefined; // Put it up for GC to ghost it. Only works once.
+    }
+  })();
+</script>
+
+{% comment %}
+  We link either to the public or private projects depending on where we are now
+  We also defer the display of a link to the private project section. The idea is that defering it makes it harder for robots and scrapers to index the page
+{% endcomment %}
+{% if page.url contains "private" %}
+  <script>setTimeout(apl.bind(null, true), 1500);</script>
+{% else %}
+  <script>setTimeout(apl, 1500);</script>
+{% endif %}

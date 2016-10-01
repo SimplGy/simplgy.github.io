@@ -294,6 +294,7 @@ a.link:visited:hover
 
 // ----------------------------------------------- Footer
 footer
+  position: relative
   +flexContainer
 
   border-top: 1px solid $black10
@@ -377,3 +378,16 @@ footer
 //  width: 100%
 //  height: 61px
 //  background: white // cover up the adline
+
+.button
+  border: 1px solid $black10
+  border-radius: 2px
+  text-align: center
+  min-height: 25px
+  line-height: 25px
+  min-width: 25px
+  box-sizing: border-box
+  &:hover
+    border-color: $black20
+    text-decoration: none
+    opacity: 1 !important

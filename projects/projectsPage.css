@@ -32,14 +32,12 @@
 .cards {
   font-size: 0;
   text-align: center;
-  margin: 0 auto;
-  background: rgba(0, 0, 0, 0.07); }
+  margin: 0 auto; }
 
 .card {
   box-sizing: border-box;
   text-align: left;
-  display: inline-block;
-  background: rgba(0, 0, 0, 0.07); }
+  display: inline-block; }
   .card a {
     display: block;
     border-radius: 2px;

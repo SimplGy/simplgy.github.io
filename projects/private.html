@@ -1,14 +1,13 @@
 ---
 categories:
 - projects
-title: Projects
+title: Projects (Full View)
 ---
 
-<h2>Projects</h2>
+<h2>All Projects</h2>
 
 <ol class="cards">
   {% for project in site.categories.projects %}
-    {% if project.isPrivate %} {% continue %} {% endif %}
     {% include li-project-card.html %}
   {% endfor %}
 </ol>
