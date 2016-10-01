@@ -80,7 +80,6 @@ o Click responsiveness and IxN on mobile and tablet
 o See if there's a way to get reddit, google+, instapaper, and other post-parsers to see the banner image first. Otherwise they share the first content image (hide an `img` tag in the banner?)
 
 ### Over the Rainbow
-o redo colors using http://www.rocket-design.fr/color-template/
 o Pick a color scheme I can live with for a while. Main color (green), supporting color (blue?), background color (not quite white), shaded bg color (pale white), dark (not quite black, tinged brown), etc.
 o Style blockquotes nicely
 o Style lists in markdown posts nicely

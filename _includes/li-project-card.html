@@ -1,10 +1,10 @@
-<li class="project card">
+<li class="project card {{ project.colorName }}">
   <a href="{{project.url}}">
 
     <figure></figure>
     <figcaption>
       <p>{{ project.title }}</p>
-      <p class="muted subtitle">{{ project.summary }}</p>
+      <p class="muted subtitle" title="{{ project.summary }}">{{ project.summary }}</p>
     </figcaption>
 
 

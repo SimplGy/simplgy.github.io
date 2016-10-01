@@ -68,4 +68,19 @@
       overflow: hidden;
       text-overflow: ellipsis; }
 
+.card.green figure {
+  background-color: #dbf3e4; }
+.card.blue figure {
+  background-color: #e3edf5; }
+.card.yellow figure {
+  background-color: #fbfdd2; }
+.card.orange figure {
+  background-color: #fcecd8; }
+.card.red figure {
+  background-color: #ffe7e3; }
+.card.purple figure {
+  background-color: #eee4f5; }
+.card.black figure {
+  background-color: #d1d1d1; }
+
 /*# sourceMappingURL=projectsPage.css.map */
