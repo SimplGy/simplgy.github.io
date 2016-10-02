@@ -4,6 +4,12 @@ productionUrl: http://www.simple.gy
 defaults:
   -
     scope:
+      path: "projects"
+      type: "posts"
+    values:
+      layout: "project"
+  -
+    scope:
       path: ""
       type: "posts"
     values:
@@ -16,7 +22,7 @@ defaults:
     values:
       layout: default
 
-exclude: ['*.sass']
+exclude: ['*.sass', '/Gemfile*', '/README.md' ]
 
 
 # Github allows changing:

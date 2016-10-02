@@ -18,12 +18,13 @@
       a.className = 'button';
       a.backgroundColor = 'white';
       a.style.position = 'absolute';
-      a.style.right = '12px'; // avoid scroll bar
+      a.style.left = '5px'; // avoid scroll bar
       a.style.bottom = '5px';
       a.style.padding = '0 5px 0 2px'; // unicode surrogate pairs tend to align rightish
       a.style.fontSize = '16px';
       a.style.textDecoration = 'none';
       a.style.opacity = '0.3';
+      a.style.zIndex = '1';
       var footer = document.getElementsByTagName('footer')[0];
       footer.appendChild(a);
 

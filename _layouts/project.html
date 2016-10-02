@@ -1,0 +1,41 @@
+---
+layout: boilerplate
+---
+{% assign project = page %}
+
+<b class="navSpace"></b>
+
+<h2>{{ project.title }}</h2>
+<h3>{{ project.summary }}</h3>
+
+{% if project.animation %}
+  <img src="{{ project.animation }}" alt="Main demo animation for {{ project.title }}">
+{% else %}
+  <img src="{{ project.mainImg }}" alt="Main demo image for {{ project.title }}">
+{% endif %}
+
+
+<article class="content">
+
+  {{ content }}
+
+  <hr/>
+
+  {% include project-aside.html %}
+
+  <hr/>
+
+  <!-- Back to Projects link here, or mini versions of other projects -->
+  <p class="alignCenter">
+    <a href="/projects">Back to Projects</a>
+  </p>
+
+
+  <hr/>
+
+</article>
+
+{% include nav.html %}
+{% include footer.html %}
+
+{% include script-hero-rows.html %}

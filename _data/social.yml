@@ -15,7 +15,7 @@
   #api: not public
 
 - id: stackOverflow
-  name: Stack Overflow Careers
+  name: Stack Overflow
   url: http://careers.stackoverflow.com/SimplGy
 
 - id: instagram

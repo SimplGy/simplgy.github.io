@@ -1,17 +1,4 @@
-.resumePage .page {
-  background: white;
-  border: 1px solid #f2f2f2;
-  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
-  width: 80%;
-  max-width: 1000px;
-  margin: 0 auto;
-  margin-top: 20px;
-  padding: 50px;
-  padding-left: 100px;
-  box-sizing: border-box; }
-.resumePage .me {
-  border: 1px solid #cccccc;
-  border-left: none;
-  border-right: none; }
+.resumePage .page { background: white; border: 1px solid #f2f2f2; box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2); width: 80%; max-width: 1000px; margin: 0 auto; margin-top: 20px; padding: 50px; padding-left: 100px; box-sizing: border-box; }
+.resumePage .me { border: 1px solid #cccccc; border-left: none; border-right: none; }
 
 /*# sourceMappingURL=resume.css.map */

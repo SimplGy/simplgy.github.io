@@ -2,7 +2,7 @@
 
 
 
-.projectsPage
+.projectListPage
   background: $white98
 
   h2
@@ -20,7 +20,7 @@
 
 // Sizing (responsive)
 .cards
-  $idealWidth: 418px // +2 for border, +10 for margins, +6 for padding. This way a full-size image is exactly 400w x 170h
+  $idealWidth: 418px // +2 for border, +10 for margins, +2 for padding. This way a full-size image is exactly 400w x 170h
   $ratio: 418 / 170
   max-width: $idealWidth * 4.1
 
@@ -29,7 +29,7 @@
     max-width: $idealWidth
     figure
       height: 120px
-    @media (min-width: 321px)
+    @media (min-width: 420px)
       width: 50%
     @media (min-width: $idealWidth * 2.1)
       width: 33%
@@ -59,7 +59,7 @@
     background: white
     overflow: hidden
     margin: 5px
-    padding: 3px
+    padding: 1px
     padding-bottom: 0
 
     +transitionable
@@ -100,6 +100,8 @@
     background: $black05
     overflow: hidden
     border-radius: 2px
+    border-bottom-left-radius: 0
+    border-bottom-right-radius: 0
     opacity: 0.7
     +transitionable
 

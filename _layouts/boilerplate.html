@@ -3,21 +3,24 @@
 <meta name="viewport" content="width=device-width">
 
 <!-- Custom CSS -->
-<link rel="stylesheet" href="/css/main.css">
-<link rel="stylesheet" href="/css/nav.css">
-<link rel="stylesheet" href="/css/icons.css">
-<link rel="stylesheet" href="/css/syntax.css">
-<link rel="stylesheet" href="/blog/blog.css">
-<link rel="stylesheet" href="/projects/projectsPage.css">
+<link rel="stylesheet" href="/css/all.css">
 
 <!--<link href='http://fonts.googleapis.com/css?family=Jura:400,600' rel='stylesheet' type='text/css'>-->
 <link href='http://fonts.googleapis.com/css?family=Comfortaa:300,700' rel='stylesheet' type='text/css'>
 
 {% include analytics.html %}
 
-
 <body class="{% for c in page.categories %} {{ c }}Page {% endfor %}">
 
   {{ content }}
 
 </body>
+
+
+
+<!--
+  page.id: {{ page.id }}
+  page.title: {{ page.title }}
+  page.categories: {{ page.categories | join: ", " }}
+  page.layout: {{ page.layout }}
+-->

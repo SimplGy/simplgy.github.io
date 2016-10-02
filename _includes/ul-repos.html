@@ -14,7 +14,7 @@
       if (request.status >= 200 && request.status < 400) {
         repos = JSON.parse(request.responseText);
         for (var i=0; i<repos.length; i++) {
-          r = addRepoToDom(repos[i], container)
+          r = addRepoToDom(repos[i], container);
           if (r) {
             hasPages.push(r);
           }

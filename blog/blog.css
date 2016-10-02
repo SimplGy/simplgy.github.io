@@ -1,143 +1,41 @@
-.blogPage .content {
-  font-size: 18px;
-  line-height: 1.75;
-  padding: 0 30px;
-  max-width: 800px;
-  margin: 0 auto; }
-  .blogPage .content h2 small {
-    font-size: 60%;
-    line-height: 1.7; }
-  .blogPage .content p, .blogPage .content .highlight, .blogPage .content blockquote {
-    margin-bottom: 15.75px; }
-  @media (max-width: 603px) {
-    .blogPage .content {
-      padding: 0 10px;
-      font-size: 16px;
-      line-height: 1.75; }
-      .blogPage .content p, .blogPage .content .highlight, .blogPage .content blockquote {
-        margin-bottom: 14px; } }
-  .blogPage .content .highlight {
-    overflow: auto;
-    padding: 10px;
-    margin-left: -10px;
-    margin-right: -10px;
-    border-radius: 5px;
-    background: #fafafa;
-    border: 1px solid #f2f2f2;
-    border-top-color: #e6e6e6; }
-    .blogPage .content .highlight code {
-      padding: 0;
-      background: none;
-      border: none; }
-  .blogPage .content .highlight {
-    font-size: 85%; }
-  .blogPage .content .gist-file .highlight {
-    font-size: 100%; }
-  .blogPage .content blockquote p {
-    margin-bottom: 0; }
-  .blogPage .content p > img {
-    display: block;
-    margin: 0 auto;
-    width: 100%; }
-  .blogPage .content ul, .blogPage .content li {
-    list-style-type: disc;
-    list-style-position: inside; }
+.blogPage .content { font-size: 18px; line-height: 1.75; padding: 0 30px; max-width: 800px; margin: 0 auto; }
+.blogPage .content h2 small { font-size: 60%; line-height: 1.7; }
+.blogPage .content p, .blogPage .content .highlight, .blogPage .content blockquote { margin-bottom: 15.75px; }
+@media (max-width: 603px) { .blogPage .content { padding: 0 10px; font-size: 16px; line-height: 1.75; }
+  .blogPage .content p, .blogPage .content .highlight, .blogPage .content blockquote { margin-bottom: 14px; } }
+.blogPage .content .highlight { overflow: auto; padding: 10px; margin-left: -10px; margin-right: -10px; border-radius: 5px; background: #fafafa; border: 1px solid #f2f2f2; border-top-color: #e6e6e6; }
+.blogPage .content .highlight code { padding: 0; background: none; border: none; }
+.blogPage .content .highlight { font-size: 85%; }
+.blogPage .content .gist-file .highlight { font-size: 100%; }
+.blogPage .content blockquote p { margin-bottom: 0; }
+.blogPage .content p > img { display: block; margin: 0 auto; width: 100%; }
+.blogPage .content ul, .blogPage .content li { list-style-type: disc; list-style-position: inside; }
 
-.banner {
-  position: relative;
-  background-color: #4d4d4d;
-  background-size: cover;
-  background-position: center;
-  padding: 30px 0 20px 0;
-  min-height: 200px; }
-  @media (max-width: 603px) {
-    .banner {
-      min-height: 0;
-      padding: 10px 0; } }
-  .banner h1 {
-    margin: 0;
-    margin-bottom: 10px;
-    letter-spacing: 0.02em;
-    word-spacing: 0.1em;
-    line-height: 1.5;
-    color: white;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 -1px 1px rgba(0, 0, 0, 0.2), 1px 0 1px rgba(0, 0, 0, 0.2), -1px 0 1px rgba(0, 0, 0, 0.2), 0 2px 10px rgba(0, 0, 0, 0.4), 0 0 50px rgba(0, 0, 0, 0.7); }
-  .banner .date {
-    text-align: right;
-    font-weight: normal;
-    color: white;
-    word-spacing: 0.2em;
-    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 -1px 1px rgba(0, 0, 0, 0.2), 1px 0 1px rgba(0, 0, 0, 0.2), -1px 0 1px rgba(0, 0, 0, 0.2); }
-  .banner .caption {
-    position: absolute;
-    bottom: 5px;
-    right: 5px;
-    color: rgba(255, 255, 255, 0.6);
-    font-size: 13px;
-    background: rgba(0, 0, 0, 0.1);
-    padding: 0 3px; }
+.banner { position: relative; background-color: #4d4d4d; background-size: cover; background-position: center; padding: 30px 0 20px 0; min-height: 200px; }
+@media (max-width: 603px) { .banner { min-height: 0; padding: 10px 0; } }
+.banner h1 { margin: 0; margin-bottom: 10px; letter-spacing: 0.02em; word-spacing: 0.1em; line-height: 1.5; color: white; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 -1px 1px rgba(0, 0, 0, 0.2), 1px 0 1px rgba(0, 0, 0, 0.2), -1px 0 1px rgba(0, 0, 0, 0.2), 0 2px 10px rgba(0, 0, 0, 0.4), 0 0 50px rgba(0, 0, 0, 0.7); }
+.banner .date { text-align: right; font-weight: normal; color: white; word-spacing: 0.2em; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 -1px 1px rgba(0, 0, 0, 0.2), 1px 0 1px rgba(0, 0, 0, 0.2), -1px 0 1px rgba(0, 0, 0, 0.2); }
+.banner .caption { position: absolute; bottom: 5px; right: 5px; color: rgba(255, 255, 255, 0.6); font-size: 13px; background: rgba(0, 0, 0, 0.1); padding: 0 3px; }
 
-.blogArchivePage .content {
-  max-width: 800px;
-  margin: 0 auto; }
-  .blogArchivePage .content h1, .blogArchivePage .content h2 {
-    margin-left: 30px;
-    margin-right: 30px; }
-  .blogArchivePage .content li a {
-    padding-left: 30px;
-    padding-right: 30px; }
-  @media (max-width: 603px) {
-    .blogArchivePage .content h1, .blogArchivePage .content h2 {
-      margin-left: 10px;
-      margin-right: 10px; }
-    .blogArchivePage .content li.post.summary a {
-      padding-left: 10px;
-      padding-right: 10px; } }
+.blogArchivePage .content { max-width: 800px; margin: 0 auto; }
+.blogArchivePage .content h1, .blogArchivePage .content h2 { margin-left: 30px; margin-right: 30px; }
+.blogArchivePage .content li a { padding-left: 30px; padding-right: 30px; }
+@media (max-width: 603px) { .blogArchivePage .content h1, .blogArchivePage .content h2 { margin-left: 10px; margin-right: 10px; }
+  .blogArchivePage .content li.post.summary a { padding-left: 10px; padding-right: 10px; } }
 
-.post.summary .title {
-  margin-bottom: 5px;
-  color: #36a75e; }
-.post.summary p {
-  max-width: 600px; }
-.post.summary a {
-  display: block;
-  color: inherit;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  border-top: 1px dotted rgba(0, 0, 0, 0.1); }
-  @media (max-width: 603px) {
-    .post.summary a {
-      padding-top: 30px;
-      padding-bottom: 30px; } }
-.post.summary a:hover {
-  text-decoration: none;
-  background: rgba(75, 197, 118, 0.05); }
-.post.summary .date {
-  float: right; }
+.post.summary .title { margin-bottom: 5px; color: #36a75e; }
+.post.summary p { max-width: 600px; }
+.post.summary a { display: block; color: inherit; padding-top: 50px; padding-bottom: 50px; border-top: 1px dotted rgba(0, 0, 0, 0.1); }
+@media (max-width: 603px) { .post.summary a { padding-top: 30px; padding-bottom: 30px; } }
+.post.summary a:hover { text-decoration: none; background: rgba(75, 197, 118, 0.05); }
+.post.summary .date { float: right; }
 
-.post.oneliner a {
-  display: block;
-  padding-top: 10px;
-  padding-bottom: 10px; }
-.post.oneliner a:hover {
-  background: rgba(75, 197, 118, 0.05); }
-.post.oneliner .date {
-  float: right; }
+.post.oneliner a { display: block; padding-top: 10px; padding-bottom: 10px; }
+.post.oneliner a:hover { background: rgba(75, 197, 118, 0.05); }
+.post.oneliner .date { float: right; }
 
-.blogPage .deepLink {
-  display: none;
-  margin-left: 5px;
-  padding: 0 10px 0 7px;
-  color: #aaa;
-  border: 1px solid transparent;
-  border-radius: 3px;
-  font-weight: normal; }
-.blogPage .deepLink:hover {
-  background: rgba(0, 0, 0, 0.05);
-  color: #36a75e;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  text-decoration: none; }
-.blogPage h2:hover .deepLink, .blogPage h2:focus .deepLink, .blogPage h3:hover .deepLink, .blogPage h3:focus .deepLink, .blogPage h4:hover .deepLink, .blogPage h4:focus .deepLink, .blogPage h5:hover .deepLink, .blogPage h5:focus .deepLink, .blogPage h6:hover .deepLink, .blogPage h6:focus .deepLink {
-  display: inline; }
+.blogPage .deepLink { display: none; margin-left: 5px; padding: 0 10px 0 7px; color: #aaa; border: 1px solid transparent; border-radius: 3px; font-weight: normal; }
+.blogPage .deepLink:hover { background: rgba(0, 0, 0, 0.05); color: #36a75e; border: 1px solid rgba(0, 0, 0, 0.2); text-decoration: none; }
+.blogPage h2:hover .deepLink, .blogPage h2:focus .deepLink, .blogPage h3:hover .deepLink, .blogPage h3:focus .deepLink, .blogPage h4:hover .deepLink, .blogPage h4:focus .deepLink, .blogPage h5:hover .deepLink, .blogPage h5:focus .deepLink, .blogPage h6:hover .deepLink, .blogPage h6:focus .deepLink { display: inline; }
 
 /*# sourceMappingURL=blog.css.map */
