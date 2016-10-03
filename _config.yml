@@ -1,5 +1,5 @@
 markdown: kramdown
-permalink: /:categories/:title
+permalink: /:categories/:title/
 productionUrl: http://www.simple.gy
 host: 0.0.0.0 # allows external access
 defaults:
