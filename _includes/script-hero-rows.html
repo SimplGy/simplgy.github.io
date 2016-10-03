@@ -2,13 +2,25 @@
   (function(){
     'use strict';
     var nodes = document.querySelectorAll('.content p');
-    Array.prototype.forEach.call(nodes, heroLoneImages);
+    [].forEach.call(nodes, function(el){
+      heroLoneImages(el);
+      imageSetGroups(el);
+    });
 
     // Given an element, add a `hero` class if its only child is an image
     function heroLoneImages (el) {
       if (el.children.length === 1 && el.children[0].tagName === 'IMG') {
         el.className += ' hero';
       }
+    }
+
+    // given an element, add a `imageSet` class if all of it's children are images and there's more than 1
+    function imageSetGroups (el) {
+      if (el.children.length <= 1) { return }
+      for (var i=0; i<el.children.length; i++) {
+        if (el.children[i].tagName !== 'IMG') { return }
+      }
+      el.className += ' imageSet';
     }
   })();
 </script>
