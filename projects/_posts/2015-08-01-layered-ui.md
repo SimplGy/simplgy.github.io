@@ -25,5 +25,5 @@ This included tooltips, drop downs, modals, and popovers.
 
 By using a central abstraction, challenges like "dismiss the topmost floating element when the background is clicked" become very straightforward and performant.
 
-It is implemented for an Angular app as a resuable set directives and factory methods. It allows the developer to create tooltips, toggle-able panels,
+It is implemented for an Angular app as a reusable set directives and factory methods. It allows the developer to create tooltips, toggle-able panels,
 and modals of N depth without requiring knowledge of the other layered elements being used at the application at that time.

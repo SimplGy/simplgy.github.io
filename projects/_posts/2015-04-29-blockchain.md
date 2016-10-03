@@ -12,7 +12,7 @@ links:
   url: https://github.com/SimplGy/bitcoin 
 ---
 
-I happened to be in Hho Chi Minh City during a bitcoin meetup. I met some very interesting people there for whom Bitcoin was a very practical, everyday part of their lives.
+I happened to be in Hho Chi Minh City during a Bitcoin meetup. I met some very interesting people there for whom Bitcoin was a very practical, everyday part of their lives.
 
 It got me thinking about how the Blockchain really works, and how accessible and visualizable it actually is.
 

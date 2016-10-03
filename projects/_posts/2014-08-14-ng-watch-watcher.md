@@ -21,7 +21,7 @@ links:
 
 * Keep an eye on the timing of your `$digest` cycle as your app grows
 * Know if you're cleaning up watches and scopes properly
-* Premempt performance issues by identifying them early
+* Preempt performance issues by identifying them early
 
 You can think of it like the check engine light for your ng-code.
 
