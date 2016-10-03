@@ -1,0 +1,29 @@
+<script>
+  // For each animated gif, show it when it loads and hide the loading message.
+  // Works even if the image has already gotten to `.complete`
+  (function(){
+    "use strict";
+
+//    var els = [].slice.call(document.querySelectorAll('.animation'));
+    var els = [].slice.call(document.getElementsByTagName('img'))
+            .filter(function(el){ return el.src.indexOf('.gif') >= 0 });
+
+    els.forEach(function(el) {
+      if (el.complete) {
+        console.log(".animation already loaded", el.src);
+        onAnimationLoaded(el)
+      } else {
+        el.addEventListener('load', onAnimationLoaded.bind(null, el));
+      }
+    });
+
+    function onAnimationLoaded(el) {
+      console.log('onAnimationLoaded', el);
+      el.style.opacity = 1; // Show the animation
+      var loadingMsg = el.nextElementSibling;
+      if (loadingMsg) {
+        loadingMsg.style.display = "none"; // Hide the loading message
+      }
+    }
+  })();
+</script>

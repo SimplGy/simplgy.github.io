@@ -2,33 +2,38 @@
 layout: boilerplate
 ---
 
-<b class="navSpace"></b>
 
-{% include post-banner.html %}
 
-<article class="content">
-  {% include blockquote-excerpt.html %}
-  {% include iframe-demo.html %}
+<body class="blogPost {% for c in page.classNames %}{{ c }} {% endfor %}">
 
-  {{ content }}
+  <b class="navSpace"></b>
 
-  <hr/>
-  {% include twitter-plug.html %}
+  {% include post-banner.html %}
 
-  {% comment %}
-  {% if page.next and page.next.categories contains "blog" %}
-    <p class="muted alignCenter">Next Post: <a rel="next" href="{{ page.next.url }}">{{ page.next.title }}</a></p>
-  {% else if page.previous and page.previous.categories contains "blog" %}
-    <p class="muted alignCenter">Previous Post: <a rel="prev" href="{{ page.previous.url }}">{{ page.previous.title }}</a></p>
-  {% endif %}
-  {% endcomment %}
+  <article class="content">
+    {% include blockquote-excerpt.html %}
+    {% include iframe-demo.html %}
 
-  <hr/>
-</article>
+    {{ content }}
 
-{% include nav.html %}
-{% include footer.html %}
+    <hr/>
+    {% include twitter-plug.html %}
 
-{% include script-hero-rows.html %}
-{% include script-anchorize-headings.html %}
+    {% comment %}
+    {% if page.next and page.next.categories contains "blog" %}
+      <p class="muted alignCenter">Next Post: <a rel="next" href="{{ page.next.url }}">{{ page.next.title }}</a></p>
+    {% else if page.previous and page.previous.categories contains "blog" %}
+      <p class="muted alignCenter">Previous Post: <a rel="prev" href="{{ page.previous.url }}">{{ page.previous.title }}</a></p>
+    {% endif %}
+    {% endcomment %}
 
+    <hr/>
+  </article>
+
+  {% include nav.html %}
+  {% include footer.html %}
+
+  {% include script-hero-rows.html %}
+  {% include script-anchorize-headings.html %}
+
+</body>

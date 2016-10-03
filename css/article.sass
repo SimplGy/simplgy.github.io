@@ -1,0 +1,66 @@
+@import '../css/__'
+
+
+
+article
+  $fontSize: 18px
+  $lineHeight: 1.75
+  $padding: 30px
+  font-size: $fontSize
+  line-height: 1.75
+  padding: 0 $padding
+  max-width: 800px
+  margin: 0 auto
+
+  h2 small
+    font-size: 60%
+    line-height: 1.7
+
+  p, .highlight, blockquote, ul, ol
+    margin-bottom: $fontSize * $lineHeight / 2
+
+  +phone
+    $padding: 10px
+    $fontSize: 16px
+    $lineHeight: 1.75
+    padding: 0 $padding
+    font-size: $fontSize
+    line-height: $lineHeight
+    p, .highlight, blockquote
+      margin-bottom: $fontSize * $lineHeight / 2
+
+  .highlight
+    $roomy: 10px
+    overflow: auto
+    padding: $roomy
+    margin-left: -($roomy)
+    margin-right: -($roomy)
+    border-radius: 5px
+    background: $black02
+    border: 1px solid $black05
+    border-top-color: $black10
+    code
+      padding: 0
+      background: none
+      border: none
+
+  .highlight
+    font-size: 85% // because the code can be dense
+  .gist-file .highlight
+    font-size: 100% // because gists are small enough
+
+  blockquote p
+    margin-bottom: 0
+
+  p > img
+    //$minImgWidth: 250px
+    //box-shadow: -($minImgWidth) 0 0 0 $black05, $minImgWidth 0 0 0 $black05 // Throws out a bar to contain the image
+    display: block
+    margin: 0 auto
+    width: 100% // grow the gif images to fill the width, it looks cool
+
+
+  ul, li
+    list-style-type: disc
+  ul, ol, li
+    list-style-position: inside

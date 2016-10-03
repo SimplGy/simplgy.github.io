@@ -1,0 +1,6 @@
+.projectListPage { background: #fafafa; }
+.projectListPage h2 { text-align: center; margin-bottom: 20px; }
+@media (min-width: 604px) and (max-width: 1024px) { .projectListPage h2 { margin-bottom: 10px; } }
+@media (max-width: 603px) { .projectListPage h2 { margin-bottom: 5px; } }
+
+/*# sourceMappingURL=projectListPage.css.map */

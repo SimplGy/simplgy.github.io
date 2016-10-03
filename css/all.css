@@ -173,93 +173,6 @@ nav .logo.altText, nav .logo:hover { margin-top: -40px; }
 nav ul { float: right; list-style: none; margin: 0; padding: 0; }
 nav li { display: inline-block; vertical-align: top; }
 
-.blogPage .content { font-size: 18px; line-height: 1.75; padding: 0 30px; max-width: 800px; margin: 0 auto; }
-.blogPage .content h2 small { font-size: 60%; line-height: 1.7; }
-.blogPage .content p, .blogPage .content .highlight, .blogPage .content blockquote { margin-bottom: 15.75px; }
-@media (max-width: 603px) { .blogPage .content { padding: 0 10px; font-size: 16px; line-height: 1.75; }
-  .blogPage .content p, .blogPage .content .highlight, .blogPage .content blockquote { margin-bottom: 14px; } }
-.blogPage .content .highlight { overflow: auto; padding: 10px; margin-left: -10px; margin-right: -10px; border-radius: 5px; background: #fafafa; border: 1px solid #f2f2f2; border-top-color: #e6e6e6; }
-.blogPage .content .highlight code { padding: 0; background: none; border: none; }
-.blogPage .content .highlight { font-size: 85%; }
-.blogPage .content .gist-file .highlight { font-size: 100%; }
-.blogPage .content blockquote p { margin-bottom: 0; }
-.blogPage .content p > img { display: block; margin: 0 auto; width: 100%; }
-.blogPage .content ul, .blogPage .content li { list-style-type: disc; list-style-position: inside; }
-
-.banner { position: relative; background-color: #4d4d4d; background-size: cover; background-position: center; padding: 30px 0 20px 0; min-height: 200px; }
-@media (max-width: 603px) { .banner { min-height: 0; padding: 10px 0; } }
-.banner h1 { margin: 0; margin-bottom: 10px; letter-spacing: 0.02em; word-spacing: 0.1em; line-height: 1.5; color: white; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 -1px 1px rgba(0, 0, 0, 0.2), 1px 0 1px rgba(0, 0, 0, 0.2), -1px 0 1px rgba(0, 0, 0, 0.2), 0 2px 10px rgba(0, 0, 0, 0.4), 0 0 50px rgba(0, 0, 0, 0.7); }
-.banner .date { text-align: right; font-weight: normal; color: white; word-spacing: 0.2em; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 -1px 1px rgba(0, 0, 0, 0.2), 1px 0 1px rgba(0, 0, 0, 0.2), -1px 0 1px rgba(0, 0, 0, 0.2); }
-.banner .caption { position: absolute; bottom: 5px; right: 5px; color: rgba(255, 255, 255, 0.6); font-size: 13px; background: rgba(0, 0, 0, 0.1); padding: 0 3px; }
-
-.blogArchivePage .content { max-width: 800px; margin: 0 auto; }
-.blogArchivePage .content h1, .blogArchivePage .content h2 { margin-left: 30px; margin-right: 30px; }
-.blogArchivePage .content li a { padding-left: 30px; padding-right: 30px; }
-@media (max-width: 603px) { .blogArchivePage .content h1, .blogArchivePage .content h2 { margin-left: 10px; margin-right: 10px; }
-  .blogArchivePage .content li.post.summary a { padding-left: 10px; padding-right: 10px; } }
-
-.post.summary .title { margin-bottom: 5px; color: #36a75e; }
-.post.summary p { max-width: 600px; }
-.post.summary a { display: block; color: inherit; padding-top: 50px; padding-bottom: 50px; border-top: 1px dotted rgba(0, 0, 0, 0.1); }
-@media (max-width: 603px) { .post.summary a { padding-top: 30px; padding-bottom: 30px; } }
-.post.summary a:hover { text-decoration: none; background: rgba(75, 197, 118, 0.05); }
-.post.summary .date { float: right; }
-
-.post.oneliner a { display: block; padding-top: 10px; padding-bottom: 10px; }
-.post.oneliner a:hover { background: rgba(75, 197, 118, 0.05); }
-.post.oneliner .date { float: right; }
-
-.blogPage .deepLink { display: none; margin-left: 5px; padding: 0 10px 0 7px; color: #aaa; border: 1px solid transparent; border-radius: 3px; font-weight: normal; }
-.blogPage .deepLink:hover { background: rgba(0, 0, 0, 0.05); color: #36a75e; border: 1px solid rgba(0, 0, 0, 0.2); text-decoration: none; }
-.blogPage h2:hover .deepLink, .blogPage h2:focus .deepLink, .blogPage h3:hover .deepLink, .blogPage h3:focus .deepLink, .blogPage h4:hover .deepLink, .blogPage h4:focus .deepLink, .blogPage h5:hover .deepLink, .blogPage h5:focus .deepLink, .blogPage h6:hover .deepLink, .blogPage h6:focus .deepLink { display: inline; }
-
-.projectListPage { background: #fafafa; }
-.projectListPage h2 { text-align: center; margin-bottom: 20px; }
-@media (min-width: 604px) and (max-width: 1024px) { .projectListPage h2 { margin-bottom: 10px; } }
-@media (max-width: 603px) { .projectListPage h2 { margin-bottom: 5px; } }
-
-.cards { max-width: 1713.8px; }
-.cards .card { width: 100%; max-width: 418px; }
-.cards .card figure { height: 120px; }
-@media (min-width: 420px) { .cards .card { width: 50%; } }
-@media (min-width: 877.8px) { .cards .card { width: 33%; }
-  .cards .card figure { height: 170px; } }
-@media (min-width: 1295.8px) { .cards .card { width: 25%; } }
-
-.cards { font-size: 0; text-align: center; margin: 0 auto; }
-
-.card { box-sizing: border-box; text-align: left; display: inline-block; }
-.card a { display: block; border-radius: 3px; border: 1px solid #ededed; background: white; overflow: hidden; margin: 5px; padding: 1px; padding-bottom: 0; -webkit-transition: all 0.15s ease-in-out; -moz-transition: all 0.15s ease-in-out; transition: all 0.15s ease-in-out; }
-.card a:hover { border-color: #e6e6e6; box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.05); z-index: 1; text-decoration: none; }
-.card a:hover figcaption { color: black; }
-.card a:hover figcaption .muted { color: gray; }
-.card a figure { opacity: 0.89; -webkit-transition: all 0.15s ease-in-out; -moz-transition: all 0.15s ease-in-out; transition: all 0.15s ease-in-out; }
-.card a:hover figure { opacity: 1; }
-.card a figcaption { -webkit-transition: all 0.15s ease-in-out; -moz-transition: all 0.15s ease-in-out; transition: all 0.15s ease-in-out; }
-.card figure { position: relative; margin: 0; padding: 0; background: #f2f2f2; overflow: hidden; border-radius: 2px; border-bottom-left-radius: 0; border-bottom-right-radius: 0; opacity: 0.7; -webkit-transition: all 0.15s ease-in-out; -moz-transition: all 0.15s ease-in-out; transition: all 0.15s ease-in-out; }
-.card figure .image { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-size: cover; background-position: 50% 20%; }
-.card figure .image.at2x { display: none; }
-@media only screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { .card figure .image.at2x { display: block; }
-  .card figure .image.at1x { display: none; background-image: none !important; } }
-@media only screen and (-webkit-max-device-pixel-ratio: 1.25), (max-resolution: 120dpi) { .card figure .image.at2x { display: none; background-image: none !important; } }
-.card figcaption { color: #262626; padding: 5px 10px; font-size: 12px; margin: 0 -3px; }
-.card figcaption p { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-
-.card.green figure { background-color: #edf9f1; }
-.card.green a:hover figcaption { box-shadow: inset 0 -2px 0 0 #4bc576; }
-.card.blue figure { background-color: #eef4f9; }
-.card.blue a:hover figcaption { box-shadow: inset 0 -2px 0 0 #90b6d6; }
-.card.yellow figure { background-color: #fcfde1; }
-.card.yellow a:hover figcaption { box-shadow: inset 0 -2px 0 0 #f0f769; }
-.card.orange figure { background-color: #fdf4e8; }
-.card.orange a:hover figcaption { box-shadow: inset 0 -2px 0 0 #f4b464; }
-.card.red figure { background-color: #fff5f3; }
-.card.red a:hover figcaption { box-shadow: inset 0 -2px 0 0 #ff9b8a; }
-.card.purple figure { background-color: #f6f1fa; }
-.card.purple a:hover figcaption { box-shadow: inset 0 -2px 0 0 #a976cc; }
-.card.black figure { background-color: #e0e0e0; }
-.card.black a:hover figcaption { box-shadow: inset 0 -2px 0 0 #666666; }
-
 .highlight { background: #ffffff; }
 
 .highlight .c { color: #999988; font-style: italic; }
@@ -439,5 +352,145 @@ nav li { display: inline-block; vertical-align: top; }
 .highlight .il { color: #009999; }
 
 /* Literal.Number.Integer.Long */
+.banner { position: relative; background-color: #4d4d4d; background-size: cover; background-position: center; padding: 30px 0 20px 0; min-height: 200px; }
+@media (max-width: 603px) { .banner { min-height: 0; padding: 10px 0; } }
+.banner h1 { margin: 0; margin-bottom: 10px; letter-spacing: 0.02em; word-spacing: 0.1em; line-height: 1.5; color: white; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 -1px 1px rgba(0, 0, 0, 0.2), 1px 0 1px rgba(0, 0, 0, 0.2), -1px 0 1px rgba(0, 0, 0, 0.2), 0 2px 10px rgba(0, 0, 0, 0.4), 0 0 50px rgba(0, 0, 0, 0.7); }
+.banner .date { text-align: right; font-weight: normal; color: white; word-spacing: 0.2em; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 -1px 1px rgba(0, 0, 0, 0.2), 1px 0 1px rgba(0, 0, 0, 0.2), -1px 0 1px rgba(0, 0, 0, 0.2); }
+.banner .caption { position: absolute; bottom: 5px; right: 5px; color: rgba(255, 255, 255, 0.6); font-size: 13px; background: rgba(0, 0, 0, 0.1); padding: 0 3px; }
+
+.blogArchivePage .content { max-width: 800px; margin: 0 auto; }
+.blogArchivePage .content h1, .blogArchivePage .content h2 { margin-left: 30px; margin-right: 30px; }
+.blogArchivePage .content li a { padding-left: 30px; padding-right: 30px; }
+@media (max-width: 603px) { .blogArchivePage .content h1, .blogArchivePage .content h2 { margin-left: 10px; margin-right: 10px; }
+  .blogArchivePage .content li.post.summary a { padding-left: 10px; padding-right: 10px; } }
+
+.post.summary .title { margin-bottom: 5px; color: #36a75e; }
+.post.summary p { max-width: 600px; }
+.post.summary a { display: block; color: inherit; padding-top: 50px; padding-bottom: 50px; border-top: 1px dotted rgba(0, 0, 0, 0.1); }
+@media (max-width: 603px) { .post.summary a { padding-top: 30px; padding-bottom: 30px; } }
+.post.summary a:hover { text-decoration: none; background: rgba(75, 197, 118, 0.05); }
+.post.summary .date { float: right; }
+
+.post.oneliner a { display: block; padding-top: 10px; padding-bottom: 10px; }
+.post.oneliner a:hover { background: rgba(75, 197, 118, 0.05); }
+.post.oneliner .date { float: right; }
+
+.blogPage .deepLink { display: none; margin-left: 5px; padding: 0 10px 0 7px; color: #aaa; border: 1px solid transparent; border-radius: 3px; font-weight: normal; }
+.blogPage .deepLink:hover { background: rgba(0, 0, 0, 0.05); color: #36a75e; border: 1px solid rgba(0, 0, 0, 0.2); text-decoration: none; }
+.blogPage h2:hover .deepLink, .blogPage h2:focus .deepLink, .blogPage h3:hover .deepLink, .blogPage h3:focus .deepLink, .blogPage h4:hover .deepLink, .blogPage h4:focus .deepLink, .blogPage h5:hover .deepLink, .blogPage h5:focus .deepLink, .blogPage h6:hover .deepLink, .blogPage h6:focus .deepLink { display: inline; }
+
+.projectListPage { background: #fafafa; }
+.projectListPage h2 { text-align: center; margin-bottom: 20px; }
+@media (min-width: 604px) and (max-width: 1024px) { .projectListPage h2 { margin-bottom: 10px; } }
+@media (max-width: 603px) { .projectListPage h2 { margin-bottom: 5px; } }
+
+.projectPage .mainImgArea { text-align: center; background: #f2f2f2; padding: 70px 0 20px 0; min-height: 400px; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+@media (max-width: 603px) { .projectPage .mainImgArea { min-height: 200px; padding: 41px 0 12px 0; } }
+.projectPage .mainImgArea h1 { color: #262626; font-size: 20px; margin: 10px 0 3px 0; }
+.projectPage .mainImgArea h2 { color: #262626; font-size: 18px; font-weight: normal; }
+.projectPage .mainImgArea .imageWrapper { display: inline-block; position: relative; font-size: 0; }
+.projectPage .mainImgArea .imageWrapper img { font-size: 12px; }
+
+.projectPage .invertedTitle h1, .projectPage .invertedTitle h2 { color: white; }
+
+.projectPage .mainImg { max-height: 500px; }
+.projectPage .animation { -webkit-transition: all 1.5s ease-in-out; -moz-transition: all 1.5s ease-in-out; transition: all 1.5s ease-in-out; opacity: 0; position: absolute; top: 0; left: 0; }
+.projectPage .loadingMsg { font-size: 11px; position: absolute; right: 0; bottom: -20px; animation: fadeIn 1s infinite alternate; }
+
+.projectPage .mainImg { box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1); }
+
+.floatingMainImg .mainImg { box-shadow: none; }
+
+.whiteBgMainImg .mainImg { box-shadow: none; }
+.whiteBgMainImg .mainImgArea { background: none; box-shadow: inset 0 -19px 0 0 white, inset 0 -20px 0 0 #d9d9d9; }
+
+.customBgColor .mainImg { box-shadow: none; }
+.customBgColor nav { background-color: rgba(0, 0, 0, 0.3); }
+
+@keyframes fadeIn { from { opacity: 0; } }
+.projectPage article p > img { width: auto; display: inline-block; }
+.projectPage article .hero { padding: 10px 0; }
+.projectPage article .hero > img { max-height: 700px; display: block; }
+.projectPage article .imageSet { font-size: 0; text-align: center; }
+.projectPage article .imageSet img { font-size: 14px; max-height: 400px; max-width: 398px; margin: 0 1px; }
+
+.projectPage .backToProjects { display: flex; justify-content: center; flex-wrap: wrap; align-items: center; }
+.projectPage .backToProjects a.back { border-bottom: 1px dotted #4bc576; text-indent: -20px; }
+.projectPage .backToProjects a.back:hover { text-decoration: none; border-bottom: 1px solid #4bc576; }
+.projectPage .backToProjects ol { margin-left: 20px; padding-left: 20px; border-left: 1px dotted #4bc576; font-size: 13px; }
+.projectPage .backToProjects li { color: #4bc576; list-style-type: none; }
+
+.cards { max-width: 1713.8px; }
+.cards .card { width: 100%; max-width: 418px; }
+.cards .card figure { height: 120px; }
+@media (min-width: 420px) { .cards .card { width: 50%; } }
+@media (min-width: 877.8px) { .cards .card { width: 33%; }
+  .cards .card figure { height: 170px; } }
+@media (min-width: 1295.8px) { .cards .card { width: 25%; } }
+
+.cards { font-size: 0; text-align: center; margin: 0 auto; }
+
+.card { box-sizing: border-box; text-align: left; display: inline-block; }
+.card a { display: block; border-radius: 3px; border: 1px solid #ededed; background: white; overflow: hidden; margin: 5px; padding: 1px; padding-bottom: 0; -webkit-transition: all 0.15s ease-in-out; -moz-transition: all 0.15s ease-in-out; transition: all 0.15s ease-in-out; }
+.card a:hover { border-color: #e6e6e6; box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.05); z-index: 1; text-decoration: none; }
+.card a:hover figcaption { color: black; }
+.card a:hover figcaption .muted { color: gray; }
+.card a figure { opacity: 0.89; -webkit-transition: all 0.15s ease-in-out; -moz-transition: all 0.15s ease-in-out; transition: all 0.15s ease-in-out; }
+.card a:hover figure { opacity: 1; }
+.card a figcaption { -webkit-transition: all 0.15s ease-in-out; -moz-transition: all 0.15s ease-in-out; transition: all 0.15s ease-in-out; }
+.card figure { position: relative; margin: 0; padding: 0; background: #f2f2f2; overflow: hidden; border-radius: 2px; border-bottom-left-radius: 0; border-bottom-right-radius: 0; opacity: 0.7; -webkit-transition: all 0.15s ease-in-out; -moz-transition: all 0.15s ease-in-out; transition: all 0.15s ease-in-out; }
+.card figure .image { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-size: cover; background-position: 50% 20%; }
+.card figure .image.at2x { display: none; }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { .card figure .image.at2x { display: block; }
+  .card figure .image.at1x { display: none; background-image: none !important; } }
+@media only screen and (-webkit-max-device-pixel-ratio: 1.25), (max-resolution: 120dpi) { .card figure .image.at2x { display: none; background-image: none !important; } }
+.card figcaption { color: #262626; padding: 5px 10px; font-size: 12px; margin: 0 -3px; }
+.card figcaption p { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+.card.green figure { background-color: #edf9f1; }
+.card.green a:hover figcaption { box-shadow: inset 0 -2px 0 0 #4bc576; }
+.card.blue figure { background-color: #eef4f9; }
+.card.blue a:hover figcaption { box-shadow: inset 0 -2px 0 0 #90b6d6; }
+.card.yellow figure { background-color: #fcfde1; }
+.card.yellow a:hover figcaption { box-shadow: inset 0 -2px 0 0 #f0f769; }
+.card.orange figure { background-color: #fdf4e8; }
+.card.orange a:hover figcaption { box-shadow: inset 0 -2px 0 0 #f4b464; }
+.card.red figure { background-color: #fff5f3; }
+.card.red a:hover figcaption { box-shadow: inset 0 -2px 0 0 #ff9b8a; }
+.card.purple figure { background-color: #f6f1fa; }
+.card.purple a:hover figcaption { box-shadow: inset 0 -2px 0 0 #a976cc; }
+.card.black figure { background-color: #e0e0e0; }
+.card.black a:hover figcaption { box-shadow: inset 0 -2px 0 0 #666666; }
+
+article { font-size: 18px; line-height: 1.75; padding: 0 30px; max-width: 800px; margin: 0 auto; }
+article h2 small { font-size: 60%; line-height: 1.7; }
+article p, article .highlight, article blockquote, article ul, article ol { margin-bottom: 15.75px; }
+@media (max-width: 603px) { article { padding: 0 10px; font-size: 16px; line-height: 1.75; }
+  article p, article .highlight, article blockquote { margin-bottom: 14px; } }
+article .highlight { overflow: auto; padding: 10px; margin-left: -10px; margin-right: -10px; border-radius: 5px; background: #fafafa; border: 1px solid #f2f2f2; border-top-color: #e6e6e6; }
+article .highlight code { padding: 0; background: none; border: none; }
+article .highlight { font-size: 85%; }
+article .gist-file .highlight { font-size: 100%; }
+article blockquote p { margin-bottom: 0; }
+article p > img { display: block; margin: 0 auto; width: 100%; }
+article ul, article li { list-style-type: disc; }
+article ul, article ol, article li { list-style-position: inside; }
+
+aside.project h4 { font-size: 16px; font-weight: normal; margin: 5px 0; }
+aside.project li span, aside.project li a { font-size: 13px; }
+aside.project li span { color: #777; }
+aside.project ol, aside.project ul { padding-left: 15px; }
+aside.project li { color: #aaa; list-style-position: outside; font-size: 11px; }
+aside.project .technologies li { list-style-type: kannada; }
+aside.project .files li { list-style-type: circle; }
+aside.project .links ol, aside.project .links ul, aside.project .links li { padding-left: 0; list-style-type: none; }
+aside.project .files a { color: #777; border-bottom: 1px dotted #aaa; padding-bottom: 2px; margin-bottom: -2px; }
+aside.project .files a:hover { color: #262626; border-bottom: 1px solid #777; text-decoration: none; }
+
+aside.project { float: right; border-left: 1px dotted #aaa; padding-left: 50px; margin-left: 50px; margin-bottom: 100px; }
+aside.project section { margin: 0 0 20px 0; }
+@media (min-width: 604px) and (max-width: 1024px) { aside.project { margin-left: 30px; padding-left: 30px; } }
+@media (max-width: 603px) { aside.project { float: none; border: none; border-bottom: 1px solid #d9d9d9; margin: 0; margin-bottom: 20px; padding: 10px 0 20px 0; display: -webkit-box; display: -moz-box; display: -webkit-flex; display: flex; -webkit-flex-wrap: wrap; flex-wrap: wrap; justify-content: space-around; }
+  aside.project section { margin: 0 20px 0 0; } }
 
 /*# sourceMappingURL=all.css.map */

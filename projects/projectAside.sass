@@ -1,0 +1,70 @@
+@import '../css/__'
+
+
+// The side bar that shows project metadata like technologies and links
+aside.project
+  h4
+    font-size: 16px
+    font-weight: normal
+    margin: 5px 0
+  li span, li a
+    font-size: 13px
+  li span
+    color: $semiMuted
+  ol, ul
+    padding-left: 15px
+  li
+    color: $muted
+    list-style-position: outside
+    font-size: 11px // just to shrink the bullet size
+
+  .technologies li
+    list-style-type: kannada // sooooo fun!
+  .files li
+    list-style-type: circle
+  .links
+    ol, ul, li
+      padding-left: 0
+      list-style-type: none
+
+  .files a
+    color: $semiMuted
+    border-bottom: 1px dotted $muted
+    padding-bottom: 2px
+    margin-bottom: -2px
+    &:hover
+      color: $darkText
+      border-bottom: 1px solid $semiMuted
+      text-decoration: none
+
+
+// Responsive Adaptation
+// On desktop this floats right. Phone gets it's own row.
+aside.project
+  float: right
+  border-left: 1px dotted $muted
+  padding-left: 50px
+  margin-left: 50px
+  margin-bottom: 100px
+  section
+    margin: 0 0 20px 0
+
+  +tablet
+    margin-left: 30px
+    padding-left: 30px
+
+  +phone
+    float: none
+    border: none
+    border-bottom: 1px solid $black15 // match <hr>
+    margin: 0
+    margin-bottom: 20px
+    padding: 10px 0 20px 0
+    +flexContainer
+    +flexWrap
+    justify-content: space-around
+
+    section
+      margin: 0 20px 0 0
+
+

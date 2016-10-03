@@ -1,15 +1,43 @@
 <aside class="project">
-  <pre>
-    project.technologies
-    {{ project.technologies }}
-    project.files
-    {{ project.files }}
-    project.repo
-    {{ project.repo }}
-    project.live
-    {{ project.live }}
-    project.isPrivate
-    {{ project.isPrivate }}
-  </pre>
+
+
+  {% if project.technologies %}
+  <section class="technologies">
+    <h4>Technologies</h4>
+    <ul>
+      {% for tech in project.technologies %}
+        <li><span>{{ tech.title }}</span></li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {% if project.files %}
+  <section class="files">
+    <h4>Selected Source Code</h4>
+    <ul>
+      {% for file in project.files %}
+      <li><a href="{{ file.url }}">{{ file.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {% if project.links %}
+  <sectionl class="links">
+    <h4>Links</h4>
+    <ul>
+      {% for link in project.links %}
+      <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {% if project.isPrivate%}
+  <p>
+    🔓
+  </p>
+  {% endif %}
 
 </aside>

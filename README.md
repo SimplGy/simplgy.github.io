@@ -57,8 +57,18 @@ If you need to use `-` or `:` in the front matter of the post, these are special
 
 ## Projects
 
-These go in `projects/_posts`. I use the `{{content}}` tags for the headers since they're complex html, and put description text and other values in the yml front matter.
-It's almost all configuration based except for the copywriting and the header fanciness.
+These go in `projects/_posts`.
+
+Every project should have:
+
+* 1 and 2x images in `projects/card`. The `shortName` property of the project specifies which card to use.
+* A `mainImg`
+* Optionally, an `animation`. This loads on top of the `mainImg`
+
+You can create `jpg`s out of the first frame of every animation for use as mainImg by running this command in the project root (OSX dependency for `sips`):
+
+    sips -s format jpeg ./projects/animation/*.gif --out projects/mainImg
+
 
 
 ## Post Categories

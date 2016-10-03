@@ -2,10 +2,17 @@
 layout: boilerplate
 ---
 
-<b class="navSpace"></b>
-<div class="content">
-  {{ content }}
-</div>
+<body class="{% for c in page.categories %} {{ c }}Page {% endfor %}">
+
+  <b class="navSpace"></b>
+
+  <div class="content">
+    {{ content }}
+  </div>
+
+</body>
+
+
 
 {% include nav.html %}
 {% include footer.html %}

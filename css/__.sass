@@ -10,6 +10,7 @@ $greenVeryDark: darken($green, 30%)
 $blue:       rgb(144,182,214)
 $orange:     rgb(244,180,100)
 $brown: #40352c
+$semiMuted: #777
 $muted: #aaa
 $yellow: #f0f769
 $red: #ff9b8a
@@ -129,6 +130,10 @@ $sizeTablet: 1024px
 
 @mixin phone
   @media (max-width: $sizePhone)
+    @content
+
+@mixin notPhone
+  @media (min-width: $sizePhone + 1)
     @content
 
 @mixin tablet

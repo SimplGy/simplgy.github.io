@@ -3,39 +3,49 @@ layout: boilerplate
 ---
 {% assign project = page %}
 
-<b class="navSpace"></b>
 
-<h2>{{ project.title }}</h2>
-<h3>{{ project.summary }}</h3>
+<body class="projectPage {% for c in page.classNames %}{{ c }} {% endfor %} {% if project.mainImgBgColor %}customBgColor{% endif %}">
 
-{% if project.animation %}
-  <img src="{{ project.animation }}" alt="Main demo animation for {{ project.title }}">
-{% else %}
-  <img src="{{ project.mainImg }}" alt="Main demo image for {{ project.title }}">
-{% endif %}
+  <div class="mainImgArea {% if project.invertedTitle %} invertedTitle{% endif %}"
+       {% if project.mainImgBgColor %} style="background-color:{{ project.mainImgBgColor }};" {% endif %}
+    >
+    <div class="imageWrapper">
+      <img class="mainImg" src="/projects/mainImg/{{ project.mainImg }}" alt="Main demo image for {{ project.title }}">
+      {% if project.animation %}
+        <img class="animation" src="/projects/animation/{{ project.animation }}" alt="Main demo animation for {{ project.title }}">
+        <span class="muted loadingMsg">Animation is Loading...</span>
+      {% endif %}
+    </div>
+    <h1>{{ project.title }}</h1>
+    <h2>{{ project.summary }}</h2>
+  </div>
 
+  <article class="content padder">
 
-<article class="content">
+    {% include project-aside.html %}
 
-  {{ content }}
+    {{ content }}
 
-  <hr/>
+    <hr/>
 
-  {% include project-aside.html %}
+    <div class="backToProjects">
+      <a class="back" href="/projects"> &larr; All Projects</a>
+      <ol>
+        {% for p in site.categories.projects %}
+          {% if p.isPrivate or p.id == page.id %} {% continue %} {% endif %}
+          <li class="project lineItem {{ p.colorName }}"><a href="{{p.url}}">
+            {{ p.title }}
+          </a></li>
+        {% endfor %}
+      </ol>
+    </div>
 
-  <hr/>
+  </article>
 
-  <!-- Back to Projects link here, or mini versions of other projects -->
-  <p class="alignCenter">
-    <a href="/projects">Back to Projects</a>
-  </p>
+  {% include nav.html %}
+  {% include footer.html %}
 
+  {% include script-on-animation-loaded.html %}
+  {% include script-hero-rows.html %}
 
-  <hr/>
-
-</article>
-
-{% include nav.html %}
-{% include footer.html %}
-
-{% include script-hero-rows.html %}
+</body>

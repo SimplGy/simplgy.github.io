@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAIA,aAAa,GACX,SAAS,EAAE,IAAI;AACf,kCAAM,GACJ,aAAa,EAAE,IAAI",
+"sources": ["projectAside.sass"],
+"names": [],
+"file": "projectAside.css"
+}
