@@ -1,0 +1,86 @@
+
+- text: Everything should be made as simple as possible, but no simpler.
+  who: Albert Einstein
+
+- text: You press the button, we do the rest.
+  who: George Eastman, Kodak
+
+- text: |
+  That's been one of my mantras - focus and simplicity. Simple can be harder than complex: You have to work hard to get your thinking clean to make it simple. But it's worth it in the end because once you get there, you can move mountains.
+  who: Steve Jobs
+
+- text: Simplicity is the final achievement. After one has played a vast quantity of notes and more notes, it is simplicity that emerges as the crowning reward of art.
+  who: Frederic Chopin
+
+- text: Intellectuals say simple things in difficult ways. Artists say difficult things in simple ways.
+  who: Charles Bukowski
+
+- text: Simplicity is the most difficult thing to secure in this world; it is the last limit of experience and the last effort of genius.
+  who: George Sand
+
+- text: Complexity itself isn't bad; the trick is making complexity seem uncomplicated. The best gizmo is the thing that lets us do what we need to do with the greatest ease.
+  who: Josh Clark, Tapworthy
+
+- text: There is no problem so complicated that you can't find a very simple answer to it if you look at it right
+  who: Douglas Adams
+
+- text: I think there is profound and enduring beautify in simplicity, in clarity, in efficiency. True simplicity is derived from so much more than just the absence of clutter and ornamentation. It's about bringing order to complexity.
+  who: Jony Ive, IOS7 intro video
+
+- text: After innumerable failures I finally uncovered the principle for which I was searching, and I was astounded at its simplicity.
+  who: Alexander Graham Bell
+
+- text: Man is a toolmaker. Man has the ability to make a tool to amplify his current abilities. And that's exactly what we're doing here.
+  who: Steve Jobs
+  year: 1980
+  url: https://www.youtube.com/watch?v=0lvMgMrNDlg
+
+- text: We are going to start chewing up [processing] power to help us remove that barrier [between the human and the machine]
+  who: Steve Jobs
+  year: 1980
+  url: https://www.youtube.com/watch?v=0lvMgMrNDlg
+
+- text: Simple is hard, and effortless takes lots of work. But those adjectives are the hallmarks of great design.
+  who: Josh Clark, Tapworthy
+
+- text: Our life is frittered away by detail. Simplify, simplify.
+  who: Henry David Thoreau
+
+- text: |
+    It was a question: "Given what we're trying to do now, what is the simplest thing that could possibly work?"
+    Once we had written it, we could look at it. And we'd say, "Oh yeah, now we know what's going on," because the mere act of writing it organized our thoughts. Maybe it worked. Maybe it didn't. Maybe we had to code some more. But we had been blocked from making progress, and now we weren't. We had been thinking about too much at once, trying to achieve too complicated a goal, trying to code it too well. Maybe we had been trying to impress our friends with our knowledge of computer science, whatever. But we decided to try whatever is most simple: to write an if statement, return a constant, use a linear search. We would just write it and see it work. We knew that once it worked, we'd be in a better position to think of what we really wanted.
+    I think that that's a breakthrough, because you are always taught to do as much as you can. Always put checks in. Always look for exceptions. Always handle the most general case. Always give the user the best advice. Always print a meaningful error message. Always this. Always that. You have so many things in the background that you're supposed to do, there's no room left to think. I say, forget all that and ask yourself, "What's the simplest thing that could possibly work?"
+    Coding up the simplest thing that could possibly work is really about this: If you can't keep five things in your head at one time and make a decision, try keeping three things in your head. Try keeping just one thing in your head, and see if you can make a decision. Then you can think of the next thing. And amazingly, when you write some of this dumb, straight-ahead code, it often turns out that it was all that was required. It works great.
+  who: Bill Venners
+  url: http://www.artima.com/intv/simplest3.html
+  year: 2004
+
+- text: The perfection of art is to conceal art.
+  who: Quintilian
+  year: 1995
+
+- text: Any intelligent fool can make things bigger, more complex, and more violent. It takes a touch of genius - and a lot of courage - to move in the opposite direction.
+  who: Albert Einstein
+
+- text: Intellectuals say simple things in difficult ways. Artists say difficult things in simple ways.
+  who: Charles Bukowski
+
+#- text: Simplicity is the ultimate sophistication
+#  who: Leonardo da Vinci
+
+- text: Simplicity is prerequisite for reliability
+  who: Edsger W. Dijkstra
+  publication: How do we tell truths that might hurt?
+  year: 1975
+
+#- text: Simplicity of character is the natural result of profound thought.
+#  who: Fortune cookie
+
+- text: |
+    Our life is frittered away by detail... Simplicity, simplicity, simplicity!
+    I say, let your affairs be as two or three, and not a hundred or a thousand; instead of a million count half a dozen, and keep your accounts on your thumb-nail.
+    Simplify, simplify.
+  who: Henry David Thoreau
+  publication: Walden
+  year: 1854
+
