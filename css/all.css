@@ -375,9 +375,9 @@ nav li { display: inline-block; vertical-align: top; }
 .post.oneliner a:hover { background: rgba(75, 197, 118, 0.05); }
 .post.oneliner .date { float: right; }
 
-.blogPage .deepLink { display: none; margin-left: 5px; padding: 0 10px 0 7px; color: #aaa; border: 1px solid transparent; border-radius: 3px; font-weight: normal; }
-.blogPage .deepLink:hover { background: rgba(0, 0, 0, 0.05); color: #36a75e; border: 1px solid rgba(0, 0, 0, 0.2); text-decoration: none; }
-.blogPage h2:hover .deepLink, .blogPage h2:focus .deepLink, .blogPage h3:hover .deepLink, .blogPage h3:focus .deepLink, .blogPage h4:hover .deepLink, .blogPage h4:focus .deepLink, .blogPage h5:hover .deepLink, .blogPage h5:focus .deepLink, .blogPage h6:hover .deepLink, .blogPage h6:focus .deepLink { display: inline; }
+.blogPost .deepLink { display: none; margin-left: 5px; padding: 0 10px 0 7px; color: #aaa; border: 1px solid transparent; border-radius: 3px; font-weight: normal; }
+.blogPost .deepLink:hover { background: rgba(0, 0, 0, 0.05); color: #36a75e; border: 1px solid rgba(0, 0, 0, 0.2); text-decoration: none; }
+.blogPost h2:hover .deepLink, .blogPost h2:focus .deepLink, .blogPost h3:hover .deepLink, .blogPost h3:focus .deepLink, .blogPost h4:hover .deepLink, .blogPost h4:focus .deepLink, .blogPost h5:hover .deepLink, .blogPost h5:focus .deepLink, .blogPost h6:hover .deepLink, .blogPost h6:focus .deepLink { display: inline; }
 
 .projectListPage { background: #fafafa; }
 .projectListPage h2 { text-align: center; margin-bottom: 20px; }
