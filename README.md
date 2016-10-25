@@ -89,8 +89,10 @@ o consider https://github.com/poole/poole
 o Better fit on mobile and tablet (footer, reduce global padding/margins)
 o Click responsiveness and IxN on mobile and tablet
 o See if there's a way to get reddit, google+, instapaper, and other post-parsers to see the banner image first. Otherwise they share the first content image (hide an `img` tag in the banner?)
+o Redo fonts with https://femmebot.github.io/google-type
 
 ### Over the Rainbow
+o Show discussion on related sites, either by manually listing which Reddit/Hacker News threads are discussing it or by detecting them automatically.
 o Pick a color scheme I can live with for a while. Main color (green), supporting color (blue?), background color (not quite white), shaded bg color (pale white), dark (not quite black, tinged brown), etc.
 o Style blockquotes nicely
 o Style lists in markdown posts nicely

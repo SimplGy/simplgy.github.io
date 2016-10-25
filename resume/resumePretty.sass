@@ -1,0 +1,214 @@
+@import '../css/__'
+
+.resumePrettyPage
+
+  $green0: rgb(182,208,54)
+  $green1: mix($green0, white, 70%) //rgb(190, 208, 80)
+  $green2: mix($green0, white, 40%) //rgb(196, 215, 146)
+  $blue0: rgb(136, 181, 227) //rgb(155,180,212)
+  $blue1: mix($blue0, white, 70%)
+  $blue2: mix($blue0, white, 40%)
+
+  $fontHuge: 60px
+
+  $fontLarge: 17px
+  $fontNormal: 14px
+
+  $fontTiny: 12px
+
+
+  // Should look like a piece of paper so it feels printable
+  background: #f6f6f6
+  font-size: $fontNormal
+
+  // Custom muted nav for this page
+  nav
+    background-color: $black05
+    box-shadow: 0 1px 0 $black10
+    a
+      color: $semiMuted
+      text-shadow: none
+      &:hover
+        text-shadow: none
+        background: $light50
+
+  h1, h2, h3, h4
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Helvetica, sans-serif
+    font-weight: 500
+
+  .page
+    background: white
+    border: 1px solid $black05
+    border-radius: 2px
+    box-shadow: 0 3px 4px $shade20
+    width: 100%
+    max-width: 900px
+    margin: 0 auto
+    box-sizing: border-box
+    padding: 20px
+    padding-left: 40px
+    padding-bottom: 40px
+    +phone
+      padding: 10px
+      padding-left: 20px
+      padding-bottom: 20px
+
+
+
+  header
+    position: relative
+    border: 1px solid $black05
+    border-left: none
+    border-right: none
+    margin-bottom: 20px
+    padding: 1px 0
+    h1
+      font-size: $fontHuge
+      display: inline-block
+      text-transform: uppercase
+      letter-spacing: 0.02em
+      margin-right: 0.3em
+      line-height: 0.85
+      color: $blue1
+      font-weight: 300
+      em
+        color: $green1
+        font-style: normal
+    aside
+      display: inline-block
+    img
+      position: absolute
+      width: 35px
+      right: 0
+      bottom: -18px
+      border-left: 5px solid white
+      border-right: 15px solid white
+    //h1, aside
+    //  vertical-align: middle
+    aside p
+      color: $muted
+      font-size: $fontTiny
+      line-height: 1.34   // match the height of h1
+
+
+
+  .summary li
+    list-style: disc
+    font-size: $fontTiny
+    color: $muted
+    margin-left: 18px
+    span
+      font-size: $fontNormal
+      color: $darkText
+
+
+
+  .timeline
+    position: relative
+    display: flex
+    margin-top: 60px
+    //border-top: 1px solid $black15
+    padding: 0 10px
+
+    // Timeline year indication lines
+    b
+      position: absolute
+      width: 100%
+      left: 0
+      box-sizing: border-box
+      border-bottom: 1px solid $black15
+
+    b label
+      position: absolute
+      top: 50%
+      margin-top: -10px
+      height: 20px
+      width: 50px
+      left: -45px
+      color: $muted
+      text-align: center
+      font-weight: normal
+      transform: rotateZ(270deg)
+      +transitionable
+
+    // Timeline month indication lines
+    b b
+      position: relative
+      display: block
+      height: 25%
+      box-sizing: border-box
+      border-bottom: 1px solid $black05
+    b:hover
+      background-color: $shade02
+      label
+        color: $semiMuted
+    b b:hover
+      background-color: transparent
+    b b:last-of-type
+      border-bottom: none
+
+
+    .col
+      position: relative
+      flex: 1 1 50%
+      margin-right: 10px
+      pointer-events: none
+
+    li
+      padding: 3px 10px
+      box-sizing: border-box
+      width: 100%
+      left: 0
+
+    .title
+      font-size: $fontLarge
+      position: absolute
+      width: 100%
+      left: 0
+      top: -50px
+      height: 40px
+      line-height: 40px
+      padding-top: 0
+      padding-bottom: 0
+      span
+        display: inline-block
+        line-height: 1.1
+
+    //*
+    //  background-color: $shade07
+
+
+
+    .work li
+      background-color: $green1
+      &:nth-child(odd)
+        background-color: $green2
+    .other li
+      background-color: $blue1
+      &:nth-child(odd)
+        background-color: $blue2
+
+    .work .title
+      background-color: white
+      background-image: linear-gradient(to bottom, white 25%, $green1)
+
+    .other .title
+      background-color: white
+      background-image: linear-gradient(to bottom, white 25%, $blue1)
+
+
+
+
+
+
+
+.resumePrettyPage
+  @media print
+    background: white
+    .padder
+      padding: 0
+    .page
+      background: white
+      border: none
+      box-shadow: none
+      max-width: none

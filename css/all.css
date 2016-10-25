@@ -19,9 +19,9 @@ code { padding: 0 3px; background: #fafafa; border: 1px solid #f2f2f2; border-to
 
 img { max-width: 100%; }
 
-h1, h2, h3, h4 { font-family: Comfortaa, sans-serif; line-height: 1.2; margin: 0; }
+h1, h2, h3, h4 { font-family: Comfortaa, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Helvetica, sans-serif; line-height: 1.2; margin: 0; }
 
-body { font-family: Helvetica, Verdana, sans-serif; line-height: 1.5; font-size: 16px; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Helvetica, sans-serif; line-height: 1.5; font-size: 16px; margin: 0; padding: 0; }
 
 h1 { font-size: 60px; }
 @media (max-width: 603px) { h1 { font-size: 30px; } }
@@ -97,14 +97,6 @@ a.link:visited:hover { color: #8bcbb8; }
 .ytbg-video { opacity: 1; }
 
 .ytbg-overlay { box-shadow: inset 0 -3px #4bc576; background: rgba(0, 0, 0, 0.4); }
-
-.resumePage { background: #f6f6f6; }
-.resumePage .content { text-align: center; }
-.resumePage .content .gist { text-align: left; display: inline-block; max-width: 900px; }
-.resumePage .content li { list-style: disc; }
-
-.resumePage .gist-data { padding: 20px; }
-@media (max-width: 603px) { .resumePage .gist-data { padding: 10px; } }
 
 .quotesPage p { color: #aaa; margin-top: -35px; text-align: right; padding: 0 20px; }
 .quotesPage blockquote { height: 100%; box-sizing: border-box; padding: 0; padding-top: 50px; margin: 0; }
@@ -352,6 +344,7 @@ nav li { display: inline-block; vertical-align: top; }
 .highlight .il { color: #009999; }
 
 /* Literal.Number.Integer.Long */
+@media print { nav, footer { display: none; } }
 .banner { position: relative; background-color: #4d4d4d; background-size: cover; background-position: center; padding: 30px 0 20px 0; min-height: 200px; }
 @media (max-width: 603px) { .banner { min-height: 0; padding: 10px 0; } }
 .banner h1 { margin: 0; margin-bottom: 10px; letter-spacing: 0.02em; word-spacing: 0.1em; line-height: 1.5; color: white; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 -1px 1px rgba(0, 0, 0, 0.2), 1px 0 1px rgba(0, 0, 0, 0.2), -1px 0 1px rgba(0, 0, 0, 0.2), 0 2px 10px rgba(0, 0, 0, 0.4), 0 0 50px rgba(0, 0, 0, 0.7); }
@@ -419,6 +412,51 @@ nav li { display: inline-block; vertical-align: top; }
 .projectPage .backToProjects a.back:hover { text-decoration: none; border-bottom: 1px solid #4bc576; }
 .projectPage .backToProjects ol { margin-left: 20px; padding-left: 20px; border-left: 1px dotted #4bc576; font-size: 13px; }
 .projectPage .backToProjects li { color: #4bc576; list-style-type: none; }
+
+.resumePage { background: #f6f6f6; }
+.resumePage .content { text-align: center; }
+.resumePage .content .gist { text-align: left; display: inline-block; max-width: 900px; }
+.resumePage .content li { list-style: disc; }
+.resumePage .gist-data { padding: 20px; }
+@media (max-width: 603px) { .resumePage .gist-data { padding: 10px; } }
+
+.resumePrettyPage { background: #f6f6f6; font-size: 14px; }
+.resumePrettyPage nav { background-color: #f2f2f2; box-shadow: 0 1px 0 #e6e6e6; }
+.resumePrettyPage nav a { color: #777; text-shadow: none; }
+.resumePrettyPage nav a:hover { text-shadow: none; background: rgba(255, 255, 255, 0.5); }
+.resumePrettyPage h1, .resumePrettyPage h2, .resumePrettyPage h3, .resumePrettyPage h4 { font-family: -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Helvetica, sans-serif; font-weight: 500; }
+.resumePrettyPage .page { background: white; border: 1px solid #f2f2f2; border-radius: 2px; box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2); width: 100%; max-width: 900px; margin: 0 auto; box-sizing: border-box; padding: 20px; padding-left: 40px; padding-bottom: 40px; }
+@media (max-width: 603px) { .resumePrettyPage .page { padding: 10px; padding-left: 20px; padding-bottom: 20px; } }
+.resumePrettyPage header { position: relative; border: 1px solid #f2f2f2; border-left: none; border-right: none; margin-bottom: 20px; padding: 1px 0; }
+.resumePrettyPage header h1 { font-size: 60px; display: inline-block; text-transform: uppercase; letter-spacing: 0.02em; margin-right: 0.3em; line-height: 0.85; color: #accbeb; font-weight: 300; }
+.resumePrettyPage header h1 em { color: #ccde72; font-style: normal; }
+.resumePrettyPage header aside { display: inline-block; }
+.resumePrettyPage header img { position: absolute; width: 35px; right: 0; bottom: -18px; border-left: 5px solid white; border-right: 15px solid white; }
+.resumePrettyPage header aside p { color: #aaa; font-size: 12px; line-height: 1.34; }
+.resumePrettyPage .summary li { list-style: disc; font-size: 12px; color: #aaa; margin-left: 18px; }
+.resumePrettyPage .summary li span { font-size: 14px; color: #262626; }
+.resumePrettyPage .timeline { position: relative; display: flex; margin-top: 60px; padding: 0 10px; }
+.resumePrettyPage .timeline b { position: absolute; width: 100%; left: 0; box-sizing: border-box; border-bottom: 1px solid #d9d9d9; }
+.resumePrettyPage .timeline b label { position: absolute; top: 50%; margin-top: -10px; height: 20px; width: 50px; left: -45px; color: #aaa; text-align: center; font-weight: normal; transform: rotateZ(270deg); -webkit-transition: all 0.15s ease-in-out; -moz-transition: all 0.15s ease-in-out; transition: all 0.15s ease-in-out; }
+.resumePrettyPage .timeline b b { position: relative; display: block; height: 25%; box-sizing: border-box; border-bottom: 1px solid #f2f2f2; }
+.resumePrettyPage .timeline b:hover { background-color: rgba(0, 0, 0, 0.02); }
+.resumePrettyPage .timeline b:hover label { color: #777; }
+.resumePrettyPage .timeline b b:hover { background-color: transparent; }
+.resumePrettyPage .timeline b b:last-of-type { border-bottom: none; }
+.resumePrettyPage .timeline .col { position: relative; flex: 1 1 50%; margin-right: 10px; pointer-events: none; }
+.resumePrettyPage .timeline li { padding: 3px 10px; box-sizing: border-box; width: 100%; left: 0; }
+.resumePrettyPage .timeline .title { font-size: 17px; position: absolute; width: 100%; left: 0; top: -50px; height: 40px; line-height: 40px; padding-top: 0; padding-bottom: 0; }
+.resumePrettyPage .timeline .title span { display: inline-block; line-height: 1.1; }
+.resumePrettyPage .timeline .work li { background-color: #ccde72; }
+.resumePrettyPage .timeline .work li:nth-child(odd) { background-color: #e2ecaf; }
+.resumePrettyPage .timeline .other li { background-color: #accbeb; }
+.resumePrettyPage .timeline .other li:nth-child(odd) { background-color: #cfe1f4; }
+.resumePrettyPage .timeline .work .title { background-color: white; background-image: linear-gradient(to bottom, white 25%, #ccde72); }
+.resumePrettyPage .timeline .other .title { background-color: white; background-image: linear-gradient(to bottom, white 25%, #accbeb); }
+
+@media print { .resumePrettyPage { background: white; }
+  .resumePrettyPage .padder { padding: 0; }
+  .resumePrettyPage .page { background: white; border: none; box-shadow: none; max-width: none; } }
 
 .cards { max-width: 1713.8px; }
 .cards .card { width: 100%; max-width: 418px; }

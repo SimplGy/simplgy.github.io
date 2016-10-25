@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAIA,YAAY,GACV,WAAW,GACT,OAAO,EAAE,IAAI",
+"sources": ["print.sass"],
+"names": [],
+"file": "print.css"
+}

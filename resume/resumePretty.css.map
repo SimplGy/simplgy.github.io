@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEA,iBAAiB,GACf,UAAU,EAAE,IAAI",
+"sources": ["resumePretty.sass"],
+"names": [],
+"file": "resumePretty.css"
+}

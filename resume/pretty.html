@@ -1,0 +1,168 @@
+---
+categories:
+- resumePretty
+title: Resume
+years:
+- 2006
+- 2007
+- 2008
+- 2009
+- 2010
+- 2011
+- 2012
+- 2013
+- 2014
+- 2015
+- 2016
+timelineHeight: 1000
+---
+
+<div class="padder">
+  <div class="page">
+
+    <header>
+      <h1><em>Eric</em> Miller</h1>
+      <aside>
+        <p>Denver, CO</p>
+        <p>(628) 333-4939</p>
+        <p>@simplgy</p>
+      </aside>
+      <img src="/gfx/monogram.jpg" alt="monogram logo">
+    </header>
+
+    <ul class="summary">
+      <li><span>Experienced JS developer. Some iOS and server-side experience.</span></li>
+      <li><span>Lead dev for large JavaScript applications and 1 native iOS app.</span></li>
+      <li><span>7 years experience in Front-End Web (Angular, Backbone, RequireJS, CoffeeScript, HTML5 apps, jQuery/Zepto, SASS, Grunt, Underscore/Lodash, Jasmine)</span></li>
+      <li><span>3 years experience in UX (On-site observation, usability testing, Balsamiq, Illustrator, Photoshop)</span></li>
+    </ul>
+
+
+
+    <div class="timeline" style="height:{{ page.timelineHeight }}px;">
+
+
+
+      {% comment %}
+        Print out lines that represent each year
+      {% endcomment %}
+      {% assign yearHeight = page.timelineHeight | divided_by: page.years.size %}
+      {% assign years = page.years | reverse %}
+      {% for year in years %}
+        <b class="y{{ year }}" style="height:{{ yearHeight }}px; top:{{ yearHeight | times: forloop.index0 }}px;">
+          <label>{{ year }}</label>
+          <b title="Winter {{ year }}"></b>
+          <b title="Fall {{ year }}"></b>
+          <b title="Summer {{ year }}"></b>
+          <b title="Spring {{ year }}"></b>
+        </b>
+      {% endfor %}
+
+
+
+
+      <ol class="col work">
+        <li class="title"><span>Work Experience</span></li>
+        <li>Independent Contractor</li>
+        <li>Coatue</li>
+        <li>TidePool</li>
+        <li>iSirona</li>
+      </ol>
+
+      <ol class="col other">
+        <li class="title"><span>Education &amp; More</span></li>
+        <li>MIT 6.006 Introduction to Algorithms</li>
+        <li>CodeWars (n kata, m rank)</li>
+        <li>TechCrunch Disrupt</li>
+        <li>LessConf 2013</li>
+        <li>Codeschool: RoR, CoffeeScript</li>
+        <li>An Event Apart</li>
+        <li>2 Weeks at Famo.us</li>
+        <li>TrimeMind Studios</li>
+      </ol>
+
+    </div>
+
+  </div>
+</div>
+
+
+
+<!-- TODO for resume: -->
+<!-- x Make it look like a page, to reinforce the printability of it -->
+<!-- Make it super printable -->
+<!-- Started Developing: 2008 start w/ A Catered Affair -->
+<!-- Dev Total: 2008, 2009, 2010, 2011, 2012, 2013  -->
+<!-- Started Designing:  2006 start w/ Shi-Ling. Skip: GSI, TidePool, Coatue (1, .5) -->
+<!-- Des Total: 2006, 2007, 2008, 2009, 2010, 2011, 2012  -->
+<!-- Years / Skill -->
+<!--  6 / Web Development -->
+<!--  7 / Design -->
+<!--  7 / HTML+CSS -->
+<!--  4 / JS -->
+<!--  2 / Backbone -->
+<!--  2 / RequireJS -->
+<!--  2 / SASS -->
+<!--  2 / Coffeescript -->
+<!--  1 / AngularJS -->
+<!--  1 / Flash -->
+<!--  2 / PHP -->
+<!--  1 / Drupal -->
+<!--  6 / Photoshop -->
+<!--  5 / Illustrator -->
+<!--  3 / IxN Wireframes (Balsamiq) -->
+<!--  3 / Visual Design, Hi-Fi -->
+<!--  3 / User Interviews -->
+
+<!-- Font: Jura or  -->
+
+
+<!-- <section class="me">
+  <h1>
+    <span class="colorGreen">{{ site.data.me.firstName }}</span><span class="colorBlue">{{ site.data.me.lastName }}</span>
+  </h1>
+  <span class="location">{{ site.data.me.location }}</span>
+</section>
+
+
+        <ul>
+          <li>Javascript Developer and Interaction Designer</li>
+          <li>Proven ability to recruit and lead developer teams</li>
+          <li>Full time maker</li>
+          <li>6 years dev experience in web technologies including AngularJS, Backbone, RequireJS, SASS, jQuery, and Coffeescript</li>
+          <li>7 years design and UX experience doing user interviews, wireframes, Photoshop, Illustrator</li>
+          <li>Quick-learning, self-managing, commitment-keeping</li>
+        </ul>
+
+
+
+<h2>Education</h2>
+<ol class="education">
+  {% for event in site.data.education %}
+  <li title="{{event.description}}">
+    {{ event.name }}
+    <pre>{{ event.timing }}</pre>
+  </li>
+  {% endfor %}
+</ol>
+
+
+<h2>Work Experience</h2>
+<ol class="work">
+  {% for event in site.data.work %}
+    <li title="{{event.description}}">
+      {{ event.name }}
+      <pre>{{ event.timing }}</pre>
+    </li>
+  {% endfor %}
+</ol>
+
+<h2>Side Projects</h2>
+<ol class="sideProjects">
+  {% for event in site.data.sideProjects %}
+  <li title="{{event.description}}">
+    {{ event.name }}
+    <pre>{{ event.timing }}</pre>
+  </li>
+  {% endfor %}
+</ol> -->
