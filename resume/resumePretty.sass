@@ -107,8 +107,7 @@
     position: relative
     display: flex
     margin-top: 60px
-    //border-top: 1px solid $black15
-    padding: 0 10px
+    padding-left: 10px
 
     // Timeline year indication lines
     b
@@ -155,10 +154,19 @@
       pointer-events: none
 
     li
+      position: absolute
       padding: 3px 10px
       box-sizing: border-box
       width: 100%
       left: 0
+      overflow: hidden
+
+      .muted
+        color: $shade50
+    li
+      pointer-events: all // parent removed them so we can highlight the years
+      &:hover
+        box-shadow: inset 3px 0 0 0 $shade10
 
     .title
       font-size: $fontLarge

@@ -1,13 +1,38 @@
+- name: MIT 6.006
+  description: Intro to Algorithms
+  to: 2016
+
+- name: Frontend Masters
+  to: 2015
+
+- name: 2 Weeks at Famo.us
+  to: 2014
+
+- name: Codewars
+  description: Data Structure and Algorithm Practice
+  to: 2014
 
 - name: Launch at TechCrunch Disrupt
+  to: 2013
 
 - name: LessConf 2013
+  to: 2013
 
 - name: "CodeSchool: RoR, CoffeeScript, Backbone"
+  to: 2012
 
 - name: Austin, TX Cofounders Conference
+  to: 2012
 
 - name: An Event Apart
+  to: 2010
 
 - name: Rochester Institute of Technology
   description: 3.74 GPA
+  to: 2007
+  from: 2005
+
+#- name: PineRiver.com
+#- name: ShokoPhoto.com
+#- name: TribeMind Studios
+#- name: DigiQuick Portrait Studios

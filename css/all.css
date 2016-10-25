@@ -435,7 +435,7 @@ nav li { display: inline-block; vertical-align: top; }
 .resumePrettyPage header aside p { color: #aaa; font-size: 12px; line-height: 1.34; }
 .resumePrettyPage .summary li { list-style: disc; font-size: 12px; color: #aaa; margin-left: 18px; }
 .resumePrettyPage .summary li span { font-size: 14px; color: #262626; }
-.resumePrettyPage .timeline { position: relative; display: flex; margin-top: 60px; padding: 0 10px; }
+.resumePrettyPage .timeline { position: relative; display: flex; margin-top: 60px; padding-left: 10px; }
 .resumePrettyPage .timeline b { position: absolute; width: 100%; left: 0; box-sizing: border-box; border-bottom: 1px solid #d9d9d9; }
 .resumePrettyPage .timeline b label { position: absolute; top: 50%; margin-top: -10px; height: 20px; width: 50px; left: -45px; color: #aaa; text-align: center; font-weight: normal; transform: rotateZ(270deg); -webkit-transition: all 0.15s ease-in-out; -moz-transition: all 0.15s ease-in-out; transition: all 0.15s ease-in-out; }
 .resumePrettyPage .timeline b b { position: relative; display: block; height: 25%; box-sizing: border-box; border-bottom: 1px solid #f2f2f2; }
@@ -444,7 +444,10 @@ nav li { display: inline-block; vertical-align: top; }
 .resumePrettyPage .timeline b b:hover { background-color: transparent; }
 .resumePrettyPage .timeline b b:last-of-type { border-bottom: none; }
 .resumePrettyPage .timeline .col { position: relative; flex: 1 1 50%; margin-right: 10px; pointer-events: none; }
-.resumePrettyPage .timeline li { padding: 3px 10px; box-sizing: border-box; width: 100%; left: 0; }
+.resumePrettyPage .timeline li { position: absolute; padding: 3px 10px; box-sizing: border-box; width: 100%; left: 0; overflow: hidden; }
+.resumePrettyPage .timeline li .muted { color: rgba(0, 0, 0, 0.5); }
+.resumePrettyPage .timeline li { pointer-events: all; }
+.resumePrettyPage .timeline li:hover { box-shadow: inset 3px 0 0 0 rgba(0, 0, 0, 0.1); }
 .resumePrettyPage .timeline .title { font-size: 17px; position: absolute; width: 100%; left: 0; top: -50px; height: 40px; line-height: 40px; padding-top: 0; padding-bottom: 0; }
 .resumePrettyPage .timeline .title span { display: inline-block; line-height: 1.1; }
 .resumePrettyPage .timeline .work li { background-color: #ccde72; }

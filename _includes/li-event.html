@@ -1,0 +1,28 @@
+{% assign i = 0 %}
+
+{% for y in years %}
+  {% assign year = y | downcase %}
+  {% assign to = event.to | downcase %}
+  {% if to contains year %} {% assign i = forloop.index0 %} {% endif %}
+{% endfor %}
+
+{% assign top = yearHeight | times: i %}
+
+{% if event.to == "now" %}
+  {% assign to = page.currentYear %}
+{% else %}
+  {% assign to = event.to %}
+{% endif %}
+
+{% if event.from %}
+  {% assign height = to | minus: event.from | times: yearHeight %}
+{% else %}
+  {% assign height = 0.25 | times: yearHeight %}
+{% endif %}
+
+
+
+<li class="event" style="top: {{top}}px; height: {{height}}px;" title="{{event.name}}, {{event.from}} to {{event.to}}">
+  <p>{{ event.name }}</p>
+  <p class="muted">{{ event.description }}</p>
+</li>

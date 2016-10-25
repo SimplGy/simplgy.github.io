@@ -1,8 +1,11 @@
+- name: Independent Contractor
+  to: now
+  from: 2015
 
 - name: Coatue
   description: Senior Front Endy
-  from: Today
-  to: 2014
+  to: 2015
+  from: 2014
 
 - name: TidePool
   description: Something

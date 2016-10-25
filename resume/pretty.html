@@ -1,7 +1,8 @@
 ---
 categories:
 - resumePretty
-title: Resume
+title: Resume Timeline
+currentYear: 2016
 years:
 - 2006
 - 2007
@@ -39,17 +40,17 @@ timelineHeight: 1000
 
 
 
-    <div class="timeline" style="height:{{ page.timelineHeight }}px;">
-
-
+    <div class="timeline" style="height: {{page.timelineHeight}}px;">
+      {% assign yearHeight = page.timelineHeight | divided_by: page.years.size %}
+      {% assign monthHeight = page.timelineHeight | divided_by: page.years.size | divided_by: 12 %}
 
       {% comment %}
         Print out lines that represent each year
       {% endcomment %}
-      {% assign yearHeight = page.timelineHeight | divided_by: page.years.size %}
+
       {% assign years = page.years | reverse %}
       {% for year in years %}
-        <b class="y{{ year }}" style="height:{{ yearHeight }}px; top:{{ yearHeight | times: forloop.index0 }}px;">
+        <b class="y{{ year }}" style="height: {{yearHeight}}px; top: {{ yearHeight | times: forloop.index0 }}px;">
           <label>{{ year }}</label>
           <b title="Winter {{ year }}"></b>
           <b title="Fall {{ year }}"></b>
@@ -60,26 +61,21 @@ timelineHeight: 1000
 
 
 
-
+      {% assign currentYear = years | pop %}
       <ol class="col work">
         <li class="title"><span>Work Experience</span></li>
-        <li>Independent Contractor</li>
-        <li>Coatue</li>
-        <li>TidePool</li>
-        <li>iSirona</li>
+        {% for event in site.data.work %}
+          {% include li-event.html %}
+        {% endfor %}
       </ol>
-
       <ol class="col other">
         <li class="title"><span>Education &amp; More</span></li>
-        <li>MIT 6.006 Introduction to Algorithms</li>
-        <li>CodeWars (n kata, m rank)</li>
-        <li>TechCrunch Disrupt</li>
-        <li>LessConf 2013</li>
-        <li>Codeschool: RoR, CoffeeScript</li>
-        <li>An Event Apart</li>
-        <li>2 Weeks at Famo.us</li>
-        <li>TrimeMind Studios</li>
+        {% for event in site.data.education %}
+          {% include li-event.html %}
+        {% endfor %}
       </ol>
+
+
 
     </div>
 
