@@ -1,36 +1,48 @@
 - name: MIT 6.006
   description: Intro to Algorithms
-  to: 2016
-
-- name: Frontend Masters
-  to: 2015
-
-- name: 2 Weeks at Famo.us
-  to: 2014
+  to: 2016-01-01
 
 - name: Codewars
   description: Data Structure and Algorithm Practice
-  to: 2014
+  to: 2015-06-01
+
+- name: Frontend Masters
+  to: 2015-01-01
+
+#- name: 2 Weeks at Famo.us
+#  to: 2013-12-01
 
 - name: Launch at TechCrunch Disrupt
-  to: 2013
+  to: 2013-08-01
+  link: https://techcrunch.com/video/get-an-actionable-picture-of-brain-health-with-tidepool/517929348/
 
 - name: LessConf 2013
-  to: 2013
+  to: 2013-01-01
 
 - name: "CodeSchool: RoR, CoffeeScript, Backbone"
-  to: 2012
+  to: 2012-06-01
 
 - name: Austin, TX Cofounders Conference
-  to: 2012
+  to: 2012-01-01
 
 - name: An Event Apart
-  to: 2010
+  to: 2010-07-01
+
+- name: Cofounder @ TribeMind Studios
+  companyLink: tidepool.com
+  description: |
+    Just out of college video game startup with 9 seniors and recent grads
+    Designed a game, built prototype, won business plan award
+  to: 2008-09-01
+  from: 2007-12-01
 
 - name: Rochester Institute of Technology
-  description: 3.74 GPA
-  to: 2007
-  from: 2005
+  description: |
+    BFA in Graphic Design
+    3.74 GPA
+
+  to: 2007-11-01
+  from: 2004-09-01
 
 #- name: PineRiver.com
 #- name: ShokoPhoto.com

@@ -4,8 +4,7 @@
   companyLink: www.simple.gy
   description: |
     * Lived and worked in Thailand, Vietnam, Budapest, and Stockholm
-    * Self-taught iOS; including `Swift`, localization, coordinated `UIView/CALayer` animations, `MapKit`, and `APNs`
-    * Rebuilt [Waitress](https://itunes.apple.com/app/waitress/id874437345) app in Swift so that the founder and I had a maintainable code base
+    * Self-taught iOS & Swift to work on [Waitress](https://itunes.apple.com/app/waitress/id874437345) app
     * Launched app to about `700` daily users and `100` transactions per day in the Stockholm market
 
 
@@ -15,14 +14,8 @@
   to: 2014-12-01
   from: 2013-11-01
   description: |
-    * App: collaborative spreadsheet-style management tool for over 200k investable entities
-    * Team: designer, 2 front-end, 2 back-end
-    * Advocated for a `Angular`+`SlickGrid` UI stack by demonstrating smooth interaction on the full data set
-    * Built a fast solution to smoothly resize spreadsheet columns to fit text as you scroll
-    * Built a tree-based file system UI where `1-n` leaves may be added, removed, and arbitrarily ordered
-    * Designed and implemented a cached-busted, automatically tested deployment with `Jenkins`, `Grunt`, `s3`, `CloudFront`, and `Karma/Jasmine`
-    * Innovated a "Component Zoo" for developing UI components in isolation. Benefits: enforced modular UI construction and kept us productive when the back-end was down or not yet developed.
-    * Built a client-side data persistence layer with configurable invalidation that reacted to changes from other users or updates from our data feeds.
+    * Collaborative spreadsheet-style management tool for over 200k investable entities. Built with `Angular` and `SlickGrid`.
+    * Included an async file system, "Component Zoo", and custom client-side data persistence layer.
 
 
 - name: TidePool
@@ -31,12 +24,8 @@
   to: 2013-09-01
   from: 2013-03-01
   description: |
-    * App: psychology-based minigames with validated outcomes, iterated on based on findings from our data scientists
-    * Team: designer, 1 front-end (me), 1 back-end, 2 data scientists
-    * Platforms: desktop, mobile web
-    * Built a side-scrolling "pick as they float by" game using `CSS Animations` for desktop and mobile web
-    * Built a drag-and-drop circle overlapping game using basic trigonometry and `CSS Transitions`
-    * Selected and implemented a stack including `Backbone`, `CoffeeScript`, `RequireJS`, `Bower`, `Underscore`, and `Jasmine`
+    * Psychology-based minigames with validated outcomes
+    * Desktop and Mobile apps based on `Backbone`, `CoffeeScript`, `RequireJS`, `Underscore`, and `Jasmine`
 
 
 - name: Front End Architect and Designer @ iSirona
@@ -45,12 +34,9 @@
   to: 2013-03-01
   from: 2011-10-01
   description: |
-    * App: configuration & management of 1000s of hospital devices, often with a serial port as their communication mechanism.
-    * Team: 4 front-end, 3 back-end
-    * Uncommonly, I was also the interaction designer, as I had the experience and interest
-    * Recruited 3 front-end developers via Stack Overflow Careers
-    * Built: native-like tab bar navigation, live display of device events, node activity, status charts, network node map.
-    * Gathered a focus group of interested customers to get feedback on proposed features and existing challenges
+    * Configuration & management of 1000s of legacy hospital devices, including events, activity, status charts, and network map.
+    * Recruited and led 3 front-end developers
+    * Gathered a focus group of interested customers for UX feedback
 
 
 - name: Senior Front End Developer @ GSI, an eBay Company
@@ -73,7 +59,7 @@
     * Contributed to UI standards and internal awareness
     * Interviewed and observed nurses' and doctors' day-to-day workflows
     * Redesigned operating room tracking workflow for intra-op nurses
-    * Elected into C# training and certification
+    * C# training and certification
     * Front-end development on greenfield CEO projects - Facebook for Doctors, New Feature Showcase, and Speaker Scheduling
 
 
