@@ -33,6 +33,12 @@ Same as above, but put it inside `projects/_posts`. This tells jekyll to categor
 
 ## Authoring
 
+Date formatting:
+
+    {{event.from | date: '%Y-%-m'}}
+
+[tips for formatting dates](http://alanwsmith.com/jekyll-liquid-date-formatting-examples)
+
 Hide a blog post or project (unpublish)
 
 > Add an `x` to the front of the title of the file

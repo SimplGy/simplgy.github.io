@@ -13,7 +13,6 @@
 
   $fontLarge: 17px
   $fontNormal: 14px
-
   $fontTiny: 12px
 
 
@@ -138,14 +137,20 @@
       box-sizing: border-box
       border-bottom: 1px solid $black05
     b:hover
-      background-color: $shade02
       label
         color: $semiMuted
+    // Season-sized elements
     b b:hover
-      background-color: transparent
+      background-color: $shade02
     b b:last-of-type
       border-bottom: none
-
+    // Trial: month-sized elements
+    b i:nth-of-type(3n)
+      border-bottom: 1px solid $black05
+    b i:last-of-type
+      border-bottom: none
+    b i:hover
+      background-color: $shade02
 
     .col
       position: relative
@@ -153,31 +158,39 @@
       margin-right: 10px
       pointer-events: none
 
-    li
+    .event
       position: absolute
       padding: 3px 10px
       box-sizing: border-box
       width: 100%
       left: 0
       overflow: hidden
-
-      .muted
-        color: $shade50
-    li
+      border-radius: 2px
+      //overflow-x: hidden
+      //overflow-y: auto
       pointer-events: all // parent removed them so we can highlight the years
+      cursor: pointer
+      +transitionable()
       &:hover
-        box-shadow: inset 3px 0 0 0 $shade10
+        box-shadow: inset 3px 0 0 0 $shade10, inset -3px 0 0 0 $shade10
+      &:focus
+        box-shadow: inset 3px 0 0 0 $shade10, inset -3px 0 0 0 $shade10, 0 0 0 3px white, 1px 2px 10px 0 $shade15
+        z-index: 1
+        height: auto !important
+        left: 20px
+        outline: none
 
-    .title
+    .colTitle
+      box-sizing: border-box
       font-size: $fontLarge
       position: absolute
+      padding: 0 10px
       width: 100%
       left: 0
       top: -50px
       height: 40px
       line-height: 40px
-      padding-top: 0
-      padding-bottom: 0
+      border-radius: 2px
       span
         display: inline-block
         line-height: 1.1
@@ -187,22 +200,40 @@
 
 
 
-    .work li
+    .work .event
       background-color: $green1
       &:nth-child(odd)
         background-color: $green2
-    .other li
+    .other .event
       background-color: $blue1
       &:nth-child(odd)
         background-color: $blue2
 
-    .work .title
+    .work .colTitle
       background-color: white
       background-image: linear-gradient(to bottom, white 25%, $green1)
 
-    .other .title
+    .other .colTitle
       background-color: white
       background-image: linear-gradient(to bottom, white 25%, $blue1)
+
+
+    // Event content
+    .work .event .title
+      font-weight: 500
+    .event .description
+      font-size: $fontTiny
+      color: $shade60
+
+      code
+        background: $light20
+        border-color: $shade10
+      li
+        line-height: 1.3
+        margin-bottom: 5px
+      a
+        color: $darkText
+        text-decoration: underline
 
 
 
@@ -220,3 +251,6 @@
       border: none
       box-shadow: none
       max-width: none
+
+
+

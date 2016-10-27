@@ -439,23 +439,29 @@ nav li { display: inline-block; vertical-align: top; }
 .resumePrettyPage .timeline b { position: absolute; width: 100%; left: 0; box-sizing: border-box; border-bottom: 1px solid #d9d9d9; }
 .resumePrettyPage .timeline b label { position: absolute; top: 50%; margin-top: -10px; height: 20px; width: 50px; left: -45px; color: #aaa; text-align: center; font-weight: normal; transform: rotateZ(270deg); -webkit-transition: all 0.15s ease-in-out; -moz-transition: all 0.15s ease-in-out; transition: all 0.15s ease-in-out; }
 .resumePrettyPage .timeline b b { position: relative; display: block; height: 25%; box-sizing: border-box; border-bottom: 1px solid #f2f2f2; }
-.resumePrettyPage .timeline b:hover { background-color: rgba(0, 0, 0, 0.02); }
 .resumePrettyPage .timeline b:hover label { color: #777; }
-.resumePrettyPage .timeline b b:hover { background-color: transparent; }
+.resumePrettyPage .timeline b b:hover { background-color: rgba(0, 0, 0, 0.02); }
 .resumePrettyPage .timeline b b:last-of-type { border-bottom: none; }
+.resumePrettyPage .timeline b i:nth-of-type(3n) { border-bottom: 1px solid #f2f2f2; }
+.resumePrettyPage .timeline b i:last-of-type { border-bottom: none; }
+.resumePrettyPage .timeline b i:hover { background-color: rgba(0, 0, 0, 0.02); }
 .resumePrettyPage .timeline .col { position: relative; flex: 1 1 50%; margin-right: 10px; pointer-events: none; }
-.resumePrettyPage .timeline li { position: absolute; padding: 3px 10px; box-sizing: border-box; width: 100%; left: 0; overflow: hidden; }
-.resumePrettyPage .timeline li .muted { color: rgba(0, 0, 0, 0.5); }
-.resumePrettyPage .timeline li { pointer-events: all; }
-.resumePrettyPage .timeline li:hover { box-shadow: inset 3px 0 0 0 rgba(0, 0, 0, 0.1); }
-.resumePrettyPage .timeline .title { font-size: 17px; position: absolute; width: 100%; left: 0; top: -50px; height: 40px; line-height: 40px; padding-top: 0; padding-bottom: 0; }
-.resumePrettyPage .timeline .title span { display: inline-block; line-height: 1.1; }
-.resumePrettyPage .timeline .work li { background-color: #ccde72; }
-.resumePrettyPage .timeline .work li:nth-child(odd) { background-color: #e2ecaf; }
-.resumePrettyPage .timeline .other li { background-color: #accbeb; }
-.resumePrettyPage .timeline .other li:nth-child(odd) { background-color: #cfe1f4; }
-.resumePrettyPage .timeline .work .title { background-color: white; background-image: linear-gradient(to bottom, white 25%, #ccde72); }
-.resumePrettyPage .timeline .other .title { background-color: white; background-image: linear-gradient(to bottom, white 25%, #accbeb); }
+.resumePrettyPage .timeline .event { position: absolute; padding: 3px 10px; box-sizing: border-box; width: 100%; left: 0; overflow: hidden; border-radius: 2px; pointer-events: all; cursor: pointer; -webkit-transition: all 0.15s ease-in-out; -moz-transition: all 0.15s ease-in-out; transition: all 0.15s ease-in-out; }
+.resumePrettyPage .timeline .event:hover { box-shadow: inset 3px 0 0 0 rgba(0, 0, 0, 0.1), inset -3px 0 0 0 rgba(0, 0, 0, 0.1); }
+.resumePrettyPage .timeline .event:focus { box-shadow: inset 3px 0 0 0 rgba(0, 0, 0, 0.1), inset -3px 0 0 0 rgba(0, 0, 0, 0.1), 0 0 0 3px white, 1px 2px 10px 0 rgba(0, 0, 0, 0.15); z-index: 1; height: auto !important; left: 20px; outline: none; }
+.resumePrettyPage .timeline .colTitle { box-sizing: border-box; font-size: 17px; position: absolute; padding: 0 10px; width: 100%; left: 0; top: -50px; height: 40px; line-height: 40px; border-radius: 2px; }
+.resumePrettyPage .timeline .colTitle span { display: inline-block; line-height: 1.1; }
+.resumePrettyPage .timeline .work .event { background-color: #ccde72; }
+.resumePrettyPage .timeline .work .event:nth-child(odd) { background-color: #e2ecaf; }
+.resumePrettyPage .timeline .other .event { background-color: #accbeb; }
+.resumePrettyPage .timeline .other .event:nth-child(odd) { background-color: #cfe1f4; }
+.resumePrettyPage .timeline .work .colTitle { background-color: white; background-image: linear-gradient(to bottom, white 25%, #ccde72); }
+.resumePrettyPage .timeline .other .colTitle { background-color: white; background-image: linear-gradient(to bottom, white 25%, #accbeb); }
+.resumePrettyPage .timeline .work .event .title { font-weight: 500; }
+.resumePrettyPage .timeline .event .description { font-size: 12px; color: rgba(0, 0, 0, 0.6); }
+.resumePrettyPage .timeline .event .description code { background: rgba(255, 255, 255, 0.2); border-color: rgba(0, 0, 0, 0.1); }
+.resumePrettyPage .timeline .event .description li { line-height: 1.3; margin-bottom: 5px; }
+.resumePrettyPage .timeline .event .description a { color: #262626; text-decoration: underline; }
 
 @media print { .resumePrettyPage { background: white; }
   .resumePrettyPage .padder { padding: 0; }

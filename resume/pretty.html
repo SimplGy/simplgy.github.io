@@ -2,21 +2,26 @@
 categories:
 - resumePretty
 title: Resume Timeline
-currentYear: 2016
-years:
-- 2006
-- 2007
-- 2008
-- 2009
-- 2010
-- 2011
-- 2012
-- 2013
-- 2014
-- 2015
-- 2016
 timelineHeight: 1000
+yearsToShow: 10
+secondsPerMonth: 2628288
+_secPerMonthComment: '60 * 60 * 24 * 30.42'
 ---
+
+
+{% comment %} ------------------------------------------ Calculate an array of years for display -- {% endcomment %}
+{% assign endYear = site.time | date: '%Y' %}
+{% assign startYear = endYear | minus: page.yearsToShow %}
+{% assign yearString = "" %}
+{% for y in (startYear..endYear) %}
+  {% assign yearString = yearString | append: y | append: ',' %}
+{% endfor %}
+{% assign years = yearString | split: ',' | reverse %}
+
+{% comment %} ------------------------------------------ Calculate pixel sizes for quantities of time -- {% endcomment %}
+{% assign yearHeight = page.timelineHeight | divided_by: years.size %}
+{% assign monthHeight = page.timelineHeight | divided_by: years.size | divided_by: 12 %}
+
 
 <div class="padder">
   <div class="page">
@@ -40,38 +45,46 @@ timelineHeight: 1000
 
 
 
-    <div class="timeline" style="height: {{page.timelineHeight}}px;">
-      {% assign yearHeight = page.timelineHeight | divided_by: page.years.size %}
-      {% assign monthHeight = page.timelineHeight | divided_by: page.years.size | divided_by: 12 %}
+    <div class="timeline" style="height: {{page.timelineHeight}}px;"
+         data-comment="These data properties are for transparency; not actualy used to build the timeline."
+         data-site-time="{{ site.time | date: '%Y-%-m' }}"
+         data-cur-month="{{ curMonth }}"
+         data-month-offset="{{ monthOffset }}"
+         data-year-height="{{yearHeight}}"
+         data-month-height="{{monthHeight}}">
 
-      {% comment %}
-        Print out lines that represent each year
-      {% endcomment %}
 
-      {% assign years = page.years | reverse %}
+
+      {% comment %} --- Print out lines that represent each year -- {% endcomment %}
+
       {% for year in years %}
         <b class="y{{ year }}" style="height: {{yearHeight}}px; top: {{ yearHeight | times: forloop.index0 }}px;">
           <label>{{ year }}</label>
-          <b title="Winter {{ year }}"></b>
-          <b title="Fall {{ year }}"></b>
-          <b title="Summer {{ year }}"></b>
-          <b title="Spring {{ year }}"></b>
+          {% for i in (0..11) %}
+            <i style="height: {{monthHeight}}px; display: block;" title="{{year}}-{{ 12 | minus: i }}"></i>
+          {% endfor %}
+
+          <!--<b title="Winter {{ year }}"></b>-->
+          <!--<b title="Fall {{ year }}"></b>-->
+          <!--<b title="Summer {{ year }}"></b>-->
+          <!--<b title="Spring {{ year }}"></b>-->
         </b>
       {% endfor %}
 
 
 
-      {% assign currentYear = years | pop %}
+      {% comment %} --- Print timeline events --- {% endcomment %}
+
       <ol class="col work">
-        <li class="title"><span>Work Experience</span></li>
+        <li class="colTitle"><span>Work Experience</span></li>
         {% for event in site.data.work %}
-          {% include li-event.html %}
+          {% include li-event.html pxPerMonth=monthHeight %}
         {% endfor %}
       </ol>
       <ol class="col other">
-        <li class="title"><span>Education &amp; More</span></li>
+        <li class="colTitle"><span>Education &amp; More</span></li>
         {% for event in site.data.education %}
-          {% include li-event.html %}
+          {% include li-event.html pxPerMonth=monthHeight %}
         {% endfor %}
       </ol>
 
