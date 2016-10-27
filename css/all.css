@@ -89,6 +89,7 @@ a.link:visited:hover { color: #8bcbb8; }
 .jumbotron h1 { text-shadow: 1px 2px 0 rgba(0, 0, 0, 0.15), 10px 3px 20px rgba(0, 0, 0, 0.25), -10px 3px 20px rgba(0, 0, 0, 0.25); margin-bottom: 40px; font-size: 60px; }
 @media (max-width: 603px) { .jumbotron h1 { margin-bottom: 20px; font-size: 30px; } }
 .jumbotron h3 { text-shadow: 0 3px 30px rgba(0, 0, 0, 0.4), 5px 1px 10px rgba(0, 0, 0, 0.25), -5px 1px 10px rgba(0, 0, 0, 0.25); width: 70%; margin: 0 auto; line-height: 1.5; font-weight: normal; }
+.jumbotron .buttonOnDark { margin: 10px; }
 
 .pusher { display: block; float: left; width: 5px; height: 50%; min-height: 210px; margin-bottom: -170px; }
 
@@ -134,6 +135,9 @@ footer a.social-link { background: none; }
 
 .button { border: 1px solid #e6e6e6; border-radius: 2px; text-align: center; min-height: 25px; line-height: 25px; min-width: 25px; box-sizing: border-box; }
 .button:hover { border-color: #cccccc; text-decoration: none; opacity: 1 !important; }
+
+.buttonOnDark { display: inline-block; border: 1px solid white; border-radius: 3px; height: 40px; line-height: 40px; padding: 0 15px; min-width: 60px; color: white; }
+.buttonOnDark:hover { text-decoration: none; background-color: rgba(0, 0, 0, 0.25); box-shadow: 0 0 3px 3px rgba(255, 255, 255, 0.1); }
 
 @font-face { font-family: "icomoon"; src: url("fonts/icomoon.eot?-m6ioij"); src: url("fonts/icomoon.eot?#iefix-m6ioij") format("embedded-opentype"), url("fonts/icomoon.woff?-m6ioij") format("woff"), url("fonts/icomoon.ttf?-m6ioij") format("truetype"), url("fonts/icomoon.svg?-m6ioij#icomoon") format("svg"); font-weight: normal; font-style: normal; }
 .icon { font-family: "icomoon"; speak: none; font-style: normal; font-weight: normal; font-variant: normal; text-transform: none; line-height: 1; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; min-width: 13px; display: inline-block; text-align: center; }
@@ -414,11 +418,21 @@ nav li { display: inline-block; vertical-align: top; }
 .projectPage .backToProjects li { color: #4bc576; list-style-type: none; }
 
 .resumePage { background: #f6f6f6; }
+.resumePage nav { background-color: #f2f2f2; box-shadow: 0 1px 0 #e6e6e6; }
+.resumePage nav a { color: #777; text-shadow: none; }
+.resumePage nav a:hover { text-shadow: none; background: rgba(255, 255, 255, 0.5); }
 .resumePage .content { text-align: center; }
-.resumePage .content .gist { text-align: left; display: inline-block; max-width: 900px; }
+.resumePage .content .gist { text-align: left; display: inline-block; max-width: 900px; width: 100%; }
+.resumePage .content .gist .gist-file { border: 1px solid #f2f2f2; border-radius: 2px; box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2); }
 .resumePage .content li { list-style: disc; }
 .resumePage .gist-data { padding: 20px; }
 @media (max-width: 603px) { .resumePage .gist-data { padding: 10px; } }
+
+.pageTabs { display: block; max-width: 900px; margin: 0 auto; margin-bottom: 5px; padding: 0 5px; text-align: right; border-bottom: 1px solid #e6e6e6; box-sizing: border-box; font-size: 14px; }
+.pageTabs li { display: inline-block; }
+.pageTabs li a { display: block; border: 1px solid #e6e6e6; border-radius: 3px; border-bottom: none; padding: 0 10px; min-height: 30px; line-height: 30px; color: #aaa; }
+.pageTabs .current { background-color: white; cursor: default; }
+.pageTabs .current:hover { text-decoration: none; }
 
 .resumePrettyPage { background: #f6f6f6; font-size: 14px; }
 .resumePrettyPage nav { background-color: #f2f2f2; box-shadow: 0 1px 0 #e6e6e6; }
@@ -433,6 +447,7 @@ nav li { display: inline-block; vertical-align: top; }
 .resumePrettyPage header aside { display: inline-block; }
 .resumePrettyPage header img { position: absolute; width: 35px; right: 0; bottom: -18px; border-left: 5px solid white; border-right: 15px solid white; }
 .resumePrettyPage header aside p { color: #aaa; font-size: 12px; line-height: 1.34; }
+.resumePrettyPage header aside a { color: #aaa; }
 .resumePrettyPage .summary li { list-style: disc; font-size: 12px; color: #aaa; margin-left: 18px; }
 .resumePrettyPage .summary li span { font-size: 14px; color: #262626; }
 .resumePrettyPage .timeline { position: relative; display: flex; margin-top: 60px; padding-left: 10px; }
@@ -466,7 +481,7 @@ nav li { display: inline-block; vertical-align: top; }
 @media print { .resumePrettyPage { background: white; }
   .resumePrettyPage .padder { padding: 0; }
   .resumePrettyPage .page { background: white; border: none; box-shadow: none; max-width: none; }
-  .resumePrettyPage .colTitle { border-bottom: 1px solid #bfbfbf; font-weight: 500; }
+  .resumePrettyPage .colTitle { font-weight: 500; }
   .resumePrettyPage .timeline .event { border: 1px solid #bfbfbf; border-radius: 3px; }
   .resumePrettyPage .timeline b label { left: -35px; } }
 

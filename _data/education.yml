@@ -31,15 +31,16 @@
 - name: Cofounder @ TribeMind Studios
   companyLink: tidepool.com
   description: |
-    Just out of college video game startup with 9 seniors and recent grads
-    Designed a game, built prototype, won business plan award
+    * Video game startup with 9 seniors and recent grads
+    * Designed game, built prototype, won business plan award
   to: 2008-09-01
   from: 2007-12-01
 
 - name: Rochester Institute of Technology
   description: |
-    BFA in Graphic Design
-    3.74 GPA
+    * BFA in Graphic Design
+    * 3.74 GPA
+    * CS Electives
 
   to: 2007-11-01
   from: 2004-09-01

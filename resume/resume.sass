@@ -1,6 +1,19 @@
 @import '../css/__'
 
 .resumePage
+
+
+  // Custom muted nav for this page
+  nav
+    background-color: $black05
+    box-shadow: 0 1px 0 $black10
+    a
+      color: $semiMuted
+      text-shadow: none
+      &:hover
+        text-shadow: none
+        background: $light50
+
   // Should look like a piece of paper so it feels printable
   background: #f6f6f6
   .content
@@ -9,6 +22,11 @@
       text-align: left
       display: inline-block
       max-width: 900px
+      width: 100%
+      .gist-file
+        border: 1px solid $black05
+        border-radius: 2px
+        box-shadow: 0 3px 4px $shade20
     li
       list-style: disc
 
@@ -16,3 +34,32 @@
     padding: 20px
     +phone
       padding: 10px
+
+
+// Applies to both resume pages
+.pageTabs
+  display: block
+  max-width: 900px
+  margin: 0 auto
+  margin-bottom: 5px
+  padding: 0 5px
+  text-align: right
+  border-bottom: 1px solid $black10
+  box-sizing: border-box
+  font-size: 14px
+  li
+    display: inline-block
+  li a
+    display: block
+    border: 1px solid $black10
+    border-radius: 3px
+    border-bottom: none
+    padding: 0 10px
+    min-height: 30px
+    line-height: 30px
+    color: $muted
+  .current
+    background-color: white
+    cursor: default
+    &:hover
+      text-decoration: none
