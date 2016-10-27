@@ -65,7 +65,7 @@
 
 <li class="event" tabindex="0"
     style="top: {{top}}px; height: {{height}}px; min-height: {{height}}px;" title="{{event.name}}: {{dateDisplay}} ({{duration}})">
-  <p class="title">{{ event.name }}</p>
+  <div class="title">{{ event.name | markdownify }}</div>
   <!--<p class="muted">dateDisplay: {{dateDisplay}} ({{duration}})</p>-->
   <div class="description">{{ event.description | markdownify }}</div>
   <!--<p class="muted">eventAge: {{eventAge}} months. eventLength: {{eventLength}} months</p>-->

@@ -8,9 +8,8 @@
     * Launched app to about `700` daily users and `100` transactions per day in the Stockholm market
 
 
-- name: Senior Front End Engineer @ Coatue
-  location: Menlo Park, CA
-  companyLink: http://www.coatue.com/
+- name: Senior Front End Engineer @ [Coatue](http://coatue.com)
+  location: San Francisco Bay Area, CA
   to: 2014-12-01
   from: 2013-11-01
   description: |
@@ -18,9 +17,8 @@
     * Included an async file system, "Component Zoo", and custom client-side data persistence layer.
 
 
-- name: TidePool
+- name: Front End Architect @ [TidePool](https://angel.co/tidepool)
   location: San Francisco, CA
-  companyLink: https://angel.co/tidepool
   to: 2013-09-01
   from: 2013-03-01
   description: |
@@ -28,9 +26,8 @@
     * Desktop and Mobile apps based on `Backbone`, `CoffeeScript`, `RequireJS`, `Underscore`, and `Jasmine`
 
 
-- name: Front End Architect and Designer @ iSirona
+- name: Front End Architect and Designer @ [iSirona](https://www.crunchbase.com/organization/isirona)
   location: Panama City, FL
-  companyLink: https://www.crunchbase.com/organization/isirona
   to: 2013-03-01
   from: 2011-10-01
   description: |
@@ -39,9 +36,8 @@
     * Gathered a focus group of interested customers for UX feedback
 
 
-- name: Senior Front End Developer @ GSI, an eBay Company
+- name: Senior Front End Developer @ [GSI](https://www.crunchbase.com/organization/gsi-commerce), an eBay Company
   location: Philadelphia, PA
-  companyLink: https://www.crunchbase.com/organization/gsi-commerce
   to: 2011-10-01
   from: 2010-09-01
   description: |
@@ -50,9 +46,8 @@
     * Created and ran a testing lab with a broad range of devices: iPhone, Android, Blackberry, Nokia, even Japanese [Keitai](https://en.wikipedia.org/wiki/Japanese_mobile_phone_culture)
 
 
-- name: User Experience Designer @ Epic
+- name: User Experience Designer @ [Epic](http://epic.com)
   location: Madison, WI
-  companyLink: www.epic.com
   to: 2010-09-01
   from: 2007-01-01
   description: |
