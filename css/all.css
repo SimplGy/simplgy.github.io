@@ -434,6 +434,7 @@ nav li { display: inline-block; vertical-align: top; }
 .pageTabs .current { background-color: white; cursor: default; }
 .pageTabs .current:hover { text-decoration: none; }
 
+@media print { .pageTabs { display: none; } }
 .resumePrettyPage { background: #f6f6f6; font-size: 14px; }
 .resumePrettyPage nav { background-color: #f2f2f2; box-shadow: 0 1px 0 #e6e6e6; }
 .resumePrettyPage nav a { color: #777; text-shadow: none; }
