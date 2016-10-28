@@ -1,11 +1,11 @@
 ---
 title: Javascript Dev Revisits the `C` programming language after 14 years
-excerpt: I hadn't written a line of C since learning it in an AP community college class. Meow I'm back.
+excerpt: I hadn't written a line of C since learning it in a high-school AP class.
 banner: http://simple.gy/img/apollo-13-eva-test.jpg
 bannerCaption: "Photo Credit: http://unsplash.com"
 ---
 
-I hadn't written a line of C in 14 years, not since the *Intro to Computer Programming* class with Treyton "T-Rex" Williams I took at Columbia State Communitiy College. He was a great professor. I hope he's doing well.
+I hadn't written a line of C in 14 years, not since the *Intro to Computer Programming* class with Treyton "T-Rex" Williams I took at Columbia State Community College. He was a great professor. I hope he's doing well.
 
 Revisiting C was fun. There are some tidbits I took from it that were really useful to me. This post collects the best bits.
 
@@ -57,7 +57,7 @@ Array.prototype.push.apply(nums, [3,4,5]);
 console.log("value: "+ nums +", reference: "+ map[ref] +", address: "+ ref);
 ```
 
-Pointers in C are more powerful though. For example, autoincrementing is type aware and works on a reference type. you can use this for interating over the characters in a string:
+Pointers in C are more powerful though. For example, autoincrementing is type aware and works on a reference type. you can use this for iterating over the characters in a string:
 
 ```
 var *letter;

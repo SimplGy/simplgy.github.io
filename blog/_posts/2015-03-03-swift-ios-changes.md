@@ -38,7 +38,7 @@ From Apple's "Using Swift with Cocoa and Objective-C":
 
 > “When you declare an outlet in Swift, you should make the type of the outlet an implicitly unwrapped optional. This way, you can let the storyboard connect the outlets at runtime, after initialization. When your class is initialized from a storyboard or xib file, you can assume that the outlet has been connected.”
 
-[More on implicity unwrapped optionals](http://commandshift.co.uk/blog/2014/07/20/swift-implicitly-unwrapped-optionals/).
+[More on implicitly unwrapped optionals](http://commandshift.co.uk/blog/2014/07/20/swift-implicitly-unwrapped-optionals/).
 
 ## `required` modifier must be present on all overrides of a required initializer
 
