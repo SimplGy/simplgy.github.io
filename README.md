@@ -58,18 +58,25 @@ If you need to use `-` or `:` in the front matter of the post, these are special
     ---
     title: Something easy
     description: "Singing: how to do it while chewing gum."
-
-
-
-## Projects
-
-These go in `projects/_posts`.
+    
+### Projects
 
 Every project should have:
 
 * 1 and 2x images in `projects/card`. The `shortName` property of the project specifies which card to use.
 * A `mainImg`
 * Optionally, an `animation`. This loads on top of the `mainImg`
+
+To add a project: 
+
+1. Assemble a bunch of screenshots, maybe an animated gif or movie
+2. Add an entry to `projects/_posts`
+3. Create a project card in `projects/cards/project card images.sketch`
+4. Create a `mainImg` to showcase the project, or choose a favorite screenshot. If you have a main animation, create a freeze-frame for it using the instructions below
+5. Polish content, add screenshots throughout
+6. Spellcheck!
+
+### Creating freeze-frames from gifs
 
 You can create `jpg`s out of the first frame of every animation for use as mainImg by running this command in the project root (OSX dependency for `sips`):
 
@@ -88,24 +95,20 @@ You can create `jpg`s out of the first frame of every animation for use as mainI
 ### On Deck
 o Make the main nav work on mobile (doesn't fit)
 o Use an img while the video is loading
-o If there's an animation, show it on hover. Show loader while fetching gif, fade the animation in a non-jarring way
-o wrap jekyll in gulp/npm scripts so I can have a a min-cat asset pipeline
 o Fix video origin, see if it can work on mobile
 o consider https://github.com/poole/poole
-o Better fit on mobile and tablet (footer, reduce global padding/margins)
 o Click responsiveness and IxN on mobile and tablet
 o See if there's a way to get reddit, google+, instapaper, and other post-parsers to see the banner image first. Otherwise they share the first content image (hide an `img` tag in the banner?)
 o Redo fonts with https://femmebot.github.io/google-type
-
-### Over the Rainbow
 o Show discussion on related sites, either by manually listing which Reddit/Hacker News threads are discussing it or by detecting them automatically.
 o Pick a color scheme I can live with for a while. Main color (green), supporting color (blue?), background color (not quite white), shaded bg color (pale white), dark (not quite black, tinged brown), etc.
 o Style blockquotes nicely
-o Style lists in markdown posts nicely
 o Move all van posts over from winterpress to here
-o Handle loading smoothly (load flat images in dom order. Then load videos based on scroll position. Play videos only when the user is viewing that one)
 
 ### Done
+x Style lists in markdown posts nicely
+x Better fit on mobile and tablet (footer, reduce global padding/margins)
+x Show loader while fetching gif, fade the animation in a non-jarring way
 x Support code highlighting with normal triple-backtick code blocks instead of boo `% highlight js %` stuff
 x Use the youtube JS api to handle the loading and replay states more seamlessly
 x Try the video on the landing page
