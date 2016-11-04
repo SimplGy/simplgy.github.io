@@ -46,7 +46,7 @@
 {% if event.from %}
   {% assign dateDisplay = event.from  | date: '%b %Y' | append: ' to ' | append: toDateDisplay %}
   {% assign yrs = eventLength | divided_by: 12 | floor %}
-  {% assign mo = eventLength | modulo: 12 | ceil %}
+  {% assign mo = eventLength | modulo: 12 %}
   {% if yrs == 0 %}
     {% assign duration = mo | append: 'mo' %}
   {% else %}
