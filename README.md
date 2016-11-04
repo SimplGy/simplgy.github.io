@@ -17,7 +17,7 @@ If you'd like to see `_drafts`, too:
 
 To build only:
 
-    bundle exec jekyll build
+    bundle exec jekyll clean && bundle exec jekyll build
 
 To add a post:
 
