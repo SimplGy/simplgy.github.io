@@ -11,7 +11,7 @@
         a.setAttribute('href', '/projects/');
         a.textContent = '🙈'; // see-no-evil monkey
       } else {
-        a.setAttribute('href', '/projects/'+ ['html','private'].reverse().join('.')); // obfuscation
+        a.setAttribute('href', '/'+ ['private','projects'].reverse().join('/')); // obfuscation
         a.textContent = '🔓'; // Apple's "Unlock" icon
       }
 

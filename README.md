@@ -19,6 +19,10 @@ To build only:
 
     bundle exec jekyll clean && bundle exec jekyll build
 
+Sync my local development environment with what GitHub is using:
+
+    bundle update // the references `Gemfile` to pull the latest versions of dependencies 
+
 To add a post:
 
 1. Create a file `YEAR-MONTH-DATE-url-title.md`
@@ -28,8 +32,6 @@ To add a post:
 To add a project:
 
 Same as above, but put it inside `projects/_posts`. This tells jekyll to categorize them as `project` but keeps things separate since I don't usually want to treat projects as blog posts.
-
-
 
 ## Authoring
 
