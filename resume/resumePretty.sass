@@ -36,6 +36,7 @@
     font-weight: 500
 
   .page
+    position: relative
     background: white
     border: 1px solid $black05
     border-radius: 2px
@@ -47,10 +48,19 @@
     padding: 20px
     padding-left: 40px
     padding-bottom: 40px
+    overflow: hidden
     +phone
       padding: 10px
       padding-left: 20px
       padding-bottom: 20px
+    &:after
+      content: ""
+      position: absolute
+      bottom: 0
+      left: 0
+      right: 0
+      height: 30px
+      background: linear-gradient(to bottom, transparent, white 65%) // Fade things off the bottom of the page if they overflow (eg: education)
 
 
 
@@ -114,7 +124,7 @@
       width: 100%
       left: 0
       box-sizing: border-box
-      border-bottom: 1px solid $black15
+      border-bottom: 1px solid $black15 // prints better than box shadow
 
     b label
       position: absolute
@@ -129,26 +139,29 @@
       transform: rotateZ(270deg)
       +transitionable
 
+    b:hover label
+      color: $semiMuted
+
+    // Timeline Season indication lines
+    //b b
+    //  position: relative
+    //  display: block
+    //  height: 25%
+      //box-sizing: border-box
+      //border-bottom: 1px solid $black05
+    //b b:hover
+    //  background-color: $shade02
+    //b b:last-of-type
+    //  border-bottom: none
+
     // Timeline month indication lines
-    b b
-      position: relative
+    b i
       display: block
-      height: 25%
       box-sizing: border-box
-      border-bottom: 1px solid $black05
-    b:hover
-      label
-        color: $semiMuted
-    // Season-sized elements
-    b b:hover
-      background-color: $shade02
-    b b:last-of-type
-      border-bottom: none
-    // Trial: month-sized elements
     b i:nth-of-type(3n)
       border-bottom: 1px solid $black05
     b i:last-of-type
-      border-bottom: none
+      border: none
     b i:hover
       background-color: $shade02
 
@@ -253,11 +266,18 @@
       max-width: none
     .colTitle
       font-weight: 500
-    .timeline .event
-      border: 1px solid $black25
-      border-radius: 3px
+    //.timeline .event
+    //  border: 1px solid $black25
+    //.timeline b i
+    //  display: none // months
     .timeline b label
       left: -35px
+
+.resumePrettyPage
+  .page h1,
+  .timeline *
+    -webkit-print-color-adjust: exact
+
 
 
 .resumePrettyPage
@@ -274,3 +294,8 @@
         left: -35px
       .event:focus
         left: 10px
+
+.resumePrettyPage
+  @media print
+    .col.other
+      display: block !important // the phone style hides this in print

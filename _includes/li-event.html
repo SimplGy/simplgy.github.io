@@ -36,7 +36,8 @@
 {% endcomment %}
 {% assign eventAge = now | minus: to | divided_by: page.secondsPerMonth %}
 {% assign top = eventAge | plus: monthOffset | times: include.pxPerMonth %}
-{% assign eventLength = to | minus: from | divided_by: page.secondsPerMonth %}
+{% assign eventLength = to | minus: from | divided_by: page.secondsPerMonth | plus: 1 %}
+  {% comment %} plus: 1 to be inclusive. If I worked from 2016-01 to 2016-02, I should cover both months {% endcomment %}
 {% assign height = eventLength | times: include.pxPerMonth %}
 
 
@@ -44,8 +45,8 @@
 {% assign toDateDisplay = event.to | date: '%b %Y' %}
 {% if event.from %}
   {% assign dateDisplay = event.from  | date: '%b %Y' | append: ' to ' | append: toDateDisplay %}
-  {% assign yrs = eventLength | divided_by: 12 %}
-  {% assign mo = eventLength | modulo: 12 %}
+  {% assign yrs = eventLength | divided_by: 12 | floor %}
+  {% assign mo = eventLength | modulo: 12 | ceil %}
   {% if yrs == 0 %}
     {% assign duration = mo | append: 'mo' %}
   {% else %}

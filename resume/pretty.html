@@ -2,25 +2,28 @@
 categories:
 - resumePretty
 title: Resume Timeline
-timelineHeight: 1000
-yearsToShow: 10
-secondsPerMonth: 2628288
-_secPerMonthComment: '60 * 60 * 24 * 30.42'
+timelineHeight: 1100
+startYear: 2005
+secondsPerMonth: 2628288.0
+decimalPlaces: 1000
+_secPerMonthComment: "60 * 60 * 24 * 30.42. also it should be a float so divided_by doesn't floor the result"
 ---
 
 
 {% comment %} ------------------------------------------ Calculate an array of years for display -- {% endcomment %}
 {% assign endYear = site.time | date: '%Y' %}
-{% assign startYear = endYear | minus: page.yearsToShow %}
 {% assign yearString = "" %}
-{% for y in (startYear..endYear) %}
+{% for y in (page.startYear..endYear) %}
   {% assign yearString = yearString | append: y | append: ',' %}
 {% endfor %}
 {% assign years = yearString | split: ',' | reverse %}
 
-{% comment %} ------------------------------------------ Calculate pixel sizes for quantities of time -- {% endcomment %}
-{% assign yearHeight = page.timelineHeight | divided_by: years.size %}
-{% assign monthHeight = page.timelineHeight | divided_by: years.size | divided_by: 12 %}
+{% comment %} ------------------------------------------ Calculate pixel sizes for quantities of time
+  use a float to get non-rounded output from `divided_by`: https://shopify.github.io/liquid/filters/divided_by/
+{% endcomment %}
+{% assign yearCountAsFloat = years.size | times: 1.0 %} {% comment %}  {% endcomment %}
+{% assign yearHeight = page.timelineHeight | divided_by: yearCountAsFloat %}
+{% assign monthHeight = yearHeight | divided_by: 12.0 %}
 
 
 <div class="padder">
@@ -36,7 +39,7 @@ _secPerMonthComment: '60 * 60 * 24 * 30.42'
       <h1><em>Eric</em> Miller</h1>
       <aside>
         <p>Denver, CO</p>
-        <p>(628) 333-4939</p>
+        <p><a href="tel:1-628-333-4939">(628) 333-4939</a></p>
         <p><a href="https://www.instagram.com/simplgy/">@simplgy</a></p>
       </aside>
       <img src="/gfx/monogram.jpg" alt="monogram logo">
@@ -52,10 +55,9 @@ _secPerMonthComment: '60 * 60 * 24 * 30.42'
 
 
     <div class="timeline" style="height: {{page.timelineHeight}}px;"
-         data-comment="These data properties are for transparency; not actualy used to build the timeline."
+         data-comment="These data properties are for transparency; not actually used to build the timeline."
          data-site-time="{{ site.time | date: '%Y-%-m' }}"
-         data-cur-month="{{ curMonth }}"
-         data-month-offset="{{ monthOffset }}"
+         data-years-size="{{startYear}}-{{endYear}}: {{years.size}}"
          data-year-height="{{yearHeight}}"
          data-month-height="{{monthHeight}}">
 
@@ -67,7 +69,22 @@ _secPerMonthComment: '60 * 60 * 24 * 30.42'
         <b class="y{{ year }}" style="height: {{yearHeight}}px; top: {{ yearHeight | times: forloop.index0 }}px;">
           <label>{{ year }}</label>
           {% for i in (0..11) %}
-            <i style="height: {{monthHeight}}px; display: block;" title="{{year}}-{{ 12 | minus: i }}"></i>
+            {% assign mo = 12 | minus: i %}
+            {% case mo %}
+              {% when 1 %}{% assign month = "January" %}
+              {% when 2 %}{% assign month = "February" %}
+              {% when 3 %}{% assign month = "March" %}
+              {% when 4 %}{% assign month = "April" %}
+              {% when 5 %}{% assign month = "May" %}
+              {% when 6 %}{% assign month = "June" %}
+              {% when 7 %}{% assign month = "July" %}
+              {% when 8 %}{% assign month = "August" %}
+              {% when 9 %}{% assign month = "September" %}
+              {% when 10 %}{% assign month = "October" %}
+              {% when 11 %}{% assign month = "November" %}
+              {% when 12 %}{% assign month = "December" %}
+            {% endcase %}
+            <i style="height: {{monthHeight}}px" title="{{month}} {{year}}"></i>
           {% endfor %}
 
           <!--<b title="Winter {{ year }}"></b>-->

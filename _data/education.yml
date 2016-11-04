@@ -1,13 +1,13 @@
 - name: MIT 6.006
   description: Intro to Algorithms
-  to: 2016-01-01
+  to: 2016-10-01
 
 - name: Codewars
   description: Data Structure and Algorithm Practice
-  to: 2015-06-01
+  to: 2016-03-01
 
 - name: Frontend Masters
-  to: 2015-01-01
+  to: 2015-09-01
 
 #- name: 2 Weeks at Famo.us
 #  to: 2013-12-01
@@ -29,21 +29,22 @@
   to: 2010-07-01
 
 - name: Cofounder @ TribeMind Studios
-  companyLink: tidepool.com
+  companyLink: tribemind.com
+  to: 2007-11-01
+  from: 2006-09-01
   description: |
-    * Video game startup with 9 seniors and recent grads
+    * Video game startup. Team: 9 seniors and recent grads
     * Designed game, built prototype, won business plan award
-  to: 2008-09-01
-  from: 2007-12-01
+
 
 - name: Rochester Institute of Technology
+  to: 2006-06-01
+  from: 2002-08-01
   description: |
     * BFA in Graphic Design
     * 3.74 GPA
     * CS Electives
 
-  to: 2007-11-01
-  from: 2004-09-01
 
 #- name: PineRiver.com
 #- name: ShokoPhoto.com

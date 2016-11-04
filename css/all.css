@@ -446,8 +446,9 @@ article, .banner .content { max-width: 800px; margin: 0 auto; }
 .resumePrettyPage nav a { color: #777; text-shadow: none; }
 .resumePrettyPage nav a:hover { text-shadow: none; background: rgba(255, 255, 255, 0.5); }
 .resumePrettyPage h1, .resumePrettyPage h2, .resumePrettyPage h3, .resumePrettyPage h4 { font-family: -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Helvetica, sans-serif; font-weight: 500; }
-.resumePrettyPage .page { background: white; border: 1px solid #f2f2f2; border-radius: 2px; box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2); width: 100%; max-width: 900px; margin: 0 auto; box-sizing: border-box; padding: 20px; padding-left: 40px; padding-bottom: 40px; }
+.resumePrettyPage .page { position: relative; background: white; border: 1px solid #f2f2f2; border-radius: 2px; box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2); width: 100%; max-width: 900px; margin: 0 auto; box-sizing: border-box; padding: 20px; padding-left: 40px; padding-bottom: 40px; overflow: hidden; }
 @media (max-width: 603px) { .resumePrettyPage .page { padding: 10px; padding-left: 20px; padding-bottom: 20px; } }
+.resumePrettyPage .page:after { content: ""; position: absolute; bottom: 0; left: 0; right: 0; height: 30px; background: linear-gradient(to bottom, transparent, white 65%); }
 .resumePrettyPage header { position: relative; border: 1px solid #f2f2f2; border-left: none; border-right: none; margin-bottom: 20px; padding: 1px 0; }
 .resumePrettyPage header h1 { font-size: 60px; display: inline-block; text-transform: uppercase; letter-spacing: 0.02em; margin-right: 0.3em; line-height: 0.85; color: #accbeb; font-weight: 300; }
 .resumePrettyPage header h1 em { color: #ccde72; font-style: normal; }
@@ -460,12 +461,10 @@ article, .banner .content { max-width: 800px; margin: 0 auto; }
 .resumePrettyPage .timeline { position: relative; display: flex; margin-top: 60px; padding-left: 10px; }
 .resumePrettyPage .timeline b { position: absolute; width: 100%; left: 0; box-sizing: border-box; border-bottom: 1px solid #d9d9d9; }
 .resumePrettyPage .timeline b label { position: absolute; top: 50%; margin-top: -10px; height: 20px; width: 50px; left: -45px; color: #aaa; text-align: center; font-weight: normal; transform: rotateZ(270deg); -webkit-transition: all 0.15s ease-in-out; -moz-transition: all 0.15s ease-in-out; transition: all 0.15s ease-in-out; }
-.resumePrettyPage .timeline b b { position: relative; display: block; height: 25%; box-sizing: border-box; border-bottom: 1px solid #f2f2f2; }
 .resumePrettyPage .timeline b:hover label { color: #777; }
-.resumePrettyPage .timeline b b:hover { background-color: rgba(0, 0, 0, 0.02); }
-.resumePrettyPage .timeline b b:last-of-type { border-bottom: none; }
+.resumePrettyPage .timeline b i { display: block; box-sizing: border-box; }
 .resumePrettyPage .timeline b i:nth-of-type(3n) { border-bottom: 1px solid #f2f2f2; }
-.resumePrettyPage .timeline b i:last-of-type { border-bottom: none; }
+.resumePrettyPage .timeline b i:last-of-type { border: none; }
 .resumePrettyPage .timeline b i:hover { background-color: rgba(0, 0, 0, 0.02); }
 .resumePrettyPage .timeline .col { position: relative; flex: 1 1 50%; margin-right: 10px; pointer-events: none; }
 .resumePrettyPage .timeline .event { position: absolute; padding: 3px 10px; box-sizing: border-box; width: 100%; left: 0; overflow: hidden; border-radius: 2px; pointer-events: all; cursor: pointer; -webkit-transition: all 0.15s ease-in-out; -moz-transition: all 0.15s ease-in-out; transition: all 0.15s ease-in-out; }
@@ -489,8 +488,9 @@ article, .banner .content { max-width: 800px; margin: 0 auto; }
   .resumePrettyPage .padder { padding: 0; }
   .resumePrettyPage .page { background: white; border: none; box-shadow: none; max-width: none; }
   .resumePrettyPage .colTitle { font-weight: 500; }
-  .resumePrettyPage .timeline .event { border: 1px solid #bfbfbf; border-radius: 3px; }
   .resumePrettyPage .timeline b label { left: -35px; } }
+
+.resumePrettyPage .page h1, .resumePrettyPage .timeline * { -webkit-print-color-adjust: exact; }
 
 @media (max-width: 603px) { .resumePrettyPage { background-color: white; }
   .resumePrettyPage .padder { padding: 0; }
@@ -498,6 +498,8 @@ article, .banner .content { max-width: 800px; margin: 0 auto; }
   .resumePrettyPage .col.other { display: none; }
   .resumePrettyPage .timeline b label { left: -35px; }
   .resumePrettyPage .timeline .event:focus { left: 10px; } }
+
+@media print { .resumePrettyPage .col.other { display: block !important; } }
 
 .cards { max-width: 1713.8px; }
 .cards .card { width: 100%; max-width: 418px; }
