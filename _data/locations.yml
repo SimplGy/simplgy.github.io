@@ -1,0 +1,50 @@
+- name: Ann Arbor, MI
+  to: 1986-05-01
+  from: 1984-06-01
+  description: Place of birth
+
+- name: Rochester, NY
+  to: 1999-01-01
+  from: 1986-06-01
+  description: Growing up
+
+- name: Nashville, TN
+  to: 2002-08-01
+  from: 1999-02-01
+  description: Late childhood
+
+- name: Rochester, NY
+  to: 2006-06-01
+  from: 2002-09-01
+  description: College and early employment
+
+- name: Traverse City, MI
+  to: 2007-12-01
+  from: 2006-07-01
+  description: Gap year
+
+- name: Madison, WI
+  to: 2010-08-01
+  from: 2008-01-05
+  description: User Experience Designer @ [Epic](http://epic.com)
+
+- name: Philadelphia, PA
+  to: 2011-09-01
+  from: 2010-09-01
+  description: Senior Front End Developer @ [GSI](https://www.crunchbase.com/organization/gsi-commerce), an eBay Company
+
+- name: Panama City, FL
+  location:
+  to: 2013-02-01
+  from: 2011-10-01
+  description: Front End Architect and Designer @ [iSirona](https://www.crunchbase.com/organization/isirona)
+
+- name: San Francisco, CA
+  to: 2014-12-01
+  from: 2013-03-01
+  description: TidePool and Coatue
+
+- name: Tallahassee, FL + Traveling
+  to: now
+  from: 2015-01-01
+  description: Independent contractor

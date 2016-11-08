@@ -1,0 +1,53 @@
+---
+title: Sibling Timeline
+permalink: siblings
+css: |
+  nav {
+    background-color: rgba(0,0,0,0.05);
+    box-shadow: 0 1px 0 rgba(0,0,0,0.15);
+  }
+  nav a {
+    color: #777;
+    text-shadow: none;
+  }
+  nav a:hover {
+    color: #333;
+    text-shadow: none;
+    background: rgba(255,255,255,0.5);
+  }
+
+categoryEvents:
+- name: Childhood
+  from: 1984-06-01
+  to: 1993-01-01
+- name: Education
+  from: 1993-02-01
+  to: 2006-06-01
+- name: Career
+  from: 2006-07-01
+  to: now
+---
+
+
+
+{% comment %}
+  options and objects:
+    startYear: What year should the timeline start in?
+    timelineHeight: px height of timeline. Given startYear, this determines the pixel height of years and months -- the timeline always runs up until `now`.
+    title: The title of the events column
+    width: override for different proportions of columns. This sets a flex basis and works with % or px
+    events: Each event object MUST have a name, to, and from, specified in YYYY-MM-DD format for Jekyll, although the timeline only handles granularity down to a month.
+            You may optionally include a description. name and description are parsed as markdown so you may include links and basic formatting.
+{% endcomment %}
+
+<br><br>
+
+<div class="jekyllTimelineWrapper">
+  {% include jekyll-timeline.html
+    startYear=1984
+    timelineHeight=2500
+    col1Title="Eric"      col1Events=site.data.locations
+    col2Title="Scott"     col2Events=site.data.scottLocations
+    col3Title="Elizabeth" col3Events=site.data.elizabethLocations
+  %}
+</div>

@@ -5,8 +5,7 @@ title: Resume Timeline
 timelineHeight: 1100
 startYear: 2005
 secondsPerMonth: 2628288.0
-decimalPlaces: 1000
-_secPerMonthComment: "60 * 60 * 24 * 30.42. also it should be a float so divided_by doesn't floor the result"
+_secPerMonthComment: "60 * 60 * 24 * 30.42. It must be be a float (end with .0) so divided_by doesn't floor the result"
 ---
 
 
@@ -33,7 +32,7 @@ _secPerMonthComment: "60 * 60 * 24 * 30.42. also it should be a float so divided
     <li><a href="javascript:void(0);" class="current">Timeline</a></li>
   </ul>
 
-  <div class="page">
+  <div class="page jekyllTimelineWrapper">
 
     <header>
       <h1><em>Eric</em> Miller</h1>
@@ -53,67 +52,12 @@ _secPerMonthComment: "60 * 60 * 24 * 30.42. also it should be a float so divided
     </ul>
 
 
-
-    <div class="timeline" style="height: {{page.timelineHeight}}px;"
-         data-comment="These data properties are for transparency; not actually used to build the timeline."
-         data-site-time="{{ site.time | date: '%Y-%-m' }}"
-         data-years-size="{{startYear}}-{{endYear}}: {{years.size}}"
-         data-year-height="{{yearHeight}}"
-         data-month-height="{{monthHeight}}">
-
-
-
-      {% comment %} --- Print out lines that represent each year -- {% endcomment %}
-
-      {% for year in years %}
-        <b class="y{{ year }}" style="height: {{yearHeight}}px; top: {{ yearHeight | times: forloop.index0 }}px;">
-          <label>{{ year }}</label>
-          {% for i in (0..11) %}
-            {% assign mo = 12 | minus: i %}
-            {% case mo %}
-              {% when 1 %}{% assign month = "January" %}
-              {% when 2 %}{% assign month = "February" %}
-              {% when 3 %}{% assign month = "March" %}
-              {% when 4 %}{% assign month = "April" %}
-              {% when 5 %}{% assign month = "May" %}
-              {% when 6 %}{% assign month = "June" %}
-              {% when 7 %}{% assign month = "July" %}
-              {% when 8 %}{% assign month = "August" %}
-              {% when 9 %}{% assign month = "September" %}
-              {% when 10 %}{% assign month = "October" %}
-              {% when 11 %}{% assign month = "November" %}
-              {% when 12 %}{% assign month = "December" %}
-            {% endcase %}
-            <i style="height: {{monthHeight}}px" title="{{month}} {{year}}"></i>
-          {% endfor %}
-
-          <!--<b title="Winter {{ year }}"></b>-->
-          <!--<b title="Fall {{ year }}"></b>-->
-          <!--<b title="Summer {{ year }}"></b>-->
-          <!--<b title="Spring {{ year }}"></b>-->
-        </b>
-      {% endfor %}
-
-
-
-      {% comment %} --- Print timeline events --- {% endcomment %}
-
-      <ol class="col work">
-        <li class="colTitle"><span>Work Experience</span></li>
-        {% for event in site.data.work %}
-          {% include li-event.html pxPerMonth=monthHeight %}
-        {% endfor %}
-      </ol>
-      <ol class="col other">
-        <li class="colTitle"><span>Education &amp; More</span></li>
-        {% for event in site.data.education %}
-          {% include li-event.html pxPerMonth=monthHeight %}
-        {% endfor %}
-      </ol>
-
-
-
-    </div>
+    {% include jekyll-timeline.html
+        startYear=2005
+        timelineHeight=1100
+        col1Title="Work Experience"   col1Events=site.data.work
+        col2Title="Education & More"  col2Events=site.data.education
+    %}
 
   </div>
 </div>
@@ -122,7 +66,7 @@ _secPerMonthComment: "60 * 60 * 24 * 30.42. also it should be a float so divided
 
 <!-- TODO for resume: -->
 <!-- x Make it look like a page, to reinforce the printability of it -->
-<!-- Make it super printable -->
+<!-- x Make it super printable -->
 <!-- Started Developing: 2008 start w/ A Catered Affair -->
 <!-- Dev Total: 2008, 2009, 2010, 2011, 2012, 2013  -->
 <!-- Started Designing:  2006 start w/ Shi-Ling. Skip: GSI, TidePool, Coatue (1, .5) -->

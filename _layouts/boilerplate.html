@@ -2,11 +2,13 @@
 <title>{{ page.title }} - Eric Miller, Simple Guy</title>
 <meta name="viewport" content="width=device-width">
 
-<!-- Custom CSS -->
 <link rel="stylesheet" href="/css/all.css">
-
 <!--<link href='http://fonts.googleapis.com/css?family=Jura:400,600' rel='stylesheet' type='text/css'>-->
 <link href='http://fonts.googleapis.com/css?family=Comfortaa:300,700' rel='stylesheet' type='text/css'>
+
+{% if page.css %}
+<style type="text/css">{{ page.css }}</style>
+{% endif %}
 
 {% include analytics.html %}
 

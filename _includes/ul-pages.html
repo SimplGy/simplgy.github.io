@@ -1,7 +1,7 @@
 <ul>
   <li><a href="/">Home</a></li>
   {% for page in site.pages %}
-    {% if page.url == '/index.html' or page.url == '/' or page.url contains 'private' %} {% continue %} {% endif %}
+    {% if page.url == '/index.html' or page.url == '/' or page.url contains 'private' or page.url == '/lifeline' or page.url== '/siblings' %} {% continue %} {% endif %}
     <li><a href="{{ page.url }}">
       {{ page.title }}
     </a></li>

@@ -3,8 +3,6 @@
 
 This is the repo for my personal site. It uses Jekyll.
 
-
-
 ## Quick Start
 
 To run in dev mode:
@@ -83,8 +81,6 @@ To add a project:
 You can create `jpg`s out of the first frame of every animation for use as mainImg by running this command in the project root (OSX dependency for `sips`):
 
     sips -s format jpeg ./projects/animation/*.gif --out projects/mainImg
-
-
 
 ## Post Categories
 

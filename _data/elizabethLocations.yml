@@ -1,0 +1,16 @@
+- name: Rochester, NY
+  to: 1999-01-01
+  from: 1989-10-01
+  description: Growing up
+
+- name: Nashville, TN
+  to: 2002-08-01
+  from: 1999-02-01
+  description: Late childhood
+
+
+
+
+- name: Peachtree, GA
+  from: 2014-01-01
+  to: now
