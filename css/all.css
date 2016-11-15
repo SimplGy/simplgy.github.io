@@ -393,6 +393,9 @@ article, .banner .content { max-width: 800px; margin: 0 auto; }
 
 .projectPage .invertedTitle h1, .projectPage .invertedTitle h2 { color: white; }
 
+.projectPage .appStoreLink { display: inline-block; margin: 30px 0; line-height: 0.8; }
+@media (max-width: 603px) { .projectPage .appStoreLink { margin: 20px 0; } }
+
 .projectPage .mainImg { max-height: 500px; }
 .projectPage .animation { -webkit-transition: all 1.5s ease-in-out; -moz-transition: all 1.5s ease-in-out; transition: all 1.5s ease-in-out; opacity: 0; position: absolute; top: 0; left: 0; }
 .projectPage .loadingMsg { font-size: 11px; position: absolute; right: 0; bottom: -20px; animation: fadeIn 1s infinite alternate; }

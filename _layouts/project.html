@@ -1,5 +1,17 @@
 ---
 layout: boilerplate
+_comment: |
+
+  "Required" properties:
+  * title -- the title used in the card on the list page and heading on this page
+  * summary -- the description used in the card on the list page and heading on this page
+  * mainImg -- the first image to show in the leading "hero" area
+
+  "Optional" properties:
+  * appStore -- include a marketing-page style link to the iTunes app store
+  * animation -- optional. should match the mainImg in size (use a screen capture). When the animation loads it fades to replace mainImg
+  * mainImgBgColor -- customize the background behind your mainImg for the hero area
+  * invertedTitle -- show white text in the hero area because you've chosen a dark background
 ---
 {% assign project = page %}
 
@@ -18,6 +30,13 @@ layout: boilerplate
     </div>
     <h1>{{ project.title }}</h1>
     <h2>{{ project.summary }}</h2>
+
+    {% if project.appStore %}
+      <a href="{{ project.appStore }}" class="appStoreLink" title="Download `{{ project.title }}` on the App Store">
+        <img src="/gfx/app-store-badge.svg" alt="Download on the App Store">
+      </a>
+    {% endif %}
+
   </div>
 
   <article class="content padder">
@@ -25,6 +44,15 @@ layout: boilerplate
     {% include project-aside.html %}
 
     {{ content }}
+
+    {% if project.appStore %}
+      <hr/>
+      <div class="alignCenter">
+      <a href="{{ project.appStore }}" class="appStoreLink" title="Download `{{ project.title }}` on the App Store">
+        <img src="/gfx/app-store-badge.svg" alt="Download on the App Store">
+      </a>
+      </div>
+    {% endif %}
 
     <hr/>
 
