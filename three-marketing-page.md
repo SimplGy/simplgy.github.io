@@ -21,16 +21,14 @@ useIphoneFrame: true
 
 
 
-<h2>Features</h2>
+## Features
 
-<ul>
-  <li>Beautiful, full-screen visual timer</li>
-  <li>Three separate time scales: 2, 10, and 60 minutes</li>
-  <li>Tap to see remaining time, otherwise, just a subtle, intuitive, shape-based display</li>
-  <li>Great responsive feel when dragging this timer up and down, like moving a pool of ferrous material</li>
-  <li>Timer rings with peaceful bird chirping sounds</li>
-  <li>Screen flashes while ringing as a fallback in case volume is off. The screen flashes match audio levels.</li>
-</ul>
+* Beautiful, full-screen visual timer
+* Three separate time scales: 2, 10, and 60 minutes
+* Subtle, intuitive, shape-based display. Tap to see remaining time.
+* Great responsive feel when interacting, like moving a pool of ferrous material
+* Timer rings with peaceful bird chirping sounds
+* Screen flashes while ringing as a fallback in case volume is off.
 
 <p class="imageSet">
   <img src="/projects/img/three/tutorial/1.png" alt="Swipe up to set a timer">
@@ -43,3 +41,7 @@ useIphoneFrame: true
   </video>
 </p>
 
+
+## Privacy Policy
+
+This application collects absolutely no personal data about you, and does not require you to login.

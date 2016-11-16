@@ -40,6 +40,42 @@
   h1, h2
     color: white
 
+.projectPage .iphoneFrame
+  position: relative
+  border: 10px solid $black80
+  border-radius: 40px
+  border-top-width: 40px
+  border-bottom-width: 60px
+  box-shadow: 0 0 0 1px black, 1px 1px 15px 0 $shade25
+  margin: 5px
+  &:after
+    $size: 40px
+    content: ""
+    position: absolute
+    width: $size
+    height: $size
+    bottom: -($size + 10px)
+    left: 50%
+    background: $light05
+    border-radius: 50%
+    margin-left: -($size/2)
+    box-sizing: border-box
+    //border: 2px solid $light10
+    border-top: 2px solid $shade40
+    border-bottom: 2px solid $light05
+  &:before
+    $w: 40px
+    $h: 6px
+    content: ""
+    position: absolute
+    width: $w
+    height: $h
+    top: -($h + 15px)
+    left: 50%
+    margin-left: -($w/2)
+    background: $shade40
+    border-radius: $h
+
 .projectPage .appStoreLink
   display: inline-block
   margin: 30px 0

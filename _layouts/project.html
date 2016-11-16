@@ -21,7 +21,7 @@ _comment: |
   <div class="mainImgArea {% if project.invertedTitle %} invertedTitle{% endif %}"
        {% if project.mainImgBgColor %} style="background-color:{{ project.mainImgBgColor }};" {% endif %}
     >
-    <div class="imageWrapper">
+    <div class="imageWrapper {% if project.useIphoneFrame %}iphoneFrame{% endif %}">
       <img class="mainImg" src="/projects/mainImg/{{ project.mainImg }}" alt="Main demo image for {{ project.title }}">
       {% if project.animation %}
         <img class="animation" src="/projects/animation/{{ project.animation }}" alt="Main demo animation for {{ project.title }}">
