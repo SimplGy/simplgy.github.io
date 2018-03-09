@@ -1,7 +1,8 @@
 # Eric Miller, Simple Guy
+
 ### Builder of Things
 
-This is the repo for my personal site. It uses Jekyll.
+This is the repo for my personal site. It uses Jekyll as a static site generator.
 
 ## Quick Start
 
@@ -19,7 +20,7 @@ To build only:
 
 Sync my local development environment with what GitHub is using:
 
-    bundle update // the references `Gemfile` to pull the latest versions of dependencies 
+    bundle update // this uses `Gemfile` to pull the latest versions of dependencies
 
 To add a post:
 
