@@ -8,7 +8,7 @@ title: Projects
 
 <ol class="cards">
   {% for project in site.categories.projects %}
-    {% if project.isPrivate %} {% continue %} {% endif %}
+    {% if project.isPrivate %} {% endif %}
     {% include li-project-card.html %}
   {% endfor %}
 </ol>
