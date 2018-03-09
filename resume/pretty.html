@@ -10,6 +10,7 @@ _secPerMonthComment: "60 * 60 * 24 * 30.42. It must be be a float (end with .0) 
 
 
 {% comment %} ------------------------------------------ Calculate an array of years for display -- {% endcomment %}
+
 {% assign endYear = site.time | date: '%Y' %}
 {% assign yearString = "" %}
 {% for y in (page.startYear..endYear) %}
@@ -20,6 +21,7 @@ _secPerMonthComment: "60 * 60 * 24 * 30.42. It must be be a float (end with .0) 
 {% comment %} ------------------------------------------ Calculate pixel sizes for quantities of time
   use a float to get non-rounded output from `divided_by`: https://shopify.github.io/liquid/filters/divided_by/
 {% endcomment %}
+
 {% assign yearCountAsFloat = years.size | times: 1.0 %} {% comment %}  {% endcomment %}
 {% assign yearHeight = page.timelineHeight | divided_by: yearCountAsFloat %}
 {% assign monthHeight = yearHeight | divided_by: 12.0 %}
@@ -29,7 +31,7 @@ _secPerMonthComment: "60 * 60 * 24 * 30.42. It must be be a float (end with .0) 
 
   <ul class="pageTabs">
     <li><a href="/resume">Traditional Resume</a></li>
-    <li><a href="javascript:void(0);" class="current">Timeline</a></li>
+    <li><a href="javascript:void(0);" class="current">Pretty (Timeline)</a></li>
   </ul>
 
   <div class="page jekyllTimelineWrapper">
@@ -37,9 +39,8 @@ _secPerMonthComment: "60 * 60 * 24 * 30.42. It must be be a float (end with .0) 
     <header>
       <h1><em>Eric</em> Miller</h1>
       <aside>
-        <p>Denver, CO</p>
-        <p><a href="tel:1-628-333-4939">(628) 333-4939</a></p>
-        <p><a href="https://www.instagram.com/simplgy/">@simplgy</a></p>
+        <p>{{ site.data.me.location }}</p>
+        <p><a href="{{ site.data.me.twitter }}">{{ site.data.me.twitterHandle }}</a></p>
       </aside>
       <img src="/gfx/monogram.jpg" alt="monogram logo">
     </header>
@@ -47,7 +48,7 @@ _secPerMonthComment: "60 * 60 * 24 * 30.42. It must be be a float (end with .0) 
     <ul class="summary">
       <li><span>Experienced JS developer. Some iOS and server-side experience.</span></li>
       <li><span>Lead dev for large JavaScript applications and 1 native iOS app.</span></li>
-      <li><span>7 years experience in Front-End Web (Angular, Backbone, RequireJS, CoffeeScript, HTML5 apps, jQuery/Zepto, SASS, Grunt, Underscore/Lodash, Jasmine)</span></li>
+      <li><span>8 years experience in Front-End Web (including: React Native, Angular, Backbone, CoffeeScript, jQuery/Zepto, SASS, Gulp, Lodash, Jasmine)</span></li>
       <li><span>3 years experience in UX (On-site observation, usability testing, Balsamiq, Illustrator, Photoshop)</span></li>
     </ul>
 
@@ -92,15 +93,7 @@ _secPerMonthComment: "60 * 60 * 24 * 30.42. It must be be a float (end with .0) 
 
 <!-- Font: Jura or  -->
 
-
-<!-- <section class="me">
-  <h1>
-    <span class="colorGreen">{{ site.data.me.firstName }}</span><span class="colorBlue">{{ site.data.me.lastName }}</span>
-  </h1>
-  <span class="location">{{ site.data.me.location }}</span>
-</section>
-
-
+<!--
         <ul>
           <li>Javascript Developer and Interaction Designer</li>
           <li>Proven ability to recruit and lead developer teams</li>
@@ -109,36 +102,4 @@ _secPerMonthComment: "60 * 60 * 24 * 30.42. It must be be a float (end with .0) 
           <li>7 years design and UX experience doing user interviews, wireframes, Photoshop, Illustrator</li>
           <li>Quick-learning, self-managing, commitment-keeping</li>
         </ul>
-
-
-
-<h2>Education</h2>
-<ol class="education">
-  {% for event in site.data.education %}
-  <li title="{{event.description}}">
-    {{ event.name }}
-    <pre>{{ event.timing }}</pre>
-  </li>
-  {% endfor %}
-</ol>
-
-
-<h2>Work Experience</h2>
-<ol class="work">
-  {% for event in site.data.work %}
-    <li title="{{event.description}}">
-      {{ event.name }}
-      <pre>{{ event.timing }}</pre>
-    </li>
-  {% endfor %}
-</ol>
-
-<h2>Side Projects</h2>
-<ol class="sideProjects">
-  {% for event in site.data.sideProjects %}
-  <li title="{{event.description}}">
-    {{ event.name }}
-    <pre>{{ event.timing }}</pre>
-  </li>
-  {% endfor %}
-</ol> -->
+-->

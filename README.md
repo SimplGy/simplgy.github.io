@@ -32,6 +32,12 @@ To add a project:
 
 Same as above, but put it inside `projects/_posts`. This tells jekyll to categorize them as `project` but keeps things separate since I don't usually want to treat projects as blog posts.
 
+## Developing
+
+Make a `.sass` change to jekyllTimeline:
+
+    TODO
+
 ## Authoring
 
 Date formatting:
@@ -79,7 +85,13 @@ To add a project:
 
 ### Creating freeze-frames from gifs
 
-You can create `jpg`s out of the first frame of every animation for use as mainImg by running this command in the project root (OSX dependency for `sips`):
+Animated gifs take a while to load, so it's good to have a static image ready sooner.
+
+The code supports this but you have to generate the static image for yourself and use it as the `mainImg` property. 
+
+The first frame of the gif is a good candidate.
+
+You can create `jpg`s out of the first frame of every animation by running this command in the project root (OSX dependency on `sips`):
 
     sips -s format jpeg ./projects/animation/*.gif --out projects/mainImg
 

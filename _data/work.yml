@@ -1,5 +1,15 @@
-- name: Independent Contractor
+- name: Software Development Engineer @ [Amazon](http://amazon.com)
   to: now
+  from: 2017-01-01
+  companyLink: amazon.com
+  description: |
+    * Launched product polling feature
+    * Key Front-end developer and architect
+    * Built consensus and established process improvements, became Tech Lead
+
+
+- name: Independent Contractor
+  to: 2016-12-01
   from: 2015-01-01
   companyLink: www.simple.gy
   description: |
