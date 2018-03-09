@@ -104,6 +104,8 @@ You can create `jpg`s out of the first frame of every animation by running this 
 ## To-Do
 
 ### On Deck
+
+```
 o Make the main nav work on mobile (doesn't fit)
 o Use an img while the video is loading
 o Fix video origin, see if it can work on mobile
@@ -115,8 +117,11 @@ o Show discussion on related sites, either by manually listing which Reddit/Hack
 o Pick a color scheme I can live with for a while. Main color (green), supporting color (blue?), background color (not quite white), shaded bg color (pale white), dark (not quite black, tinged brown), etc.
 o Style blockquotes nicely
 o Move all van posts over from winterpress to here
+```
 
 ### Done
+
+```
 x Style lists in markdown posts nicely
 x Better fit on mobile and tablet (footer, reduce global padding/margins)
 x Show loader while fetching gif, fade the animation in a non-jarring way
@@ -141,3 +146,4 @@ x List all projects
 x Include gif or image for each project
 x list of blog posts and blog post perma page
 x footer
+```
