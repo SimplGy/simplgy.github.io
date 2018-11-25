@@ -1,5 +1,14 @@
-- name: Software Development Engineer @ [Amazon](http://amazon.com)
+
+- name: Software Development Engineer @ [Google](http://google.com)
   to: now
+  from: 2018-06-25
+  companyLink: google.com
+  description: |
+    * ng2 App for Managing Android Releases
+
+
+- name: Software Development Engineer @ [Amazon](http://amazon.com)
+  to: 2018-05-22
   from: 2017-01-01
   companyLink: amazon.com
   description: |
