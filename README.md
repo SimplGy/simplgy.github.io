@@ -12,7 +12,7 @@ To run in dev mode:
 
 If you'd like to see `_drafts`, too:
 
-    bundle exec jekyll serve --wD
+    bundle exec jekyll serve -wD
 
 To build only:
 
@@ -52,19 +52,35 @@ Hide a blog post or project (unpublish)
 
 Add a blog post
 
-> Add a text file of the format `YYYY-MM-DD-my-title` to the `blogs/_posts` folder. Make sure to include an `excerpt` field in the front matter.
+> Add a text file of the format `YYYY-MM-DD-my-title` to the `blogs/_posts` folder.
 
-To add a live code demo to your blog post, add a `demo` section to your front matter. This will add an iframe to the demo and a link.
+Fill in front matter something like this:
 
-    ---
-    demo: https://jsfiddle.net/yhvrcwog/2/embedded/result
-    ---
+```
+---
+title: Plain old Title
+excerpt: "This title has something strange: a colon in the text."
+banner: "http://simple.gy/img/deep-fried-bacon.jpg"
+bannerCaption: "Deep-fried bacon in Thailand"
+---
+```
 
 If you need to use `-` or `:` in the front matter of the post, these are special characters to YAML. Surround the whole thing in quotes to make it work.
 
-    ---
-    title: Something easy
-    description: "Singing: how to do it while chewing gum."
+To add images to the body of your blog post:
+
+Bit of a chicken and egg problem here, unfortunately. I haven't figured out a way to make local relative pathing while authoring work the same as published. So, publish images first, then reference.
+
+1. Put images in `img/` and publish
+1. Reference as absolute paths in markdown. eg: `![animated demo](http://simple.gy/img/dual-slider-demo.gif)`
+
+If you want the special `demo` style of embedding, you can add this section to your front matter. Normal JS Fiddle async script embed will also work though, if you want an inline display style:
+
+```
+---
+demo: https://jsfiddle.net/yhvrcwog/2/embedded/result
+---
+```
     
 ### Projects
 
