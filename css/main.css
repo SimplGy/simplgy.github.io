@@ -31,7 +31,7 @@ blockquote.unstyled {
   padding: 0;
   box-shadow: none;
   background: transparent;
-  borde-radius: 0; }
+  border-radius: 0; }
 
 .hero blockquote {
   box-shadow: inset 1px 0 0 rgba(0, 0, 0, 0.1), inset -1px 0 0 rgba(0, 0, 0, 0.1);

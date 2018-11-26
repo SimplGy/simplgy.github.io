@@ -27,7 +27,7 @@ article
     p, .highlight, blockquote
       margin-bottom: $fontSize * $lineHeight / 2
 
-  .highlight
+  pre.highlight
     $roomy: 10px
     overflow: auto
     padding: $roomy
@@ -42,9 +42,9 @@ article
       background: none
       border: none
 
-  .highlight
+  pre.highlight
     font-size: 85% // because the code can be dense
-  .gist-file .highlight
+  .gist-file pre.highlight
     font-size: 100% // because gists are small enough
 
   blockquote p

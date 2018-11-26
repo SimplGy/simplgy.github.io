@@ -32,7 +32,7 @@ blockquote.unstyled {
   padding: 0;
   box-shadow: none;
   background: transparent;
-  borde-radius: 0; }
+  border-radius: 0; }
 
 .hero blockquote {
   box-shadow: inset 1px 0 0 rgba(0, 0, 0, 0.1), inset -1px 0 0 rgba(0, 0, 0, 0.1);
@@ -1287,7 +1287,7 @@ article {
       line-height: 1.75; }
       article p, article .highlight, article blockquote {
         margin-bottom: 14px; } }
-  article .highlight {
+  article pre.highlight {
     overflow: auto;
     padding: 10px;
     margin-left: -10px;
@@ -1296,13 +1296,13 @@ article {
     background: #fafafa;
     border: 1px solid #f2f2f2;
     border-top-color: #e6e6e6; }
-    article .highlight code {
+    article pre.highlight code {
       padding: 0;
       background: none;
       border: none; }
-  article .highlight {
+  article pre.highlight {
     font-size: 85%; }
-  article .gist-file .highlight {
+  article .gist-file pre.highlight {
     font-size: 100%; }
   article blockquote p {
     margin-bottom: 0; }

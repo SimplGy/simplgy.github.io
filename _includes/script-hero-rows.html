@@ -1,17 +1,21 @@
 <script>
   (function(){
     'use strict';
-    var nodes = document.querySelectorAll('.content p');
-    [].forEach.call(nodes, function(el){
-      heroLoneImages(el);
-      imageSetGroups(el);
-    });
 
-    // Given an element, add a `hero` class if its only child is an image
+	const asArray = sel =>
+	  Array.from(document.querySelectorAll(sel));
+
+    asArray('.content p').forEach(imageSetGroups);
+    asArray('.content blockquote > p').forEach(heroLoneImages);
+
+    // Given a p as a direct child of a blockquote, add a `hero` class if its only child
     function heroLoneImages (el) {
-      if (el.children.length === 1 && el.children[0].tagName === 'IMG') {
+	  const parent = el.parentElement;
+	  if (el.tagName === 'IMG' && parent.tagName === 'BLOCKQUOTE' && parent.children.length === 1) {
         el.className += ' hero';
+        parent.className += ' unstyled';
       }
+
     }
 
     // given an element, add a `imageSet` class if all of it's children are images and there's more than 1
