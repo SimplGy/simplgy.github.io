@@ -6,26 +6,22 @@
   description: |
     * ng2 App for Managing Android Releases
 
-
 - name: Software Development Engineer @ [Amazon](http://amazon.com)
   to: 2018-05-22
   from: 2017-01-01
   companyLink: amazon.com
   description: |
-    * Launched product polling feature
-    * Key Front-end developer and architect
-    * Built consensus and established process improvements, became Tech Lead
-
+    * Key front-end developer for launched "polling" feature
+    * Became Tech Lead, then successful in a 3mo trial as manager
 
 - name: Independent Contractor
   to: 2016-12-01
   from: 2015-01-01
   companyLink: www.simple.gy
   description: |
-    * Lived and worked in Thailand, Vietnam, Budapest, and Stockholm
-    * Self-taught iOS & Swift to work on [Waitress](https://itunes.apple.com/app/waitress/id874437345) app
-    * Launched app to about `700` daily users and `100` transactions per day in the Stockholm market
-
+    * Self-managed consultancy while slowly traveling through 5+ countries.
+    * Self-taught iOS & Swift to work on [Waitress](https://itunes.apple.com/app/waitress/id874437345) app. Launched to about `700` daily users and `100` transactions per day in the Stockholm market
+    * Long term project with Coatue to support multiple infinite scrolling grids on a single screen
 
 - name: Senior Front End Engineer @ [Coatue](http://coatue.com)
   location: San Francisco Bay Area, CA
