@@ -14,7 +14,7 @@ The idea:
 
 As you drag the slider near the center boundary, add more "steps" to the input by changing the min or max. At the same time, give each input an amount of visual space that is proportional to the number of steps they're responsible for.
 
-My hope was that chaning this on the fly would appear flicker free and seamless.
+My hope was that changing this on the fly would appear flicker free and seamless.
 
 If this could work, we'd have a control that's pretty close to native with almost no JS, which should be a win for durability and accessibility.
 
@@ -59,7 +59,7 @@ function update({target} = {}) {
 	 b.min = pivot + 1;
   }
   
-  // Amount of visual/presentation space proporitonal to steps
+  // Amount of visual/presentation space proportional to steps
   a.style.flexGrow = stepsIn(a); // how many steps in input `a`?
   b.style.flexGrow = stepsIn(b);
 }
