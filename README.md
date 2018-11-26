@@ -18,6 +18,11 @@ To build only:
 
     bundle exec jekyll clean && bundle exec jekyll build
 
+To recompile css:
+    
+    sass --update css/
+    # of course you'll need the sass command line tool
+
 Sync my local development environment with what GitHub is using:
 
     bundle update // this uses `Gemfile` to pull the latest versions of dependencies
@@ -59,9 +64,10 @@ Fill in front matter something like this:
 ```
 ---
 title: Plain old Title
-excerpt: "This title has something strange: a colon in the text."
-banner: "http://simple.gy/img/deep-fried-bacon.jpg"
-bannerCaption: "Deep-fried bacon in Thailand"
+excerpt: "This title has something strange: a colon in the text." // optional
+banner: "http://simple.gy/img/deep-fried-bacon.jpg" // optional
+bannerCaption: "Deep-fried bacon in Thailand" // optional
+color: rgb(172, 203, 235) // optional
 ---
 ```
 
@@ -73,6 +79,12 @@ Bit of a chicken and egg problem here, unfortunately. I haven't figured out a wa
 
 1. Put images in `img/` and publish
 1. Reference as absolute paths in markdown. eg: `![animated demo](http://simple.gy/img/dual-slider-demo.gif)`
+
+Also, if you want the image to be styled as a "hero" (full width, special visual treatment), put it in a blockquote by adding a caret in front of the image code. eg:
+
+    > ![](my-image.png)
+
+To embed demos / scripts, you can either use front matter or a JS Fiddle snippet.
 
 If you want the special `demo` style of embedding, you can add this section to your front matter. Normal JS Fiddle async script embed will also work though, if you want an inline display style:
 

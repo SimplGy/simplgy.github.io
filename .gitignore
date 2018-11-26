@@ -5,3 +5,4 @@ dist/
 .idea/
 _site/
 .jekyll-metadata
+.sass-cache/
