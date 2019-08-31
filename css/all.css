@@ -861,6 +861,9 @@ article, .banner .content {
 .blogPost h2:hover .deepLink, .blogPost h2:focus .deepLink, .blogPost h3:hover .deepLink, .blogPost h3:focus .deepLink, .blogPost h4:hover .deepLink, .blogPost h4:focus .deepLink, .blogPost h5:hover .deepLink, .blogPost h5:focus .deepLink, .blogPost h6:hover .deepLink, .blogPost h6:focus .deepLink {
   display: inline; }
 
+.blogPost img[src*="#row-m"] {
+  max-height: 300px; }
+
 .projectListPage {
   background: #fafafa; }
   .projectListPage h2 {
