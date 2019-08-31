@@ -1,23 +1,29 @@
 
 ## To-Do
 
-### On Deck
+
+
+### 🔬 On Deck
 
 ```
 - [ ] Make the main nav work on mobile (doesn't fit)
 - [ ] Use an img while the video is loading
 - [ ] Fix video origin, see if it can work on mobile
+```
+
+### 🌈 Some Day
+
+```
 - [ ] consider https://github.com/poole/poole
 - [ ] Click responsiveness and IxN on mobile and tablet
 - [ ] See if there's a way to get reddit, google+, instapaper, and other post-parsers to see the banner image first. Otherwise they share the first content image (hide an `img` tag in the banner?)
-- [ ] Redo fonts with https://femmebot.github.io/google-type
 - [ ] Show discussion on related sites, either by manually listing which Reddit/Hacker News threads are discussing it or by detecting them automatically.
-- [ ] Pick a color scheme I can live with for a while. Main color (green), supporting color (blue?), background color (not quite white), shaded bg color (pale white), dark (not quite black, tinged brown), etc.
+- [ ] Redo fonts with https://femmebot.github.io/google-type
 - [ ] Style blockquotes nicely
 - [ ] Move all van posts over from winterpress to here
 ```
 
-### Done
+### ✅ Done
 
 ```
 - [x] Style lists in markdown posts nicely
