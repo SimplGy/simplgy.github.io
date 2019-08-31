@@ -3,6 +3,7 @@
 ### 🔬 On Deck
 
 ```
+- [ ] [`https`](https) on github pages
 - [ ] Fix article styling, it's actually in kind of bad shape (block quotes, bullet points with paragraphs in them)
 - [ ] Make the main nav work on mobile (doesn't fit)
 - [ ] Use an img while the video is loading
@@ -48,3 +49,5 @@
 - [x] list of blog posts and blog post perma page
 - [x] footer
 ```
+
+[https]: https://help.github.com/en/articles/securing-your-github-pages-site-with-https
