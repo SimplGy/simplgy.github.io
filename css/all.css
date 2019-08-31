@@ -795,26 +795,46 @@ article, .banner .content {
       padding-left: 10px;
       padding-right: 10px; } }
 
-.post.summary .title {
-  margin-bottom: 5px;
-  color: #36a75e; }
-.post.summary p {
-  max-width: 600px; }
-.post.summary a {
-  display: block;
-  color: inherit;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  border-top: 1px dotted rgba(0, 0, 0, 0.1); }
-  @media (max-width: 603px) {
-    .post.summary a {
-      padding-top: 30px;
-      padding-bottom: 30px; } }
-.post.summary a:hover {
-  text-decoration: none;
-  background: rgba(75, 197, 118, 0.05); }
-.post.summary .date {
-  float: right; }
+.post.summary {
+  position: relative; }
+  .post.summary .title {
+    margin-bottom: 5px; }
+  .post.summary p {
+    max-width: 600px; }
+  .post.summary a {
+    display: block;
+    color: inherit;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-top: 1px dotted rgba(0, 0, 0, 0.1); }
+    @media (max-width: 603px) {
+      .post.summary a {
+        padding-top: 30px;
+        padding-bottom: 30px; } }
+  .post.summary a:hover {
+    text-decoration: none;
+    background: rgba(75, 197, 118, 0.05); }
+  .post.summary .date {
+    float: right; }
+  .post.summary .colorBar {
+    position: absolute;
+    left: 0;
+    width: 5px;
+    background-color: #e6e6e6;
+    transition: width ease 200ms;
+    background-position: center;
+    background-size: cover;
+    top: 50px;
+    bottom: 50px; }
+    @media (max-width: 603px) {
+      .post.summary .colorBar {
+        top: 30px;
+        bottom: 30px; } }
+  .post.summary a:hover .colorBar, .post.summary a:focus .colorBar {
+    width: 20px; }
+    @media (max-width: 603px) {
+      .post.summary a:hover .colorBar, .post.summary a:focus .colorBar {
+        width: 5px; } }
 
 .post.oneliner a {
   display: block;

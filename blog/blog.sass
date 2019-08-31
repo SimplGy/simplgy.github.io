@@ -73,12 +73,13 @@ article, .banner .content
 
 // --------------------------------- Blog Post Brief Summary
 .post.summary
+  position: relative
+
   .title
     margin-bottom: 5px
-    color: $greenDark
   p
     max-width: 600px // prevent lines that are so long as to be difficutl to read
-  a
+  a  
     display: block
     color: inherit
     padding-top: 50px
@@ -92,7 +93,25 @@ article, .banner .content
     background: $hoverBg
   .date
     float: right
+  .colorBar
+    position: absolute
+    left: 0
+    width: 5px
+    background-color: $black10
+    transition: width ease 200ms
+    background-position: center
+    background-size: cover
+    top: 50px // match padding
+    bottom: 50px
+    +phone
+      top: 30px
+      bottom: 30px
 
+  a:hover, a:focus
+    .colorBar
+      width: 20px
+      +phone
+        width: 5px // don't grow on phone
 
 // --------------------------------- Blog Post One-liner Title Display
 .post.oneliner

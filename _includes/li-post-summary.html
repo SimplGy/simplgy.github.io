@@ -1,5 +1,12 @@
 <li class="post summary">
   <a href="{{ post.url }}">
+    
+    {% if post.color %}
+      <b class="colorBar" style="background-color: {{post.color}}"></b>
+    {% else if post.banner %}
+      <b class="colorBar" style="background-image: url('{{post.banner}}')"></b>
+    {% endif %}
+    
     <h3 class="title">
       {{ post.title }}
       <!--<small class="muted category">{{ post.categories | array_to_sentence_string }}</small>-->
