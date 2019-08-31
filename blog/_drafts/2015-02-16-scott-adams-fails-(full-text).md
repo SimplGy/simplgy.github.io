@@ -3,14 +3,20 @@ title: Scott Adams - How to Fail at Almost Everything and Still Win Big
 excerpt: An uncommonly straight-forward and practical how-to guide to success from the mind of an engineer turned cartoonist.
 ---
 
+<a target="_blank"  href="https://www.amazon.com/gp/product/1591847745/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1591847745&linkCode=as2&tag=simplgy-20&linkId=4d22758ccce19bd2dab1896649056b77"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=1591847745&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=simplgy-20" ></a><img src="//ir-na.amazon-adsystem.com/e/ir?t=simplgy-20&l=am2&o=1&a=1591847745" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+
 ## Summary/Key Takeaways
+
+I really like this book. Adams covers almost all aspects of buiding a successful life, but without any "froo froo" stuff. Instead, it's grounded in his understanding of current science, psychology, and his work experience.
 
 * The unit of measure is personal energy and happiness
 * Evaluate things for yourself
 * Use a strategy of diverse skill building (including hard and soft skills)
 * Roll the dice as often as you can, and make sure every time you roll the dice you gain some useful skill
 
-## The One-Page Summary in Quotes
+## Favorite Quotes from the Book
+
+Following are quotes from "How to Fail at Almost Everything and Still Win Big", sorted by category of advice.
 
 ### Don't Trust Experts (Including Me)
 
@@ -24,20 +30,19 @@ excerpt: An uncommonly straight-forward and practical how-to guide to success fr
 
 > I wanted to create, invent, write, or otherwise concoct something widely desired that would be easy to reproduce.
 
-> see the world as a slot machine that doesn't ask you to put money in. All it asks is your time, focus, and energy.
+> See the world as a slot machine that doesn't ask you to put money in. All it asks is your time, focus, and energy.
 
 > You can't directly control luck, but you can move from a game with low odds of success to a game with better odds... The hard part is figuring out the odds of any given game, and that's harder than it looks.
 
 > generate lots of opportunities for luck to find you and take the sort of risks that will allow you to come out ahead even if the project fails.
 
-
 ### Be Constructively Selfish
 
 > During your journey to success you will find yourself continually trying to balance your own needs with the needs of others. You will always wonder if you are being too selfish or not selfish enough.
 
-> by becoming a person with good energy, you lift the people around you. That positive change will improve your social life, your love life, your family life, and your career.
+> By becoming a person with good energy, you lift the people around you. That positive change will improve your social life, your love life, your family life, and your career.
 
-> capitalism channels selfishness in a direction that benefits civilization
+> Capitalism channels selfishness in a direction that benefits civilization
 
 ### Simplify Plans, Communication, and Systems
 
@@ -49,9 +54,9 @@ excerpt: An uncommonly straight-forward and practical how-to guide to success fr
 
 ### Systems are Better than Goals
 
-> Goal-oriented people exist in a state of continuous presuccess failure... enjoying the spoils of  success until they bore... or set new goals and reenter the cycle of permanent presuccess failure.
-
 > Systems people [feel] good every time they apply their system.
+
+> Goal-oriented people exist in a state of continuous presuccess failure... enjoying the spoils of success until they bore [of them]... or set new goals and reenter the cycle of permanent presuccess failure.
 
 ### Build a Skill Set
 
@@ -61,20 +66,17 @@ excerpt: An uncommonly straight-forward and practical how-to guide to success fr
 
 > Acquire as many key skills as possible: public speaking, business writing, the psychology of persuasion, basic technology concepts, social skills, proper voice technique, good grammar, and basic accounting. 
 
-> Everything you learn becomes a shortcut for understanding something else.
-
 > Avoid career traps such as pursuing jobs that require you to sell your limited supply of time while preparing you for nothing better.
 
 ### Learn to Socialize and Tell Stories
 
-> Faking social confidence leads to the real thing over time... Observe outgoing people and steal their little tricks if you can. I've been doing that for years. It works great.
-
 > The point of conversation is to make the other person feel good.
+
+> Faking social confidence leads to the real thing over time... Observe outgoing people and steal their little tricks if you can. I've been doing that for years. It works great.
 
 > Smile, ask questions, avoid complaining and sad topics, and have some entertaining stories ready to go. It's all you need to be in the top 10 percent of all conversationalists.
 
 > imagine telling the story to someone in particular--a spouse, friend, or relative... storytelling is a learnable skill and not a genetic gift... If something story-worthy happens to you, spend some time developing the story structure in your head.
-
 
 ### Develop a Good Attitude
 
@@ -84,11 +86,11 @@ excerpt: An uncommonly straight-forward and practical how-to guide to success fr
 
 > You shouldn't hesitate to modify your perceptions to whatever makes you happy, because you're probably wrong about the underlying nature of reality anyway... hope has a lot of practical utility.
 
-> if you have a big, interesting project in the works, you're a winner every time you wake up.
+> If you have a big, interesting project in the works, you're a winner every time you wake up.
 
-> happiness tends to happen naturally whenever you have good health, resources, and a flexible schedule... [it] has more to do with where you're heading than where you are.
+> Happiness tends to happen naturally whenever you have good health, resources, and a flexible schedule... [it] has more to do with where you're heading than where you are.
 
-> the formula for happiness is as simple as daydreaming, controlling your schedule, napping, eating right, and being active every day.
+> The formula for happiness is as simple as daydreaming, controlling your schedule, napping, eating right, and being active every day.
 
 
 
