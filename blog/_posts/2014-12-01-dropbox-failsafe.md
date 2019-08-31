@@ -1,5 +1,6 @@
 ---
-title: Automatically Archive Dropbox Every Night on OSX
+title: Archive Dropbox Every Night on OSX
+color: rgb(0, 113, 224)
 ---
 
 I'm one of Dropbox's biggest fans. I've used them for years, referred them to friends and colleagues, collaborated on projects with it. Every text editor I consider must have seamless dropbox support. It's been a big part of my note taking and photo sharing strategy for a long time.
