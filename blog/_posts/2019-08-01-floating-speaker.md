@@ -1,7 +1,7 @@
 ---
 title: "Build: A speaker mount floating over your TV"
 excerpt: "I found a simple solution for mounting a center speaker above a TV"
-banner: http://simple.gy/img/floating-speaker/front-up.jpg
+banner: http://simple.gy/img/floating-speaker/close.jpg
 color: rgb(16, 16, 16)
 ---
 
