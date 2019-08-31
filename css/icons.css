@@ -1,11 +1,13 @@
 @font-face {
-  font-family: "icomoon";
+  font-family: 'icomoon';
   src: url("fonts/icomoon.eot?-m6ioij");
   src: url("fonts/icomoon.eot?#iefix-m6ioij") format("embedded-opentype"), url("fonts/icomoon.woff?-m6ioij") format("woff"), url("fonts/icomoon.ttf?-m6ioij") format("truetype"), url("fonts/icomoon.svg?-m6ioij#icomoon") format("svg");
   font-weight: normal;
-  font-style: normal; }
+  font-style: normal;
+}
+
 .icon {
-  font-family: "icomoon";
+  font-family: 'icomoon';
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -16,16 +18,30 @@
   -moz-osx-font-smoothing: grayscale;
   min-width: 13px;
   display: inline-block;
-  text-align: center; }
-  .icon.twitter:before {
-    content: "\ea92"; }
-  .icon.linkedIn:before {
-    content: "\eac8"; }
-  .icon.github:before {
-    content: "\eab4"; }
-  .icon.stackOverflow:before {
-    content: "\e601"; }
-  .icon.rss:before {
-    content: "\ea95"; }
-  .icon.instagram:before {
-    content: "\e600"; }
+  text-align: center;
+}
+
+.icon.twitter:before {
+  content: "\ea92";
+}
+
+.icon.linkedIn:before {
+  content: "\eac8";
+}
+
+.icon.github:before {
+  content: "\eab4";
+}
+
+.icon.stackOverflow:before {
+  content: "\e601";
+}
+
+.icon.rss:before {
+  content: "\ea95";
+}
+
+.icon.instagram:before {
+  content: "\e600";
+}
+/*# sourceMappingURL=icons.css.map */

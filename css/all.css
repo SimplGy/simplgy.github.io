@@ -17,11 +17,15 @@ a {
 a:hover {
   text-decoration: underline; }
 
+svg {
+  fill: currentColor;
+  vertical-align: middle; }
+
 blockquote {
-  padding: 10px 10px 10px 15px;
-  box-shadow: inset 3px 0 0 #bed98f;
-  background: #f2f2f2;
-  border-radius: 5px; }
+  padding: 5px;
+  padding-left: 10px;
+  box-shadow: inset 3px 0 0 #d9d9d9;
+  background: #fafafa; }
   blockquote code {
     background: white; }
   blockquote p {
@@ -86,7 +90,7 @@ h1 small {
 .content > h2 {
   margin: 30px 0 5px 0; }
 .content > h3 {
-  margin: 10px 0 5px 0; }
+  margin: 20px 0 5px 0; }
 
 hr {
   background-color: #d9d9d9;

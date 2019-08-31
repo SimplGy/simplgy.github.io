@@ -1,4 +1,106 @@
-.resumePage .page { background: white; border: 1px solid #f2f2f2; box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2); width: 80%; max-width: 1000px; margin: 0 auto; margin-top: 20px; padding: 50px; padding-left: 100px; box-sizing: border-box; }
-.resumePage .me { border: 1px solid #cccccc; border-left: none; border-right: none; }
+.resumePage {
+  background: #f6f6f6;
+}
 
+.resumePage nav {
+  background-color: #f2f2f2;
+  -webkit-box-shadow: 0 1px 0 #e6e6e6;
+          box-shadow: 0 1px 0 #e6e6e6;
+}
+
+.resumePage nav a {
+  color: #777;
+  text-shadow: none;
+}
+
+.resumePage nav a:hover {
+  text-shadow: none;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.resumePage .content {
+  text-align: center;
+}
+
+.resumePage .content .gist {
+  text-align: left;
+  display: inline-block;
+  max-width: 900px;
+  width: 100%;
+}
+
+.resumePage .content .gist .gist-file {
+  border: 1px solid #f2f2f2;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 4px rgba(0, 0, 0, 0.2);
+}
+
+.resumePage .content li {
+  list-style: disc;
+}
+
+.resumePage .gist-data {
+  padding: 20px;
+}
+
+@media (max-width: 603px) {
+  .resumePage .gist-data {
+    padding: 10px;
+  }
+}
+
+.pageTabs {
+  display: block;
+  max-width: 900px;
+  margin: 5px auto;
+  padding: 0 5px;
+  text-align: right;
+  border-bottom: 1px solid #e6e6e6;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 14px;
+}
+
+.pageTabs li {
+  display: inline-block;
+}
+
+.pageTabs li a {
+  display: block;
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  border-bottom: none;
+  padding: 0 10px;
+  min-height: 30px;
+  line-height: 30px;
+  color: #aaa;
+}
+
+.pageTabs .current {
+  background-color: white;
+  cursor: default;
+}
+
+.pageTabs .current:hover {
+  text-decoration: none;
+}
+
+@media (max-width: 603px) {
+  .resumePage {
+    background-color: white;
+  }
+  .resumePage .padder {
+    padding: 0;
+  }
+  .resumePage .content .gist .gist-file {
+    border: none;
+  }
+}
+
+@media print {
+  .pageTabs {
+    display: none;
+  }
+}
 /*# sourceMappingURL=resume.css.map */

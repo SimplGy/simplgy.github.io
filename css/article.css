@@ -1,45 +1,69 @@
 article {
   font-size: 18px;
   line-height: 1.75;
-  padding: 0 30px; }
-  article h2 small {
-    font-size: 60%;
-    line-height: 1.7; }
-  article p, article .highlight, article blockquote, article ul, article ol {
-    margin-bottom: 15.75px; }
-  @media (max-width: 603px) {
-    article {
-      padding: 0 10px;
-      font-size: 16px;
-      line-height: 1.75; }
-      article p, article .highlight, article blockquote {
-        margin-bottom: 14px; } }
-  article pre.highlight {
-    overflow: auto;
-    padding: 10px;
-    margin-left: -10px;
-    margin-right: -10px;
-    border-radius: 5px;
-    background: #fafafa;
-    border: 1px solid #f2f2f2;
-    border-top-color: #e6e6e6; }
-    article pre.highlight code {
-      padding: 0;
-      background: none;
-      border: none; }
-  article pre.highlight {
-    font-size: 85%; }
-  article .gist-file pre.highlight {
-    font-size: 100%; }
-  article blockquote p {
-    margin-bottom: 0; }
-  article .hero > img {
-    display: block;
-    margin: 0 auto;
-    width: 100%; }
-  article ul, article li {
-    list-style-type: disc; }
-  article ul, article ol, article li {
-    list-style-position: inside; }
+  padding: 0 30px;
+}
 
+article h2 small {
+  font-size: 60%;
+  line-height: 1.7;
+}
+
+article p, article .highlight, article blockquote, article ul, article ol {
+  margin-bottom: 15.75px;
+}
+
+@media (max-width: 603px) {
+  article {
+    padding: 0 10px;
+    font-size: 16px;
+    line-height: 1.75;
+  }
+  article p, article .highlight, article blockquote {
+    margin-bottom: 14px;
+  }
+}
+
+article pre.highlight {
+  overflow: auto;
+  padding: 10px;
+  margin-left: -10px;
+  margin-right: -10px;
+  border-radius: 5px;
+  background: #fafafa;
+  border: 1px solid #f2f2f2;
+  border-top-color: #e6e6e6;
+}
+
+article pre.highlight code {
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+article pre.highlight {
+  font-size: 85%;
+}
+
+article .gist-file pre.highlight {
+  font-size: 100%;
+}
+
+article blockquote p {
+  margin-bottom: 0;
+}
+
+article .hero > img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+
+article ul, article li {
+  list-style-type: disc;
+}
+
+article ul, article ol, article li {
+  list-style-position: inside;
+}
 /*# sourceMappingURL=article.css.map */
