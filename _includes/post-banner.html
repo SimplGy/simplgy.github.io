@@ -17,7 +17,7 @@
       {{ page.title }}
       <!--<small class="muted category">{{ page.categories | array_to_sentence_string }}</small>-->
     </h1>
-    <h3 class="muted date">{{ page.date | date_to_string }}</h3>
+    <h3 class="muted date">{{ page.date | date: '%B %-d, %Y' }}</h3>
   </div>
 
   {% if page.bannerCaption %}

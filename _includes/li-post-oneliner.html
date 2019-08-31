@@ -1,7 +1,7 @@
 <li class="post oneliner">
   <a href="{{ post.url }}">
     {{ post.title }}
-    <span class="muted date">{{ post.date | date_to_string }}</span>
+    <span class="muted date">{{ post.date | date: "%B %Y" }}</span>
   </a>
   <!--<span class="muted category" style="display: inline-block; min-width: 100px;">{{ post.categories | array_to_sentence_string }}</span>-->
 </li>

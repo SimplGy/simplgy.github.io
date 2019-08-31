@@ -11,7 +11,7 @@
       {{ post.title }}
       <!--<small class="muted category">{{ post.categories | array_to_sentence_string }}</small>-->
       <small class="muted date">
-        {{ post.date | date_to_string }}
+        {{ post.date | date: "%B %Y" }}
       </small>
     </h3>
     <p>{{ post.excerpt | strip_html }}</p>
