@@ -1,5 +1,5 @@
 ---
-title: "Book Summary: How to Fail and Still Win Big"
+title: "Book: How to Fail and Still Win Big"
 excerpt: An uncommonly straight-forward and practical how-to guide to success from the mind of an engineer turned cartoonist.
 banner: //ir-na.amazon-adsystem.com/e/ir?t=simplgy-20&l=am2&o=1&a=1591847745
 color: rgb(243, 1, 0)
