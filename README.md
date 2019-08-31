@@ -111,6 +111,16 @@ To add a project:
 5. Polish content, add screenshots throughout
 6. Spellcheck!
 
+### Process Images
+
+Strip exif info (like location. You may need to download the command line tool):
+
+    exiftool -all= -overwrite_original_in_place *.jpg
+
+Shrink large images to a standard size:
+
+    sips -Z 2560 *.jpg
+
 ### Creating freeze-frames from gifs
 
 Animated gifs take a while to load, so it's good to have a static image ready sooner.
