@@ -1,11 +1,9 @@
-
 ## To-Do
-
-
 
 ### 🔬 On Deck
 
 ```
+- [ ] Fix article styling, it's actually in kind of bad shape (block quotes, bullet points with paragraphs in them)
 - [ ] Make the main nav work on mobile (doesn't fit)
 - [ ] Use an img while the video is loading
 - [ ] Fix video origin, see if it can work on mobile
@@ -19,7 +17,6 @@
 - [ ] See if there's a way to get reddit, google+, instapaper, and other post-parsers to see the banner image first. Otherwise they share the first content image (hide an `img` tag in the banner?)
 - [ ] Show discussion on related sites, either by manually listing which Reddit/Hacker News threads are discussing it or by detecting them automatically.
 - [ ] Redo fonts with https://femmebot.github.io/google-type
-- [ ] Style blockquotes nicely
 - [ ] Move all van posts over from winterpress to here
 ```
 
