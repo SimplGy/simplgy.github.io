@@ -49,7 +49,7 @@ article .gist-file pre.highlight {
   font-size: 100%;
 }
 
-article blockquote p {
+article blockquote p:last-of-type {
   margin-bottom: 0;
 }
 
