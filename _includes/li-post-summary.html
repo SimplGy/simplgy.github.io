@@ -10,7 +10,7 @@
     <h3 class="title">
       {{ post.title }}
       <!--<small class="muted category">{{ post.categories | array_to_sentence_string }}</small>-->
-      <small class="muted date">
+      <small class="muted date" title="Written on {{ post.date | date: "%B %-d, %Y" }}">
         {{ post.date | date: "%B %Y" }}
       </small>
     </h3>
