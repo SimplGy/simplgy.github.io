@@ -59,8 +59,12 @@ article .hero > img {
   width: 100%;
 }
 
-article ul, article li {
+article ul {
   list-style-type: disc;
+}
+
+article ol {
+  list-style-type: decimal;
 }
 
 article ul, article ol, article li {
