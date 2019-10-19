@@ -253,22 +253,31 @@ a.link:visited:hover
 
 
 // ----------------------------------------------- Social About Page
-.aboutPage .content .social
-  li a
-    position: relative
-    height: 100px
-    line-height: 100px
-    padding-left: 110px
-    display: block
-    color: white
-    text-decoration: none
-    &:hover
-      box-shadow: inset 0 100px $hoverBg
-  img
-    max-height: 100%
-    position: absolute
-    top: 0
-    left: 0
+.aboutPage
+  .content
+    max-width: 600px
+    padding: 0 10px
+    margin: 0 auto
+  p
+    margin-bottom: 1em
+  .content .social
+    li a
+      position: relative
+      line-height: 40px
+      padding-left: 40px + 10px // height + some extra room
+      margin-bottom: 10px
+      display: block
+      color: white
+      text-decoration: none
+      opacity: 0.6
+      &:hover
+        opacity: 1
+        box-shadow: inset 0 100px $hoverBg
+    img
+      max-height: 100%
+      position: absolute
+      top: 0
+      left: 0
 
 .bg-twitter
   background-color: $twitter

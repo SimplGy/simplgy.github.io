@@ -4,17 +4,25 @@ categories:
 title: About
 ---
 
-<h1>About</h1>
+## About
 
-(work in progress)
+I'm a web-focused software developer with a background in UX.
 
-I'm a web-focused software developer with a background in design and UX.
+I write here about things I've built or found interesting.
 
-// TODO: pulling this data would be neat:
+Sometimes it's convenient to include a link to an Amazon product I've used in a project, and for those links I use Amazon's affiliate program.
+As an Amazon Associate I earn from qualifying purchases.
 
-I've written n blog posts, have n stars on github, gotten n likes on instagram, and made n impressions on stack overflow.
+You can find me on the internet in some of these places:
 
-I was last seen online in [CITY].
+<!--
+
+  // TODO: pulling this data would be neat:
+  
+  I've written n blog posts, have n stars on github, gotten n likes on instagram, and made n impressions on stack overflow.
+  
+  I was last seen online in [CITY].
+-->
 
 
 {% include ul-social.html %}
