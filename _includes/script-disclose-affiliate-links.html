@@ -1,0 +1,18 @@
+<script>
+  // look for amazon links and add an "affiliate link" disclosure
+
+  var imgs = document.querySelectorAll('[src^="//ws-na.amazon-adsystem.com"')
+
+  Array.from(imgs).forEach(addDisclosure)
+  
+  function addDisclosure(img) {
+    el = document.createElement('small');
+    el.innerText = '(affiliate link)';
+    el.className = 'muted';
+    img.parentNode.parentNode.appendChild(document.createElement('br'));
+    img.parentNode.parentNode.appendChild(el);
+  }
+  
+</script>
+
+
