@@ -1,0 +1,35 @@
+---
+categories:
+- about
+title: Quotes on Simplicity
+---
+
+<h2>Quotes</h2>
+
+{% for quote in site.data.quotes %}
+
+<br/>
+
+<p>
+  {{quote.text}}
+</p>
+
+{% if quote.url %}
+<a href="{{quote.url}}" class="muted url" target="_blank">
+{% endif %}
+
+<span class="muted">
+    {{quote.who}}
+</span>
+
+{% if quote.year %}
+<span class="muted year">({{quote.year}})</span>
+{% endif %}   
+
+{% if quote.url %}
+</a>
+{% endif %}
+
+<br/>
+
+{% endfor %}
