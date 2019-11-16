@@ -33,9 +33,13 @@ So, I built this Chrome Extension:
 
 ## Why is it Better?
 
-My extension only asks for clipboard access, which is probably the minimum you can ask for and still provide a useful/seamless emoji finding experience.
+1. Secure (minimal permissions)
+2. Fast (no network requests)
+3. Great Keyboard Support
 
-I spent some time getting the keyboard to work well, so both the arrow keys and tab work well to navigate and select emoji.
+This extension only asks for clipboard access, which is probably the minimum you can ask for and still provide an efficient user experience.
+
+I spent some time getting the keyboard to work well, so both the arrow keys and tab work to navigate and select emoji.
 
 ## How Can I Get it?
 
