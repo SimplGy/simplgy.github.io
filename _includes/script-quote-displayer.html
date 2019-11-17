@@ -1,0 +1,78 @@
+<script>
+  (function() {
+    "use strict";
+
+    const $el = document.getElementById('QuoteDisplayer');
+    
+    // Quotes from data/quotes.yml
+    let rawQuotes = {{ site.data.quotes | jsonify }};
+    // shuffle all but the 1st quote
+    const quotes = [rawQuotes[0], ...shuffle(rawQuotes.slice(1))]
+
+    // console.info('quote displayer', {quotes})
+
+    // How fast does the average quote show up for?
+    const AVG_DURATION = 7000;
+    // const MAX_DURATION = 5000;
+    const AVG_SIZE = 3.3; //em
+    const AUTHOR_SHRINKAGE = 0.7; // how much smaller should the author's name be?
+
+    function render(quote) {
+      const {text, who, year, url} = quote;
+      const size = getFontSizeMultiplier(text.length);
+
+      const yearHtml = year ? `<span class="year">(${quote.year})</span>` : '';
+
+      $el.style = `font-size: ${size}em;`;
+      $el.innerHTML = `
+        <h1>${text}</h1>
+        <h3 class="who">
+          ${who} ${yearHtml}
+        </h3>
+      `;
+    }
+
+    let i = 1; // start on the 2nd one, because the first one is already rendered by the server.
+    function renderNext() {
+      i = i >= quotes.length ? 0 : i;
+      const q = quotes[i]
+      render(q);
+      i++;
+      setTimeout(renderNext, AVG_DURATION);
+    }
+
+    setTimeout(renderNext, AVG_DURATION); // start!
+
+
+
+    // given a number of chars, get a font size multiplier
+    function getFontSizeMultiplier(chars) {
+      let size = AVG_SIZE;
+      if (chars > 80) {
+        size = size * 0.9;
+      } else if (chars > 110) {
+        size = size * 0.9;
+      } else if (chars > 130) {
+        size = size * 0.8;
+      } else if (chars > 150) {
+        size = size * 0.7;
+      }
+      return size;
+    }
+
+    // JS Util: Shuffle an array in place
+    function shuffle(arr, startAt = 0) {
+      let idx = arr.length;
+      // While there remain elements to shuffle...
+      while (0 !== idx) {
+        const random = Math.floor(Math.random() * idx); // Pick a remaining element...
+        idx -= 1;
+        const temp = arr[idx];
+        arr[idx] = arr[random]; // swap
+        arr[random] = temp;
+      }
+      return arr;
+    }
+
+})();
+</script>
