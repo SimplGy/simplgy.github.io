@@ -12,6 +12,8 @@ technologies:
 links:
 - title: "Emoji Magic - Chrome App Store"
   url: https://chrome.google.com/webstore/detail/emoji-magic/jfegjdogmpipkpmapflkkjpkhbnfppln
+- title: "Emoji Magic - Demo"
+  url: https://www.simple.gy/emoji-magic
 ---
 
 ## Why Build This?
