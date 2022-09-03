@@ -1,7 +1,7 @@
 ---
 title: A Visa Extension in Thailand
 excerpt: Somehow government offices look the same everywhere.
-banner: "http://simple.gy/img/visa-page.jpg"
+banner: "//www.simple.gy/img/visa-page.jpg"
 ---
 
 It looks familiar. The walls of the complex are dirty and there is some trash on the corner. Signs are posted everywhere. Mostly in Thai, some English.

@@ -1,7 +1,7 @@
 ---
 title: Memory and Pointers in iOS (C and Objective-C)
 excerpt: If you are even a little uncertain about how pointers work, this post aims to clear it up.
-banner: "http://simple.gy/img/van-roof.jpg"
+banner: "//www.simple.gy/img/van-roof.jpg"
 bannerCaption: "My van's support frame"
 ---
 

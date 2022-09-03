@@ -1,7 +1,7 @@
 ---
 title: Swift Changes Since Launch That'll Break an iOS Project
 excerpt: If you haven't touched Swift since Apple released it a year ago, some things have changed. Here's what I found.
-banner: http://simple.gy/img/swift.jpg
+banner: "//www.simple.gy/img/swift.jpg"
 color: rgb(232,120,67)
 ---
 

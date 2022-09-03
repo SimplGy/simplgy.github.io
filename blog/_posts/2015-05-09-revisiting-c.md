@@ -1,7 +1,7 @@
 ---
 title: Javascript Dev Revisits the `C` programming language after 14 years
 excerpt: I hadn't written a line of C since learning it in a high-school AP class.
-banner: http://simple.gy/img/apollo-13-eva-test.jpg
+banner: "//www.simple.gy/img/apollo-13-eva-test.jpg"
 bannerCaption: "Photo Credit: http://unsplash.com"
 ---
 

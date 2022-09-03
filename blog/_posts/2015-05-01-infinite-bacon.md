@@ -3,7 +3,7 @@ title: Create an Infinite Scroll List with Bacon.js
 demo: http://simple.gy/demo/infinite-bacon
 excerpt:
   In this tutorial, you'll learn to think "reactively" while building an infinite scroll UI using Bacon.js
-banner: "http://simple.gy/img/deep-fried-bacon.jpg"
+banner: "//www.simple.gy/img/deep-fried-bacon.jpg"
 bannerCaption: "Deep-fried bacon in Thailand"
 ---
 
