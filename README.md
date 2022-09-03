@@ -65,7 +65,7 @@ Fill in front matter something like this:
 ---
 title: Plain old Title
 excerpt: "This title has something strange: a colon in the text." // optional
-banner: "http://simple.gy/img/deep-fried-bacon.jpg" // optional
+banner: "http://simple.gy/img/deep-fried-bacon.jpg" // optional. use http (not "s") until I figure out the https-needs-www problem
 bannerCaption: "Deep-fried bacon in Thailand" // optional
 color: rgb(172, 203, 235) // optional
 ---
