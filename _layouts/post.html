@@ -19,13 +19,38 @@ layout: boilerplate
     <hr/>
     {% include twitter-plug.html %}
 
-    {% comment %}
-    {% if page.next and page.next.categories contains "blog" %}
-      <p class="muted alignCenter">Next Post: <a rel="next" href="{{ page.next.url }}">{{ page.next.title }}</a></p>
-    {% else if page.previous and page.previous.categories contains "blog" %}
-      <p class="muted alignCenter">Previous Post: <a rel="prev" href="{{ page.previous.url }}">{{ page.previous.title }}</a></p>
-    {% endif %}
-    {% endcomment %}
+    <!-- Next/Previous post links -->
+    <!-- Careful: need "previous" but only in the category of blog posts -->
+    <!-- https://talk.jekyllrb.com/t/how-to-link-to-next-and-previous-posts-for-same-blog-category/629 -->
+    {% assign cat = page.categories[0] %}
+    {% assign cat_list = site.categories[cat] %}
+    {% for post in cat_list %}
+      {% if post.url == page.url %}
+        {% assign pOffset = forloop.index0 | minus: 1 %}
+        {% assign nOffset = pOffset | plus: 2 %}
+        {% if forloop.first == false %}
+          {% assign next_post = cat_list[pOffset] %}
+        {% endif %}
+        {% if forloop.last == false %}
+          {% assign prev_post = cat_list[nOffset] %}
+        {% endif %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+
+    <br>
+    <p class="muted alignCenter">
+      {% if prev_post %}
+        &laquo; Previous: <a rel="prev" href="{{ prev_post.url }}">{{ prev_post.title }}</a>
+      {% endif %}
+      &nbsp;
+      &bull;
+      &nbsp;
+      {% if next_post %}
+        Next: <a rel="next" href="{{ next_post.url }}">{{ next_post.title }}</a> &raquo;
+      {% endif %}
+    </p>
+    
 
     <hr/>
   </article>

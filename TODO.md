@@ -5,8 +5,8 @@
 ```
 - [x] show slowly rotating quotes on home page (every 7s)
 - [ ] adjust quote rotation speed based on char count
-- [ ] [`https`](https) on github pages
-- [ ] Fix article styling, it's actually in kind of bad shape (block quotes, bullet points with paragraphs in them)
+- [x] [`https`](https) on github pages
+- [x] Fix article styling, it's actually in kind of bad shape (block quotes, bullet points with paragraphs in them)
 - [ ] Make the main nav work on mobile (doesn't fit)
 - [ ] Use an img while the video is loading
 - [ ] Fix video origin, see if it can work on mobile

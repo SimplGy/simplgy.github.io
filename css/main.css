@@ -21,10 +21,10 @@ svg {
   vertical-align: middle; }
 
 blockquote {
-  padding: 5px;
-  padding-left: 10px;
-  box-shadow: inset 3px 0 0 #d9d9d9;
-  background: #fafafa; }
+  padding: 1rem;
+  padding-left: 2rem;
+  box-shadow: inset 5px 0 0 #a976cc;
+  background: #f5ecfb; }
   blockquote code {
     background: white; }
   blockquote p {
@@ -64,10 +64,10 @@ body {
   padding: 0; }
 
 h1 {
-  font-size: 60px; }
+  font-size: 4rem; }
   @media (max-width: 603px) {
     h1 {
-      font-size: 30px; } }
+      font-size: 2rem; } }
 
 h2 {
   font-size: 30px;
@@ -376,6 +376,23 @@ footer {
   display: block;
   text-align: right;
   font-size: 80%; }
+
+.padded {
+  padding: 1rem; }
+
+.padded-y {
+  padding-top: 1rem;
+  padding-bottom: 1rem; }
+
+.padded-l {
+  padding: 2rem; }
+
+.padded-l-y {
+  padding-top: 2rem;
+  padding-bottom: 2rem; }
+
+.margin-bottom {
+  margin-bottom: 1rem; }
 
 .hero {
   background-color: rgba(0, 0, 0, 0.07);

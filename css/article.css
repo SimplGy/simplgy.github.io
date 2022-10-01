@@ -44,7 +44,7 @@ article {
   article ul, article ol, article li {
     list-style-position: inside; }
   article ul, article ol {
-    padding-inline-start: 0.3rem; }
+    padding-inline-start: 0.2rem; }
   article ul ul {
     padding-inline-start: 1.8rem;
     margin-bottom: 0; }

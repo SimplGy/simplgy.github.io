@@ -14,13 +14,13 @@
   url: http://linkedin.com/in/simplgy
   #api: not public
 
-- id: stackOverflow
-  name: Stack Overflow
-  url: http://careers.stackoverflow.com/SimplGy
+#- id: stackOverflow
+#  name: Stack Overflow
+#  url: http://careers.stackoverflow.com/SimplGy
 
-- id: instagram
-  name: Instagram
-  url: https://instagram.com/simplgy
+#- id: instagram
+#  name: Instagram
+#  url: https://instagram.com/simplgy
   #api: not public -- https://api.instagram.com/v1/users/{user-id}/
 
 #- id: vanBlog
