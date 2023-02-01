@@ -1,20 +1,16 @@
 ---
 title: "Style Guides at Small Companies"
 excerpt: "A style guide at a small company generates relief"
-color: rgb(55, 177, 98)
-xbanner: //simple.gy/img/ebike/pedals.jpg
-xbannerCaption: ""
+color: rgb(154, 65, 34)
 ---
-
-
-
-
 
 A style guide is the set of rules for how your team writes software.
 
 Style guides at small companies are great. At a small company, a style guide generates the feeling of *relief*.
 
 > "Aaaah, this settles it" 😌
+
+![Image from lexica.art](/img/golden-book.jpg){: .hero-image }
 
 As a developer, you might be in the middle of a question about the right way to do something, or there could be a disagreement about syntax or library use.
 
