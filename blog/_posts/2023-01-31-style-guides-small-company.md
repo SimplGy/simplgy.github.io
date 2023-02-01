@@ -16,7 +16,7 @@ As a developer, you might be in the middle of a question about the right way to 
 
 It's already been decided. With a lovely, simple rule that resolves the question. The rule applies to you perfectly because it was written for your use of the technology. You trust the rule because it's written by people you work with closely, every day. You might even have been in the room when it was decided.
 
-## Hard-Won time
+## Incentives and Hard-Won time
 
 At a small company, typically all the people involved in the style guide decisions are directly connected to the day-to-day software development work that the company is doing.
 
