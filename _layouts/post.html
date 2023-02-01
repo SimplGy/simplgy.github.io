@@ -11,7 +11,9 @@ layout: boilerplate
   {% include post-banner.html %}
 
   <article class="content">
-    {% include blockquote-excerpt.html %}
+    {% comment %}
+      {% include blockquote-excerpt.html %}
+    {% endcomment %}
     {% include iframe-demo.html %}
 
     {{ content }}

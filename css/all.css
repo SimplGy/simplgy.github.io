@@ -1376,7 +1376,7 @@ article, .banner .content {
 article {
   font-size: 18px;
   line-height: 1.75;
-  padding: 0 30px; }
+  padding: 30px; }
   article h2 small {
     font-size: 60%;
     line-height: 1.7; }
