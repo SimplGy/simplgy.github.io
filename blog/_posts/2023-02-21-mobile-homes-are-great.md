@@ -71,7 +71,7 @@ For more data like this see [github.com/mobile-home-space-rents](https://github.
 
 ## Definition of "Value"
 
-This may be controversial. But my definition of value here is what other people would pay for the utility a thing provides **today**. Defining value by price is speculation on supply shortage and long term trends that are out of control. So value === rent. If I moved out of town, could I rent out my house for about what the mortgage costs me? In the bay area, usually, absolutely not.
+This may be controversial. But my definition of value here is what other people would pay for the utility a thing provides **today**. Defining value by price is speculation on supply shortage and long term trends that are out of my control. So for me, `value of housing === rent`. If I moved out of town, could I rent out my house for about what the mortgage costs me? In the bay area, usually, absolutely not.
 
 Real Estate investors call this rent/price ratio [1] and in the Bay this number is *way* off the norm. For example, in San Jose, a home costs **42 times** a year's worth of rent, but in Cleveland, a home only costs 8 times a year's worth of rent [source](https://smartasset.com/data-studies/price-to-rent-ratio-in-the-50-largest-us-cities-2022).
 
