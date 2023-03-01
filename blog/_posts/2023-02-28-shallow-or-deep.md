@@ -1,7 +1,7 @@
 ---
 title: "UX: Wide + Shallow or Narrow + Deep?"
 excerpt: "A framework for thinking about UX that applies to almost every visual product decision."
-color: #4321fc
+color: rgb(216 152 33)
 ---
 
 
