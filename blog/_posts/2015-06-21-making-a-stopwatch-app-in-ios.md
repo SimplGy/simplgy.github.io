@@ -5,6 +5,8 @@ excerpt: "My Very first iOS app. A Timer. How hard could it be?"
 
 > My Very first iOS app. A Timer. How hard could it be?
 
+This is kind of the story of how it came to be. For the project page, go [here](/projects/three/).
+
 ## The Idea
 
 A super simple timer modeled after traditional "twist-to-start" kitchen timers.
