@@ -1,3 +1,10 @@
+---
+title: "Making a Stopwatch app in IOS"
+excerpt: "My Very first iOS app. A Timer. How hard could it be?"
+---
+
+> My Very first iOS app. A Timer. How hard could it be?
+
 ## The Idea
 
 A super simple timer modeled after traditional "twist-to-start" kitchen timers.
