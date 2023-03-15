@@ -11,7 +11,7 @@ A super simple timer modeled after traditional "twist-to-start" kitchen timers.
 
 This meant it should be easy to set, analog, highly visual, not too concerned about fiddly exact times.
 
-I also wanted a minimalistic, non skeumorphic appearance. Because of this, animations were important for communicating when the timer is set, ticking, or ringing.
+I also wanted a minimalistic, non skeuomorphic appearance. Because of this, animations were important for communicating when the timer is set, ticking, or ringing.
 
 ## Who It's For
 
@@ -19,7 +19,7 @@ This isn't for everyone. There are lots of people who want a more fully-featured
 
 You may find you love it if you want a perfectly simple timer for situations like this:
 
-* Medidate for 10 minutes (quick to set, has a peaceful bird sound as the alert tone)
+* Meditate for 10 minutes (quick to set, has a peaceful bird sound as the alert tone)
 * Take a quick 30 minute nap (quick to set, just slide it to 30 and drift off)
 * Play video games for no more than an hour (Throw the hour timer up to the top, leave it by the tv so you can see how much time you have left)
 * Pomodoro technique (Easy to set and re-set, lets you focus on working)
@@ -54,7 +54,7 @@ This means a double-dialog, but I felt the quality of the explanation made it a 
 
 I didn't want to ask for permission as soon as the app launches. I think it's not fun to have that be the first thing you see when you launch an app. Also, if you ask right away instead of when it's needed, [acceptance rates are lower](https://www.nngroup.com/articles/permission-requests/).
 
-I also don't always need notification permissions. For a timer I only needed sound and alert permissions, and then only if the app is likely to be in the background long enough to get suspended. This means long-running timers. I chose `>11` minutes to mean long-running. A nice beneifit is that the way my app is set up, with 2, 10, and 60 minute tiers, only the last timer can trigger the notification request. So the user is likely to have explored the app a little bit before I request notification permissions.
+I also don't always need notification permissions. For a timer I only needed sound and alert permissions, and then only if the app is likely to be in the background long enough to get suspended. This means long-running timers. I chose `>11` minutes to mean long-running. A nice benefit is that the way my app is set up, with 2, 10, and 60 minute tiers, only the last timer can trigger the notification request. So the user is likely to have explored the app a little bit before I request notification permissions.
 
 Once we decide to actually ask them, here are the rules I use to maximize politeness:
 
