@@ -157,9 +157,11 @@ So actually, the only thing I'm saying that might be dramatic is don't bother te
 
 If you've made it this far, I'm amazed.
 
-This probably made you want to drive me out of town at the pointy end of a spear. But, funny thing is, I still think I'm right about this. Time will tell I supposed.
+You've learned there's someone out there, presumably a professional Software Developer with (so far) a job, who thinks testing isn't all that it's cracked up to be.
 
-If you try it, or know a team who has tried a rigorous approach to maximizing functional code and mindfully focusing testing primarily on that, please let me know how it went or share an article.
+This probably made you want to drive me out of town at the pointy end of a spear. But, funny thing is, I still think I'm right about this. Time will tell I suppose.
+
+If you try something like this, or know a team who has, please let me know how it went or share an article.
 
 ---
 
