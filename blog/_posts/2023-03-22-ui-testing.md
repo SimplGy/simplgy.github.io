@@ -165,9 +165,13 @@ If you try it, or know a team who has tried a rigorous approach to maximizing fu
 
 I don't have commenting in my blog, but you can reach out on [twitter](https://twitter.com/SimplGy).
 
-## Footnote
-
 ---
+
+
+
+
+
+### Footnote
 
 One more thing. Everything I'm saying is about UI development. That's all I really know. iOS, Javascript, TypeScript, Angular, React -- doesn't matter. What that stuff has in common is you always, ALWAYS have to actually run it and test manually. Because there's no other way to really see how it works, what the positioning of elements is, the timing of animations, all that.
 
