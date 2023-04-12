@@ -24,7 +24,7 @@ defaults:
       layout: default
 
 exclude: ['*.sass', '/Gemfile*', '/README.md' ]
-
+future: true
 
 # Github allows changing:
 github: [metadata]
