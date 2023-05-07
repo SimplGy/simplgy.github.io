@@ -1,0 +1,107 @@
+<!-- boilerplate html -->
+
+<html>
+  <head>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      h1 {
+        text-transform: uppercase;
+        color: #ccc;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Audio Visualization</h1>
+    <pre class="debug-output"></pre>
+
+    <canvas id="canvas" width="320" height="50"></canvas>
+
+
+    
+    <script>
+      main();
+
+      function main() {
+        // check if the user's browser supports Web Audio API
+        if (!navigator.mediaDevices?.getUserMedia) {
+          document.querySelector(".debug-output").textContent = "Web Audio API not supported.";
+          return;
+        }
+        
+        // request access to the user's microphone
+        navigator.mediaDevices.getUserMedia({ audio: true })
+          .then(gotMicAccess)
+          .catch(function(err) {
+            // microphone access denied or an error occurred
+            document.querySelector(".debug-output").textContent = "Failed to get microphone access.";
+            console.error("Failed to get microphone access:", err);
+          });
+
+        function gotMicAccess(stream) {
+          const canvas = document.getElementById('canvas');
+          makeSimpleVisualizer(stream, canvas);
+        }
+
+
+
+
+        function makeSimpleVisualizer(micStream, canvas) {
+          // audio
+          const audioContext = new AudioContext();
+          const sourceNode = audioContext.createMediaStreamSource(micStream);
+          const analyserNode = audioContext.createAnalyser();
+          sourceNode.connect(analyserNode);
+          analyserNode.fftSize = 256;
+          // analyserNode.fftSize = 2048;
+          const dataArray = new Uint8Array(analyserNode.frequencyBinCount); // store the frequency data
+
+          // visuals
+          const canvasCtx = canvas.getContext('2d');
+          const canvasWidth = canvas.width;
+          const canvasHeight = canvas.height;
+
+          // render the visualization (called every RAF)
+          function renderEqVisualizer() {
+            canvasCtx.clearRect(0, 0, canvasWidth, canvasHeight);
+            analyserNode.getByteFrequencyData(dataArray); // get the frequency data
+            // set the bar width and gap
+            const barWidth = canvasWidth / dataArray.length;
+            const barGap = 1;
+            // loop through the frequency data
+            for (let i = 0; i < dataArray.length; i++) {
+              const barHeight = canvasHeight * (dataArray[i] / 255);
+
+              // set the bar color
+              const hue = (360 / dataArray.length) * i; // calculate the hue based on the bar index
+              const saturation = '100%'; // set the saturation to 100%
+              // const lightness = `${barHeight / canvasHeight * 50}%`; // calculate the lightness based on the bar height
+              const lightness = '50%';
+              canvasCtx.fillStyle = `hsl(${hue}, ${saturation}, ${lightness})`;
+
+              canvasCtx.fillRect(i * barWidth, canvasHeight - barHeight, barWidth - barGap, barHeight);
+            }
+            requestAnimationFrame(renderEqVisualizer);
+          }
+
+          // start rendering
+          renderEqVisualizer();
+        }
+
+
+
+
+
+
+
+
+
+      } // main()
+      
+
+    
+    </script>
+  </body>
+</html>

@@ -1,0 +1,368 @@
+<!-- boilerplate html -->
+
+<html>
+  <head>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      h1 {
+        text-transform: uppercase;
+        color: #ccc;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Beat detection</h1>
+    <p style="color:#999">(to detect a beat, you'll have to play or clap something that has a beat)</p>
+    <pre class="debug-output"></pre>
+
+    <canvas id="canvas" width="320" height="50"></canvas>
+
+
+    
+    <script>
+      main();
+
+      function main() {
+        const debugOutput$ = document.querySelector(".debug-output");
+        const canvas = document.getElementById('canvas');
+        const WIDTH = canvas.width;
+        const HEIGHT = canvas.height;
+
+        // check if the user's browser supports Web Audio API
+        if (!navigator.mediaDevices?.getUserMedia) {
+          debugOutput$.textContent = "Web Audio API not supported.";
+          return;
+        }
+        
+        // request access to the user's microphone
+        navigator.mediaDevices.getUserMedia({ audio: true })
+          .then(gotMicAccess)
+          .catch(function(err) {
+            // microphone access denied or an error occurred
+            debugOutput$.textContent = "Failed to get microphone access.";
+            console.error("Failed to get microphone access:", err);
+          });
+
+        function gotMicAccess(stream) {
+
+          // detectBpmV3(stream); // nope
+          // detectBeatV2(stream, canvas); // nerp
+        }
+
+
+
+
+
+        // http://joesul.li/van/beat-detection-using-web-audio/
+        // most dance music is between 90BPM and 180BPM (actually, most dance music is between 120-140BPM)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // write an algorithm for Autocorrelation-based detection of bpm in an audio stream
+        /*
+        Here's an algorithm for Autocorrelation-based detection of bpm in an audio stream:
+
+        1. Define a window size, `N`, that is long enough to capture at least one beat, but not so long that beats overlap.
+        2. Divide the audio stream into overlapping windows of size `N`.
+        3. For each window, calculate the autocorrelation function of the signal.
+        4. Find the first peak in the autocorrelation function that is above a certain threshold, `T`.
+        5. Calculate the period, `p`, corresponding to the lag at the first peak.
+        6. Calculate the tempo, `bpm`, in beats per minute, using the formula `bpm = 60 / (p / sampleRate)`.
+        7. Store the calculated `bpm` for the current window.
+        8. Repeat steps 2-7 for subsequent windows.
+        9. Combine the `bpm` values from all windows to get an overall estimate of the tempo.
+
+        The threshold `T` and window size `N` may need to be tuned to the specific characteristics of the audio signal being analyzed. Additionally, to improve the accuracy of the algorithm, it may be necessary to use more advanced techniques such as dynamic tempo estimation and beat tracking.
+        */
+        function detectBeatV2(stream, _canvas) {
+        
+          const audioCtx = new AudioContext({ sampleRate: 44100/2 });
+          const source = audioCtx.createMediaStreamSource(stream);
+
+          // Set up script processor node
+          const scriptNode = audioCtx.createScriptProcessor(1024*4, 1, 1);
+          scriptNode.onaudioprocess = handleAudioProcess;
+          source.connect(scriptNode);
+          scriptNode.connect(audioCtx.destination);
+
+          function handleAudioProcess(event) {
+            // doesn't work, not sure why
+            const buffer = event.inputBuffer.getChannelData(0);
+            const bpm = detectBPMv2(buffer, audioCtx.sampleRate);
+          }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // I'm going to ask you to write some javascript. given an audio stream and a canvas reference, write a function that detects the beat (BPM) in the stream and show a visualization of that beat on the canvas object
+        /*
+        function detectBeat(stream, canvas) {
+          
+          // Create a new AudioContext
+          const audioContext = new AudioContext();
+
+          const sourceNode = audioContext.createMediaStreamSource(stream);
+          // const sourceNode = audioContext.createMediaElementSource(audioElement);
+          sourceNode.connect(audioContext.destination);
+
+          // Create a new AnalyserNode and connect it to the AudioContext
+          const analyserNode = audioContext.createAnalyser();
+          sourceNode.connect(analyserNode);
+
+          // Set the FFT size to 2048 and the smoothing time constant to 0.8
+          analyserNode.fftSize = 2048;
+          analyserNode.smoothingTimeConstant = 0.8;
+
+          // Get the canvas context and set its properties
+          const canvasContext = canvas.getContext('2d');
+          
+          
+
+          // Set up the beat detection algorithm
+          const threshold = 0.5;
+          const decayRate = 0.98;
+          const bufferSize = 1024;
+          const sampleRate = audioContext.sampleRate;
+          const sampleInterval = bufferSize / sampleRate;
+          let energy = 0;
+          let lastEnergy = 0;
+          let beats = [];
+
+          // Define a function to update the visualization
+          function updateBpm() {
+            // Get the frequency data from the analyser node
+            const frequencyData = new Float32Array(analyserNode.frequencyBinCount);
+            analyserNode.getFloatFrequencyData(frequencyData);
+
+            // Calculate the energy of the signal
+            energy = 0;
+            for (let i = 0; i < bufferSize; i++) {
+              energy += frequencyData[i] * frequencyData[i];
+            }
+            energy /= bufferSize;
+
+            // Update the beats array
+            if (energy > threshold * lastEnergy && energy > threshold) {
+              beats.push(audioContext.currentTime);
+            }
+            lastEnergy = energy * decayRate;
+
+            // Calculate the BPM based on the beats array
+            const beatCount = beats.length;
+            const timeDifference = beatCount > 1 ? (beats[beatCount - 1] - beats[0]) / (beatCount - 1) : 0;
+            const bpm = 60 / timeDifference;
+            if (bpm > 500) {
+              // error, silence, something like that
+              // return;
+            }
+            debugOutput$.textContent = `energy: ${Math.round(energy)} BPM: ${Math.round(bpm)}`;
+
+            // Draw the beat visualization on the canvas
+            drawToCanvas({ctx: canvasContext, curTime: audioContext.currentTime, bpm, beats});
+
+            // Schedule the next update
+            requestAnimationFrame(updateBpm);
+          }
+
+          // Start the visualization
+          updateBpm();
+        }
+
+
+
+
+        function drawToCanvas({ctx, curTime, bpm, beats}) {
+          ctx.clearRect(0, 0, WIDTH, HEIGHT);
+          ctx.fillStyle = '#ffffff';
+          ctx.font = '24px Arial';
+          ctx.fillText(`BPM: ${Math.round(bpm)}`, 10, 30);
+          ctx.fillStyle = '#ff0000';
+          ctx.fillRect(WIDTH / 2 - 5, HEIGHT / 2 - 5, 10, 10);
+          if (beats.length > 0) {
+            const beatTime = (curTime - beats[beats.length - 1]) * 1000;
+            const beatSize = 20 + 10 * Math.sin(beatTime * Math.PI / 250);
+            ctx.fillStyle = '#ffff00';
+            ctx.beginPath();
+            ctx.arc(WIDTH / 2, HEIGHT / 2, beatSize, 0, 2 * Math.PI);
+            ctx.fill();
+          }
+        }
+*/
+
+        function detectBpmV3(stream) {
+          let audioContext = new AudioContext();
+          let microphoneStream;
+          let scriptProcessorNode;
+          let sampleRate;
+          let bufferLength;
+          let buffer = new Float32Array(bufferLength);
+
+          microphoneStream = stream;
+          sampleRate = audioContext.sampleRate;
+          scriptProcessorNode = audioContext.createScriptProcessor(bufferLength, 1, 1);
+          scriptProcessorNode.connect(audioContext.destination);
+          scriptProcessorNode.onaudioprocess = doDetectBPM;
+      
+          // Define the detectBPM function
+          function doDetectBPM(event) {
+            // Get the input buffer from the microphone stream
+            let inputBuffer = event.inputBuffer.getChannelData(0);
+
+            // Copy the input buffer into the main buffer
+            buffer.set(inputBuffer);
+
+            // Calculate the autocorrelation of the buffer
+            let correlation = new Float32Array(bufferLength);
+            for (let i = 0; i < bufferLength; i++) {
+              for (let j = 0; j < bufferLength - i; j++) {
+                correlation[i] += buffer[j] * buffer[j + i];
+              }
+            }
+
+            // Find the maximum value and its index in the correlation array
+            let maxIndex = 0;
+            let maxValue = -Infinity;
+            for (let i = 0; i < bufferLength; i++) {
+              if (correlation[i] > maxValue) {
+                maxIndex = i;
+                maxValue = correlation[i];
+              }
+            }
+
+            // Calculate the bpm
+            let bpm = Math.round(sampleRate / maxIndex * 60);
+
+            // Output the bpm to the console
+            console.log(bpm);
+          }
+        }
+
+
+
+      } // main()
+      
+
+
+      // ------------------------------- 
+      function detectBPMv2(audioBuffer, sampleRate) {
+        
+        // console.log('sampleRate', sampleRate); // 44100
+        // console.log('audioBuffer.length', audioBuffer.length); // 2048
+
+        const N = 1024; // window size // long enough to capture at least one beat, but not so long that beats overlap. // typically samples or frames.
+        const T = 0.2; // threshold
+        const hopSize = N / 2; // overlap
+
+        const numWindows = Math.floor((audioBuffer.length - N) / hopSize) + 1;
+        const bpmValues = [];
+
+
+        for (let i = 0; i < numWindows; i++) {
+          const start = i * hopSize;
+          const end = start + N;
+
+          const window = audioBuffer.slice(start, end);
+          const autocorrelation = calculateAutocorrelation(window);
+          const peak = findFirstPeak(autocorrelation, T);
+
+          if (peak) {
+            const period = peak.index / sampleRate;
+            const bpm = 60 / period;
+            bpmValues.push(bpm);
+          }
+        }
+        
+        const avg = bpmValues.reduce((a, b) => a + b, 0) / bpmValues.length;
+        if (isNaN(avg)) {
+          return undefined;
+        }
+
+        console.log(bpmValues)
+        return isNaN(avg) ? undefined : avg;
+      }
+
+
+      function calculateAutocorrelation(signal) {
+          const N = signal.length;
+          const autocorrelation = new Float32Array(N);
+
+          for (let i = 0; i < N; i++) {
+            for (let j = i; j < N; j++) {
+              autocorrelation[i] += signal[j] * signal[j - i];
+            }
+          }
+
+          return autocorrelation;
+        }
+
+      function findFirstPeak(signal, threshold) {
+          const N = signal.length;
+          let peak = null;
+
+          for (let i = 1; i < N; i++) {
+            if (signal[i] > threshold && (peak === null || signal[i] > peak.value)) {
+              peak = { index: i, value: signal[i] };
+            }
+          }
+
+          return peak;
+        }
+
+
+
+
+
+      
+
+
+    
+    </script>
+  </body>
+</html>

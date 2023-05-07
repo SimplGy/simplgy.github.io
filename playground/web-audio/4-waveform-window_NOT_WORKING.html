@@ -1,0 +1,168 @@
+<!-- boilerplate html -->
+
+<html>
+  <head>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      h1 {
+        text-transform: uppercase;
+        color: #ccc;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <pre class="debug-output"></pre>
+
+    <canvas id="canvas" width="800" height="200"></canvas>
+
+
+    
+    <script>
+      main();
+
+      function main() {
+        // check if the user's browser supports Web Audio API
+        if (!navigator.mediaDevices?.getUserMedia) {
+          document.querySelector(".debug-output").textContent = "Web Audio API not supported.";
+          return;
+        }
+
+        // Cache canvas
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        const WIDTH = canvas.width;
+        const HEIGHT = canvas.height;
+        
+        // request access to the user's microphone
+        navigator.mediaDevices.getUserMedia({ audio: true })
+          .then(gotMicAccess)
+          .catch(function(err) {
+            // microphone access denied or an error occurred
+            document.querySelector(".debug-output").textContent = "Failed to get microphone access.";
+            console.error("Failed to get microphone access:", err);
+          });
+
+        function gotMicAccess(stream) {
+
+          const audioContext = new AudioContext({ sampleRate: 44100/2 });
+          const sourceNode = audioContext.createMediaStreamSource(stream);
+          const scriptNode = audioContext.createScriptProcessor(1024 * 2, 1, 1);
+          sourceNode.connect(scriptNode);
+          scriptNode.connect(audioContext.destination);
+          
+          // Create an array to hold the audio data
+          const audioData = new Array(WIDTH).fill(0);
+
+          // Listen for audio data from the script node
+          scriptNode.onaudioprocess = (event) => {
+            // Get the audio data from the input buffer of the script node
+            // The values in the array range from -1.0 to 1.0, with 0 representing no sound.
+            const buffer = event.inputBuffer.getChannelData(0);
+
+            // Add the audio data to the audioData array
+            audioData.push(...buffer);
+            // limit size to...
+            audioData.splice(0, audioData.length - WIDTH);
+            // console.log(audioData.length);
+
+            // const yVals = summarize(audioData, WIDTH);
+            // console.log(yVals);
+
+            renderEqVisualizer(audioData);
+          };
+
+          
+
+
+
+          
+
+
+          renderEqVisualizer(audioData);
+
+          // render the visualization (called every RAF)
+          function renderEqVisualizer(data) {
+            ctx.clearRect(0, 0, WIDTH, HEIGHT);
+
+            // analyserNode.getByteFrequencyData(data); // get the frequency data
+            const barWidth = 1; // WIDTH / data.length;
+            const barGap = 0;
+            for (let i = 0; i < data.length; i++) {
+              const barHeight = data[i] * 100;
+              // const barHeight = HEIGHT * (data[i] / 255);
+
+              //   // set the bar color
+              const hue = 100;
+              //   const hue = (360 / data.length) * i; // calculate the hue based on the bar index
+              const saturation = '100%'; // set the saturation to 100%
+              const lightness = '50%';
+              ctx.fillStyle = `hsl(${hue}, ${saturation}, ${lightness})`;
+              x = i * barWidth;
+              y = HEIGHT - barHeight;
+              ctx.fillRect(x, y, barWidth, barHeight);
+            }
+
+            requestAnimationFrame(() => renderEqVisualizer(data));
+          }
+        }
+      
+
+
+
+
+
+        
+
+
+
+
+
+
+
+      
+  
+      
+      
+      
+      
+      
+      
+      
+      
+      } // main()
+
+
+          // http://joesul.li/van/2014/03/drawing-waveforms/
+              // We don't reasonably need more data than we can display on the screen. In other words, we only need an array of values with length equal to the number of pixels along the x-axis.
+              function summarize(data, pixels) {
+                var pixelLength = Math.round(data.length / pixels);
+                var vals = [];
+
+                // For each pixel we display
+                for (var i = 0; i < pixels; i++) {
+                  var posSum = 0,
+                    negSum = 0;
+
+                  // Cycle through the data-points relevant to the pixel
+                  for (var j = 0; j < pixelLength; j++) {
+                    var val = data[i * pixelLength + j];
+
+                    // Keep track of positive and negative values separately
+                    if (val > 0) {
+                      posSum += val;
+                    } else {
+                      negSum += val;
+                    }
+                  }
+                  vals.push([negSum / pixelLength, posSum / pixelLength]);
+                }
+                return vals;
+              }
+          
+    
+    </script>
+  </body>
+</html>
