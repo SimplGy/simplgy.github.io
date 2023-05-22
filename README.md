@@ -10,6 +10,10 @@ To run in dev mode:
 
     bundle exec jekyll serve -w
 
+With extra debug info, perhaps filtered to certain paths:
+
+    bundle exec jekyll serve -w --verbose | grep song
+
 If you'd like to see `_drafts`, too:
 
     bundle exec jekyll serve -wD

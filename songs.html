@@ -1,0 +1,26 @@
+---
+categories:
+- songList
+title: Songs
+---
+
+<div class="padder">
+  <h2>Songs</h2>
+
+  <ol>
+    {% for song in site.songs %}
+      <!-- <p>{{ song.content | markdownify }}</p> -->
+      <li>
+        <a href="{{ song.url }}">{{ song.title }}</a>
+      </li>
+    {% endfor %}
+  </ol>
+
+  <br>
+
+  <p class="muted">
+    <small>
+      Songs I practice and play a little bit. Written in this neat format called ABC notation and visualized with <a href="https://www.abcjs.net/">ABCjs</a>.
+    </small>
+  </p>
+</div>

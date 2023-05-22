@@ -26,6 +26,13 @@ defaults:
 exclude: ['*.sass', '/Gemfile*', '/README.md' ]
 future: true
 
+# https://jekyllrb.com/docs/collections/
+# https://stackoverflow.com/questions/27099427/jekyll-filename-without-date
+collections:
+  songs:
+    output: true
+    permalink: /:collection/:path/
+
 # Github allows changing:
 github: [metadata]
 kramdown:

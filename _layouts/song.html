@@ -1,0 +1,28 @@
+---
+layout: boilerplate
+---
+
+
+
+<body class="song {% for c in page.classNames %}{{ c }} {% endfor %}">
+
+  <b class="navSpace"></b>
+
+  <article class="content">
+    {% comment %}
+    {% include blockquote-excerpt.html %}
+    {% endcomment %}
+    {% include iframe-demo.html %}
+
+    {{ content }}
+
+    <hr />
+    {% include twitter-plug.html %}
+
+    <hr />
+  </article>
+
+  {% include nav.html %}
+  {% include footer.html %}
+
+</body>
