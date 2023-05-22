@@ -2,7 +2,7 @@
 layout: boilerplate
 ---
 
-<body class="song {% for c in page.classNames %}{{ c }} {% endfor %}">
+<body class="songPage">
 
   <!-- empty space holder for site nav/header -->
   <b class="navSpace"></b>
@@ -16,11 +16,22 @@ layout: boilerplate
       </a>
     </p>
     
-    {{ content }}
+    <!-- TODO: song visualization and playback -->
+    <aside class="playback-controls"></aside>
+    <output class="renderArea"></output>
+    <br>
+    <br>
+
+    <!-- Song "editor" -->
+    <div class="editableAreaWrapper">
+      {{ content }}
+    </div>
 
   </article>
 
   {% include nav.html %}
   {% include footer.html %}
+  
+  {% include script-abcjs-playback.html %}
 
 </body>

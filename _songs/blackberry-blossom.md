@@ -3,6 +3,8 @@ title: "Blackberry Blossom"
 ---
 
 ```music-abc
+{ "tablature": [{ "instrument": "violin" }] }
+---
 T:Blackberry Blossom
 R:Hornpipe
 C:Trad.

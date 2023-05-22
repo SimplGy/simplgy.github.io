@@ -1,0 +1,149 @@
+<!--
+  Adds playable music to Markdown files that contain ABCjs notation.
+  1. Looks for ABC notation via classname ".language-music-abc"
+  2. 
+-->
+
+<!-- "abcjs": "6.2.2" -->
+<!-- creates global `ABCJS` -->
+<script src="/lib/abcjs-basic-min.min.js"></script>
+<!-- CSS for playback controls -->
+<link rel="stylesheet" href="/lib/abcjs-audio.min.css">
+
+<script>
+  // from /lib/abcjs-basic-min.min.js:
+  const { renderAbc, synth } = ABCJS;
+
+
+
+  // ------------------------------------------------------------------------- cfg
+  // Options: 
+  const DEFAULT_OPTIONS/* : AbcVisualParams */ = {
+    add_classes: true,
+    responsive: 'resize'
+  };
+  // https://paulrosen.github.io/abcjs/audio/synthesized-sound.html#init-synthoptions
+  const AUDIO_PARAMS/* : SynthOptions */ = {
+    // chordsOff: true,
+    // defaultQpm: localStorage.getItem('abcjs-qpm'), // preferred user tempo
+  };
+  const SYNTH_INIT_OPTIONS/* : SynthOptions */ = {
+    pan: [-0.25, 0.25] // a quarter note of extra room, I think?
+  };
+  const SYNTH_PLAYBACK_UI_OPTIONS/* : SynthVisualOptions */ = {
+    displayPlay: true,
+    displayWarp: true, // Tune speed. TODO: shared pref for playback speed across multiple tunes?
+    displayLoop: true, // option to loop the tune. Sometimes funky about timing on the first loop.
+  };
+
+
+
+  // ------------------------------------------------------------------------- lib
+  // given text, find if there are ABC notation options in there.
+  function parseAbcOptions(sourceText) {
+    const optionsRegex = new RegExp(/(?<options>{.*})\n---\n(?<sourceText>.*)/s);
+    const optionsMatch = sourceText.match(optionsRegex);
+    if (optionsMatch == null) return [undefined, sourceText];
+    sourceText = optionsMatch.groups["sourceText"];
+    try {
+      const opts = JSON.parse(optionsMatch.groups["options"]);
+      return [opts, sourceText];
+    } catch (e) {
+      console.error('Failed to parse user-options', e);
+    }
+  }
+
+  function render(source, el, userOptions = {}) {
+    const renderResp = renderAbc(el, source, Object.assign(DEFAULT_OPTIONS, userOptions));
+    const visualObj = renderResp[0];
+
+    // Support audio playback.
+    // Many variants, options, and guidance here: https://paulrosen.github.io/abcjs/audio/synthesized-sound.html
+    if (synth.supportsAudio()) {
+      const synthControl = new synth.SynthController();
+      synthControl.load(
+        '.playback-controls', // can be an HTMLElement reference or css selector
+        new NoteHighlighter(el), // an implementation of a `CursorControl`
+        SYNTH_PLAYBACK_UI_OPTIONS,
+      );
+
+      const synthInstance = new synth.CreateSynth();
+      synthInstance.init({ visualObj, options: SYNTH_INIT_OPTIONS })
+        .then(() => synthControl.setTune(visualObj, false, AUDIO_PARAMS))
+        .catch(console.warn.bind(console));
+
+      // reach in to observe and record the preferred tempo (not working):
+      // document.querySelector('.abcjs-midi-tempo').addEventListener('change', (e) => {
+        // const tempoRatio = e.target.value; // this is the %, not what we need
+      //   const tempo = document.querySelector('.abcjs-midi-current-tempo').textContent?.trim();
+      //   localStorage.setItem('abcjs-qpm', tempo);
+      // });
+    }
+  }
+
+
+  /**
+   * Monitors playback and provides event hooks.
+   * 
+   * Used to:
+   * 1. indicate song start/end
+   * 2. highlight the currently playing note
+   */
+  class NoteHighlighter/*  implements CursorControl */ {
+    beatSubdivisions = 2;
+
+    constructor(el) {
+      this.el = el;
+    }
+
+    onStart = () => this.markIsPlaying(true);
+    onFinished = () => {
+      this.markIsPlaying(false);
+      this.removeNoteHighlights();
+    };
+    onEvent(event/* : NoteTimingEvent */) {
+      // this was the second part of a tie across a measure line. Just ignore it.
+      if (event.measureStart && event.left === null) return;
+
+      this.removeNoteHighlights();
+      // Select the currently selected notes.
+      const notes = event.elements.flat();
+      notes.forEach(el => el.classList.add("abcjs-highlight"));
+    }
+
+    // Unselect any previously selected notes.
+    removeNoteHighlights() {
+      const selected = Array.from(this.el.querySelectorAll(".abcjs-highlight"));
+      selected.forEach(el => el.classList.remove("abcjs-highlight"));
+    }
+
+    markIsPlaying(is) {
+      this.el.parentElement.classList.toggle('is-playing', is);
+    }
+  }
+
+
+  // ------------------------------------------------------------------------- Take action
+  
+  // Just the first song on the page, for now.
+  const el = document.querySelector('.language-music-abc');
+
+  // Trigger the intial render
+  update();
+
+  // update every change (warning: buggy, render not very idempotent / doesn't clean up yet)
+  el.setAttribute('contenteditable', 'true');
+  el.addEventListener('input', () => { update(); });
+
+  // Get and parse the text
+  function update() {
+    const abcText = el.textContent?.trim(); // trailing whitespace blows up abc
+    const [userOptions, abcSource] = parseAbcOptions(abcText) || {};
+    console.log([userOptions, abcSource]);
+    
+    
+    const outputEl = document.querySelector('.renderArea');
+    render(abcSource, outputEl, userOptions);
+  }
+
+</script>

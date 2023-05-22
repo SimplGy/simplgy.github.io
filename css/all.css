@@ -1241,6 +1241,11 @@ article, .banner .content {
   .resumePrettyPage .col.other {
     display: block !important; } }
 
+.songPage pre code {
+  display: block;
+  overflow: auto;
+  font-size: 12px; }
+
 .cards {
   max-width: 1713.8px; }
   .cards .card {
