@@ -2,24 +2,22 @@
 layout: boilerplate
 ---
 
-
-
 <body class="song {% for c in page.classNames %}{{ c }} {% endfor %}">
 
+  <!-- empty space holder for site nav/header -->
   <b class="navSpace"></b>
 
   <article class="content">
-    {% comment %}
-    {% include blockquote-excerpt.html %}
-    {% endcomment %}
-    {% include iframe-demo.html %}
-
+    <p>
+      <a href="/songs/">
+        <small class="muted">
+          &larr; All Songs
+        </small>
+      </a>
+    </p>
+    
     {{ content }}
 
-    <hr />
-    {% include twitter-plug.html %}
-
-    <hr />
   </article>
 
   {% include nav.html %}

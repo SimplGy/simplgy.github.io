@@ -22,6 +22,11 @@ defaults:
       type: "pages"
     values:
       layout: default
+  -
+    scope:
+      path: "_songs"
+    values:
+      layout: song
 
 exclude: ['*.sass', '/Gemfile*', '/README.md' ]
 future: true
